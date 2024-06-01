@@ -43,5 +43,11 @@ SAP learnings and projects
 - Dereferencing
 
 ## [SAP Tips & Tricks](https://discoveringabap.com/sap-tips/)
+- Send emails with .xlsx Attachment
+- Read Excel File from Presentation Server
+- Write Excel File to Presentation Server
+- Read Excel File from Application Server
+- Write Internal Table as Excel File on SAP Application Server
+- ABAP Code Samples : Send emails with .xlsx Attachment
 
 ## [OO ABAP](https://discoveringabap.com/object-oriented-abap-ooabap/) Only link
