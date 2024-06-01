@@ -42,4 +42,4 @@ SAP learnings and projects
 - Deep Structure
 - Dereferencing
 
-## [SAP Tips & Tricks] (https://discoveringabap.com/sap-tips/)
+## [SAP Tips & Tricks](https://discoveringabap.com/sap-tips/)
