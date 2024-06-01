@@ -89,6 +89,27 @@ sy-uzeit } by { sy-uname } |.
 
 DATA(created_at) = sy-datum && ':' && sy-uzeit.
 
+*Chaining Operator
+WRITE : / 'Chaining Operator'.
+DATA: v_var1 TYPE char30,
+      v_var2 TYPE char30,
+      v_var3 TYPE char30.
+
+DATA : lv_result TYPE string.
+
+v_var1 = 'Building'.
+v_var2 = 'A'.
+v_var3 = 'String'.
+
+lv_result = v_var1 && v_var2 && v_var3.
+WRITE : / 'Using &&', lv_result.
+
+*String Templates
+WRITE : / 'String Templates'.
+DATA: character_string TYPE string.
+character_string = |This is a literal text.|.
+
+WRITE :/ character_string.
 *LINE_EXISTS
 *LINE_EXISTS is used to check whether a record exists in internal table 
 *or not.

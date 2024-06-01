@@ -69,7 +69,7 @@ SELECT carrid, connid, fldate, 'Extra Column' AS new_column
   WHERE carrid IN @s_carrid
   INTO TABLE @DATA(result).
   
-*Arithmetic Operations 
+*Arithmetic Operations / Performing Calculations within SQL Statements
 
 SELECT carrid, 
        connid, 

@@ -54,6 +54,9 @@ DATA(lt_itab) = VALUE tt_user(
                   ( user_id = 'U_DOEJAN' user_name = 'Jane Doe' )
                 ).
 
+L_TAB_DOCTYP = VALUE #( ( SIGN = 'I' OPTION = 'EQ' LOW = 'ZSO' )
+                ( SIGN = 'I' OPTION = 'EQ' LOW = 'ZEM' ) ).
+
 "Nested structure
 TYPES : BEGIN OF ty_addr,
           house_number TYPE numc4,
@@ -161,6 +164,36 @@ DATA(messages_en) = FILTER #( messages WHERE sprsl = 'E' ).
 "Get all messages where language is other than English
 DATA(messages_non_en) = FILTER #( messages EXCEPT WHERE sprsl = 'E' ).
 
+*Filter Operator
+WRITE : / 'Filter Operator'.
+
+*DATA LT_ALL_MATERIAL TYPE STANDARD TABLE OF MARA
+*                     WITH NON-UNIQUE SORTED KEY MATNR
+*                     COMPONENTS MATNR.
+*SELECT *
+*       FROM MARA
+*       INTO TABLE @DATA(LT_ALL_MATERIALS)
+*       UP TO 10000 ROWS.
+*
+*DATA(LT_MATERIALS_FERT) = FILTER #( LT_ALL_MATERIALS USING KEY MATNR
+*                                                     WHERE MATNR = 'A001989210399' ).
+
+SELECT *
+       FROM scarr
+       INTO TABLE @DATA(carriers).
+
+DATA filter TYPE SORTED TABLE OF scarr-carrid
+                 WITH UNIQUE KEY table_line.
+filter = VALUE #( ( 'AA ' ) ( 'LH ' ) ( 'UA ' ) ).
+
+WRITE : / 'SCARR'.
+WRITE : / 'CAR CARRNAME           CURRC URL'.
+LOOP AT carriers INTO DATA(ls_carriers).
+  WRITE : / ls_carriers-carrid,
+            ls_carriers-carrname,
+            ls_carriers-currcode,
+            ls_carriers-url.
+ENDLOOP.
 *cond  and switch – conditional operators
 *the condition operator will evaluate a condition specified after when
 *and assign the value specified after then. WHEN all the conditions
