@@ -43,3 +43,5 @@ SAP learnings and projects
 - Dereferencing
 
 ## [SAP Tips & Tricks](https://discoveringabap.com/sap-tips/)
+
+## [OO ABAP](https://discoveringabap.com/object-oriented-abap-ooabap/) Only link
