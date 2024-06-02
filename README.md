@@ -51,3 +51,7 @@ SAP learnings and projects
 - ABAP Code Samples : Send emails with .xlsx Attachment
 
 ## [OO ABAP](https://discoveringabap.com/object-oriented-abap-ooabap/) Only link
+
+## [OData](https://discoveringabap.com/odata-development-in-sap/)
+
+Building OData Services [1] : OData Overview
