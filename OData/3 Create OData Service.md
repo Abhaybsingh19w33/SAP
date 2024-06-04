@@ -238,7 +238,7 @@ METHOD carrierset_get_entity.
     SELECT SINGLE carrid, carrname, currcode
       FROM scarr
       INTO @er_entity
-      WHERE carrid = @ls_keys-carrid.
+      WHERE carrid = @ls_keys-carrierid.
     IF sy-subrc NE 0.
       RAISE EXCEPTION TYPE /iwbep/cx_mgw_busi_exception
         EXPORTING
@@ -273,7 +273,7 @@ METHOD flightschedulese_get_entityset.
       io_tech_request_context->get_converted_source_keys(
         IMPORTING es_key_values = ls_keys ).
       SELECT * FROM spfli INTO TABLE @et_entityset
-        WHERE carrid = ls_keys-carrid.
+        WHERE carrid = @ls_keys-carrierid.
     WHEN 'FlightSchedule'. "Called directly - check filters
       "This code is not implemented now-it will be demonstrated in next posts
     WHEN OTHERS.
