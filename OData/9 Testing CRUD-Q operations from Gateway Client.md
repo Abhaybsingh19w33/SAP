@@ -177,7 +177,7 @@ Request
 
 Response
 
-![alt text](image-141.png)
+![alt text](image-155.png)
 
 SCARR table entry is deleted.
 

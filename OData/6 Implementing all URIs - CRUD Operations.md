@@ -70,9 +70,13 @@ The below code is useful when all the filter values can be used in a single quer
 
 <h3> <b>
 <span style="color:red" > 
-/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet?$filter=CarrierID eq ‘AA’
-
-/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet?search=’Ame’
+in filter use database table field name 
+</br>
+</br>
+/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet?$filter=carrid eq 'AA'
+</br>
+</br>
+/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet?search='Ame'
 </span>
 </h3></b> 
 
@@ -102,7 +106,7 @@ The below code is useful when we need to use each field as a different range.
 
 <h3> <b>
 <span style="color:red" > 
-/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet?$filter=CarrierID eq ‘AA’
+/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet?$filter=carrid eq 'AA'
 </span>
 </h3></b> 
 
@@ -132,7 +136,7 @@ ENDMETHOD.
 ## Code for Sorting
 <h3> <b>
 <span style="color:red" > 
-/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet?$orderby=Currency,CarrierID
+/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet?$orderby=currcode,carrid
 </span>
 </h3></b> 
 
