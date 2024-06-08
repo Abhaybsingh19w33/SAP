@@ -38,7 +38,7 @@ Now, generate the project and register the service. Important classes generated 
 
 ## Define Deep Structure
 
-The deep structure to represent the complete sales order would look like the below. Structure ZJP_SO_DS represents the Header data and also has a component structure TOCUSTOMER which refers to the Customer Type and a component table TOITEM which refers to Item Table. In turn, the item table has a component structure TOPRODUCT that refers to the product structure. Customer and Product structures are same earlier ones used for Entities.
+The deep structure to represent the complete sales order would look like the below. Structure <b>ZJP_SO_DS</b> represents the Header data and also has a component structure TOCUSTOMER which refers to the Customer Type and a component table TOITEM which refers to Item Table. In turn, the item table has a component structure TOPRODUCT that refers to the product structure. Customer and Product structures are same earlier ones used for Entities.
 
 ![alt text](image-184.png)
 
@@ -125,7 +125,7 @@ Get Expanded Entity i.e. $expand is used to get the Entity Type along with its a
 
 The expansion can work on multiple associations i.e. Customer Entity and Items Entity Set can be fetched in one request along with SOHeader OR it can work as multi-level associations i.e. SOHeader, SOItems, Products can be fetched in one request.
 
-The exapnsion can also use multiple and multi-level concepts in single request.
+The expansion can also use multiple and multi-level concepts in single request.
 
 The method to be redefined are
 
@@ -292,12 +292,16 @@ METHOD /iwbep/if_mgw_appl_srv_runtime~get_expanded_entityset.
   ENDCASE.
 ENDMETHOD.
 ```
+This error occured while adding the service saying he TY_SO_ALL does not exist
 
+This was happening becuase I made mistake while the class name in redifine menthod
+
+![alt text](image-193.png)
 ## Test using Gateway Client
 
 |Operation |	HTTP Method |	URI |
 | :-: | :-: | :-: |
-|GetEntitySet – Single Association | GET |	/sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet?$expand=ToCustomer&$format=json |
+|GetEntitySet – Single Association | GET |	/sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet?$expand=ToCustomer?$format=json |
 
 ![alt text](image-187.png)
 
