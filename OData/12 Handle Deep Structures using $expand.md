@@ -313,6 +313,8 @@ The response shows multiple records, Association ToCustomer is expanded with dat
 | :-: | :-: | :-: |
 |GetEntitySet – Mutliple Associations	| GET |	/sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet?$expand=ToCustomer,ToItem&$format=json |
 
+Since we have 2 association related to SOHeader, we can specify them directly
+
 ![alt text](image-189.png)
 
 ![alt text](image-190.png)

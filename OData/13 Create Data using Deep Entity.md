@@ -1,35 +1,19 @@
-Building OData Services [13] : Create Data using Deep Entity
-Date: November 10, 2022
-Author: Jagdish
-0 Comments
+# Building OData Services [13] : Create Data using Deep Entity
 
-
-Pause
-
-Unmute
-Remaining Time -30:29
-
-Fullscreen
-
-Settings
-Now Playing
-
-Play Video
-Learn DynamoDB Data Modeling
-
-Share
-Watch onHumix
 In this post, you will learn about handling Deep Structures in OData. We need to handle data with a hierarchy with deep structures while reading the data for the front-end applications and also while creating the data in SAP. This earlier post Handle Deep Structures using $expand was about with reading the data. This one will deal with creating the data.
 
 The scenario considered is the same as the earlier post which also has the project creation details.
 
+![alt text](image-194.png)
 
 For creating / updating the data using deep strcuture, method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~CREATE_DEEP_ENTITY needs to be redefined.
 
+![alt text](image-195.png)
 
 Here is a sample code that can be used to implement Sales Order create a scenario using a BAPI. Here, using the key VBELN for the header entity, it can be checked whether it’s a ‘create scenario’ or an ‘update scenario’, and accordingly the BAPI can be called. I have only added code with CREATE BAPI and the code for UPDATE BAPI is something that you can write if needed.
 
 Code Reference
+```
 METHOD /iwbep/if_mgw_appl_srv_runtime~create_deep_entity.
 
   DATA : ls_so_all TYPE zcl_g00_jp_so_mpc_ext=>ty_so_all.
@@ -105,37 +89,40 @@ METHOD /iwbep/if_mgw_appl_srv_runtime~create_deep_entity.
     RAISE EXCEPTION TYPE /iwbep/cx_mgw_busi_exception
         EXPORTING
         message_container = lo_msg .
-
-    RAISE EXCEPTION NEW /iwbep/cx_mgw_busi_exception(
-        message_container = lo_msg ).
-
   ENDIF.
 
 ENDMETHOD.
-Important Code blocks
+```
+
+## Important Code blocks
+
 io_data_provider->read_entry_data is used to read the data from the request
 
 The entity data updated with Sales Order Number is passed back using below code.
 
+```
     me->copy_data_to_ref(
        EXPORTING
          is_data = ls_so_all
        CHANGING
          cr_data = er_deep_entity ).
-Usually, one project will have one deep entity, but in case there are multiple deep entities then the entity type name should be first checked using method GET_ENTITY_TYPE_NAME from IO_TECH_REQUEST_CONTEXT
-Advertisements
-Ezoic
+```
 
-Testing using Gateway Client
+Usually, one project will have one deep entity, but in case there are multiple deep entities then the entity type name should be first checked using method GET_ENTITY_TYPE_NAME from IO_TECH_REQUEST_CONTEXT
+
+## Testing using Gateway Client
+
 Observe the code. Only Header and Item data are used from the deep structure to pass data to the BAPI. So, the request payload needs to have that information.
 
 To get the details, first execute a GET request with $expand=ToItem. Then, use the data as Request payload using the button Use as Request.
 
 URI : /sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet(‘109’)?$expand=ToItem&$format=json
 
+![alt text](image-196.png)
 
 Alternatively, below well formatted payload can also be used.
 
+```
 {
   "Vbeln" : "",
   "Erdat" : "\/Date(1660694400000)\/",
@@ -164,19 +151,22 @@ Alternatively, below well formatted payload can also be used.
     }
   ]
 }
+```
+
 Execute the request as below.
 
+![alt text](image-197.png)
 
 As the sales order number is passed, it is interpreted as an Update scenario that is not implemented as per the code, and hence exception is triggered. Note that even though this is an update scenario, the method used here is POST and not PUT.
 
+![alt text](image-198.png)
 
 Now, remove the sales order number from the payload and execute again.
 
+![alt text](image-199.png)
 
-Advertisements
-Ezoic
 The order gets created. The result that you will get would depend on the data and configuration in your system.
 
+![alt text](image-200.png)
 
-
-This marks the end of this post.
+![alt text](image-201.png)
