@@ -34,7 +34,7 @@ Implementing ETAG with a timestamp field
 
 ![alt text](image-242.png)
 
-4. Double-click on the Entity Customer and add the field name ‘Changetime‘ in the ETag field.
+4. Double-click on the Entity Customer and add the field name 'Changetime' in the ETag field.
 
 ![alt text](image-243.png)
 
@@ -152,9 +152,9 @@ This results in an error as ETag is active for the entity but it is not provided
 
 ![alt text](image-253.png)
 
-Click on Add Header button, and then add Header Name ‘If-Match’ with Value like W/”datetime’2022-10-25T13%3A37%3A04′”.
+Click on Add Header button, and then add Header Name 'If-Match' with Value like W/”datetime'2022-10-25T13%3A37%3A04′”.
 
-The template for the value is W/”datetime’YYYY–MM–DDTHH%3AMM%3ASS‘”. You get this as a response header in GET request, so it can be copied from there.
+The template for the value is W/”datetime'YYYY–MM–DDTHH%3AMM%3ASS'”. You get this as a response header in GET request, so it can be copied from there.
 
 ![alt text](image-254.png)
 

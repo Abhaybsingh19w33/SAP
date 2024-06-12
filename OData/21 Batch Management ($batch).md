@@ -112,7 +112,7 @@ This way a sample payload is also loaded in HTTP request section.
 1. The HTTP Method is always POST
 2. URI has an addition $batch.
 3. There is no entity name in URI
-4. Content-Type is ‘multipart/mixed; boundary=batch’
+4. Content-Type is 'multipart/mixed; boundary=batch'
 5. The name of the boundary should be the same in the header and the payload
 
 Let us test simple batches first. The data uploaded to table is as below.

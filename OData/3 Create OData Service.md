@@ -187,7 +187,7 @@ Now that you have created Entity Type, Entity Set, Association, Navigation Prope
 
 ![alt text](image-52.png)
 
-Class Name and Base Class Name for Model Provider Class and Data Provider Class along with Technical Model Name, Technical Service Name will be auto populated. Usually, you don’t have to change anything, but you can change to match your naming conventions.
+Class Name and Base Class Name for Model Provider Class and Data Provider Class along with Technical Model Name, Technical Service Name will be auto populated. Usually, you don't have to change anything, but you can change to match your naming conventions.
 
 Hit Enter.
 
@@ -219,7 +219,7 @@ Select a method, Right Click > Choose Redefine.
 
 ![alt text](image-59.png)
 
-Add the code in the redefined method’s implementation section.
+Add the code in the redefined method's implementation section.
 
 ![alt text](image-60.png)
 
@@ -282,7 +282,7 @@ METHOD flightschedulese_get_entityset.
 
 ENDMETHOD.
 ```
-Add the code, save and activate the methods. That’s it. Our project is ready. Next step is to Register and Test the Service in Gateway system.
+Add the code, save and activate the methods. That's it. Our project is ready. Next step is to Register and Test the Service in Gateway system.
 
 # Summary of the transaction codes.
 

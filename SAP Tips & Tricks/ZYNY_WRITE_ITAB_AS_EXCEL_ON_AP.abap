@@ -83,7 +83,7 @@ ENDIF.
 
 *Important
 *If you try to download the file from AL11 or using CG3Z, the file 
-*won’t be downloaded correctly and you can not open it as an excel 
+*won't be downloaded correctly and you can not open it as an excel 
 *document.
 
 *However, you can download this using any FTP client or ask your 

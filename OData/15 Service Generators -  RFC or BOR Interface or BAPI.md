@@ -92,4 +92,4 @@ In both methods, the right BAPI OR right method needs to be selected as per the 
 ## Conclusion
 It is possible to use BAPI/BOR to create entities and implement operations.
 
-I personally like to use the BAPI only to create the Entity and then implement the operation in DPC_EXT as it gives more flexibility and it’s easy to maintain as well.
+I personally like to use the BAPI only to create the Entity and then implement the operation in DPC_EXT as it gives more flexibility and it's easy to maintain as well.

@@ -18,7 +18,7 @@ Method io_tech_request_context->get_converted_keys is used to get the key passed
 
 <h3> <b>
 <span style="color:red" > 
-/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet(‘AA’)
+/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet('AA')
 </span>
 </h3></b> 
 
@@ -202,7 +202,7 @@ The import parameter iv_source_name tells from where it is called.
 
 <h3> <b>
 <span style="color:red" > 
-/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet(‘DL’)/ToFlightSchedule
+/sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet('DL')/ToFlightSchedule
 </span>
 </h3></b> 
 
@@ -233,7 +233,7 @@ This example depicts the scenario when a function import is created to get a num
 
 Here, it is important to note that the Function Import always returns a single entity or entity set. As it can pass back both entity and entity sets, a special method copy_data_to_ref is used to copy result data to er_data which is the exported data reference.
 
-‘GetFlightNumbers’ is the name of the function import. The types for function import parameter gets automatically created in MPC class.
+'GetFlightNumbers' is the name of the function import. The types for function import parameter gets automatically created in MPC class.
 
 ```
 METHOD /iwbep/if_mgw_appl_srv_runtime~execute_action.

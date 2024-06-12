@@ -10,7 +10,7 @@ REPORT zyny_7_open_sql_enh_part_2.
 *Select with Joins
 
 *JOINs have always been there and we have been avoiding them and
-*preferred the ‘FOR ALL ENTRIES’. Not anymore, we can now use joins
+*preferred the 'FOR ALL ENTRIES'. Not anymore, we can now use joins
 *effectively with SAP HANA. We now have RIGHT OUTER JOIN as well.
 
 *Inner Join
@@ -178,7 +178,7 @@ SELECT SINGLE
   INTO @DATA(todays_flight).
 
 *Temporary table using the clause WITH (7.51+)
-*Using the keyword ‘WITH’, a dataset is created which can be further
+*Using the keyword 'WITH', a dataset is created which can be further
 *used in the query. We can have multiple such named datasets and they
 *all need to start with +.
 

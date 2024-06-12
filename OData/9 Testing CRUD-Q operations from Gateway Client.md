@@ -145,7 +145,7 @@ Notice that the CREATE payload did not have the URL field. So let us add a URL f
 
 ![alt text](image-135.png)
 
-Use READ request to get details for Carrier ‘AI’. Copy the request using the button ‘Use as Request’.
+Use READ request to get details for Carrier 'AI'. Copy the request using the button 'Use as Request'.
 
 ![alt text](image-136.png)
 

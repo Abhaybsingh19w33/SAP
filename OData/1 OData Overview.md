@@ -2,7 +2,7 @@
 
 OData is an open standard that is both a data format and a protocol for consuming and manipulating data in a uniform way. It is ISO approved and managed by the OASIS organization. You read more about OData at OData – the Best Way to REST.
 
-What you are going to learn in this post is <b>What is OData from ABAP Developer’s point of view.</b>
+What you are going to learn in this post is <b>What is OData from ABAP Developer's point of view.</b>
 
 ![alt text](image.png)
 

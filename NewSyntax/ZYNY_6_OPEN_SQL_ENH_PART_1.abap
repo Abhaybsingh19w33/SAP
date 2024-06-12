@@ -11,10 +11,10 @@ REPORT ZYNY_6_OPEN_SQL_ENH_PART_1.
 *time. And one fine day, SAP enhances the Open SQL and adds many new 
 *features.
 
-*One such change is the use of the escape character ‘@’ for the 
+*One such change is the use of the escape character '@' for the 
 *host/program variables (variable/structure/table ). Earlier, we could 
 *use program variables in the SQL query as if SQL is part of ABAP 
-*itself. in ABAP 7.40 ‘@’ was introduced to explicitly mention that 
+*itself. in ABAP 7.40 '@' was introduced to explicitly mention that 
 *anything that follows @ is a program variable. This made it possible 
 *for the Open SQL parser to distinguish clearly between operands that 
 *are evaluated by the database and ABAP variables whose contents have 
@@ -130,7 +130,7 @@ SELECT num1, num2,
 *Aggregate Queries
 
 *An essential shift with HANA is the use of aggregate queries. 
-*Aggregate queries went from not recommended to recommended with HANA’s 
+*Aggregate queries went from not recommended to recommended with HANA's 
 *code pushdown approach.
 
 *A simple aggregate query is as below.

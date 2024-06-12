@@ -55,8 +55,8 @@ ENDLOOP.
 
 *Link - https://discoveringabap.com/ezoimgfmt/discoveringabap.files.wordpress.com/2021/11/debugger2_3.jpg?ezimgfmt=ng:webp/ngcb2
 
-*While enabling the Step Debugger, you will get a message ‘Debugger 
-*increment changed to subcondition/statement’.
+*While enabling the Step Debugger, you will get a message 'Debugger 
+*increment changed to subcondition/statement'.
 
 *Link - https://discoveringabap.com/ezoimgfmt/discoveringabap.files.wordpress.com/2021/11/debugger2_4.jpg?ezimgfmt=ng:webp/ngcb2
 

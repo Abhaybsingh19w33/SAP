@@ -108,7 +108,7 @@ SELECT FROM /dmo/flight
 
 *Let us complicate this a little
 
-*It’s not really making it complex but using more functionality to show
+*It's not really making it complex but using more functionality to show
 *a glimpse of the potential of these queries.
 
 *With the below single query, we can produce data to analyze the trend

@@ -145,7 +145,7 @@ ENDLOOP.
 
 
 *so, by using loop at… group by you can get rid of the at statements,
-*make the code cleaner. and unlike at – you don’t need the fields used
+*make the code cleaner. and unlike at – you don't need the fields used
 *in combinations to be the first in the table structure.
 
 *for example, below will also work.

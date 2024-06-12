@@ -58,7 +58,7 @@ Payload:
 
 ![alt text](image-294.png)
 
-The request ends in error with the error code 403 and with the message ‘CSRF token validation failed’.
+The request ends in error with the error code 403 and with the message 'CSRF token validation failed'.
 
 To tackle this issue, we need to request the X-CSRF token in a GET request.
 

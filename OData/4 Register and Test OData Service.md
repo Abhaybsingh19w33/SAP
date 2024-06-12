@@ -69,7 +69,7 @@ Now, let us test the 3 methods that we implemented.
 - Carrier – Get Entity
 - FlightSchedule – Get Entity Set
 
-URI details will be a separate article, but for now use /sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet(‘DL’) to get Entity for Carrier = ‘DL’.
+URI details will be a separate article, but for now use /sap/opu/odata/sap/ZJP_DEMO_SRV/CarrierSet('DL') to get Entity for Carrier = 'DL'.
 
 ![alt text](image-74.png)
 

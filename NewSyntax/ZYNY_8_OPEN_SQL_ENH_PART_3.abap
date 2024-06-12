@@ -14,7 +14,7 @@ REPORT zyny_8_open_sql_enh_part_3.
 *Earlier, to search for a text, you would get the data into internal
 *table, loop through the table, change the content of the field to be
 *searched in to upper case, also translate search string to upper case
-*and then perform the ‘CS’ like operation.
+*and then perform the 'CS' like operation.
 
 *Now, just use below,
 
@@ -46,7 +46,7 @@ SELECT movie FROM zmmovie
 *Method call within a where clause, select list and on condition
 
 *Imagine a functional method get_hulk_movie that returns a movie
-*featuring a fictional character ‘Hulk’. This returning value can
+*featuring a fictional character 'Hulk'. This returning value can
 *directly be used in where clause.
 
 SELECT movie FROM zmmovie

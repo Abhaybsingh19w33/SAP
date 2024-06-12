@@ -52,7 +52,7 @@ A new empty request will be created.
 
 ![alt text](image-279.png)
 
-Go to the Authorization tab and select the option – ‘Basic Auth’.
+Go to the Authorization tab and select the option – 'Basic Auth'.
 
 ![alt text](image-280.png)
 

@@ -75,4 +75,4 @@ The operations are pretty much self explanatory. The only probable question is w
 
 Function Imports are created to perform some function in SAP like releasing a purchase order. Function Imports are only used when CRUD-Q operations can not be used.
 
-For example, through CRUD-Q operation, a customer can be created, read, updated, deleted or queried. But to triggers a credit check for a customer, we can’t use any of the CRUD-Q operations – so function import will be created.
+For example, through CRUD-Q operation, a customer can be created, read, updated, deleted or queried. But to triggers a credit check for a customer, we can't use any of the CRUD-Q operations – so function import will be created.

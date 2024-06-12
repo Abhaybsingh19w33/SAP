@@ -337,11 +337,11 @@ Similarly, the Entity Type i.e. READ operations can be tested with the below URI
 
 |Operation|	URI |
 | :-: | :-: |
-| GetEntity	| /sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet(‘1’)?$format=json
-| GetEntity – Single Association | /sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet(‘1’)?$expand=ToItem&$format=json
-| GetEntity – Multiple Association | /sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet(‘1’)?$expand=ToItem,ToCustomer&$format=json
-| GetEntity – Multi-Level Association |	/sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet(‘1’)?$expand=ToItem/ToProduct&$format=json
-| GetEntity – Multi-Level & Multiple Association |	/sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet(‘1’)?$expand=ToItem/ToProduct,ToCustomer&$format=json
+| GetEntity	| /sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet('1')?$format=json
+| GetEntity – Single Association | /sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet('1')?$expand=ToItem&$format=json
+| GetEntity – Multiple Association | /sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet('1')?$expand=ToItem,ToCustomer&$format=json
+| GetEntity – Multi-Level Association |	/sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet('1')?$expand=ToItem/ToProduct&$format=json
+| GetEntity – Multi-Level & Multiple Association |	/sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet('1')?$expand=ToItem/ToProduct,ToCustomer&$format=json
 
 Note that the URI has Navigation Property names and we have ensured that the property names and the Deep Structure component names are the same.
 

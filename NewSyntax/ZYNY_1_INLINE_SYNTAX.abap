@@ -23,7 +23,7 @@ lv_number_of_authors = 2.
 
 DATA(lv_number_of_authors) = 2.
 *In SAP, wherever operands are used, the inline declaration is possible.
-*This is basically, instead of a programmer defining the variables’ type
+*This is basically, instead of a programmer defining the variables' type
 *explicitly, allowing the compiler to decide the type.
 
 *********************************Format*********************************

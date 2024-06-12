@@ -10,7 +10,7 @@ For creating / updating the data using deep strcuture, method /IWBEP/IF_MGW_APPL
 
 ![alt text](image-195.png)
 
-Here is a sample code that can be used to implement Sales Order create a scenario using a BAPI. Here, using the key VBELN for the header entity, it can be checked whether it’s a ‘create scenario’ or an ‘update scenario’, and accordingly the BAPI can be called. I have only added code with CREATE BAPI and the code for UPDATE BAPI is something that you can write if needed.
+Here is a sample code that can be used to implement Sales Order create a scenario using a BAPI. Here, using the key VBELN for the header entity, it can be checked whether it's a 'create scenario' or an 'update scenario', and accordingly the BAPI can be called. I have only added code with CREATE BAPI and the code for UPDATE BAPI is something that you can write if needed.
 
 Code Reference
 ```
@@ -116,7 +116,7 @@ Observe the code. Only Header and Item data are used from the deep structure to 
 
 To get the details, first execute a GET request with $expand=ToItem. Then, use the data as Request payload using the button Use as Request.
 
-URI : /sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet(‘109’)?$expand=ToItem&$format=json
+URI : /sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet('109')?$expand=ToItem&$format=json
 
 ![alt text](image-196.png)
 

@@ -27,7 +27,7 @@ Note that these are not exhaustive lists of status codes and those can be found 
 
 In the earlier post Testing CRUD-Q operations from Gateway Client, all the success scenarios are covered. Some of the error codes can be simulated as below.
 
-400 (Bad Request) – Extra ‘ character after key-value AI in the request causes the error. When you get a such an error, check the URI.
+400 (Bad Request) – Extra ' character after key-value AI in the request causes the error. When you get a such an error, check the URI.
 
 ![alt text](image-156.png)
 

@@ -80,7 +80,7 @@ SELECT FROM /dmo/flight
 
 *NTILE( n )
 
-*NTILE will split the Window in ‘n’ number of frames. Here, n can be a 
+*NTILE will split the Window in 'n' number of frames. Here, n can be a 
 *variable but the variable should not have a -ve value. If it has a -ve 
 *value then a runtime error CX_SY_OPEN_SQL_DB will occur.
 
