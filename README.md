@@ -54,4 +54,28 @@ SAP learnings and projects
 
 ## [OData](https://discoveringabap.com/odata-development-in-sap/)
 
-Building OData Services [1] : OData Overview
+- Building OData Services [1] : OData Overview
+- Building OData Services [2] : Understanding OData Service
+- Building OData Services [3] : Create OData Service
+- Building OData Services [4] : Register and Test OData Service
+- Building OData Services [5] : Working With OData URIs
+- Building OData Services [6] : Implementing all URIs
+- Building OData Services [7] : JSON Formatter Extension
+- Building OData Services [8] : How to find SEGW project from Service Name
+- Building OData Services [9] : Testing CRUD-Q operations from Gateway Client
+- Building OData Services [10] : Difference between Put, Merge and Patch
+- Building OData Services [11] : Trouble-shooting OData services and Debugging
+- Building OData Services [12] : Handle Deep Structures using $expand
+- Building OData Services [13] : Create Data using Deep Entity
+- Building OData Services [14] : Service Generators – Search Help
+- Building OData Services [15] : Service Generators – RFC/ BOR Interface / BAPI
+- Building OData Services [16] : Concurrency handling using ETag with time-stamp field
+- Building OData Services [17] : Concurrency handling using ETag with Entity Hash
+- Building OData Services [18] : Using POSTMAN for testing OData Services
+- Building OData Services [19] : X-CSRF Tokens
+- Building OData Services [20] : Media Handling
+- Building OData Services [21] : Batch Management ($batch)
+- Building OData Services [22] : Draft Management
+- Building OData Services [23] : CDS View mapped to OData Service
+- Building OData Services [24] : CDS View with OData.Publish
+- Building OData Services [25] : CDS View BOPF
