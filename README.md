@@ -79,3 +79,20 @@ SAP learnings and projects
 - Building OData Services [23] : CDS View mapped to OData Service
 - Building OData Services [24] : CDS View with OData.Publish
 - Building OData Services [25] : CDS View BOPF
+
+## [ABAP on HANA : CDS Views](https://discoveringabap.com/abap-on-hana-cds-views/)
+
+- Introduction to CDS Views
+- Joins in CDS Views
+- CDS View with parameters
+- Extend a CDS View
+- Associations in CDS View
+- Currency/Unit Conversion in CDS Views
+- Expressions & Operations in CDS Views
+- CDS Table Function
+- CDS View Entity
+- CDS View mapped to OData Service
+- CDS View with OData.Publish
+- CDS View BOPF
+- Virtual Elements in CDS
+- Union in CDS
