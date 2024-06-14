@@ -96,3 +96,38 @@ SAP learnings and projects
 - CDS View BOPF
 - Virtual Elements in CDS
 - Union in CDS
+
+## [RAP Model](https://discoveringabap.com/abap-rap-model/)
+
+### ABAP RESTful Application Programming Model
+- Introduction
+- Managed Scenario
+- Create Fiori Element App from RAP Service – Managed Scenario
+- Unmanaged Scenario Part 1
+- Unmanaged Scenario Part 2
+- Unmanaged Scenario Part 3
+- Create Fiori Element App from RAP Service – Unmanaged Scenario
+- RAP Generator Wizard
+- Travel Service – Use demo generator to create a Travel Service
+- Travel Service – Generated Objects
+- Travel Service – Annotations for List Page
+- Travel Service – Annotations for Object Page
+- Travel Service – Annotations for adding associated entity table
+- Travel Service – Understanding CDS Entities
+- Travel Service – Behavior Definition
+- Travel Service – Miscellaneous Improvements
+- Managed with unmanaged save
+- Custom Entity
+- Application with Editable List Report
+- Field Validations & Prechecks
+- Adding fields to existing custom service
+- Determinations and Side Effects
+- Actions and Feature Control
+- External Numbering and Managed Early Numbering
+- Unmanaged Early Numbering
+- Unmanaged Late Numbering
+- Concurrency Control
+- Authorization Control
+- Determine Actions
+- Behavior Implementation Class
+- Naming Conventions for Development Objects
