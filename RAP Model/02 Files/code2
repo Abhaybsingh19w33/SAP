@@ -557,4 +557,495 @@ define service ZUI_YNY_RAP_BOOK_T2_O4 provider contracts odata_v4_ui {
   expose ZC_YNY_RAP_BOOK_T2;
 }
 
- 
+managed implementation in class ZBP_R_YNY_RAP_BOOK_T2 unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_YNY_RAP_BOOK_T2 alias ZrYnyRapBookT2
+persistent table zyny_rap_book_t2
+draft table zyny_rap_book_d
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+early numbering
+{
+  field ( readonly )
+  TravelId;
+
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LocalLastChangedBy,
+  LocalLastChangedAt,
+  LastChangedAt;
+
+  create;
+  update;
+  delete;
+
+  determination setStatusToOpen on modify { create; }
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for zyny_rap_book_t2
+    {
+      TravelId           = travel_id;
+      AgencyId           = agency_id;
+      CustomerId         = customer_id;
+      BeginDate          = begin_date;
+      EndDate            = end_date;
+      BookingFee         = booking_fee;
+      TotalPrice         = total_price;
+      CurrencyCode       = currency_code;
+      Description        = description;
+      OverallStatus      = overall_status;
+      Attachment         = attachment;
+      MimeType           = mime_type;
+      FileName           = file_name;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+}
+
+CLASS lhc_zr_yny_rap_book_t2 DEFINITION INHERITING FROM cl_abap_behavior_handler.
+  PRIVATE SECTION.
+    CONSTANTS:
+      BEGIN OF travel_status,
+        open     TYPE c LENGTH 1 VALUE 'O', "Open
+        accepted TYPE c LENGTH 1 VALUE 'A', "Accepted
+        rejected TYPE c LENGTH 1 VALUE 'X', "Rejected
+      END OF travel_status.
+
+    METHODS:
+      get_global_authorizations FOR GLOBAL AUTHORIZATION
+        IMPORTING
+        REQUEST requested_authorizations FOR ZrYnyRapBookT2
+        RESULT result,
+      earlynumbering_create FOR NUMBERING
+        IMPORTING entities FOR CREATE ZrYnyRapBookT2,
+      setStatusToOpen FOR DETERMINE ON MODIFY
+        IMPORTING keys FOR ZrYnyRapBookT2~setStatusToOpen.
+ENDCLASS.
+
+CLASS lhc_zr_yny_rap_book_t2 IMPLEMENTATION.
+  METHOD get_global_authorizations.
+  ENDMETHOD.
+  METHOD earlynumbering_create.
+    DATA:
+      entity           TYPE STRUCTURE FOR CREATE zr_yny_rap_book_t2,
+      travel_id_max    TYPE /dmo/travel_id,
+      " change to abap_false if you get the ABAP Runtime error 'BEHAVIOR_ILLEGAL_STATEMENT'
+      use_number_range TYPE abap_bool VALUE abap_false.
+
+    "Ensure Travel ID is not set yet (idempotent)- must be checked when BO is draft-enabled
+    LOOP AT entities INTO entity WHERE TravelID IS NOT INITIAL.
+      APPEND CORRESPONDING #( entity ) TO mapped-zrynyrapbookt2.
+    ENDLOOP.
+
+    DATA(entities_wo_travelid) = entities.
+    "Remove the entries with an existing Travel ID
+    DELETE entities_wo_travelid WHERE TravelID IS NOT INITIAL.
+
+    IF use_number_range = abap_true.
+      "Get numbers
+      TRY.
+          cl_numberrange_runtime=>number_get(
+            EXPORTING
+              nr_range_nr       = '01'
+              object            = '/DMO/TRV_M'
+              quantity          = CONV #( lines( entities_wo_travelid ) )
+            IMPORTING
+              number            = DATA(number_range_key)
+              returncode        = DATA(number_range_return_code)
+              returned_quantity = DATA(number_range_returned_quantity)
+          ).
+        CATCH cx_number_ranges INTO DATA(lx_number_ranges).
+          LOOP AT entities_wo_travelid INTO entity.
+            APPEND VALUE #(  %cid      = entity-%cid
+                             %key      = entity-%key
+                             %is_draft = entity-%is_draft
+                             %msg      = lx_number_ranges
+                          ) TO reported-zrynyrapbookt2.
+            APPEND VALUE #(  %cid      = entity-%cid
+                             %key      = entity-%key
+                             %is_draft = entity-%is_draft
+                          ) TO failed-zrynyrapbookt2.
+          ENDLOOP.
+          EXIT.
+      ENDTRY.
+
+      "determine the first free travel ID from the number range
+      travel_id_max = number_range_key - number_range_returned_quantity.
+    ELSE.
+      "determine the first free travel ID without number range
+      "Get max travel ID from active table
+      SELECT SINGLE FROM zyny_rap_book_t2 FIELDS MAX( travel_id ) AS travelID INTO @travel_id_max.
+      "Get max travel ID from draft table
+      SELECT SINGLE FROM zyny_rap_book_d FIELDS MAX( travelid ) INTO @DATA(max_travelid_draft).
+      IF max_travelid_draft > travel_id_max.
+        travel_id_max = max_travelid_draft.
+      ENDIF.
+    ENDIF.
+
+    "Set Travel ID for new instances w/o ID
+    LOOP AT entities_wo_travelid INTO entity.
+      travel_id_max += 1.
+      entity-TravelID = travel_id_max.
+
+      APPEND VALUE #( %cid      = entity-%cid
+                      %key      = entity-%key
+                      %is_draft = entity-%is_draft
+                    ) TO mapped-zrynyrapbookt2.
+    ENDLOOP.
+
+  ENDMETHOD.
+
+  METHOD setStatusToOpen.
+    "Read travel instances of the transferred keys
+    READ ENTITIES OF ZR_YNY_RAP_BOOK_T2 IN LOCAL MODE
+     ENTITY ZrYnyRapBookT2
+       FIELDS ( OverallStatus )
+       WITH CORRESPONDING #( keys )
+     RESULT DATA(travels)
+     FAILED DATA(read_failed).
+
+    "If overall travel status is already set, do nothing, i.e. remove such instances
+    DELETE travels WHERE OverallStatus IS NOT INITIAL.
+    CHECK travels IS NOT INITIAL.
+
+    "else set overall travel status to open ('O')
+    MODIFY ENTITIES OF ZR_YNY_RAP_BOOK_T2 IN LOCAL MODE
+      ENTITY ZrYnyRapBookT2
+        UPDATE SET FIELDS
+        WITH VALUE #( FOR travel IN travels ( %tky    = travel-%tky
+                                              OverallStatus = travel_status-open ) )
+    REPORTED DATA(update_reported).
+
+    "Set the changing parameter
+    reported = CORRESPONDING #( DEEP update_reported ).
+
+  ENDMETHOD.
+
+ENDCLASS.
+
+managed implementation in class ZBP_R_YNY_RAP_BOOK_T2 unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_YNY_RAP_BOOK_T2 alias ZrYnyRapBookT2
+persistent table zyny_rap_book_t2
+draft table zyny_rap_book_d
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+early numbering
+{
+  field ( mandatory )
+  CustomerID,
+  BeginDate,
+  EndDate;
+
+  field ( readonly )
+  TravelId;
+
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LocalLastChangedBy,
+  LocalLastChangedAt,
+  LastChangedAt;
+
+  create;
+  update;
+  delete;
+
+  determination setStatusToOpen on modify { create; }
+
+  validation validateCustomer on save { create; field CustomerID; }
+  validation validateDates on save { create; field BeginDate, EndDate; }
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare
+  {
+    validation validateCustomer;
+    validation validateDates; }
+
+
+  mapping for zyny_rap_book_t2
+    {
+      TravelId           = travel_id;
+      AgencyId           = agency_id;
+      CustomerId         = customer_id;
+      BeginDate          = begin_date;
+      EndDate            = end_date;
+      BookingFee         = booking_fee;
+      TotalPrice         = total_price;
+      CurrencyCode       = currency_code;
+      Description        = description;
+      OverallStatus      = overall_status;
+      Attachment         = attachment;
+      MimeType           = mime_type;
+      FileName           = file_name;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+}
+
+CLASS lhc_zr_yny_rap_book_t2 DEFINITION INHERITING FROM cl_abap_behavior_handler.
+  PRIVATE SECTION.
+    CONSTANTS:
+      BEGIN OF travel_status,
+        open     TYPE c LENGTH 1 VALUE 'O', "Open
+        accepted TYPE c LENGTH 1 VALUE 'A', "Accepted
+        rejected TYPE c LENGTH 1 VALUE 'X', "Rejected
+      END OF travel_status.
+
+    METHODS:
+      get_global_authorizations FOR GLOBAL AUTHORIZATION
+        IMPORTING
+        REQUEST requested_authorizations FOR ZrYnyRapBookT2
+        RESULT result,
+      earlynumbering_create FOR NUMBERING
+        IMPORTING entities FOR CREATE ZrYnyRapBookT2,
+      setStatusToOpen FOR DETERMINE ON MODIFY
+        IMPORTING keys FOR ZrYnyRapBookT2~setStatusToOpen,
+      validateCustomer FOR VALIDATE ON SAVE
+            IMPORTING keys FOR ZrYnyRapBookT2~validateCustomer.
+
+          METHODS validateDates FOR VALIDATE ON SAVE
+            IMPORTING keys FOR ZrYnyRapBookT2~validateDates.
+ENDCLASS.
+
+CLASS lhc_zr_yny_rap_book_t2 IMPLEMENTATION.
+  METHOD get_global_authorizations.
+  ENDMETHOD.
+  METHOD earlynumbering_create.
+    DATA:
+      entity           TYPE STRUCTURE FOR CREATE zr_yny_rap_book_t2,
+      travel_id_max    TYPE /dmo/travel_id,
+      " change to abap_false if you get the ABAP Runtime error 'BEHAVIOR_ILLEGAL_STATEMENT'
+      use_number_range TYPE abap_bool VALUE abap_false.
+
+    "Ensure Travel ID is not set yet (idempotent)- must be checked when BO is draft-enabled
+    LOOP AT entities INTO entity WHERE TravelID IS NOT INITIAL.
+      APPEND CORRESPONDING #( entity ) TO mapped-zrynyrapbookt2.
+    ENDLOOP.
+
+    DATA(entities_wo_travelid) = entities.
+    "Remove the entries with an existing Travel ID
+    DELETE entities_wo_travelid WHERE TravelID IS NOT INITIAL.
+
+    IF use_number_range = abap_true.
+      "Get numbers
+      TRY.
+          cl_numberrange_runtime=>number_get(
+            EXPORTING
+              nr_range_nr       = '01'
+              object            = '/DMO/TRV_M'
+              quantity          = CONV #( lines( entities_wo_travelid ) )
+            IMPORTING
+              number            = DATA(number_range_key)
+              returncode        = DATA(number_range_return_code)
+              returned_quantity = DATA(number_range_returned_quantity)
+          ).
+        CATCH cx_number_ranges INTO DATA(lx_number_ranges).
+          LOOP AT entities_wo_travelid INTO entity.
+            APPEND VALUE #(  %cid      = entity-%cid
+                             %key      = entity-%key
+                             %is_draft = entity-%is_draft
+                             %msg      = lx_number_ranges
+                          ) TO reported-zrynyrapbookt2.
+            APPEND VALUE #(  %cid      = entity-%cid
+                             %key      = entity-%key
+                             %is_draft = entity-%is_draft
+                          ) TO failed-zrynyrapbookt2.
+          ENDLOOP.
+          EXIT.
+      ENDTRY.
+
+      "determine the first free travel ID from the number range
+      travel_id_max = number_range_key - number_range_returned_quantity.
+    ELSE.
+      "determine the first free travel ID without number range
+      "Get max travel ID from active table
+      SELECT SINGLE FROM zyny_rap_book_t2 FIELDS MAX( travel_id ) AS travelID INTO @travel_id_max.
+      "Get max travel ID from draft table
+      SELECT SINGLE FROM zyny_rap_book_d FIELDS MAX( travelid ) INTO @DATA(max_travelid_draft).
+      IF max_travelid_draft > travel_id_max.
+        travel_id_max = max_travelid_draft.
+      ENDIF.
+    ENDIF.
+
+    "Set Travel ID for new instances w/o ID
+    LOOP AT entities_wo_travelid INTO entity.
+      travel_id_max += 1.
+      entity-TravelID = travel_id_max.
+
+      APPEND VALUE #( %cid      = entity-%cid
+                      %key      = entity-%key
+                      %is_draft = entity-%is_draft
+                    ) TO mapped-zrynyrapbookt2.
+    ENDLOOP.
+
+  ENDMETHOD.
+
+  METHOD setStatusToOpen.
+    "Read travel instances of the transferred keys
+    READ ENTITIES OF ZR_YNY_RAP_BOOK_T2 IN LOCAL MODE
+     ENTITY ZrYnyRapBookT2
+       FIELDS ( OverallStatus )
+       WITH CORRESPONDING #( keys )
+     RESULT DATA(travels)
+     FAILED DATA(read_failed).
+
+    "If overall travel status is already set, do nothing, i.e. remove such instances
+    DELETE travels WHERE OverallStatus IS NOT INITIAL.
+    CHECK travels IS NOT INITIAL.
+
+    "else set overall travel status to open ('O')
+    MODIFY ENTITIES OF ZR_YNY_RAP_BOOK_T2 IN LOCAL MODE
+      ENTITY ZrYnyRapBookT2
+        UPDATE SET FIELDS
+        WITH VALUE #( FOR travel IN travels ( %tky    = travel-%tky
+                                              OverallStatus = travel_status-open ) )
+    REPORTED DATA(update_reported).
+
+    "Set the changing parameter
+    reported = CORRESPONDING #( DEEP update_reported ).
+
+  ENDMETHOD.
+
+**********************************************************************
+* Validation: Check the validity of the entered customer data
+**********************************************************************
+  METHOD validateCustomer.
+      "read relevant travel instance data
+      READ ENTITIES OF ZR_YNY_RAP_BOOK_T2 IN LOCAL MODE
+      ENTITY ZrYnyRapBookT2
+       FIELDS ( CustomerID )
+       WITH CORRESPONDING #( keys )
+      RESULT DATA(travels).
+
+      DATA customers TYPE SORTED TABLE OF /dmo/customer WITH UNIQUE KEY customer_id.
+
+      "optimization of DB select: extract distinct non-initial customer IDs
+      customers = CORRESPONDING #( travels DISCARDING DUPLICATES MAPPING customer_id = customerID EXCEPT * ).
+      DELETE customers WHERE customer_id IS INITIAL.
+      IF customers IS NOT INITIAL.
+
+        "check if customer ID exists
+        SELECT FROM /dmo/customer FIELDS customer_id
+                                  FOR ALL ENTRIES IN @customers
+                                  WHERE customer_id = @customers-customer_id
+          INTO TABLE @DATA(valid_customers).
+      ENDIF.
+
+      "raise msg for non existing and initial customer id
+      LOOP AT travels INTO DATA(travel).
+
+        APPEND VALUE #(  %tky                 = travel-%tky
+                         %state_area          = 'VALIDATE_CUSTOMER'
+                       ) TO reported-zrynyrapbookt2.
+
+        IF travel-CustomerID IS  INITIAL.
+          APPEND VALUE #( %tky = travel-%tky ) TO failed-zrynyrapbookt2.
+
+          APPEND VALUE #( %tky                = travel-%tky
+                          %state_area         = 'VALIDATE_CUSTOMER'
+                          %msg                = NEW /dmo/cm_flight_messages(
+                                                                  textid   = /dmo/cm_flight_messages=>enter_customer_id
+                                                                  severity = if_abap_behv_message=>severity-error )
+                          %element-CustomerID = if_abap_behv=>mk-on
+                        ) TO reported-zrynyrapbookt2.
+
+        ELSEIF travel-CustomerID IS NOT INITIAL AND NOT line_exists( valid_customers[ customer_id = travel-CustomerID ] ).
+          APPEND VALUE #(  %tky = travel-%tky ) TO failed-zrynyrapbookt2.
+
+          APPEND VALUE #(  %tky                = travel-%tky
+                           %state_area         = 'VALIDATE_CUSTOMER'
+                           %msg                = NEW /dmo/cm_flight_messages(
+                                                                  customer_id = travel-customerid
+                                                                  textid      = /dmo/cm_flight_messages=>customer_unkown
+                                                                  severity    = if_abap_behv_message=>severity-error )
+                           %element-CustomerID = if_abap_behv=>mk-on
+                        ) TO reported-zrynyrapbookt2.
+        ENDIF.
+
+      ENDLOOP.
+  ENDMETHOD.
+
+**********************************************************************
+* Validation: Check the validity of begin and end dates
+**********************************************************************
+  METHOD validateDates.
+
+    READ ENTITIES OF ZR_YNY_RAP_BOOK_T2 IN LOCAL MODE
+      ENTITY ZrYnyRapBookT2
+        FIELDS (  BeginDate EndDate TravelID )
+        WITH CORRESPONDING #( keys )
+      RESULT DATA(travels).
+
+    LOOP AT travels INTO DATA(travel).
+
+      APPEND VALUE #(  %tky               = travel-%tky
+                       %state_area        = 'VALIDATE_DATES' ) TO reported-zrynyrapbookt2.
+
+      IF travel-BeginDate IS INITIAL.
+        APPEND VALUE #( %tky = travel-%tky ) TO failed-zrynyrapbookt2.
+
+        APPEND VALUE #( %tky               = travel-%tky
+                        %state_area        = 'VALIDATE_DATES'
+                         %msg              = NEW /dmo/cm_flight_messages(
+                                                                textid   = /dmo/cm_flight_messages=>enter_begin_date
+                                                                severity = if_abap_behv_message=>severity-error )
+                      %element-BeginDate = if_abap_behv=>mk-on ) TO reported-zrynyrapbookt2.
+      ENDIF.
+      IF travel-BeginDate < cl_abap_context_info=>get_system_date( ) AND travel-BeginDate IS NOT INITIAL.
+        APPEND VALUE #( %tky               = travel-%tky ) TO failed-zrynyrapbookt2.
+
+        APPEND VALUE #( %tky               = travel-%tky
+                        %state_area        = 'VALIDATE_DATES'
+                         %msg              = NEW /dmo/cm_flight_messages(
+                                                                begin_date = travel-BeginDate
+                                                                textid     = /dmo/cm_flight_messages=>begin_date_on_or_bef_sysdate
+                                                                severity   = if_abap_behv_message=>severity-error )
+                        %element-BeginDate = if_abap_behv=>mk-on ) TO reported-zrynyrapbookt2.
+      ENDIF.
+      IF travel-EndDate IS INITIAL.
+        APPEND VALUE #( %tky = travel-%tky ) TO failed-zrynyrapbookt2.
+
+        APPEND VALUE #( %tky               = travel-%tky
+                        %state_area        = 'VALIDATE_DATES'
+                         %msg                = NEW /dmo/cm_flight_messages(
+                                                                textid   = /dmo/cm_flight_messages=>enter_end_date
+                                                               severity = if_abap_behv_message=>severity-error )
+                        %element-EndDate   = if_abap_behv=>mk-on ) TO reported-zrynyrapbookt2.
+      ENDIF.
+      IF travel-EndDate < travel-BeginDate AND travel-BeginDate IS NOT INITIAL
+                                           AND travel-EndDate IS NOT INITIAL.
+        APPEND VALUE #( %tky = travel-%tky ) TO failed-zrynyrapbookt2.
+
+        APPEND VALUE #( %tky               = travel-%tky
+                        %state_area        = 'VALIDATE_DATES'
+                        %msg               = NEW /dmo/cm_flight_messages(
+                                                                textid     = /dmo/cm_flight_messages=>begin_date_bef_end_date
+                                                                begin_date = travel-BeginDate
+                                                                end_date   = travel-EndDate
+                                                                severity   = if_abap_behv_message=>severity-error )
+                        %element-BeginDate = if_abap_behv=>mk-on
+                        %element-EndDate   = if_abap_behv=>mk-on ) TO reported-zrynyrapbookt2.
+      ENDIF.
+    ENDLOOP.
+  ENDMETHOD.
+ENDCLASS.
