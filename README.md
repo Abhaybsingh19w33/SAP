@@ -131,3 +131,9 @@ SAP learnings and projects
 - Determine Actions
 - Behavior Implementation Class
 - Naming Conventions for Development Objects
+
+Links 
+
+[abap-platform-refscen-flight](https://github.com/SAP-samples/abap-platform-refscen-flight?tab=coc-ov-file)
+
+[Create Database Table and Generate UI Service](https://developers.sap.com/tutorials/abap-environment-rap100-generate-ui-service.html)

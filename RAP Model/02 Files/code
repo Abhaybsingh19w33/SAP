@@ -1,0 +1,115 @@
+managed implementation in class zbp_zyny_rap_book unique;
+strict ( 2 );
+
+define behavior for ZYNY_RAP_BOOK //alias <alias_name>
+persistent table zyny_rap_book_t
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Travel_Id, Booking_Id;
+}
+
+
+@EndUserText.label : 'Travel Booking Table'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zyny_rap_book_t {
+
+  key client     : abap.clnt not null;
+  key travel_id  : /dmo/travel_id not null;
+  key booking_id : /dmo/booking_id not null;
+  booking_date   : /dmo/booking_date;
+  customer_id    : /dmo/customer_id;
+  carrier_id     : /dmo/carrier_id;
+  connection_id  : /dmo/connection_id;
+  flight_date    : /dmo/flight_date;
+  @Semantics.amount.currencyCode : 'zyny_rap_book_t.currency_code'
+  flight_price   : /dmo/flight_price;
+  currency_code  : /dmo/currency_code;
+
+}
+
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'Root View for ZYNY_RAP_BOOK_T Table'
+@Metadata.allowExtensions: true
+define root view entity ZYNY_RAP_BOOK
+  as select from zyny_rap_book_t
+{
+  key travel_id     as Travel_Id,
+  key booking_id    as Booking_Id,
+      booking_date  as Booking_Date,
+      customer_id   as Customer_Id,
+      carrier_id    as Carrier_Id,
+      connection_id as Connection_Id,
+      flight_date   as Flight_Date,
+      flight_price  as Flight_Price,
+      currency_code as Currency_Code
+}
+
+
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Booking',
+                typeNamePlural: 'Bookings',
+                title: { type: #STANDARD, label: 'Travel', value: 'Booking_ID' } }
+              }
+annotate view ZYNY_RAP_BOOK with
+{
+  @UI.facet: [ { id:              'Travel',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Booking',
+                 position:        10 } ]
+  @UI: {  lineItem:       [ { position: 10 } ],
+          identification: [ { position: 10 } ],
+          selectionField: [ { position: 10 } ] }
+  travel_id;
+  @UI: {  lineItem:       [ { position: 20 } ],
+          identification: [ { position: 20 } ],
+          selectionField: [ { position: 20 } ] }
+  booking_id;
+  @UI: {  lineItem:       [ { position: 30 } ] ,
+          identification: [ { position: 30 } ]}
+  booking_date;
+  @UI: {  lineItem:       [ { position: 40 } ] ,
+          identification: [ { position: 40 } ]}
+  customer_id;
+  @UI: {  lineItem:       [ { position: 50 } ] ,
+          identification: [ { position: 50 } ]}
+  carrier_id;
+  @UI: {  lineItem:       [ { position: 60 } ] ,
+          identification: [ { position: 60 } ]}
+  connection_id;
+  @UI: {  lineItem:       [ { position: 70 } ] ,
+          identification: [ { position: 70 } ]}
+  flight_date;
+  @UI: {  lineItem:       [ { position: 80 } ] ,
+          identification: [ { position: 80 } ]}
+  flight_price;
+  @UI: {  lineItem:       [ { position: 90 } ] ,
+          identification: [ { position: 90 } ]}
+  currency_code;
+
+}
+
+managed;
+
+define behavior for ZYNY_RAP_BOOK
+persistent table zyny_rap_book_t
+lock master
+{
+  create;
+  update;
+  delete;
+}
+
+@EndUserText.label: 'Service Definition for Booking CDS view'
+define service ZYNY_UI_RAP_BOOK {
+  expose ZYNY_RAP_BOOK;
+}
