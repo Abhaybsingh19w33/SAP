@@ -134,6 +134,8 @@ SAP learnings and projects
 
 Links 
 
-[abap-platform-refscen-flight](https://github.com/SAP-samples/abap-platform-refscen-flight?tab=coc-ov-file)
+[Build an SAP Fiori App Using the ABAP RESTful Application Programming Model [RAP100]](https://developers.sap.com/mission.sap-fiori-abap-rap100.html)
 
-[Create Database Table and Generate UI Service](https://developers.sap.com/tutorials/abap-environment-rap100-generate-ui-service.html)
+[ABAP RESTful Application Programming Model (RAP)](https://pages.community.sap.com/topics/abap/rap)
+
+[abap-platform-refscen-flight](https://github.com/SAP-samples/abap-platform-refscen-flight?tab=coc-ov-file)
