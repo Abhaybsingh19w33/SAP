@@ -139,3 +139,47 @@ Links
 [ABAP RESTful Application Programming Model (RAP)](https://pages.community.sap.com/topics/abap/rap)
 
 [abap-platform-refscen-flight](https://github.com/SAP-samples/abap-platform-refscen-flight?tab=coc-ov-file)
+
+
+# Sales & Distibution Module 
+https://www.udemy.com/course/sap-sd-training/
+
+
+# To Do
+
+Python
+	
+https://degreed.com/pathway/3pmvev2qpn/pathway
+	
+NodeJS
+	
+https://degreed.com/pathway/w9dwkwzkpj/pathway
+
+JavaScript
+	
+https://degreed.com/pathway/k9wmz1y784/pathway
+
+
+React
+	
+https://degreed.com/pathway/08q77mx49r/pathway
+
+
+SAP BTP in a Nutshell
+	
+https://open.sap.com/courses/btp1
+
+
+Discover SAP BTP
+	
+https://learning.sap.com/learning-journey/discover-sap-business-technology-platform
+
+
+Introduction to SAP BTP
+	
+https://blogs.sap.com/2021/12/01/sap-business-technology-platform/
+	
+Neo Vs Cloud Foundry
+	
+https://blogs.sap.com/2019/02/24/sap-cloud-platform-environment-cloud-foundry-vs-neo/
+	
