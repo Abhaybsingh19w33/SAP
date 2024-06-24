@@ -228,26 +228,27 @@ Now delivery is completed
  
 ## Billing – Invoices
 
- 
+![alt text](image-61.png)
+![alt text](image-62.png)
+![alt text](image-63.png)
+![alt text](image-64.png)
+![alt text](image-65.png)
+![alt text](image-66.png)
+![alt text](image-67.png)
+![alt text](image-68.png)
+![alt text](image-69.png)
+![alt text](image-70.png)
 
+## Master Data
  
+![alt text](image-71.png)
+![alt text](image-72.png)
+![alt text](image-73.png)
+![alt text](image-74.png)
+![alt text](image-75.png)
+![alt text](image-76.png)
 
-   
- 
- 
- 
- 
- 
- 
- 
-Master Data
- 
- 
- 
- 
- 
- 
-Customer master
+## Customer master
  
  
  
