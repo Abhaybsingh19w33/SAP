@@ -277,76 +277,112 @@ CLICK ON THE SALES AREA DATA
 
 Delivery priority as name suggest
 
+![alt text](image-95.png)
  
 Order combination – If the date and place of delivery is same it can combine both line items of different order in single delivery
 Complete delivery -  no partial delivery will be accepted
  
+![alt text](image-96.png)
+
 Tolerance – if customer is okay with delivery of little less or more quantity than the ordered quantity. The customer will be billed for delivery quantity. And if there is remaining quantity another order needs to be placed.
  
+![alt text](image-97.png)
+
 InvoicingDates – this will invoice the customer over a period link weekly, monthly, etc
 
 InvoicingLIstDates – this will combine all the invoices of a period link weekly or monthly  into one document
  
+![alt text](image-98.png)
+
 Tax classification – how to tax the customer – need to ask FICO consultant for this info
 
 Save the sales view
+
+![alt text](image-99.png)
  
 Tcode -FD01
  
-  
- 
+![alt text](image-100.png)
+![alt text](image-101.png)
+![alt text](image-102.png)
+![alt text](image-103.png)
+
 Now extending the view
 
 VD02
+
+![alt text](image-104.png)
  
 Here customer data is extended for Germany company code – 1000
 To extend it for USA – 3000
- 
+
+![alt text](image-105.png)
+
 Here address is already present in master data so it does not need to fill it again
 We just have to enter the shipping and billing data here according to USA
 
- 
- 
+![alt text](image-106.png)
+![alt text](image-107.png)
+![alt text](image-108.png)
  
 Now creating new customer with reference
  
- 
- 
+![alt text](image-109.png)
+![alt text](image-110.png)
+![alt text](image-111.png)
+
 Tcode -VD02
- 
+
+![alt text](image-112.png)
+
 MADE CHANGES HERE
  
- 
- 
+![alt text](image-113.png)
+![alt text](image-114.png)
+![alt text](image-115.png)
+
 Double click on it
- 
+
+![alt text](image-116.png)
+![alt text](image-117.png)
  
 Go to general data for this.
 We can customize this using CMOD 
- 
-Material Master
+
+![alt text](image-118.png)
+
+## Material Master
+
 MM01
- 
- 
- 
- 
- 
- 
- 
- 
+
+![alt text](image-119.png) 
+![alt text](image-120.png)
+![alt text](image-121.png)
+![alt text](image-122.png)
+![alt text](image-123.png)
+![alt text](image-124.png)
+![alt text](image-125.png)
+![alt text](image-126.png)
+
 Older material number – refers to the same material but from older system
  
- 
- 
+![alt text](image-127.png)
+![alt text](image-128.png)
+![alt text](image-129.png)
+![alt text](image-130.png)
  
 Here we can categories the same materials on different basis size, processor, type etc.
  
- 
+![alt text](image-131.png)
+![alt text](image-132.png)
+
 Hierarchy could be made like 5 – 5 – 8 structure, this is 3 level or it can be made by dividing differently 5- 3 - 3 - 3 – 4 it 5 levels
  
- 
- 
- 
+![alt text](image-133.png)
+![alt text](image-134.png)
+![alt text](image-135.png)
+![alt text](image-136.png)
+
 Sales Order Deep Dive
   
   
