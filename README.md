@@ -3,6 +3,7 @@ SAP learnings and projects
 
 ## Reference
 - [SAP ABAP RAP](https://help.sap.com/doc/abapdocu_754_index_htm/7.54/en-US/index.htm?file=abennews-754-restful.htm)
+- [Embedded CDS View exposure to Fiori](https://community.sap.com/t5/technology-blogs-by-members/embedded-cds-view-exposure-to-fiori/ba-p/13397811)
 
 ## [ABAP Expressions (7.4+)](https://discoveringabap.com/abap-7-4-syntaxes-abap-expressions/)
 
