@@ -1,6 +1,9 @@
 # SAP
 SAP learnings and projects
 
+## Reference
+- [SAP ABAP RAP](https://help.sap.com/doc/abapdocu_754_index_htm/7.54/en-US/index.htm?file=abennews-754-restful.htm)
+
 ## [ABAP Expressions (7.4+)](https://discoveringabap.com/abap-7-4-syntaxes-abap-expressions/)
 
 ## New Syntax learnings
