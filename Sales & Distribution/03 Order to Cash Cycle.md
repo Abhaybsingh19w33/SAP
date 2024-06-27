@@ -384,16 +384,22 @@ Hierarchy could be made like 5 – 5 – 8 structure, this is 3 level or it can 
 ![alt text](image-136.png)
 
 Sales Order Deep Dive
-  
-  
-   
- 
- 
- 
- 
- 
- 
- 
+
+![alt text](image-137.png)
+![alt text](image-138.png)
+![alt text](image-139.png)
+![alt text](image-140.png)
+![alt text](image-141.png)
+![alt text](image-142.png)
+![alt text](image-143.png)
+![alt text](image-144.png)
+![alt text](image-145.png)
+![alt text](image-146.png)
+![alt text](image-147.png)
+![alt text](image-148.png)
+![alt text](image-149.png)
+![alt text](image-150.png)
+![alt text](image-151.png)
  
 CO OP -BUYER – HELP TO GET THE BETTER DEAL
  
