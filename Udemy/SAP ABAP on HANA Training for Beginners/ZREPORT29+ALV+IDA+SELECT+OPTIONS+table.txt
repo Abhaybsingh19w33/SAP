@@ -1,0 +1,56 @@
+*&---------------------------------------------------------------------*
+*& Report zreport29
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zreport29.
+
+"data: lo_range_collector type ref to cl_salv_range_tab_collector.
+
+"create object lo_range_collector.
+tables scarr.
+
+data(lo_range_collector) = new cl_salv_range_tab_collector( ).
+
+select-options: s_carrid for scarr-carrid,
+                s_curr for scarr-currcode.
+
+lo_range_collector->ADD_RANGES_FOR_NAME(
+  exporting
+    IV_NAME   = 'CARRID'
+    IT_RANGES = s_carrid[]
+).
+
+lo_range_collector->ADD_RANGES_FOR_NAME(
+  exporting
+    IV_NAME   = 'CURRCODE'
+    IT_RANGES = s_curr[]
+).
+
+lo_range_collector->GET_COLLECTED_RANGES(
+  importing
+    ET_NAMED_RANGES = data(it_select_option)
+).
+
+data(lo_salv) = cl_salv_gui_table_ida=>CREATE(
+                    IV_TABLE_NAME                  = 'SCARR'
+*                    IO_GUI_CONTAINER               =
+*                    IO_CALC_FIELD_HANDLER          =
+                )
+*                  catch CX_SALV_DB_CONNECTION.  "
+*                  catch CX_SALV_DB_TABLE_NOT_SUPPORTED.  "
+*                  catch CX_SALV_IDA_CONTRACT_VIOLATION.  "
+.
+
+lo_salv->SET_SELECT_OPTIONS(
+  exporting
+    IT_RANGES                     =  it_select_option
+*    IO_CONDITION                  =
+).
+*  catch CX_SALV_IDA_ASSOCIATE_INVALID.    "
+*  catch CX_SALV_DB_CONNECTION.    "
+*  catch CX_SALV_IDA_CONDITION_INVALID.    "
+*  catch CX_SALV_IDA_UNKNOWN_NAME.    "
+
+lo_salv->FULLSCREEN( )->DISPLAY( ).
+*  catch CX_SALV_IDA_CONTRACT_VIOLATION.    "

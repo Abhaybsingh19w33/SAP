@@ -1,0 +1,23 @@
+*&---------------------------------------------------------------------*
+*& Report zreport24
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zreport24.
+
+data: lo_salv type ref to if_salv_gui_table_ida.
+
+      cl_salv_gui_table_ida=>CREATE(
+        exporting
+          IV_TABLE_NAME                  =  'SCARR'   " Name of table for database access
+*          IO_GUI_CONTAINER               =     " Container for ALV display
+*          IO_CALC_FIELD_HANDLER          =     " IDA API: Handler for calculated fields
+        receiving
+          RO_ALV_GUI_TABLE_IDA           =  lo_salv   " ALV with integrated data access (IDA)
+      ).
+*        catch CX_SALV_DB_CONNECTION.    "
+*        catch CX_SALV_DB_TABLE_NOT_SUPPORTED.    "
+*        catch CX_SALV_IDA_CONTRACT_VIOLATION.    "
+
+lo_salv->FULLSCREEN( )->DISPLAY( ).
+*  catch CX_SALV_IDA_CONTRACT_VIOLATION.    "

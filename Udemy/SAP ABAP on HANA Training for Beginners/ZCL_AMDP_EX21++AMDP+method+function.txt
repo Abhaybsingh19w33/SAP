@@ -1,0 +1,30 @@
+class ZCL_AMDP_EX21 definition public.
+
+
+  public section.
+
+interfaces if_amdp_marker_hdb.
+
+class-methods amdp_function for table function ZCDS_DDL_EX20.
+
+ENDCLASS.
+
+
+
+CLASS ZCL_AMDP_EX21 IMPLEMENTATION.
+
+method amdp_function by database function
+                        for hdb
+                        language sqlscript
+                        options read-only
+                        using scarr.
+
+          return select mandt, carrid, carrname, currcode, url from scarr
+                        where mandt = :i_mandt and
+                        contains(carrname, :i_name, fuzzy(0.4));
+
+
+endmethod.
+
+
+ENDCLASS.

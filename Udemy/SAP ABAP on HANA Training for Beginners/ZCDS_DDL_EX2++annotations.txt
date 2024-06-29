@@ -1,0 +1,21 @@
+@AbapCatalog.sqlViewName: 'ZCDS_SQL_EX2'
+@AbapCatalog.compiler.compareFilter: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'annotations'
+//@AbapCatalog.buffering.status:#ACTIVE 
+//@AbapCatalog.buffering.type:#SINGLE
+@ClientDependent:false
+define view ZCDS_DDL_EX2 as 
+select from sbook 
+{
+    carrid as airline_code,
+    connid as flight_number,
+    fldate as flight_date,
+    bookid as booking_number,
+    customid as customer_nummber,
+    @Semantics.amount.currencyCode: 'local_currrency_key'
+    loccuram as local_currency_amount,
+    @Semantics.currencyCode: true
+    loccurkey as local_currrency_key
+} 
+ 

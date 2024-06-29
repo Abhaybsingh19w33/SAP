@@ -1,0 +1,14 @@
+@AbapCatalog.sqlViewName: 'ZISPFLI'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'flight schedule'
+@VDM.viewType: #BASIC
+define view ZI_Spfli
+  as select from spfli
+{
+  key carrid   as Airline,
+  key connid   as FlightNumber,
+      cityfrom as CityFrom,
+      cityto   as CityTo
+}

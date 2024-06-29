@@ -1,0 +1,31 @@
+*&---------------------------------------------------------------------*
+*& Report zcds_ddl_ex10
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zcds_ddl_ex10.
+
+parameters:p_date type datum.
+
+select * from ZCDS_DDL_EX8(
+                           SMOKER_FACTOR =  3,
+                           NON_SMOKER_FACTOR = 2,
+                           FLDAT = @p_date
+                          )
+         into table @data(lt_zcds_ddl_ex8).
+
+         try.
+         CL_SALV_TABLE=>FACTORY(
+           EXPORTING
+             LIST_DISPLAY   = IF_SALV_C_BOOL_SAP=>FALSE    " ALV Displayed in List Mode
+*             R_CONTAINER    =     " Abstract Container for GUI Controls
+*             CONTAINER_NAME =
+           IMPORTING
+             R_SALV_TABLE   =  data(lo_alv)   " Basis Class Simple ALV Tables
+           CHANGING
+             T_TABLE        = lt_zcds_ddl_ex8
+         ).
+           CATCH CX_SALV_MSG.    "
+         endtry.
+
+         lo_alv->DISPLAY( ).

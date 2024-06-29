@@ -1,0 +1,47 @@
+*&---------------------------------------------------------------------*
+*& Report zreport30
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zreport30.
+
+tables scarr.
+
+data(lo_range_collector) = new cl_salv_range_tab_collector( ).
+
+select-options s_carrid for scarr-carrid.
+
+lo_range_collector->ADD_RANGES_FOR_NAME(
+  exporting
+    IV_NAME   = 'AIRLINE_CODE'
+    IT_RANGES =  s_carrid[]
+).
+
+lo_range_collector->GET_COLLECTED_RANGES(
+  importing
+    ET_NAMED_RANGES = data(it_select_option)
+).
+
+data(lo_salv) = cl_salv_gui_table_ida=>CREATE_FOR_CDS_VIEW(
+                    IV_CDS_VIEW_NAME               = 'ZCDS_DDL_EX25'
+*                    IO_GUI_CONTAINER               =
+*                    IO_CALC_FIELD_HANDLER          =
+                )
+*                  catch CX_SALV_DB_CONNECTION.  "
+*                  catch CX_SALV_DB_TABLE_NOT_SUPPORTED.  "
+*                  catch CX_SALV_IDA_CONTRACT_VIOLATION.  "
+*                  catch CX_SALV_FUNCTION_NOT_SUPPORTED.  "
+.
+
+lo_salv->SET_SELECT_OPTIONS(
+  exporting
+     IT_RANGES                     = it_select_option
+*    IO_CONDITION                  =
+).
+*  catch CX_SALV_IDA_ASSOCIATE_INVALID.    "
+*  catch CX_SALV_DB_CONNECTION.    "
+*  catch CX_SALV_IDA_CONDITION_INVALID.    "
+*  catch CX_SALV_IDA_UNKNOWN_NAME.    "
+
+lo_salv->FULLSCREEN( )->DISPLAY( ).
+*  catch CX_SALV_IDA_CONTRACT_VIOLATION.    "

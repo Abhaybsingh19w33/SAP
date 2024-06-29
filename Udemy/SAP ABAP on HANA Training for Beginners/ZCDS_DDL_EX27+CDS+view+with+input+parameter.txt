@@ -1,0 +1,14 @@
+@AbapCatalog.sqlViewName: 'ZCDS_SQL_EX27'
+@EndUserText.label: 'Simple CDS view'
+define view ZCDS_DDL_EX27 
+with parameters p_carrid : s_carrid
+as select 
+from scarr
+{
+   carrid as airline_code,
+   carrname as airline_name,
+   currcode as curr_code,
+   url as website 
+} 
+ 
+ where carrid = :p_carrid

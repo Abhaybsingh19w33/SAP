@@ -1,0 +1,19 @@
+*&---------------------------------------------------------------------*
+*& Report zreport26
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zreport26.
+
+data: lo_salv type ref to if_salv_gui_table_ida.
+
+lo_salv = cl_salv_gui_table_ida=>CREATE_FOR_CDS_VIEW(
+             IV_CDS_VIEW_NAME               =  'ZCDS_DDL_EX25'
+*              IO_GUI_CONTAINER               =
+*              IO_CALC_FIELD_HANDLER          =
+          )
+.
+lo_salv->FULLSCREEN( )->DISPLAY( ).
+
+
+"cl_salv_gui_table_ida=>CREATE_FOR_CDS_VIEW( IV_CDS_VIEW_NAME = 'ZCDS_DDL_EX25')->FULLSCREEN( )->DISPLAY( ).

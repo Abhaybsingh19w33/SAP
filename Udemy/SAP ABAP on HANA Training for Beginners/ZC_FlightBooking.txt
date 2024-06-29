@@ -1,0 +1,35 @@
+@AbapCatalog.sqlViewName:'ZCFLIGHTBOOKING'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'flight booking consumption view for fiori application'
+@VDM.viewType: #CONSUMPTION
+define view ZC_FlightBooking
+  as select from ZI_FlightBooking
+  association [1..1] to ZC_Flights as _flights_hdr on  $projection.Airline      = _flights_hdr.Airline
+                                                   and $projection.FlightNumber = _flights_hdr.FlightNumber
+                                                   and $projection.FlightDate   = _flights_hdr.FlightDate
+{
+      @UI.lineItem.position: 1
+      @EndUserText.label: 'Airline'
+  key Airline,
+      @UI.lineItem.position: 2
+      @EndUserText.label: 'Flight Number'
+  key FlightNumber,
+      @UI.lineItem.position: 3
+      @EndUserText.label: 'Flight Date'
+  key FlightDate,
+      @UI.lineItem.position: 4
+      @EndUserText.label: 'Flight Bokkings'
+  key FlightBooking,
+      @UI.lineItem.position: 5
+      @EndUserText.label: 'Flight Customer'
+      FLightCustomer,
+      @UI.lineItem.position: 6
+      @EndUserText.label: 'Customer Name'
+      CustomerName,
+      @UI.lineItem.position: 7
+      @EndUserText.label: 'CUstomer City'
+      CustomerCity,
+      _flights_hdr // Make association public
+}

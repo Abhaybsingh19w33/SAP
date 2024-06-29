@@ -1,0 +1,34 @@
+*&---------------------------------------------------------------------*
+*& Report zreport35
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zreport35.
+
+DATA:l_carrid TYPE s_carrid,
+     lt_scarr TYPE TABLE OF zcds_ddl_ex34,
+     lv_where  TYPE string.
+
+SELECT-OPTIONS:s_carrid FOR l_carrid.
+
+START-OF-SELECTION.
+  lv_where = cl_shdb_seltab=>combine_seltabs(
+                              EXPORTING it_named_seltabs = VALUE #( ( name = 'CARRID' dref = REF #( s_carrid[] ) ) )
+                                        iv_client_field = 'MANDT').
+
+  SELECT * FROM zcds_ddl_ex34( sel_opt_carrid = @lv_where ) INTO TABLE @lt_scarr.
+
+
+  cl_salv_table=>factory(
+    EXPORTING
+      list_display = if_salv_c_bool_sap=>false    " ALV Displayed in List Mode
+*     R_CONTAINER  =     " Abstract Container for GUI Controls
+*     CONTAINER_NAME =
+    IMPORTING
+      r_salv_table = DATA(lo_alv)  " Basis Class Simple ALV Tables
+    CHANGING
+      t_table      = lt_scarr
+  ).
+*  CATCH CX_SALV_MSG.    "
+
+  lo_alv->display( ).

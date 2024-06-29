@@ -1,0 +1,12 @@
+@AbapCatalog.sqlViewName: 'ZCDS_SQL_EX25'
+@EndUserText.label: 'simple CDS view'
+define view ZCDS_DDL_EX25 as 
+select 
+from scarr
+{
+    carrid as airline_code,
+    carrname as airline_name,
+    currcode as currency,
+    url as website
+} 
+ 

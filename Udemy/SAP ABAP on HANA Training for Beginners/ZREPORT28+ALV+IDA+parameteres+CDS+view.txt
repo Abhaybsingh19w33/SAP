@@ -1,0 +1,16 @@
+*&---------------------------------------------------------------------*
+*& Report zreport28
+*&---------------------------------------------------------------------*
+*&  ALV IDA input parameter CDS view
+*&---------------------------------------------------------------------*
+REPORT zreport28.
+
+parameters: p_carrid type scarr-carrid.
+
+data: lo_salv type ref to if_salv_gui_table_ida.
+
+lo_salv = cl_salv_gui_table_ida=>create_for_cds_view( iv_cds_view_name = 'ZCDS_DDL_EX27').
+
+lo_salv->set_view_parameters( it_parameters = VALUE #( ( name = 'P_CARRID' value = p_carrid ) ) ).
+
+lo_salv->fullscreen( )->display( ).

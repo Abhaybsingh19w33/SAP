@@ -1,0 +1,16 @@
+@AbapCatalog.sqlViewName: 'ZCDS_SQL_EX16'
+@EndUserText.label: 'simple cds view for extend view'
+@AbapCatalog.viewEnhancementCategory: [#PROJECTION_LIST ]
+define view ZCDS_DDL_EX16 as select from sbook  as a
+{
+a.carrid,
+a.connid,
+a.customid,
+a.smoker,
+loccuram,
+ case a.smoker
+ when 'X' then loccuram * 2 
+ else loccuram * 1
+ end as adjusted_amount    
+} 
+ 

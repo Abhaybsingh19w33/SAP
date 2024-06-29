@@ -1,0 +1,15 @@
+@AbapCatalog.sqlViewName: 'ZISBOOK'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'flight booking'
+@VDM.viewType: #BASIC
+define view ZI_Sbook
+  as select from sbook
+{
+  key carrid   as Airline,
+  key connid   as FlightNumber,
+  key fldate   as FlightDate,
+  key bookid   as FlightBooking,
+      customid as FLightCustomer
+}

@@ -1,0 +1,17 @@
+@AbapCatalog.sqlViewName: 'ZCDS_SQL_EX11'
+@EndUserText.label: 'associations'
+define view ZCDS_DDL_EX11 as select from sbook as a
+    association to scustom as _b
+    on a.customid = _b.id  
+   {
+    a.carrid,    
+    a.connid,
+    a.fldate,
+    a.bookid, 
+    a.customid,
+    _b.name,   //_b[id = '00000001'].name, filtered associaion
+    _b.email 
+    } 
+  
+
+ 

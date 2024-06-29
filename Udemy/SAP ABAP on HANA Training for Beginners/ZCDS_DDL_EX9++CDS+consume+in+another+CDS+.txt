@@ -1,0 +1,16 @@
+@AbapCatalog.sqlViewName: 'ZCDS_SQL_EX9'
+@EndUserText.label: 'consuming CDS in another CDS with Input parameters'
+define view ZCDS_DDL_EX9 
+with parameters  
+                fldat : abap.dats
+as select from ZCDS_DDL_EX8( smoker_factor:3, 
+                             non_smoker_factor:2, 
+                             fldat: $parameters.fldat )
+{
+airline,
+amount,
+smoker,
+adjusted_amount,
+fldate
+} 
+ 

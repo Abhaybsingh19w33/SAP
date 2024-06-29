@@ -1,0 +1,10 @@
+@AbapCatalog.sqlViewName: 'ZCDS_SQL_EX13'
+@EndUserText.label: 'path expression CDS DDL'
+define view ZCDS_DDL_EX13 as 
+select from ZCDS_DDL_EX12  as c
+{
+c.carrid,
+c.customid,
+c._b.email,
+c._b.name       
+} 

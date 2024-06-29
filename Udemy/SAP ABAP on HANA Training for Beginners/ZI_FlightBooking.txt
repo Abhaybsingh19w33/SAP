@@ -1,0 +1,24 @@
+@AbapCatalog.sqlViewName: 'ZIFLIGHTBOOKING'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'flight booking'
+@VDM.viewType: #COMPOSITE
+define view ZI_FlightBooking
+  as select from ZI_Sbook
+  association [1..1] to ZI_Scustom as _flight_customer on  $projection.FLightCustomer = _flight_customer.FlightCustomer
+
+  association [1..1] to ZI_Flights as _flights         on  $projection.Airline      = _flights.Airline
+                                                       and $projection.FlightNumber = _flights.FlightNumber
+                                                       and $projection.FlightDate   = _flights.FlightDate
+{
+  key Airline,
+  key FlightNumber,
+  key FlightDate,
+  key FlightBooking,
+      FLightCustomer,
+      _flight_customer.CustomerName,
+      _flight_customer.CustomerCity,
+      _flight_customer,
+      _flights
+}
