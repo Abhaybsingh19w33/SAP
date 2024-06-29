@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function callMe() {
+            alert('Clicked Me');
+        };
+        function callFunction(fn){
+            fn();
+        };
+
+        var greet = function() {
+            alert("hai , How are you, now?");
+        }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="callFunction(function(){
+        alert('Hi and Hello');
+    })">Click Me</button>
+</body>
+
+</html>

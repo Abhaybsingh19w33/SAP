@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+      var person = {
+        firstName : 'John',
+        lastName : 'Doe',
+        interests : ['reading','running','swimming'],
+        getDetail : function(){
+            alert(this.firstName);
+        }
+      };
+    </script>
+</head>
+
+<body>
+    <button onclick="person.getDetail()">Click Me</button>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        
+        function a() {
+            var a1 = 'a1';
+            console.log(a1 + 'from window call');
+            console.log(this);
+        };
+        function b() {
+            var b1 = 'b1';
+            console.log(b1 + 'from window call');
+            console.log(this);
+
+        };
+        window.a();
+        window.b();
+
+    </script>
+</head>
+
+<body>
+    <button>Click Me</button>
+</body>
+
+</html>

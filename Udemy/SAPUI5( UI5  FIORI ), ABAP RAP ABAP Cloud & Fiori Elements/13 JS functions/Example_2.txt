@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function callMe() {
+            alert('Clicked Me');
+        };
+        function callFunction(fn){
+            fn();
+        };
+
+    </script>
+</head>
+
+<body>
+    <button onclick="callFunction(callMe)">Click Me</button>
+</body>
+
+</html>
