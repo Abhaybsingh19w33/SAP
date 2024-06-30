@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8">
+	<title>Our First Application</title>
+	<script id='sap-ui-bootstrap' src='https://sapui5.hana.ondemand.com/resources/sap-ui-core.js'
+		data-sap-ui-theme='sap_bluecrystal' data-sap-ui-libs='sap.m,sap.ui.commons'>
+		</script>
+	<script>
+		sap.ui.getCore().attachInit(function () {
+			var onImagePressed = function (oEvent1) {
+				var oImgID = oEvent1.getSource().getId();
+				if (oImgID === "image1") {
+					alert("image1 is pressed");
+				} else {
+					alert("image2 is pressed");
+				}
+			}
+			var oImage = new sap.m.Image("image1", {
+				src: "images/image1.jpg",
+				press: onImagePressed,
+				width: "100px",
+				height: "100px"
+			});
+			var oImage1 = new sap.m.Image("image2", {
+				src: "images/image1.jpg",
+				press: onImagePressed,
+				width: "100px",
+				height: "100px"
+			});
+			oImage.addStyleClass("sapUiSmallMargin");
+			oImage1.addStyleClass("sapUiSmallMargin");
+
+			var oRadioButton1 = new sap.m.RadioButton({
+				text: "first Radio Button"
+			});
+
+			var oRadioButton2 = new sap.m.RadioButton({
+				text: "Second Radio Button"
+			});
+
+			var oRadioButtonGroup = new sap.m.RadioButtonGroup({
+
+			});
+
+			oRadioButtonGroup.setAggregation("tooltip", "radio Button test tooltip");
+			oRadioButtonGroup.addButton(oRadioButton1);
+			oRadioButtonGroup.addButton(oRadioButton2);
+
+			var oToolBar = new sap.m.Toolbar();
+			oToolBar.addContent(new sap.m.Label({ text: "Radio Buttons Below" }));
+
+			/*	var oForm = new sap.ui.layout.form.SimpleForm({layout:"ResponsiveGridLayout"});
+				oForm.addContent( oToolBar );
+				oForm.addContent( oRadioButtonGroup );
+				*/
+			var oLayout = new sap.ui.layout.Grid({
+				defaultSpan: "XL12 L12 M12 S12",
+				content: [
+					oImage,
+					oImage1,
+					oToolBar,
+					oRadioButtonGroup
+				]
+			});
+			oLayout.placeAt("content");
+		});
+	</script>
+</head>
+
+<body class="sapUiBody sapUiResponsiveMargin" id="content">
+</body>
+
+</html>
