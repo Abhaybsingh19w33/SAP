@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8">
+	<title>MVC Application</title>
+	<script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-libs="sap.m" data-sap-ui-theme="sap_belize" data-sap-ui-compatVersion="edge"
+		data-sap-ui-bindingSyntax="complex" data-sap-ui-resourceroots='{ "satya.prasad.mvcapp" : "./webapp/"}'>
+		</script>
+	<script>
+		var oData = {
+			"CountSweets": "2",
+			"SweetsSupplier": [
+				{
+					"ID": 0,
+					"Name": "Sweet Magic",
+					"Address": {
+						"Street": "Sivarao Street",
+						"City": "Vijayawada",
+						"State": "Andhra Pradesh",
+						"ZipCode": "521456",
+						"Country": "INDIA"
+					}
+				},
+				{
+					"ID": "1",
+					"Name": "Aanjaneya Sweets",
+					"Address": {
+						"Street": "Bhavanipuram",
+						"City": "Vijayawada",
+						"State": "Andhra Pradesh",
+						"ZipCode": "521456",
+						"Country": "INDIA"
+					}
+				}
+			]
+		};
+
+		// model creation and setting data
+		var oModel = new sap.ui.model.json.JSONModel();
+		oModel.setData(oData);
+		// setting the model to the core
+		// so that it’s available in the whole application
+		sap.ui.getCore().setModel(oModel);
+
+		//Table Column headings			
+		var aColumns = [
+			new sap.m.Column({ header: new sap.m.Text({ text: "Sweet Shop Id" }) }),
+			new sap.m.Column({ header: new sap.m.Text({ text: "Sweet Shop Name" }) })
+		];
+
+		// Table row template
+		var oTemplate = new sap.m.ColumnListItem({
+			type: "Detail",
+			cells: [
+				new sap.m.ObjectIdentifier({ text: "{ID}" }),
+				new sap.m.ObjectIdentifier({ text: "{Name}" })
+			]
+		});
+		
+		var oTableHeader = new sap.m.Toolbar({
+			content: [
+				new sap.m.Title({ text: "Number of sweet Suppliers: {/SweetsSupplier/1/Name}" })
+			]
+		});
+
+		var oTable = new sap.m.Table({
+			columns: aColumns,
+			headerToolbar: oTableHeader
+		});
+
+		oTable.bindItems({ path: "/SweetsSupplier", template: oTemplate });
+
+		var oPageMaster = new sap.m.Page("masterpage", {
+			title: "Sweet Suppliers",
+			content: [oTable]
+		});
+
+		var oApp = new sap.m.App("myApp");
+		oApp.addPage(oPageMaster);
+		oApp.placeAt("content");
+	</script>
+</head>
+
+<body class="sapUiBody" role="application">
+	<div id="content"></div>
+</body>
+
+</html>
