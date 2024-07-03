@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8">
+	<title>MVC Application</title>
+	<script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-libs="sap.m" data-sap-ui-theme="sap_belize" data-sap-ui-compatVersion="edge"
+		data-sap-ui-resourceroots='{ "satya.prasad.mvcapp" : "./webapp/"}'>
+		</script>
+	<script>
+		/*jQuery.sap.registerModulePath('satya.prasad.mvcapp', './webapp/');*/
+
+		var oData = {
+			"CountSweets": "2",
+			"SweetsSupplier": [
+				{
+					"ID": 0,
+					"Name": "Sweet Magic",
+					"Address": {
+						"Street": "Sivarao Street",
+						"City": "Vijayawada",
+						"State": "Andhra Pradesh",
+						"ZipCode": "521456",
+						"Country": "INDIA"
+					}
+				},
+				{
+					"ID": "1",
+					"Name": "Aanjaneya Sweets",
+					"Address": {
+						"Street": "Bhavanipuram",
+						"City": "Vijayawada",
+						"State": "Andhra Pradesh",
+						"ZipCode": "521456",
+						"Country": "INDIA"
+					}
+				}
+			]
+		};
+
+		// model creation and setting data
+		var oModel = new sap.ui.model.json.JSONModel();
+		oModel.setData(oData);
+		// setting the model to the core
+		// so that it’s available in the whole application
+		sap.ui.getCore().setModel(oModel);
+
+		var oView = sap.ui.view("initialPage", {
+			viewName: "satya.prasad.mvcapp.view.First",
+			type: sap.ui.core.mvc.ViewType.XML
+		});
+
+		var secondView = sap.ui.view("detailPageId", {
+			viewName: "satya.prasad.mvcapp.view.second",
+			type: sap.ui.core.mvc.ViewType.XML
+		});
+
+		/* adding the view to DOM*/
+		var oApp = new sap.m.App("myApp", {
+			initialPage: "initialPage"
+		});
+
+		oApp.addPage(oView).addPage(secondView);
+		oApp.placeAt("content");
+	</script>
+</head>
+
+<body class="sapUiBody" role="application">
+	<div id="content"></div>
+</body>
+
+</html>
