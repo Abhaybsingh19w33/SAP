@@ -44,7 +44,7 @@
 		var oModel = new sap.ui.model.json.JSONModel();
 		oModel.setData(oData);
 		// setting the model to the core
-		// so that it’s available in the whole application
+		// so that it’s available in the whol application
 		sap.ui.getCore().setModel(oModel);
 
 		var oView = sap.ui.view("initialPage", {
@@ -55,14 +55,16 @@
 		var secondView = sap.ui.view("detailPageId", {
 			viewName: "satya.prasad.mvcapp.view.second",
 			type: sap.ui.core.mvc.ViewType.JS
+
 		});
 
 		var oApp = new sap.m.App("myApp", {
 			initialPage: "initialPage"
 		});
-
 		oApp.addPage(oView).addPage(secondView);
+
 		oApp.placeAt("content");
+
 	</script>
 </head>
 
