@@ -1,0 +1,16 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App id="app">
+		<pages>
+			<!-- in JS, we were mentioning which view is the initial view
+			```
+			var oApp = new sap.m.App("myApp", {
+						initialPage: "initialPage"
+					});
+			```
+
+			But in the case of xml, which ever view is added first is the initial view -->
+			<mvc:XMLView id="initialPage" viewName="satya.prasad.mvcapp.view.First"/>
+			<mvc:XMLView id="detailPageId" viewName="satya.prasad.mvcapp.view.second"/>
+		</pages>
+	</App>
+</mvc:View>
