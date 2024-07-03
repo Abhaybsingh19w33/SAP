@@ -8,7 +8,7 @@
 	<script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
 		data-sap-ui-libs="sap.m" data-sap-ui-theme="sap_belize" data-sap-ui-compatVersion="edge"
 		data-sap-ui-resourceroots='{ "satya.prasad.mvcapp" : "./webapp/"}'>
-		</script>
+	</script>
 	<script>
 		/*jQuery.sap.registerModulePath('satya.prasad.mvcapp', './webapp/');*/
 
@@ -44,7 +44,7 @@
 		var oModel = new sap.ui.model.json.JSONModel();
 		oModel.setData(oData);
 		// setting the model to the core
-		// so that it’s available in the whole application
+		// so that it’s available in the whol application
 		sap.ui.getCore().setModel(oModel);
 
 		var oView = sap.ui.view("initialPage", {
@@ -55,15 +55,18 @@
 		var secondView = sap.ui.view("detailPageId", {
 			viewName: "satya.prasad.mvcapp.view.second",
 			type: sap.ui.core.mvc.ViewType.JS
+
 		});
 
 		/* adding the view to DOM*/
+
 		var oApp = new sap.m.App("myApp", {
 			initialPage: "initialPage"
 		});
-
 		oApp.addPage(oView).addPage(secondView);
+
 		oApp.placeAt("content");
+
 	</script>
 </head>
 

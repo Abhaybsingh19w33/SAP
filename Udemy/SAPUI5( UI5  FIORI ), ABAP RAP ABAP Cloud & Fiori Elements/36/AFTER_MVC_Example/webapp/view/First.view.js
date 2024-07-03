@@ -1,17 +1,17 @@
 sap.ui.jsview("satya.prasad.mvcapp.view.First", {
+
 	// return the controller name through this system will understand the controller location
 	getControllerName: function () {
 		return "satya.prasad.mvcapp.controller.First";
 	},
 	createContent: function (oController) {
 
-		//Table Column headings			
 		var aColumns = [
 			new sap.m.Column({ header: new sap.m.Text({ text: "Sweet Shop ID" }) }),
 			new sap.m.Column({ header: new sap.m.Text({ text: "Sweet Shop Name" }) })
 		];
 
-		// Table row template
+		//Columns		
 		var oTemplate = new sap.m.ColumnListItem({
 			type: "Navigation",
 			press: [oController.onListItemPress, oController],
