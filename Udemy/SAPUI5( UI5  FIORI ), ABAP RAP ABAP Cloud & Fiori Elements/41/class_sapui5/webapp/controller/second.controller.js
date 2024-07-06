@@ -7,7 +7,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/routing/History"], fun
 		},
 		_oRoutePatternMatched: function (oEvent) {
 			var sPath = "/SweetsSupplier/" + oEvent.getParameter("arguments").ID;
-			this.getView().bindElement(sPath);
+			this.getView().bindElement(sPath); // this will load the data for this provided path
 		},
 		onNavPress: function () {
 			var oHistory = History.getInstance();

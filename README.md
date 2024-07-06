@@ -136,7 +136,7 @@ SAP learnings and projects
 - Behavior Implementation Class
 - Naming Conventions for Development Objects
 
-Links 
+#### Links 
 
 [Build an SAP Fiori App Using the ABAP RESTful Application Programming Model [RAP100]](https://developers.sap.com/mission.sap-fiori-abap-rap100.html)
 
@@ -163,7 +163,6 @@ Confirm installation with command :- ui5 --help
 Confirm installation with command :- fiori --help
 Install VSCode
 ```
-
 
 # To Do
 
