@@ -1,0 +1,12 @@
+Description=ES5
+Type=HTTP
+TrustAll=true
+Authentication=BasicAuthentication
+Name=ES5
+ProxyType=Internet
+URL=https://sapes5.sapdevcenter.com
+ProxyType=Internet
+WebIDEUsage=odata_abap,dev_abap,odata_gen,ui5_execute_abap,bsp_execute_abap,odata_xs
+WebIDESystem=ES5
+WebIDEEnabled=true
+sap-client=002
