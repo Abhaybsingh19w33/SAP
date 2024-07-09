@@ -31,7 +31,7 @@
 			<OverflowToolbar>
 				<ToolbarSpacer/>
 				<Button text="Accept" type="Accept" press="onPress" />
-				<Button text="Reject" type="Reject" />
+				<Button text="Product List" type="Reject" press="onList"/>
 				<Button text="Edit" />
 				<Button text="Delete" />
 			</OverflowToolbar>

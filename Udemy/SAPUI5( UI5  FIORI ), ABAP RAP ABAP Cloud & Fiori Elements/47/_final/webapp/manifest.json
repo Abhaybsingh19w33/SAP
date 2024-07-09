@@ -10,8 +10,18 @@
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"sourceTemplate": {
-			"id": "ui5template.basicSAPUI5ApplicationProject",
-			"version": "1.40.12"
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"GWSAMPLE_BASIC": {
+				"uri": "/sap/opu/odata/iwbep/GWSAMPLE_BASIC/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -73,6 +83,10 @@
 				"settings": {},
 				"preload": false,
 				"uri": "model/namedModel.json"
+			},
+			"ODATA": {
+				"dataSource": "GWSAMPLE_BASIC",
+				"preload": true
 			}
 		},
 		"resources": {
@@ -101,6 +115,11 @@
 					"pattern": "detail/{ID}",
 					"name": "detail",
 					"target": "detail"
+				},
+				{
+					"pattern": "list",
+					"name": "list",
+					"target": "list"
 				}
 			],
 			"targets": {
@@ -110,6 +129,10 @@
 				},
 				"detail": {
 					"viewName": "second",
+					"viewLevel": 2
+				},
+				"list": {
+					"viewName": "List",
 					"viewLevel": 2
 				}
 			}
