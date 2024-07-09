@@ -1,8 +1,9 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-	<App id="app">
-	<!--	<pages>
-			<mvc:XMLView id="initialPage" viewName="satya.prasad.mvcapp.view.First"/>
-			<mvc:XMLView id="detailPageId" viewName="satya.prasad.mvcapp.view.second"/>
-		</pages>-->
-	</App>
+<mvc:View
+	controllerName="bb.b.controller.App"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	busy="{appView>/busy}"
+	busyIndicatorDelay="{appView>/delay}"
+	xmlns="sap.m">
+	<SplitApp id="idAppControl" />
 </mvc:View>
