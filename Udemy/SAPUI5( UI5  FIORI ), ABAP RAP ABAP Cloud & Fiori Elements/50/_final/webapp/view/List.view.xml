@@ -1,0 +1,41 @@
+<mvc:View controllerName="satya.prasad.mvcapp.controller.List" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" core:require="{
+Util:'satya/prasad/mvcapp/utilities/utilities'
+}">
+	<Page title="Sweet Suppliers">
+		<content>
+			<Table items="{ODATA>/ProductSet}" class="sapUiResponsiveMargin" width="auto">
+				<headerToolbar>
+					<Toolbar>
+						<Label text="Number of Sweets Suppliers "/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column>
+						<header><Text text="Product ID"/></header>
+					</Column>
+					<Column>
+						<header><Text text="Product Name"/>
+						</header>
+					</Column>
+						<Column>
+						<header><Text text="Weight"/>
+						</header>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="onListItemPress">
+						<cells>
+							<ObjectIdentifier text="{ODATA>ProductID}"/>
+							<ObjectIdentifier text="{ODATA>Name}"/>
+							<ObjectNumber number="{ODATA>WeightMeasure}" unit="{ODATA>WeightUnit}" 
+							state="{
+								parts:[ {path:'ODATA>WeightMeasure'},{path:'ODATA>WeightUnit'} ],
+								formatter:'Util.formatterFunction'
+							}"></ObjectNumber>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>
