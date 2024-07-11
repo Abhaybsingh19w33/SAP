@@ -1,0 +1,30 @@
+<mvc:View controllerName="satya.prasad.mvcapp.controller.First" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page title="Sweet Suppliers">
+		<content>
+			<Table items="{/SweetsSupplier}" class="sapUiResponsiveMargin" width="auto">
+				<headerToolbar>
+					<Toolbar>
+						<Label text="Number of Sweets Suppliers :{/SweetsSupplier/1/ID}"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column>
+						<header><Text text="Sweet Shop ID"/></header>
+					</Column>
+					<Column>
+						<header><Text text="Sweet Shop Name"/>
+						</header>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="onListItemPress">
+						<cells>
+							<ObjectIdentifier text="{ID}"/>
+							<ObjectIdentifier text="{Name}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>
