@@ -26,6 +26,7 @@
 						<header><Text text="Price"/>
 						</header>
 					</Column>
+					
 					<Column>
 						<header><Text text="Category"/>
 						</header>
