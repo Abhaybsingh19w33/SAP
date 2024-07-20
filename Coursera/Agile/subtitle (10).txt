@@ -1,0 +1,88 @@
+In this lesson, we are going to learn about an important
+concept in Agile planning called velocity. To learn about velocity,
+let's take an example. Let's say, you are in a new country and
+you are on a road trip from point A to point B which
+is about 300 miles apart and I ask you how long will it take
+you to go from point A to point B? You may answer like I don't know
+what kind of roads are going to be. What kind of traffic it is. So come back after an hour or two, and I'll tell you how long
+it's going to take me. So after you have driven for a while, let's say in the first
+hour you covered 50 miles. And in the next hour,
+you covered 45 miles. So if I come after two hours and
+I ask you, how long do you think now it'll
+take you to reach point B? You may say, well, it's 40, 50, 45. Approximately, I'll say, 50. Ad so, it'll take me and
+I have driven for two hours. So I think it's going to
+take me another four hours. So, my velocity is approximately 50 and
+I have another 200 miles to go. So, it's about four more hours. Similar concept is used in Agile planning. So, velocity is the amount
+of work that a team ... so, it's about team ... a team is getting done in a sprint. And then again, then it depends
+on the team or the project. For example, in your case,
+the road matters, the traffic matters or the people who are in your car matters. So if you have kids,
+you might take more breaks. And if you are just single,
+then you might just go faster and you don't take as many breaks. So again, it depends on a lot of factors. But whatever is the team
+velocity is what we use. So, how do we calculate velocity? So to calculate the velocity for
+a sprint that you just finished, let's say, you just finished a sprint and you want to
+calculate the velocity for that sprint. You basically take all
+the stories that you finished. Let's say, you finished three stories
+with estimates of 5, 3 and 10 and you add them together. So in this case,
+it's going to be the velocity for that sprint is going to be 18. Now, velocity is also used for
+predicting or selecting stories for an upcoming sprint. So let's say, you just finished
+as you can see in the table here, the sprint 21 to 27 and their velocity. So let's say, you are about to
+start the sprint number 28 and you want to know what velocity you should
+use to pick the number of the tory for a sprint 28,
+then there are several ways you can do it. The first one very simple. You may say, well, I'm just going to use
+the velocity of the last sprint always. So if I'm doing a sprint 28, I'll just use
+the sprint, the velocity for sprint 27. So in this case, if I use that technique,
+I'll just use the velocity of sprint 27 which is 23 and that's what I'll
+use for sprint 28 for planning. Another concept you can use
+is average of last X sprints. So in this case,
+if I use the last three sprints, then the predicted velocity or
+the velocity that I will use for planning sprint 28 will be
+the average of sprint 25, 26 and 27. So the velocity for sprint 25 is 25,
+26 is 27 and then for sprint 27 it's 23. So I add them together and
+take an average, it comes out to be 25. So for sprint 28,
+I will take stories worth 25 points. The third style of calculating
+velocity is the velocity range. So in which, you calculate the minimum and the maximum velocity for
+the last X sprints. So in this case,
+if I was using the last three sprints, then to calculate the velocity range for
+spring 28, I will be using spring 25, 26 and 27 and the minimum is 23 and
+the maximum is 27. So, I will be using the minimum is 23 and
+27. So, the range is going to be 23 to 27. Now if you look at sprint 23,
+you see the velocity of 54. That sounds like an anomaly. So unless it was pretty natural,
+they must have something special or something has happened. But in this case,
+you would skip that velocity. So in case I was using the last five,
+if my method was to use the last five sprints for calculation,
+I would skip sprint 23. Now, there are several situations that you
+will encounter as you will use velocity. So, let's take some of those situations
+in which you may have to adjust your velocity or not. So what if you are just starting a new
+release and a new project, and a new sprint? You don't have any history of your sprint. So, what will you do in this case? Well, what you can do is you can take a
+few sample stories from your backlog and the team can get together and just say, pick stories that we think
+we can get done in a sprint. The team may want to task
+it out like talk about it. Task it out how to do those stories,
+so they have a better idea. But in a nutshell, they want to pick a few stories that
+they think they can do in a sprint. And then just the total or sum them up,
+sum up all the estimates and that becomes your starting
+velocity to plan for the sprint. Another situation or situations you may
+encounter is more people are joining your next sprint or somebody new joined,
+or a few people are leaving the team, or people are going on vacation. So, how do you handle these situations? Should you adjust your velocity for
+that? Well, the point is to continue to use
+the velocity of the previous sprint, except in the case where
+most of the team is going. So for example, in case of holidays
+when most of the team is out, then you may want to register it. But in most cases, it averages out. So you don't need to do any adjustment,
+especially for these three situations. Because let's say,
+a new team member joins. Then they're going to take
+some time to get used to and some time in the beginning,
+although they may contribute. But they would also take some time away
+from people who are going to explain to them or get them up to speed. So, and you don't know the new team member. What is the impact on the team
+velocity he or she will have? So that's why it's best to just continue
+to use the velocity from the previous sprints. Then another situation you may
+encounter is, what if the estimates were off? So you were working on a story
+that you estimated to be 3, but it actually took you 4 or more. So, should you adjust these velocities for
+that estimate or should you just estimate? Well, generally it averages out. So the recommendation is no
+need to adjust the estimate for those stories, but
+in a case where you had a new learning. So let's say, every screen,
+we learned new stuff that "hey, now, going forward,
+we need to do both browser checking and most of the screens are now going to
+take double the time or more time." Then all the stories related
+to this kind of work, we should adjust their estimates. In those cases, yes. If there is a new learning and there's
+a bunch of stories that will be impacted from it, you should go to your story
+backlog and update the estimates. But other than that,
+the story, the velocity and the averaging will take care of that. So, that's all about velocity.

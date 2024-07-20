@@ -1,0 +1,35 @@
+In this lesson, we are going
+to learn about Sprint Review. If you look at the Scrum overview, a Sprint Review happens at the end of
+the sprint where you demo your work, get some feedback, and you show the work
+that you have done in this sprint. Let's dig a little deeper. So, the purpose of Sprint Review is to
+review the work you've done in the sprint, and share the learnings from the sprint. You get some feedback, and based on that
+you can adjust your future direction. And of course, it's time to celebrate. Who do you invite? Your core team members, your stakeholders,
+and anybody and everybody. You want to show the work
+that your team has done. You want to sometimes even invite the
+manager who's not involved in the project, but he's your boss. You want to show what work you are doing. How long does it take? Most cases, it takes about an hour, but sometimes if there
+are multiple teams involved, or if there's a big team, sometimes
+you can schedule up to two hours. What happens in the Sprint Review? Well, you start with summarizing
+what you planned, what you finished, what were your learnings,
+what were the road blocks, until you summarize what exactly
+happened in your sprint? Then you demo the work that you have done. So, individual team members actually
+demo the work that they have done. And then you discuss the
+sprint with your stakeholders, get their feedback, and if needed you
+adapt a future direction of your product. When you're doing the Sprint Review,
+you don't want to wait for the Sprint Review to show off your work. If you are done, let's say with
+a particular story you are done earlier, you can show it to your product owner,
+you could even show it to the user to get the feedback because you don't want to
+wait for the Sprint Review to get that feedback and then if there is a change
+needed you can do it within the sprint. Some teams follow this rule
+of demo done things only. That helps them stay focussed and encourages the team member
+to finish their stories. So, it could be a good rule to do that. But in some cases if you're not
+demoing the work that you almost have done, it may result in not getting
+the feedback that may help you. So, again there are pros and
+cons of this rule. Make an effort to get stakeholders to attend. I think this is the meeting where you
+can build trust with your stakeholders of your commitment of
+what you're delivering. So I think you want to make an effort to
+have them attend your Sprint Review. And then you want to make sure that the
+presentation is done by individual team members rather than one or two people. That provides motivation and provides
+encouragement for them to do good work. In terms of the prep work,
+you have to just find the right balance. You want to have enough prep work so
+that the Sprint Review looks good. But you don't want to spend too much
+time in your Sprint Review planning.

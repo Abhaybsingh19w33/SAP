@@ -1,0 +1,129 @@
+In this lesson, we are going to dig
+deeper into user stories as to what are the different
+components of user stories. How do you write them? What are some of the tips and
+tricks to write user stories? So, the main component of user stories
+are the 3C's of the user stories. The card, which is the token for
+conversation. So you basically write just very high-level,
+what do you want. And then when you actually get into the
+implementation, then comes the second C which is the conversation when you
+build the shared understanding. So during the conversation,
+you talk about who, who's the user, wants what. What do they want in
+terms of functionality? And why, how is it going to help them? So, we talk about these three important
+things and then we also record facts or information to help you
+recall the conversation. So it could be a screenshot or it could
+be a flow chart, or any other design, or other things that you discussed
+during this conversation. And then you also discuss what
+happens outside the software. So not only just what the user's doing in
+the system, but what is the context in which they are using the system. And then
+we discuss what can go wrong. So, not only just talking about the happy path,
+but also the exceptions or what can go wrong when they are using the system.
+And then the third C is the confirmation. So once you have this rich conversation,
+then you write down acceptance tests as to how you're going to
+validate the story once this is done. So the template to capture who, what, why,
+there are a lot of templates available. The most popular one is, "As a <role>," ... So as a user,
+whatever the role of the user is ... " I want to <do this task> so
+that I can <achieve this goal>. Another template, typically
+used is the name of the personas, "<Persona>" ... So let's say, the persona name is John ... "John wants to <perform this
+task> to <achieve this goal>" or you can create your own template and
+the key thing to remember is that it doesn't need to be a template
+to be considered a story. You can just write the story in
+whatever format you feel appropriate. The reason people use templates is so that they remember to capture the who,
+what, and why. So initially, a lot of teams use it and as they become more
+familiar with this approach, then they use their own format and
+here is one example of a story. So as you can see,
+"As a [registered user], I want to [log in], so I can [access subscriber content]." That captures the who, what, why and
+then the acceptance test. What are the success criteria? What are the failure and
+work messages to display? It kind of shows what we expect to
+validate once the story is done. And then there is other information about
+the story like the title of the story and the estimate of the story and
+then other sketches, relevant notes and details that you captured
+during your rich conversation. Now, let's talk about
+the acceptance tests. How do you actually
+write acceptance tests? Because a lot of times, product owners and key members struggle to
+write the acceptance tests. What level to write acceptance tests? Is it too fine? Is it too coarse? So, let's take a look at it. So first, one suggestion that I always
+give is to instead of thinking about the acceptance test, you can ask them
+a question like once the story's done, what will you check to validate
+that it is indeed done? So just write down, just think about this
+question like what will you validate to make sure that the stories done and
+write that down. Or what will you test to confirm that this
+story is done. Or another way to say it is how we will demonstrate
+the software at a product review? So suppose we have to demo
+this new functionality to someone, what steps are we going to take
+to demonstrate the functionality? So by asking this question, it makes
+it easier to write the acceptance test. The second thing is to use simple language and user
+language to write the acceptance test and don't write too technical of language. The third is to write the what and
+not the how. So for example, a manager can approve or
+disapprove an audit form rather than saying that the manager can click and
+approve or disapprove with a radio button where now we have enclosed implementation
+details in the acceptance test. I would rather stay on what
+the user wants to do rather than telling how it should be done. Here's one example of the acceptance tests. The story is, "As an Administrator, I want
+to be able to create User Accounts so that I can grant users
+access to the system." Now if you look at this acceptance test, a lot of things that we
+talked about are here. For example, "I cannot assign a new user" ... "I cannot assign a new User to report to a
+User if it creates a cyclical relationship." Again, these are those error conditions or
+something that should not happen and then "The system notifies me" rather
+than specifying how it should notify. It just says that it notifies me and
+then it lists all the other happy paths or what is the functionality that is needed
+and how I will validate the story. Then so, one of the questions that people
+ask is why write acceptance tests since I have this rich conversation and
+I have explained everything to the user? So, why do I need to
+write acceptance tests? So here are some of the benefits of writing
+the acceptance tests from a product owner perspective, when you're going to write
+the acceptance test you're going to be in a frame of mind like how I'm going
+to validate that the story is done? And that helps you think through
+some of the error conditions, some of the non-happy paths and
+it makes you complete the story or write down everything that
+can potentially happen. And that helps you get whatever the
+product owner wants earlier, because there are less rounds of back and forth
+between the product owner and the team. And then from a team perspective,
+it helps to build a common understanding. So although they have a rich conversation,
+but there are a lot of assumed things that are in the product owner's
+mind that may not be obvious. And so by writing the acceptance test,
+everything is clear and everybody knows exactly how we're
+going to validate this story. The second is the response
+time will improve because if the story's complete,
+the acceptance test is complete. Hopefully, multiple rounds
+will not be required. It also helps, especially
+the testers to write the test cases. Because it specifies how you're going to
+validate it, so they can use this to also write their test case and
+then it also helps you slice your work. So, suppose the story is too big. It can help you say, okay, these three acceptance tests should be
+in one story and if they make sense and then these three acceptance
+tests should be in another story. So, it can help you slice the work. Another idea behind the stories is that
+stories can be written at many levels of abstraction, so you can write
+a story at a very, very high level. It could be like at a business sense,
+which makes for the business. Sometimes called an epic or feature, or capability where it actually
+impacts a business at that level. Then you can write the story at a user
+level which is specific functionality of the software that the user is going to use. Or
+you can write the story at the developer level which is a story
+that can be finished within a day, or two. And so, it is the right size from
+the development perspective. So again, stories can be written
+at many levels of abstraction, a very high level and those epics can be
+broken down into smaller stories and then each of those stories could be further
+broken down into development stories. Another idea in the Agile approach
+is something called spike, and these stories are needed when you have to
+do some kind of exploratory work or let's say, you have to choose a tool or
+a technology or a software to build your to
+build what you're building. Then you may say, okay,
+we're going to try these two tools and you have time-boxed five days. And here is at the end of the story, we want you to have a clear recommendation
+for which tool to use and why. So again, these stories are needed for
+research or exploratory work or knowledge gathering. They are time-boxed and
+they have a very clear definition of done. And most of the time, the work done under a spike is
+not part of your production code. It's generally something to explore and
+then throw away, and then you actually write the code for
+your production. So they're mostly used for knowledge gathering or
+trying something out. Another aspect of the Agile approach
+is how do you write the non-functional requirements? Because you're writing your requirements
+in these smaller chunks of user stories. So, how do you write a requirement
+that is non-functional and may be applicable to
+the whole application? So, you can handle these kinds
+of things in two different ways. One is there's something called definition
+of done that is true for all stories. So if the non-functional requirement
+like your application should work on both of these browsers, you can
+put that into a definition of done. So every time any story is done, it will go through that definition of done
+which means, okay, does it work on Chrome? Does it work on Internet Explorer? Does it work on Firefox? And so you put those in the definition of
+done, then it will be tested with every single story or you can write
+specific stories for non-functional requirements as well if it is applicable
+to a small part of the system. The key thing to remember is that for recording all your "-ilities" like faster, or
+more accurate, or quickly. Instead of using these words, make
+sure that you use quantitative things. For example, instead of faster, how many
+millisecond response time do you want? And so, that makes it easier to test.

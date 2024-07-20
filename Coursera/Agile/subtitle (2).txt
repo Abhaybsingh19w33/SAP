@@ -1,0 +1,98 @@
+In this lesson,
+we are going to learn about how do you apply the Agile mindset to a software
+development project and what are the tactics that you
+use to implement the mindset. And what we're going to do is compare
+that to the Waterfall method, so that we understand how they
+are different from each other. So the first difference or first thing that
+you have to think about when you're implementing the Agile mindset on
+a software development project, is to implement the software
+in small bite-size chunks. So instead of a big batch, you're
+going to build in small bite-size chunks. So if you look at the Waterfall
+method, you do your requirements, takes a couple months, and then you get your
+requirements document, then you do your design and
+you get a couple more documents, and then implementation and verification. And after all this work,
+all of these phases, you get your product in one big batch. Now, when you're doing Agile, you work
+in these small cyclical, small cycles. So after every cycle,
+you get a part of the product. And after the first two weeks or three
+weeks, whatever is the size of your cycle, you get some product out,
+and then after the next sprint, you will get some more product built
+iteratively and incrementally. And then you may realize,
+we need to adjust and then you might get a different or adjusted or
+changed product in the next portion. And then again you add
+more functionality and then again you may realize,
+we need to pivot again, and then again you may change the direction
+of the project or the product. And then, finally, you get your products. As you can see, we work in these
+small bite-sized chunks and the product over time changes or adapts. The second thing you will see
+is that instead of handoff, you're going to encourage collaboration or
+you need to encourage collaboration for Agile projects. So in a waterfall method,
+the requirements will be written and then they will be handed off to
+the designer, the architects, and then it will be going to the development
+team and they will build it. Then it goes to verification and so on. Now, if you look into the Agile world,
+you kind of put all of these people together and they work all the way
+from beginning to the end together so instead of this handoff that is
+happening from phase to phase, there is this collaboration that is
+happening throughout the project. So that's the second thing that you have to do to
+implement it as your mindset. The third thing is that you
+have to create this change in culture in their organization
+because to implement Agile, you need a lot of self-organizing teams and
+promote sustainable development. So to implement all these things, you need to change the culture of your
+team, so let's take a look at that. So for the Adaptive, so
+these are the Agile principles in summary here, so if you look at
+the Adaptive part of the Agile principles to implement that you have to encourage
+strong engineering culture in your team. Which means examples are "automated
+build and deployment", "continuous integration", "automated tests",
+"collective ownership", and many other engineering practices and these engineering practices really help
+teams to be able to welcome change. Otherwise, making those
+changes becomes very costly. And then also we need to learn adaptive
+planning, just the right time planning. So initially, you will do very high level
+planning with just some basic thing, and then as you get into those
+bite-size chunk implementations, then you do more detail planning for
+this part of the product. So again,
+you go multiple levels of planning and just enough detail at the right time. And then from the side
+of self-organizing teams, and many of these People and Interaction, you need to encourage "psychological
+safety" in your team so that any team member can raise their hand,
+ask questions and feel comfortable in owning the item and
+doing it. You need to "partner with your customer"
+rather than contracting with your customer, you need to have a more
+"collaborative environment" rather than top down or command and control. You need to support "cross functional
+teams" rather than handing off from one team to another team. So again,
+you need to bring this culture change if you really want to implement
+the Agile mindset in your team. So these were very, very high level. Now, let's take a look at how
+an Agile project would look like. In an Agile project journey,
+and again, this is just a typical Agile project, it doesn't mean every
+team is going to do it this way. But I just wanted to show you what are
+some of the activities that can happen and generally how long do they take. Again, these durations are also
+going to be very different based on the size of the project, how familiar
+the team is with the domain and so on. So, this is just a typical example but every team and every organization and
+every project might be different. So we can start with the chartering, where you just get the whole team
+together, have an alignment. It can take between one or two days. Then you do some small session where you
+learn about, what do we need to build? And you discover user needs and a couple
+ways to do it, like a story workshop or story mapping and then again
+this takes about a week and then you do some high level of architecture,
+it takes about two to three days, you make some architectural decisions,
+you're not going into detail here. But, those decisions that
+must be made at this time. Otherwise, we try to push the
+architectural decisions as far as we can. So once the very high level
+architecture is done, then you do your release planning. That's your first stop, like what
+is the first thing that we're going to release, again, it can take a day or two. And then you get into this execution mode
+where every two to three weeks you're delivering something, and
+you're defining detailed requirements, you're creating a detailed plan,
+you're developing it, you're testing it and
+you're constantly improving and there's a lot of methods to implement
+this part of the execution. But then as you're building this and
+once all the functionality for the release is ready, optionally,
+some teams may need the UAT or business readiness activities or
+communication that you need to do. So that may happen after this and then you
+release your project that you planned. And then during this whole process
+you're changing your backlog, your stories,
+your architecture is constantly changing. And then once this release is done,
+you plan your next release. And again, you repeat the cycle. So, as you can see that we get
+to the execution pretty fast. Now, compare this to a Waterfall method. As we saw that just a couple of months
+it takes for requirements and then the design and then the execution starts
+somewhere in the middle of the year. And then you go into the verification,
+and that's another couple months, and then you need to do the deployment. And if you look back here,
+it's like one to two days, one week, two to three days, release
+planning, and then you start executing. So, it's more just in time and
+just enough planning kind of concepts, and continuous delivery and
+collaboration, is what you will see in
+a typical Agile project.

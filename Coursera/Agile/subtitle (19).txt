@@ -1,0 +1,36 @@
+In this lecture, we are going to learn about one of
+the Agile methodologies called XP. XP stands for eXtreme Programming. And it was formally introduced in 1996, although it was already in use
+informally for many years. The basis for XP came from a project
+at Chrysler managed by Kent Beck. What made this project popular
+was that a dozen or so programmers implemented
+a financial system in two years that a team of 30 failed to
+implement over many years. So where does the word extreme come from? Well, the word extreme came from, like, if something is good,
+let's take it to the extreme. For example, there is a technique called
+code review in the software industry where if a developer is done with their code,
+they get it reviewed by another developer in the team to say whether it is
+meeting the quality, whether it is doing what it is supposed to do, and is it
+implementing the functionality correctly? So, in eXtreme Programming,
+we take code review to its extreme where, instead of doing it just at the end of
+development, why don't we get the two developers working together so they're
+constantly giving feedback to each other, constantly talking to each other, and
+doing the work right the first time? Similarly, if testing is good,
+why don't we test every single time? Every single developer, every single
+team member, is involved in testing. If design is good, why don't we
+incorporate that on a daily routine, rather than doing it one time? So, anything that is good,
+why don't we take it to the extreme? So what is eXtreme
+Programming all about? Well, if you talk to the industry, a lot of team members associate
+XP to its engineering practices. But according to Kent Beck,
+it's way more than engineering practices. It's about the social change. It's about giving up old habits of working
+for new ways tailored to the new reality. And it is also lightweight compared to
+some of the traditional methodologies like Waterfall, etc. And it is adaptive in nature, which means
+set up to accept changing requirements. In concrete terms, XP defines a set
+of values, principles, and practices. Now, since it took everything to
+an extreme, it ran into some controversy. And so one of the controversy is
+around that it is prescriptive compared to many of the lightweight
+Agile practices, like Scrum. And another controversy is
+around pair programming, and a lot of industries say that this is too
+much, this is too extreme of a practice. And similarly about incremental design. And finally there is a controversy
+around scalability of XP methods, that it cannot scale to bigger teams and it's
+okay for small to medium-sized company. But even with all of these
+controversies around it, a large part of XP has been widely
+accepted by the software community.

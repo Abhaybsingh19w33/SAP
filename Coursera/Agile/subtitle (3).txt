@@ -1,0 +1,32 @@
+So as we know, Agile is a mindset. So the question is, how do you
+actually apply this mindset on a software development process? Well, the good news is that there
+are a lot of frameworks that are available that you can use to apply this Agile
+mindset for your team or for your project. But there's no silver bullet. So you have to customize this framework
+to meet the needs of your team, your project, or your organization. And the key to customization is to make
+sure that you stay true to the principles and the values of Agile and do not get bogged down by the rituals or
+practices of a specific framework. So, let's familiarize ourselves with some
+of these frameworks which are out there. One of the most common
+ones is called Scrum. And Scrum is based on this one to four
+week cycle, where you take part of your project and you do your define,
+your develop, your design and you test your software and so
+your product is developed incrementally. Another popular one is called Kanban,
+which is based on a continuous flow model where you basically try to optimize your
+existing software development process. Then of course there is a combination of these two called Scrumban where you
+use Scrum as your primary framework. And then you use Kanban to optimize
+your flow within your sprint. Another popular one which is
+similar to Scrum is called XP. And so XP has most of
+the practices of Scrum but it also defines some engineering practices
+which are very crucial for an Agile team. Then of course there is
+the hybrid of Scrum and XP. Another one which has become quite
+popular recently is called Lean Startup which helps you if you have a lot of
+unpredictable market or industry and you want to really prove your
+solution before you implement it. So Lean Startup helps you in that area.
+And there are many more. And more often than not, organizations
+actually end up customizing some of these frameworks to meet the needs of their team,
+or their project, or the organization. And if I may repeat,
+I want to make sure that you stay true to the Agile principles and practices and do not get bogged down by the rituals or
+practices of a specific framework. In terms of popularity,
+Scrum is by far the most popular of all. It's about 70% of the Agile teams use
+either Scrum or one of its variants. And that's how sometimes, people equate
+Agile to Scrum, which, of course, you can see that it's not true. There are so many frameworks
+out there that you can use for your Agile implementation.

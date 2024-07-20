@@ -1,0 +1,87 @@
+In this lesson, we are going to learn
+about the rest of the XP practices. So, let's start with Stories. So, stories are a unit of functionality
+that represent a part of the user's needs. In XP, stories are a fundamental unit
+around which the whole development revolves. And stories are supposed to be flexible,
+meaning that they only state the intent of the user's needs and the detailed
+functionality or how exactly it will be implemented is discussed or
+decided during development. In XP, it is recommended to provide
+the estimate to the stakeholders or your customers as soon as possible. This allows the customer and the team
+to have a meaningful conversation about whether is it worth to do their story or
+should we do only part of the story? So providing this estimate allows them
+to have a meaningful conversation and also to predict what can be done and
+not done. One more recommendation of XP is to keep
+the stories visible in the workspace, and not to computerize those
+stories into a computer program. Another practice of XP is called the
+Weekly Cycle, which means you plan weekly. And each of those weekly
+planning sessions, you review the progress that you made so far,
+you select a week's worth of work, and then you break your stories into the task. And because planning time is not
+directly adding value to the customer, it is recommended that you
+gradually reduce the planning time. So even this weekly cycle or
+weekly planning that you are doing, you should try to reduce the time that
+it takes for you to do the planning. When you are breaking out the stories
+into the tasks, it is recommended to break them so individual developers can
+take responsibility of these tasks. The next practice of XP is
+called the Quarterly Cycle. Which means to plan your
+work a quarter at a time. And what we are talking about here is
+not the weekly detailed planning, but at a very, very high level. What is the theme that
+you want to work on? So in this quarterly cycle, you're focusing on the big picture, where
+the projects fits within the organization. You plan the theme or
+the themes for the quarter, you pick a quarter's worth of
+stories to address those themes, and then you identify bottlenecks, especially those controlled
+outside the team. The next practice we want to
+talk about is called Slack. One of the recommendations is to build
+some slack time into the process. By slack time we mean some
+buffer time in your planning so you do not feel rushed
+to finish something. If you are stuck or run into some issues
+in development, you can always catch up. How do you do that? Well one way is to add few lower-priority
+tasks to your weekly plan so that you can drop this task if
+you are running short on time. Another way is to add one week after every
+eighth week or whatever is convenient or comfortable or makes sense for
+that group or team, as a geek week where the developer can choose
+developer-driven tasks for that week or simply you can just add 20% every week for
+the programmer-chosen tasks. And another recommendation around this
+concept is to avoid an aggressive timeline or commitments. Instead of that,
+make the commitments that you can make. Another practice we want to talk
+about is called the Ten-Minute Build, which means that the team should be able
+to build their complete code and run their tests within 10 minutes. This is one of the practices where
+a new team has struggled to achieve it. So, in this case, lets say you have a manual
+build, then start with automated build. If you have automated build, then start
+with running some of the key tests within 10 minutes and
+then continue to evolve. Having this 10 minute build gives teams
+confidence that they can make change comfortably. And it also reduces their stress. Next practice we want to talk about
+is called continuous integration. So continuous integration is
+a practice where as soon as a developer makes a change to their code, it is
+integrated with the rest of the code to validate if anything broke due to
+the change that was just made. In XP, it is recommended that you get
+your feedback as quickly as possible, no later than a couple hours. There are two types of integration,
+asynchronous integration and synchronous integration. Asynchronous integration is where once
+the developer has made the change, a separate process integrates that
+code with the rest of the code and notifies the developer if
+there is anything broken. Whereas in the synchronous integration,
+the developer makes a change and constantly integrates with the rest
+of the system and waits for the feedback before continuing
+with the next functionality. The next practice we want to talk about
+is called Test First Programming. The basic idea here is that
+you write your test first for the functionality that you want to build
+and then you make those tests fail because you haven't written functionalities so
+those tests are supposed to fail. Then you write your code
+until all of your tests pass. It is also called TDD, or
+test-driven development. The benefit of this approach
+is that it avoids scope creep. And then it also helps you build
+trust in the team members because you know that everybody
+who is building the code or writing the code, they're also writing
+tests that make sure that it works. This also helps you reduce
+coupling between the components. Because when you write tests, It forces you to create a system
+that is loosely coupled. The last practice we want to talk
+about is called incremental design. And this comes from that extreme
+part where if design is good, let's do it everyday. So, in XP it is recommended to invest in
+incremental design every single day. For example, let's say while
+building the functionality or while writing some code, you find
+some excess complexity in your code. It is recommended that you
+refactor the code to simplify it. Another example could be,
+if you see a pattern in the code, a repetitive code, then you may want
+to refactor it and make the code so that it is easier to change in the future. In this way, if you are using XP,
+the architecture emerges over time. So this finishes learning
+about all the XP practices. In this lecture we talked about Stories,
+Weekly Cycle, Quarterly Cycle, Slack, Ten-Minute Build, Continuous Integration,
+Test-First Programming, and Incremental Design.

@@ -1,0 +1,104 @@
+In this lesson, we are going to
+learn about one of the most popular frameworks to implement
+the Agile mindset called Scrum. To understand the basic idea behind Scrum, let's put Scrum next to
+a Waterfall method. So, Scrum works on this one- to four-week
+sprint where you take part of your product, and you define, you design,
+you build, and you test. And then you show your product
+to your stakeholders and see if we need to adjust your product or
+if you need to do something different. And then, you again,
+you repeat the cycle one again and again. And so this way, you are building your
+product incrementally after every sprint. And then at the end,
+you get all of your product. In a Waterfall method,
+when you do the Requirements phase, you get a requirement
+document at the end of it. And then you have your Design phase, at the end of which you get
+some of the high-level design or low-level design documents, so
+you have more design documents. And then you do your
+Implementation, Verification, and then you do your Deployment, and so
+finally you get your finished product. So, as you can see
+in the Waterfall method, there is one big batch and
+then you get to your final product. Whereas in Scrum, after every 2, or between 1 to 4 weeks, you get
+some finished product and then you just keep on adding to your existing
+product until you get your final product. So now that we know the basic idea behind
+Scrum, let's dig deeper into what happens inside each of these one-
+to four-week sprints. Let's take an example of a company
+who wants to build a job website, let's say like monster.com, and
+they want to use a Scrum framework. There are three roles that
+are defined in Scrum. The first one is the Product Owner who defines
+what needs to be done and in what order. And then there is a Scrum Master that
+helps the team stay true to the Scrum values and principles, and then
+you will also notice that the Scrum Master helps facilitate most of
+the meetings in the team. And then if there are any roadblocks, then he will be the one who will drive the
+resolution of some of these roadblocks. And then of course, there is The Team,
+that is self-organizing, and they do most of the building
+of the software, and it includes the developers and
+testers and everyone. So, let's see how the job website will
+be created using a Scrum framework. So the Product Owner is going to talk to the
+executives, the team, the stakeholders, clients, users, and will try to
+define what exactly needs to be built. And so that will create something called a
+product backlog, which is basically a list of user stories which are prioritized
+and defines what needs to be done. Now, the product backlog is very different
+than a typical requirements document. As you will see that,
+it's basically at a very high level, and it can change over time. So very high level. In this case, it might mean that
+the first item may say "Post a job". So, a company admin can post a job
+or a job seeker can apply for a job. So those, at that level,
+the backlog is defined. So once the team is ready to sprint,
+they get together for a meeting called a Sprint Planning Meeting,
+where the whole team gets together and then they pick the top stories that
+they can work on in the existing sprint. And the product owner reviews
+those stories with the team and helps answer any questions or
+clarifies anything that is not clear. And then the team gets together again and
+then does a tasking out of the stories, which means like, what exactly do we
+need to do to build the software? So, in this case, they may say, well,
+I need to design this database, I need to fill some data,
+some test data in the database. I need to create this UI screen,
+and yada, yada, yada. So once the team has looked at the
+stories, and they have tasked it out and they know that they can finish
+it in the next sprint or the existing sprint, then they will
+commit to the stories and say that, "okay, we'll finish it in this sprint." And then that starts their execution. That starts this sprint where everybody
+is working to implement the software, and during that sprint,
+the whole team gets together for a daily standup, in which everybody
+talks about what they did yesterday, what are they going to do today,
+and if there are any road blocks. So, in this case,
+a database person may say, "well, I designed or created the tables
+yesterday in the database. And then today, I'm going to
+populate it with some test data, and if there is anybody out there who can help me,
+that would be awesome." And then he may also say that, "I don't have permission of
+certain things in the database, and unless I have that permission,
+I won't be able to finish my job." So then, somebody might help him like, who do I contact, and
+what do I do to get access to that? And so this thing continues for
+the rest of the days in the sprint, but at the end of the sprint,
+you end up having your finished product. In this case, it will be posting a job and
+then applying for a job. So let's say those were the two
+stories that were picked, so those two stories will be done
+at the end of the sprint. There are two other meetings that
+happen at the end of the sprint. The first one is called the Sprint Review, where the whole team gets
+together with the stakeholders, with the client, and demonstrates the work
+that they have done and get the feedback. So in that meeting, the stakeholders
+may say, well, I have an additional idea, I think we should do that also. Or they may say that,
+let's tweak some of this functionality. The second meeting that happens at
+the end of this sprint is called a Sprint Retrospectives where they talk about
+the process and not about the product. So they talk about, like, how can we do better? So, in this case, they talk about
+what went well in the last sprint, what didn't go well in the last sprint,
+and how we can do better? So an example would be, well,
+nobody comes on time for the standup, and that results in
+not everybody getting a chance to talk. So, as an action item, we'll send
+a reminder like five minutes before the standup so
+that everybody can show up on time. And we can finish the stand up, and
+everybody gets a chance to talk. To keep track of the sprint, like, "are we going
+to achieve our goal for the sprint?", the team uses something called a Burndown or
+a Burnup chart, which shows the amount of work left over
+the days of the sprint. So at any given day, they can say,
+are we going to make it, or are we not going to make it? And if they need to focus or
+need additional help. So that's it,
+those are the main, key things about Scrum. So, let's pause for a minute and see how
+Scrum actually supports the Agile principles. As you can see, we are building
+iteratively, so it embraces change. After every sprint, you can make
+changes to your product backlog and shift your products to
+a different direction. It also supports a lot of meetings for
+collaboration, a lot of opportunities, I would say, for collaboration between
+the team members with the clients. And then, it also supports continuous
+improvement with a Sprint Retrospective, and there are many other things. But as we can see that, it at least
+embodies the key principles of Agile. To summarize, there are three roles in Scrum: Scrum
+Master, The Team, and the Product Owner. There are a couple rituals, like the Sprint
+Planning Meeting, Daily Scrum Meeting, Sprint Review, and a Sprint Retrospective. And there are some artifacts like
+product backlog, sprint backlog, and Burndown chart.

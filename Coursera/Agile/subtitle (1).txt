@@ -1,0 +1,43 @@
+In this lesson, we are going to learn about when
+to use Agile and when not to. Is Agile good for all situations? We'll find out. So, several years ago when I used to
+tell or used to talk about Agile, there was a conception that Agile
+only works for a small projects. And I started believing that maybe that's true,
+that Agile only works for small projects, but then I came across this
+Standish Chaos Report which is from 2015. And that has compiled from more than
+10,000 projects from 2011 to 2015. So this data is based on those projects,
+and what they found is that for
+the small-size projects, Agile was 58% successful and
+Waterfall was 44%. Now, it becomes more interesting
+is that for medium-size projects, Agile was 27% more successful and
+the Waterfall was 7%. And then for large-size projects,
+Agile was 18% successful and Waterfall was 3% successful. So that kind of changed my view is that, "no, agile could be useful and is useful for
+even large-size projects and it can be very successful", and
+of course the percent of success, 18%, is of course less than
+the small-size projects but still, I mean compared to the Waterfall,
+it is more successful. Then the next question that I used
+to ponder is, will Agile work for big projects? Mission critical projects? Government projects? Now, there is no data around the critical
+projects or the government projects. But I know that there are a lot of
+organizations like Lockheed Martin, Google, Microsoft, SpaceX,
+they are using Agile now. So that tells me that even for mission
+critical projects or government projects, I would say Agile has found its way and
+people are using it and finding it useful. So, does that mean Agile is good for
+all situations? I would say no, it's not suitable for
+predictive and repeatable work. So if you are doing something
+that is very predictive and very repeatable, Agile can work but
+it's not going to be valuable. So in that case, a traditional model or
+a predictive model will work much better. And also for
+using Agile there are some prerequisites, so it's good to talk about those here. So the first prerequisite is that you
+require close collaboration with business and users since requirements are not done
+up front, there is a constant discussion or conversation that is happening
+between business people and developers, so you need that collaboration. And then the second is
+because you embrace change, the team should be set up for change, which means they should be
+following those engineering practices to help them make
+changes quickly and confidently. But then there are some barriers to
+the Agile adoption that people have found. So, this is a result from the survey
+that a company called Version One does every year. And what they found in the last survey,
+is that if the "company philosophy or culture is at odds with the core Agile values",
+it can cause problem with the Agile adoption. Or "lack of experience
+with the Agile method", "lack of management support" or "general
+organization resistance to the change." If they're resistant to the change
+then the Agile adoption won't work. So, there are many such reasons
+that organizations have found in adopting Agile.

@@ -1,0 +1,71 @@
+In this video,
+we are going to talk about Sprint Retrospective where you
+reflect. How was the process? How did the team work together? How can they get better? So, if you look at the Scrum overview, the Sprint Retrospective happens
+at the end of the sprint. And the main thing the team talks
+about is, how are we working together? And it's about the process and
+it's not about the product. To me, the Sprint Retrospective
+is one of the most important activities in Scrum if
+not the most important. Because no matter how much you plan, you cannot get your process
+right the first time. So you always want to make sure that
+you're constantly improving your process and also, sometimes things change and
+you need to add just your process. And this is the meeting that
+allows you to reflect back and make changes that'll
+make your team better. Who do you invite? It's only for the core team. You don't want the stakeholders
+in this meeting, because you want to have an open
+conversation in your team. So you just want to invite the core team.
+When do you do that? At the end of each sprint. And it's generally an hour,
+but you can add more or less based on the topic or
+the big team or a small team. What's the purpose of
+a Sprint Retrospective? It's continuous improvement. What happens in a Sprint Retrospective? Well, the most common format is
+that you talk about what's working, what's not working, and action items. So what happens is that everybody gets
+together in a room, and then on the board you have three columns: what's working,
+what's not working, and action items. And everybody gets these stickies
+where they write on each sticky: what is working and another sticky what's
+not working for each of their suggestion. And they get up to the board, they talk
+about it and they put it on the board. Then the whole team gets together and
+again, kind of talks about these items, and says, what are a couple things that
+we want to do or we want to improve? So, that's the most common
+format of a Sprint Retrospective. But you can do an alternative where
+you're doing a Focused Retro. So you pick a topic, for example, let's
+say you're not finishing the stories, or there are a lot of defects and
+you want to say, what is going on? So, in that case,
+it's a Focused Retro on a specific topic. So, in that case, the steps are;
+first, you set the atmosphere. You just tell everybody that
+it's a candid environment, and you should feel free to share ...
+it is for ourselves. So once you set the atmosphere,
+then you talk about the context. So you give, based on the data
+that you have collected, you say these many defects happened last,
+then these many happened, what is going on? Then the whole team will
+reflect at the data. They look at what they did, or
+they identify the insights from the data and they identify, what are the action
+item we're going to do to get better? And then you close the Retro. Now, no matter what format of
+Retrospective you are doing, make sure you follow
+through the action items. If you don't follow
+through the action items, people will lose interest in the Retrospective
+and they will stop participating. So you want to make sure
+you follow through. And then sometimes if you use
+the same format again and again, people do get bored, and so you want to
+change the Retrospective format. One of the formats I know of is when a team
+member, what they did is they got lots of pictures from somewhere, and
+then they spread the pictures in the room, and then everybody has to pick a picture
+from that bundle of pictures to represent how they felt about the sprint. That makes this Retrospective
+a little bit more interesting. Another one is somebody
+used the happiness level. They said how happy, out of 1 out of
+10, were you from the work that you did in the last, that again, encourages a
+different kind of discussion in the room. You want to avoid finger-pointing, because that can make the environment
+not conducive for open discussion. And as far as the action
+items are concerned, you want to select only a few action items. Because when there are lot of action
+items, very few of them get done, and then you get the feel that
+there's no follow through. So, you want to select
+just a few action items. Sometimes people are not
+talking in Retrospectives. In that case, you can get them
+started with some non-work questions. So at least the inertia of talking is
+gone, or you can go round robin so everybody has to speak. Sometimes if the manager is in the room,
+then the team members won't speak out, so you may ask the manager to
+opt out of the Retrospect. If the group is very large,
+sometimes you can say, okay, everybody provide their feedback then
+in a couple of groups they discuss, and then the group share their
+finding with the rest of the groups. That helps contain the discussion,
+otherwise interact 20 people and everybody is talking,
+then it doesn't allow a good discussion. So if there are a lot of people, you
+want to do individual, then couple groups, and then with the whole team.

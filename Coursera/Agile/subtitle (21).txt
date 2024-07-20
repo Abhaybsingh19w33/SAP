@@ -1,0 +1,74 @@
+In this lecture,
+we are going to learn about XP practices. We have divided this
+video into two sections. So, in this video, we are going to
+talk about the first five practices. And then the rest of the practices we are
+going to talk about in the next lecture. Before we learn about
+individual practices, let us talk about things
+that are applicable to all. One of the things emphasized in XP is to
+make sure that the practices are applied in its true spirit,
+applied with their true purpose in mind. Don't do them just as a ritual. For example, pairing to please
+your boss is not a good idea. But pairing to communicate,
+get feedback, simplify the system, catch errors and
+bolster your courage makes a lot of sense. One of the criticisms around XP
+is that it is very prescriptive and, in some cases, it is not possible to
+achieve what is prescribed as part of XP, like capability to build
+the whole code in ten minutes. Well, the practices were written
+with the ideal state in mind, so you don't have to achieve them on day one. Keep making progress towards them and
+as far as you can. For example, building some automated
+test is better than no test. Now Kent also encourages to
+experiment with XP practices and learn for yourself if it helps. Don't debate whether it will be useful or
+not, try it out. Now practices in XP work well together. When you use them individually
+they will help you. But if you combine multiple
+practices together, the implement is compounded or
+the changes are dramatic. Now there are two sets of practices
+defined in XP, Primary and Corollary. In this lecture and in the next one, we are only going
+to cover the Primary practices. For Corollary practices, please refer
+to one of the resources mentioned for this video. Now let's learn a little bit more
+about each of these practices. Let's talk about the first practice,
+which is Sitting Together. Aligning with the value of collaboration, XP recommends the team to sit together
+in open, collaborative environment. Which means tear down the walls
+between the cubicles. Bring the whole team together to a common
+area or a common room for collaboration. One caution is to not rush into it. Sometimes, team members are not ready for
+it. They don't feel safe in an open space. Now we're not talking about
+physical safety here, we are talking about psychological safety. The next principle is Whole Team. With the focus on delivering the software
+in short iterations, it is really important that everyone needed for
+the project's success is part of the team. So if we have the need for database
+related work and we need a database administrator, we add the person
+with the required skill to the team. In some cases,
+you don't require the person for the complete duration of the project. In those cases, you can get the person for
+the duration of the project you need. XP doesn't recommend having team
+members a part of multiple teams at the same time. It causes lack of focus and multitasking, which negatively impacts the
+team's ability to deliver. The third practice we're going to
+talk about is Informative Workspaces. What do we mean by that? What it means is that you set up your
+workspace with information on the walls or appropriate places in the workplace so that if any interested person
+walks into the space, he or she can get an idea about how the project
+is doing in less than 15 seconds. What information to focus on
+at a given time may change. So you have to keep
+the information area up-to-date. Remove things that are no longer relevant. Keep the relevant information up-to-date. Keep the workspace clean and in order, it helps the mind to think
+clearly about the problem. Another principle we want to
+talk about is Energized Work. What this means is for
+team members to work as many hours as they can be productive and
+only as many hours as they can sustain. Burning themselves out on
+productivity today and spoiling the next two days
+doesn't help them or the team. And if team members are sick, it is
+suggested that you stay out of the office, take rest, get well. And when you're ready, come back to
+the workspace to collaborate and work with others. Also, in XP, they recommend that you
+continuously try to improve your productivity during the time
+when you are with the team. For example, you may want to
+experiment with restricting email or phone when you're trying to
+focus on a specific issue. Another principle we want to
+talk about is Pair Programming. So, pair programming is a practice where
+two team members are working together on a single computer machine. This does not mean that
+nobody gets alone time. It is important to allow team members to
+think about the problem individually. So there is always this
+alone time when needed, but the majority of the work is done in pairs. So, again, two people tackling
+the same problem together. This is one of those controversial XP
+practices where the industry is divided on its use and its benefit. Whereas, for eXtreme Programming,
+both developers who are working on it keep each other on task. It helps them brainstorm
+refinement to the system. It helps them clarify
+ideas with each other. It also allows for one person to take
+initiative when their partner is stuck, thus lowering the frustration. And then they can also hold each other
+accountable to the team's practice. So, in this lecture, we learned about
+five XP practices, Sit Together, Whole Team, Informative Workspace,
+Energized Work, and Pair Programming. In the next lecture, we're going to
+talk about the rest of the XP practices.
