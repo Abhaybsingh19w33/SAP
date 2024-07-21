@@ -1,0 +1,131 @@
+OOPS ABAP :
+_________
+
+--> Fair knowledge in ABAP 
+
+
+
+-> ABAP On HANA
+-> OData
+-> Workflow
+-> Webdynpro
+-> BADIs
+-> BAPIs
+
+Report :
+______
+
+__________________________________________________________________________________________________
+
+Features of OOPS ABAP :
+______________________
+
+1. Encapsulation : Combining all the details in to a single unit (Class)
+
+ --> Local class (se38)
+
+Step 1 :
+_______
+
+ class <class name> defenition
+ endclass.
+
+Instantiate the class 
+
+Create an object 
+
+data <obj name> type ref to <class name>
+create object <object name>
+
+Attribute : 
+
+1.) Instance attribute
+
+  data <attribute name> type <data type>
+  Instance attributes can be accessed only by using object name
+  Instance attributes are object dependent , whenever you create a new object the old memory will be collapsed
+  and new memory will be allocated based on the data type of the attribute
+
+2.) Static attribute 
+
+   class-data <attribute name> type <data type>
+   static attributes can be accessed either by using object name or by using class name
+
+We can create as many objects as we need for a single class
+
+
+ --> Global class
+
+*&---------------------------------------------------------------------*
+*& Report  ZOOPS_CLASS1
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+
+REPORT ZOOPS_CLASS1.
+
+**********************************Creation of class
+
+class lcl_abc DEFINITION.
+
+  PUBLIC SECTION.
+
+  data a type i.        "Instance attribute
+  class-data b type i.  "Static attribute
+
+  ENDCLASS.
+
+
+***************  Instantiation of a class/ Object creation
+
+  data ob type REF TO lcl_Abc.
+  create OBJECT ob.
+
+*  a = 10.  We cannot use
+
+  ob->a = 10.
+* lcl_abc=>a = 10. we cannot use this
+*  ob->b = 20.
+  lcl_abc=>b = 20.
+*  WRITE a. We cannot use
+
+  WRITE ob->a.
+  WRITE ob->b.
+uline.
+  data ob1 type REF TO lcl_abc.
+  create OBJECT ob1.
+
+ ob1->a = 10.
+
+  WRITE : ob1->a,
+          ob1->b.
+
+
+
+
+_______________________________________________________________________________________________________
+
+2. Data Abstraction : Preventing the access of components of a class from outside the class, by using
+visibility sections
+
+1. Public section : The components under this section can be accessed from the class, from the sub class
+and also from outside the class
+
+2. Protected section : The components under this section can be accessed from the class, from the sub class
+but not from outside the class
+
+3. Private section : The components under this section can be accessed only from the class, but not from
+the sub class and also not from outside the class
+
+Note : There is no default visibility section, you have to specify any one of them
+
+______________________________________________________________________________________________________
+
+3. Inheritance : Using the components of one class in another class 
+
+4. Polymorphism : Many forms behaviour 
+
+__________________________________________________________________________________________________
+

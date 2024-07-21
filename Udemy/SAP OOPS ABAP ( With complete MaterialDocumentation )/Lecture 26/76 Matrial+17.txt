@@ -1,0 +1,113 @@
+
+
+	Transient data :- data available only till runtime
+			eg:- variables declared inside blocks (subroutines,f.m's,methods),
+			 global variable declared in a program,
+			class objects,
+
+	persistent data:- data available beyond runtime
+
+			eg:- data stored in db tables,
+		data stored in 	presentation/appl.server files
+
+
+	Persistence service:- to store state of the object persistently (permenently)
+
+	insert dbtable from <object>.
+
+	select .,.... from dbtable into <object>
+
+	persistence classes globally --> zcl_..../ ycl_....  ---> implements interface
+									if_os_state
+
+				---> protected class
+
+		base agent class --> zcb_..... / ycb_....  --> abstract class --> super 								class for actor class
+					--> friend of persistence class
+
+		actor / agent class  ---> zca_.../ yca_....  ---> private class --> sub 					class for base agent class
+
+				--> singleton class --> max. of one object
+
+
+
+		Persistence class ---> zcl_1030emp
+
+		Base agent class --> zcb_1030emp
+
+		actor/agent class --> zca_1030emp
+
+
+	db table --> z1030emp
+
+		Fields:
+
+		empno(p.key)		int			--> Business key identity
+		ename			char10
+		empdesig		char20
+
+	persistence service using business key identity:
+
+	
+
+	insert <dbtable> from <wa> ---> create_persistent
+
+	select single -------------------> get_persistent
+
+	delete from dbtable where <keyfield>=...   --> delete_persistent
+
+	update 					--> setter methods
+
+
+
+	UPDATE SET F1 =   F2 = F3 = F4
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
