@@ -1,0 +1,104 @@
+*&---------------------------------------------------------------------*
+*& Report  Z_OTHER_DATA_TYPES                                          *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+*&                                                                     *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+
+REPORT  z_other_data_types                      .
+
+TABLES: zemployees2.
+
+** Date and Time Fields
+****************************
+* Date fields format: YYYYMMDD with initial value of '00000000'
+DATA my_date TYPE d VALUE '20120101'.
+DATA my_date2 LIKE sy-datum.
+* Time fields format: HHMMSS with initial value of '000000'
+DATA my_time TYPE t VALUE '111005'.
+DATA my_time2 LIKE sy-uzeit.
+****************************
+****************************
+* Field for Date Calculations
+DATA empl_sdate  TYPE d.
+DATA todays_date TYPE d.
+DATA los         TYPE i.
+DATA days_count  TYPE i.
+DATA fut_date    TYPE d.
+****************************
+* Field for Time Calculations
+DATA clock_in     TYPE t.
+DATA clock_out    TYPE t.
+DATA seconds_diff TYPE i.
+DATA minutes_diff TYPE i.
+DATA hours_diff   TYPE p DECIMALS 2.
+****************************
+*CURRENCY & QUANTITY FIELDS
+* Field for Currency Calculations
+DATA my_salary  LIKE zemployees2-salary.
+DATA my_tax_amt LIKE zemployees2-salary.
+DATA my_net_pay LIKE zemployees2-salary.
+DATA tax_perc   TYPE p DECIMALS 2.
+
+
+****************************
+
+****************************
+* Test Date & Time Fields Ouput
+WRITE: my_date,
+       / my_date2,
+       / my_time,
+       / my_time2.
+ULINE.
+****************************
+
+empl_sdate = '20090515'.
+todays_date = sy-datum.
+los = todays_date - empl_sdate.
+WRITE / los.
+****************************
+
+todays_date = sy-datum.
+days_count = 20.
+fut_date = todays_date  + days_count.
+WRITE / fut_date.
+****************************
+
+todays_date = sy-datum.
+todays_date+6(2) = '20'.
+WRITE / sy-datum.
+WRITE / todays_date.
+ULINE.
+****************************
+
+todays_date = sy-datum.
+todays_date+6(2) = '01'.
+todays_date = todays_date - 1.
+WRITE / todays_date.
+****************************
+* TIME CALCULATIONS
+clock_in = '073000'.
+clock_out = '160000'.
+seconds_diff = clock_out - clock_in.
+
+WRITE: / 'clock in: ', clock_in, '   clock out: ', clock_out.
+WRITE: / 'difference in seconds: ', seconds_diff.
+
+minutes_diff = seconds_diff / 60.
+WRITE: / 'difference in minutes: ', minutes_diff.
+
+hours_diff = minutes_diff / 60.
+WRITE: / 'difference in hours: ', hours_diff.
+ULINE.
+****************************
+* CURRENCY CALCULATIONS
+tax_perc = '0.20'.
+SELECT * FROM zemployees2.
+WRITE: / zemployees2-surname, zemployees2-salary, zemployees2-ecurrency.
+  my_tax_amt = tax_perc * zemployees2-salary.
+  my_net_pay = zemployees2-salary - my_tax_amt.
+  WRITE: / 'tax amount: ', my_tax_amt, zemployees2-ecurrency,
+           'net amount: ', my_net_pay, zemployees2-ecurrency.
+  SKIP.
+ENDSELECT.

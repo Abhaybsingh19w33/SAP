@@ -1,0 +1,154 @@
+*&---------------------------------------------------------------------*
+*& Report  Z_MOD_1                                                     *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+*&                                                                     *
+*&       Modularizing Techniques - Examples 1                          *
+*&---------------------------------------------------------------------*
+
+REPORT  z_mod_1                                 .
+
+INCLUDE z_employee_definitions.
+
+TABLES: zemployees.
+
+**Declare a Line Type
+*TYPES: BEGIN OF line01_typ,
+*        surname LIKE zemployees-surname,
+*        dob     LIKE zemployees-dob,
+*       END OF line01_typ.
+
+*Declare the 'Table Type' based on the 'Line Type'
+TYPES itab02_typ TYPE STANDARD TABLE OF line01_typ.
+
+*Declare the table based on the 'Table Type'
+DATA itab02 TYPE itab02_typ.
+
+*Declare the Work Area to use with our Internal Table
+DATA wa_itab02 TYPE line01_typ.
+
+DATA line_cnt TYPE i.
+
+DATA z_field1 LIKE zemployees-surname.
+DATA z_field2 LIKE zemployees-forename.
+
+*****************************************
+
+PERFORM itab02_fill.
+
+
+PERFORM sub_1 IN PROGRAM zemployee_hire USING z_field1 z_field2.
+
+
+PERFORM sub_1(zemployee_hire) TABLES itab02 USING z_field1 z_field2.
+
+
+
+
+
+
+
+z_field1 = 'ANDREWS'.
+z_field2 = 'SUSAN'.
+
+PERFORM itab02_fill_again USING z_field1 z_field2.
+
+PERFORM itab02_write TABLES itab02.
+
+PERFORM itab02_multi TABLES itab02 USING z_field2 z_field1.
+
+*SELECT * FROM zemployees
+*  INTO CORRESPONDING FIELDS OF TABLE itab02.
+
+LOOP AT itab02 INTO wa_itab02.
+  WRITE wa_itab02-surname.
+ENDLOOP.
+
+CLEAR: itab02, wa_itab02.
+
+LOOP AT itab02 INTO wa_itab02.
+  IF wa_itab02-surname = 'JONES'.
+    wa_itab02-surname = 'SMITH'.
+    MODIFY itab02 FROM wa_itab02.
+  ENDIF.
+ENDLOOP.
+
+DESCRIBE TABLE itab02 LINES line_cnt.
+IF line_cnt > 0.
+  INSERT wa_itab02 INTO itab02 INDEX line_cnt.
+
+  READ TABLE itab02 INDEX 5 INTO wa_itab02.
+
+  READ TABLE itab02 INTO wa_itab02
+       WITH KEY surname = 'SMITH'.
+ENDIF.
+
+
+
+*
+*&---------------------------------------------------------------------*
+*&      Form  itab02_fill
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM itab02_fill .
+
+  DATA zempl LIKE zemployees-surname.
+
+  SELECT * FROM zemployees
+    INTO CORRESPONDING FIELDS OF TABLE itab02.
+
+ENDFORM.                    " itab02_fill
+
+
+*&---------------------------------------------------------------------*
+*&      Form  itab02_fill_again
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*      -->P_Z_FIELD1  text
+*      -->P_Z_FIELD2  text
+*----------------------------------------------------------------------*
+FORM itab02_fill_again  USING    p_zsurname
+                                 p_zforename.
+
+  WRITE / p_zsurname.
+  WRITE / p_zforename.
+
+  p_zsurname = 'abcde'.
+
+ENDFORM.                    " itab02_fill_again
+*&---------------------------------------------------------------------*
+*&      Form  itab02_write
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*      -->P_ITAB02  text
+*----------------------------------------------------------------------*
+FORM itab02_write  TABLES   p_itab02.
+
+  DATA wa_tmp TYPE line01_typ.
+
+  LOOP AT p_itab02 INTO wa_tmp.
+    WRITE wa_tmp-surname.
+  ENDLOOP.
+
+ENDFORM.                    " itab02_write
+*&---------------------------------------------------------------------*
+*&      Form  itab02_multi
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*      -->P_ITAB02  text
+*      -->P_Z_FIELD1  text
+*      -->P_Z_FIELD2  text
+*----------------------------------------------------------------------*
+form itab02_multi  tables   p_itab02 structure < itab02 #local# >
+                              "Insert correct name for <...>
+                   using    p_z_field1
+                            p_z_field2.
+
+endform.                    " itab02_multi

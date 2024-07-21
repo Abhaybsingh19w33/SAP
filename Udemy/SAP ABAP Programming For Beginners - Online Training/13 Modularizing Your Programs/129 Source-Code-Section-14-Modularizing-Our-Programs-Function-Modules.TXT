@@ -1,0 +1,36 @@
+*&---------------------------------------------------------------------*
+*& Report  Z_MOD_2                                                     *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+*&                                                                     *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+
+REPORT  Z_MOD_2                                 .
+
+data result like SPELL.
+
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN COMMENT 1(15) text-001.
+PARAMETER mynum   Type i.
+SELECTION-SCREEN END OF LINE.
+
+CALL FUNCTION 'SPELL_AMOUNT'
+ EXPORTING
+   AMOUNT          = mynum
+*   CURRENCY        = ' '
+*   FILLER          = ' '
+*   LANGUAGE        = SY-LANGU
+ IMPORTING
+   IN_WORDS        = result
+* EXCEPTIONS
+*   NOT_FOUND       = 1
+*   TOO_LARGE       = 2
+*   OTHERS          = 3
+          .
+
+IF sy-subrc <> 0.
+  write: 'The function Module returned a value of: ', sy-subrc.
+else.
+  write: 'The amount in words is: ', result-word.
+ENDIF.

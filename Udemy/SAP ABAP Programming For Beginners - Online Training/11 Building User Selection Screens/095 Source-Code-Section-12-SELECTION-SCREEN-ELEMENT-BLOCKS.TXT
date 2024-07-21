@@ -1,0 +1,70 @@
+*&---------------------------------------------------------------------*
+*& Report  Z_SCREENS_1                                                 *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+*&                                                                     *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+
+REPORT  z_screens_1                             .
+
+TABLES: zemployees.
+
+DATA: wa_employee LIKE zemployees-employee.
+
+
+PARAMETERS: my_ee LIKE zemployees-employee
+                          DEFAULT '12345678' OBLIGATORY.
+
+SELECTION-SCREEN BEGIN OF BLOCK myblock1 WITH FRAME TITLE text-001.
+
+SELECTION-SCREEN BEGIN OF LINE.
+SELECTION-SCREEN POSITION pos_low.
+PARAMETER abc(5).
+SELECTION-SCREEN END OF LINE.
+SELECTION-SCREEN COMMENT 1(15) text-001.
+SELECTION-SCREEN COMMENT 20(10) comm1.
+
+SELECTION-SCREEN END OF BLOCK myblock1.
+
+
+SELECTION-SCREEN SKIP 2.
+
+
+PARAMETERS:            my_box1 AS CHECKBOX,
+            wa_green  RADIOBUTTON GROUP grp1,
+            wa_blue   RADIOBUTTON GROUP grp1,
+            wa_red    RADIOBUTTON GROUP grp1.
+
+SELECT-OPTIONS my_dob FOR zemployees-dob NO-EXTENSION.
+
+INITIALIZATION.
+
+  comm1 = 'Hello SAP'.
+  SELECT * FROM zemployees.
+    wa_employee = zemployees-employee.
+  ENDSELECT.
+
+AT SELECTION-SCREEN ON my_ee.
+* Check to make sure the employee number is not greater than the
+* last employee number in our table.
+  IF my_ee > wa_employee.
+    MESSAGE e001(zmes1) WITH my_ee.
+  ENDIF.
+*
+*SELECT * FROM zemployees.
+*  IF zemployees-dob IN my_dob.
+*    WRITE: / zemployees.
+*  ENDIF.
+*
+*ENDSELECT.
+
+
+  WRITE: / 'Surname'.
+
+
+  WRITE: / text-001.
+
+
+
+*

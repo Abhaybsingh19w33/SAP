@@ -1,0 +1,44 @@
+*&---------------------------------------------------------------------*
+*& Report  Z_EMPLOYEE_LIST_03                                          *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+*&                                                                     *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+
+REPORT  z_employee_list_03                      .
+
+TABLES: zemployees.
+
+*New Way of defining Internal Tables
+*Declare a Line Type
+TYPES: BEGIN OF line01_typ,
+        surname LIKE zemployees-surname,
+        dob     LIKE zemployees-dob,
+       END OF line01_typ.
+
+*Declare the 'Table Type' based on the 'Line Type'
+TYPES itab02_typ TYPE STANDARD TABLE OF line01_typ.
+
+*Declare the table based on the 'Table Type'
+DATA itab02 TYPE itab02_typ.
+
+*Declare the Work Area to use with our Internal Table
+DATA wa_itab02 TYPE line01_typ.
+
+DATA line_cnt TYPE i.
+*SELECT surname dob FROM zemployees
+*  INTO wa_itab02.
+*  APPEND wa_itab02 TO itab02.
+*ENDSELECT.
+*
+
+SELECT * FROM zemployees
+  INTO CORRESPONDING FIELDS OF TABLE itab02.
+
+LOOP AT itab02 INTO wa_itab02.
+  WRITE wa_itab02-surname.
+ENDLOOP.
+
+
+*

@@ -1,0 +1,38 @@
+*&---------------------------------------------------------------------*
+*& Report  Z_SCREENS_1                                                 *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+*&                                                                     *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+
+REPORT  z_screens_1                             .
+
+TABLES: zemployees.
+
+DATA: wa_employee LIKE zemployees-employee.
+
+PARAMETERS: my_ee LIKE zemployees-employee
+                          DEFAULT '12345678' OBLIGATORY,
+            my_box1 AS CHECKBOX,
+            wa_green  RADIOBUTTON GROUP grp1,
+            wa_blue   RADIOBUTTON GROUP grp1,
+            wa_red    RADIOBUTTON GROUP grp1.
+            
+            
+            
+INITIALIZATION.
+
+  SELECT * FROM zemployees.
+    wa_employee = zemployees-employee.
+  ENDSELECT.
+
+AT SELECTION-SCREEN ON my_ee.
+* Check to make sure the employee number is not greater than the
+* last employee number in our table.
+  IF my_ee > wa_employee.
+* DISPLAY A MESSAGE.
+  ENDIF.
+
+
+*

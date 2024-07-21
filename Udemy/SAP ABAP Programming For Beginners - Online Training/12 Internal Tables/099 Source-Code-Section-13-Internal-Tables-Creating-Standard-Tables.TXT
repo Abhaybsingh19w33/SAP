@@ -1,0 +1,37 @@
+*&---------------------------------------------------------------------*
+*& Report  Z_EMPLOYEE_LIST_03                                          *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+*&                                                                     *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+
+REPORT  z_employee_list_03                      .
+
+*Internal Table with Header line
+DATA: BEGIN OF itab01 OCCURS 0,
+        surname LIKE zemployees-surname,
+        dob     LIKE zemployees-dob,
+      END OF itab01.
+
+*New Way of defining Internal Tables
+*Declare a Line Type
+TYPES: BEGIN OF line01_typ,
+        surname LIKE zemployees-surname,
+        dob     LIKE zemployees-dob,
+       END OF line01_typ.
+
+*Declare the 'Table Type' based on the 'Line Type'
+TYPES itab02_typ TYPE STANDARD TABLE OF line01_typ.
+*TYPES itab02_typ TYPE SORTED TABLE OF line01_typ
+*                                 WITH UNIQUE KEY surname, dob.
+
+*Declare the table based on the 'Table Type'
+DATA itab02 TYPE itab02_typ.
+
+*Declare the Work Area to use with our Internal Table
+DATA wa_itab02 TYPE line01_typ.
+
+
+
+*

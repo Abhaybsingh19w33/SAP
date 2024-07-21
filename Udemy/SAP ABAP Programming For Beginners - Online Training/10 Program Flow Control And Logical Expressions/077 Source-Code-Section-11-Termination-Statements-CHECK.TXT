@@ -1,0 +1,35 @@
+*&---------------------------------------------------------------------*
+*& Report  Z_ITERATIONS_1                                              *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+*&                                                                     *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+
+REPORT  z_iterations_1                        .
+
+TABLES: zemployees.
+
+SELECT * FROM zemployees WHERE surname = 'MILLS'.
+  WRITE: / zemployees.
+ENDSELECT.
+
+DATA: a TYPE i,
+      b TYPE i,
+      c TYPE i.
+
+a = 0.
+c = 0.
+
+check a = 1.
+
+DO 15 TIMES.
+  a = a + 1.
+  CHECK sy-index <> 2.
+  WRITE: / 'Outer Loop cycle: ', a.
+ENDDO.
+
+
+
+
+*

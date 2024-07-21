@@ -1,0 +1,78 @@
+*& Report  Z_EMPLOYEE_LIST_03                                          *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+*&                                                                     *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+
+REPORT  z_employee_list_03                      .
+
+TABLES: zemployees.
+
+*Internal Table with Header line
+DATA: BEGIN OF itab01 OCCURS 0,
+        employee   LIKE zemployees-employee,
+        surname    LIKE zemployees-surname,
+        forename   LIKE zemployees-forename,
+        title      LIKE zemployees-title,
+        dob        LIKE zemployees-dob,
+        los        TYPE i VALUE 3,
+END OF itab01.
+
+DATA line_cnt TYPE i.
+
+SELECT * FROM zemployees.
+  MOVE zemployees-employee   TO itab01-employee.
+  MOVE zemployees-surname    TO itab01-surname.
+  MOVE zemployees-forename   TO itab01-forename.
+  MOVE zemployees-title      TO itab01-title.
+  MOVE zemployees-dob        TO itab01-dob.
+
+  APPEND itab01.
+ENDSELECT.
+
+LOOP AT itab01.
+  IF itab01-surname = 'JONES'.
+    itab01-surname = 'SMITH'.
+    MODIFY itab01.
+  ENDIF.
+ENDLOOP.
+
+
+DESCRIBE TABLE itab01 LINES line_cnt.
+INSERT itab01 INDEX line_cnt.
+
+READ TABLE itab01 INDEX 5.
+
+READ TABLE itab01 WITH KEY
+    employee = 10000007.
+
+DELETE itab01 INDEX 5.
+
+LOOP AT itab01.
+  IF itab01-surname = 'SMITH'.
+    DELETE itab01 INDEX sy-index.
+  ENDIF.
+ENDLOOP.
+
+DELETE itab01 WHERE surname = 'SMITH'.
+
+* SORT tables
+
+SORT itab01 DESCENDING AS TEXT BY surname forename.
+
+
+
+
+
+
+
+
+
+WRITE itab01-surname.
+
+
+
+
+
+*

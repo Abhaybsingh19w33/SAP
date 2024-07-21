@@ -1,0 +1,41 @@
+*& Report  Z_EMPLOYEE_LIST_03                                          *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+*&                                                                     *
+*&     CONTAIN SYNTAX ERRORS - DUE TO INCOMPLETE EXAMPLES              *
+*&---------------------------------------------------------------------*
+
+REPORT  z_employee_list_03                      .
+
+TABLES: zemployees.
+
+*Internal Table with Header line
+DATA: BEGIN OF itab01 OCCURS 0,
+        employee   LIKE zemployees-employee,
+        surname    LIKE zemployees-surname,
+        forename   LIKE zemployees-forename,
+        title      LIKE zemployees-title,
+        dob        LIKE zemployees-dob,
+        los        TYPE i VALUE 3,
+END OF itab01.
+
+
+SELECT * FROM zemployees.
+  MOVE zemployees-employee   TO itab01-employee.
+  MOVE zemployees-surname    TO itab01-surname.
+  MOVE zemployees-forename   TO itab01-forename.
+  MOVE zemployees-title      TO itab01-title.
+  MOVE zemployees-dob        TO itab01-dob.
+
+  APPEND itab01.
+ENDSELECT.
+
+WRITE itab01-surname.
+
+*With Header Line
+CLEAR itab01.
+CLEAR itab01[].
+
+REFRESH itab01.
+
+FREE itab01.

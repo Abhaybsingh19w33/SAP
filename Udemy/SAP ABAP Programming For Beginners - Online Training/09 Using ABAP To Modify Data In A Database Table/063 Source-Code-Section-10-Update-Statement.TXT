@@ -1,0 +1,42 @@
+*&---------------------------------------------------------------------*
+*& Report  Z_OPENSQL_1                                                 *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+*&                                                                     *
+*&                                                                     *
+*&---------------------------------------------------------------------*
+
+REPORT  z_opensql_1                             .
+
+DATA wa_employees LIKE zemployees.
+
+********************
+**** - INSERT
+wa_employees-employee = '10000006'.
+wa_employees-surname = 'WESTMORE'.
+wa_employees-forename = 'BRUCE'.
+wa_employees-title = 'MR'.
+wa_employees-dob = '19921213'.
+
+INSERT zemployees FROM wa_employees.
+
+IF sy-subrc = 0.
+  WRITE 'Record Inserted Correctly'.
+ELSE.
+  WRITE: 'We have a return code of ', sy-subrc.
+ENDIF.
+********************
+**** - UPDATE
+wa_employees-employee = '10000006'.
+wa_employees-surname = 'EASTMORE'.
+wa_employees-forename = 'ANDY'.
+wa_employees-title = 'MR'.
+wa_employees-dob = '19921213'.
+
+UPDATE zemployees FROM wa_employees.
+
+IF sy-subrc = 0.
+  WRITE: / 'Record Updated Correctly'.
+ELSE.
+  WRITE: / 'We have a return code of ', sy-subrc.
+ENDIF.
