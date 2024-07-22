@@ -148,10 +148,32 @@ SAP learnings and projects
 ## Sales & Distibution Module
 [SAP SD Training - in Plain English](https://www.udemy.com/course/sap-sd-training/)
 
+## ABAP
+[Learn SAP ABAP by Doing](https://www.udemy.com/course/learn-sap-abap-by-doing)
+
+[Learn SAP ABAP Objects - Online Training Course](https://www.udemy.com/course/abap-objects)
+
+[SAP ABAP New Language Features - Learn ABAP 7.4 & 7.5 syntax](https://www.udemy.com/course/sap-abap-new-language-features)
+
+[SAP ABAP Programming For Beginners - Online Training](https://www.udemy.com/course/sap-abap-programming-for-beginners)
+
+[SAP OOPS ABAP ( With complete MaterialDocumentation )](https://www.udemy.com/course/sapoopsabap)
+
+## ABAP Enhancement & Modification
+[SAP ABAP  Enhancement & Modification to SAP Standard](https://www.udemy.com/course/sap-abap-enhancement-modification)
+
 ## ABAP on HANA
 [SAP ABAP on HANA Training for Beginners](https://www.udemy.com/course/abap-for-hana/learn/lecture/37431220#overview)
 
-## UI5 
+[SAP ABAP Core Data Services for S4 HANA](https://www.udemy.com/course/sap-abap-core-data-services)
+
+[SAP S4HANA - Learn ABAP Programming model for SAP S4 HANA](https://www.udemy.com/course/abap-development-in-s4hana)
+
+[SAP S4HANA Training - in Plain English](https://www.udemy.com/course/sap-s4hana-training)
+
+## UI5 & Fiori
+[SAP FIORI - Configuring Fiori Environment and Security](https://www.udemy.com/course/sap-fiori-setup-and-security)
+
 [SAPUI5( UI5 / FIORI ), ABAP RAP/ ABAP Cloud & Fiori Elements](https://www.udemy.com/course/professional-sapui5-web-application-development-part-1/learn/lecture/43584054#overview)
 ```
 Install node js
