@@ -1,0 +1,6 @@
+With the no-gaps option all the blank spaces from the string are removed and the string is left-justified.
+	Alpha = ‘      lets get on-line whatsay??’.
+	Condense alpha no-gaps.
+	Write alpha.
+	This will display
+	letsgeton-linewhatsay??

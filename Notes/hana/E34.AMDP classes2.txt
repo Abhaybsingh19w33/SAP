@@ -1,0 +1,70 @@
+*Add 2 fields IDATE and PDATE in SALES table in SE11 for this Demo.
+*IDATE  data type DATS
+*PDATE data type DATS.
+================================================
+
+CLASS zmt_amdp
+DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+  TYPES:BEGIN OF TY_SALES,
+        VBELN TYPE VBELN,
+        KUNNR TYPE KUNNR,
+        NETPR TYPE NETPR,
+        PRTY(10) TYPE C,
+        IDATE TYPE DATS,
+        InvDAY(12) TYPE C,
+        PDATE TYPE DATS,
+        PayDAY(12) TYPE C,
+        DUE_DATE TYPE I,
+        END OF TY_SALES.
+
+   TYPES IT_SALES TYPE TABLE OF TY_SALES.
+
+
+   INTERFACES : IF_AMDP_MARKER_HDB.
+   METHODS : GET_SALES EXPORTING VALUE(OUT_SALES) TYPE IT_SALES.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zmt_amdp IMPLEMENTATION.
+
+METHOD GET_SALES BY DATABASE PROCEDURE
+                  FOR HDB
+                  LANGUAGE SQLSCRIPT
+                  USING ZMT_SALES.
+
+OUT_SALES = SELECT VBELN,
+                   KUNNR,
+                   NETPR,
+                   case
+                   when netpr between 0 and 100000 then 'LOW'
+                   when netpr between 100001 and 300000 then 'MEDIUM'
+                   when netpr >  300000 then 'HIGH'
+                   else 'NA'
+                   end as prty,
+                   IDATE as InvDate,
+                   DAYNAME( IDATE ) AS InvDAY,
+                    PDATE as PayDate,
+                    DAYNAME( PDATE ) AS PayDAY,
+                   days_between(IDATE, PDATE) AS DUE_DATE
+                   From ZMT_SALES ;
+
+ ENDMETHOD.
+ENDCLASS.
+
+======================SE38 ====================
+
+data(o_amdp) = new zmt_amdp( ).
+
+o_amdp->get_sales(
+  IMPORTING
+    out_sales = data(it_sales)
+).
+cl_demo_output=>display( it_sales ).

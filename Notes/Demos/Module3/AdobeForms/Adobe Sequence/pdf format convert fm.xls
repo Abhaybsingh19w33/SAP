@@ -1,0 +1,28 @@
+Identify the correct way of calling the function module in the driver program for converting the smartform to PDF?	"CALL FUNCTION 'CONVERT_OTF'
+ EXPORTING
+   FORMAT                      = 'PDF'
+   MAX_LINEWIDTH          = 132
+ IMPORTING
+   BIN_FILESIZE              = lv_BIN_FILESIZE
+  TABLES
+    otf                          = LT_OTF
+    lines                        = LT_LINES.
+"	"CALL FUNCTION 'CONVERT_OTF'
+ EXPORTING
+   FORMAT                   = 'ASCII'
+   MAX_LINEWIDTH       = 132
+ IMPORTING
+   BIN_FILESIZE            = lv_BIN_FILESIZE
+  TABLES
+    otf                        = LT_OTF
+    lines                      = LT_LINES.
+"	"CALL FUNCTION 'CONVERT_PDF'
+ EXPORTING
+   FORMAT                      = 'ASCII'
+   MAX_LINEWIDTH          = 132
+ IMPORTING
+   BIN_FILESIZE               = lv_BIN_FILESIZE
+  TABLES
+    otf                            = LT_OTF
+    lines                          = LT_LINES.
+"	None of the above	1

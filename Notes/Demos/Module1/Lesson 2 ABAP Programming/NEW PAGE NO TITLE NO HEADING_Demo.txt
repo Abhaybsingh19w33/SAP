@@ -1,0 +1,25 @@
+*Standard Page Headers of Individual Pages 
+REPORT Z.
+*WRITE: 'PAGE', SY-PAGNO.
+"NEW-PAGE.
+"WRITE: 'PAGE', SY-PAGNO. "Displays Page 2
+NEW-PAGE NO-TITLE. "Shows column heading
+WRITE: 'NEW-PAGE NO-TITLE', SY-PAGNO. "Displays Page 2
+"NEW-PAGE.
+"WRITE: 'PAGE', SY-PAGNO. "Displays Page 2
+"NEW-PAGE NO-HEADING.
+"WRITE: 'PAGE', SY-PAGNO. "Displays Page 2
+"NEW-PAGE NO-HEADING."Does not show column heading
+"WRITE: 'NEW-PAGE NO-HEADING', SY-PAGNO. "Displays Page 2
+*NEW-PAGE WITH-HEADING.
+*WRITE: 'PAGE', SY-PAGNO. "Displays Page 2REPORT ZCAP_REPORT LINE-SIZE 90.
+WRITE: 'PAGE', SY-PAGNO.
+NEW-PAGE.
+"NEW-PAGE NO-TITLE.
+WRITE: 'PAGE', SY-PAGNO. "Displays Page 2
+NEW-PAGE NO-HEADING.
+WRITE: 'PAGE', SY-PAGNO. "Displays Page 3
+NEW-PAGE NO-HEADING NO-TITLE. 
+WRITE: 'PAGE', SY-PAGNO. "Displays Page 4
+NEW-PAGE WITH-HEADING.
+WRITE: 'PAGE', SY-PAGNO. "Displays Page 5

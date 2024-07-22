@@ -1,0 +1,468 @@
+%PDF-1.3
+101 0 obj
+<< /Length 6746 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 20 752 Tm
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*&---------------------------------------------------------------------*) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*& Report ZTR_SMARTFORM_PRG2) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*&---------------------------------------------------------------------*) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*&) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*&---------------------------------------------------------------------*) Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(REPORT ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(ZCAP_SMARTFORMS_PROG2) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(INCLUDE ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(ZCAP_SMARTFORMS_PROG2_TOP) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(PARAMETERS ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(P_EBELN ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TYPE ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(EKKO) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(EBELN) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.  ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" " Purchasing Document Number) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(CALL ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(FUNCTION ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('SSF_FUNCTION_MODULE_NAME') Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(  ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(EXPORTING) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(    ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(FORMNAME                 ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(= ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('ZCAP_SMARTFORMS2') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   VARIANT                  = ' ') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   DIRECT_CALL              = ' ') Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+( ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(IMPORTING) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(   ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(FM_NAME                  ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(= ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(FM) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(* EXCEPTIONS) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   NO_FORM                  = 1) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   NO_FUNCTION_MODULE       = 2) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   OTHERS                   = 3) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(          ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(IF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(SY) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(SUBRC ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(<> ) Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(0) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(* Implement suitable error handling here) Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(ENDIF) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(CALL ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(FUNCTION ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(FM) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+( ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(EXPORTING) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   ARCHIVE_INDEX              =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   ARCHIVE_INDEX_TAB          =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   ARCHIVE_PARAMETERS         =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   CONTROL_PARAMETERS         =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   MAIL_APPL_OBJ              =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   MAIL_RECIPIENT             =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   MAIL_SENDER                =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   OUTPUT_OPTIONS             =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   USER_SETTINGS              = 'X') Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(   ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(GV_EBELN1                  ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(= ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(P_EBELN) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(* IMPORTING) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   DOCUMENT_OUTPUT_INFO       =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   JOB_OUTPUT_INFO            =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   JOB_OUTPUT_OPTIONS         =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(* EXCEPTIONS) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   FORMATTING_ERROR           = 1) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   INTERNAL_ERROR             = 2) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   SEND_ERROR                 = 3) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   USER_CANCELED              = 4) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   OTHERS                     = 5) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(          ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(IF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(SY) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(SUBRC ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(<> ) Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(0) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(* Implement suitable error handling here) Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(ENDIF) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+ET
+endstream
+endobj
+100 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/MediaBox [ 0 0 612 792 ]
+/Contents 101 0 R
+/Resources << /ProcSet 6 0 R
+/Font << /F1 7 0 R 
+/F2 8 0 R 
+/F3 9 0 R 
+/F4 10 0 R >>
+>>
+>>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [100 0 R ]
+/Count 1
+>>
+endobj
+% catalog object
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R
+>>
+endobj
+2 0 obj
+<< /Type /Outlines
+/Count 0
+>>
+endobj
+6 0 obj
+[ /PDF /Text ]
+endobj
+7 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F1
+/BaseFont /Courier
+/Encoding /MacRomanEncoding
+>>
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F2
+/BaseFont /Courier-Bold
+/Encoding /MacRomanEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F3
+/BaseFont /Courier-Oblique
+/Encoding /MacRomanEncoding
+>>
+endobj
+10 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F4
+/BaseFont /Courier-BoldOblique
+/Encoding /MacRomanEncoding
+>>
+endobj
+11 0 obj
+<<
+/CreationDate (D:20161230114418)
+/Creator (AB4Editor Control)
+/Producer (AB4Editor Control)
+/Title (ZCAP_SMARTFORMS_PROG2)
+>>
+endobj
+trailer
+<< /Info 11 0 R
+/Root 1 0 R
+ >>
+startxref
+0
+%%EOF

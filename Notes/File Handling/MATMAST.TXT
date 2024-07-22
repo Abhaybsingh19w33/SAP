@@ -1,0 +1,10 @@
+23                	W	18.0	Consigment material_new                 	   	
+33                	L	24.0	sapn test material_new                  	   	
+13                	R	10.0	Pig Iron_new                            	   	
+22                	W	18.0	Consigment material_new                 	   	
+24                	R	18.0	Consigment material 1_new               	   	
+25                	R	18.0	Consigment material 2_new               	   	
+29                	F	12.0	tata_new                                	   	
+30                	F	18.0	sub contracting material_new            	   	
+31                	L	24.0	sapn test material_new                  	   	
+32                	L	24.0	sapn test material_new                  	   	

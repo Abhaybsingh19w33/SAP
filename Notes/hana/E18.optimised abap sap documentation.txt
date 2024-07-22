@@ -1,0 +1,27 @@
+tcode : abapdocu
+ to search for fucntions DATS_ADD_MONTH
+
+Path : ABAP Refernce-
+Processing External data-
+ABAP Database Access-
+ABAP SQL-
+ABAP SQL Operands and Expressions-
+Built in fucntions-
+special functions-
+
+*&---------------------------------------------------------------------*
+REPORT ZTR_OPTIMIZED_ABAP1.
+"functions can be used in select statement
+
+SELECT   KUNNR,
+         UPPER( NAME1 ) AS UNAME1,
+         LOWER( NAME2 ) AS LNAME2,
+         CONCAT( NAME1, NAME2 ) AS CONCATNAME,
+        AEDAT AS OLDATE,
+         DATS_ADD_MONTHS( AEDAT,12 ) AS NEWDATE
+
+FROM ZMT_KNA1
+
+INTO TABLE @DATA(IT_SALES).
+
+CL_DEMO_OUTPUT=>DISPLAY( IT_SALES )."inline declaration

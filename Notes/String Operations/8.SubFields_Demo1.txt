@@ -1,0 +1,28 @@
+REPORT  ZVKPRG1.
+*Offset +
+*length ()
+data:  var(7),
+       dat(7).
+start-of-selection.
+var  = 'BOY'.
+dat  = 'BIG'.
+
+var+0(1)  = 'T'.
+write / var.    "output is TOY
+
+var(1)  = 'J'.    "same as var+0(1)
+write / var.    "output is JOY
+
+var(1)  = dat.    "same as var(1) = dat(1)
+write / var.    "output is BOY
+
+var+4  = var.   "same as var+4(3) = var(3)
+write / var.    "output is BOY BOY
+
+var(3)  = dat(3).   "same as var+0(3) = dat+0(3)
+write / var.    "output is BIG BOY
+
+
+
+
+

@@ -1,0 +1,3 @@
+EZ14FKEMPTAB -- lock object
+
+ZEZ14FKEMPTAB_LOCKPR-- lock program-- check

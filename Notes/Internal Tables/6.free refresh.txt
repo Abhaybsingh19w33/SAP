@@ -1,0 +1,35 @@
+*&---------------------------------------------------------------------*
+*& Report ZRT_IT_DEMO4B
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT ZRT_IT_DEMO4B.
+*CLEAR - Can clear the content of any   variable but memory remains occupied
+*clear <v1>/<wa>/<itab>.
+*
+*REFRESH - Can Refresh content of only 	  ITAB
+*REFRESH <itab>.
+*but memory remains occupied
+*
+*FREE - along with content and it frees
+*      the memory also for any variable.
+*FREE <v1>/<wa>/<itab>.
+
+*When the ITAB is With Header Line
+DATA IT_KNA1 TYPE TABLE OF KNA1 WITH HEADER LINE.
+
+SELECT * INTO TABLE IT_KNA1 FROM KNA1
+                            UP TO 10 ROWS.
+*clear it_kna1. "header line
+*clear it_kna1[]. "itab
+refresh it_kna1. "itab as it cannot refersh wa/headline
+free IT_kna1. "free itab but not header line
+
+IF IT_KNA1[] IS INITIAL.
+   WRITE / 'No Data'.
+else.
+  LOOP AT it_kna1 .
+      write : / it_kna1-kunnr,
+                it_kna1-name1.
+  ENDLOOP.
+endif.

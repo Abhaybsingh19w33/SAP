@@ -1,0 +1,7 @@
+DATA A TYPE I VALUE 10.
+
+IF A > 5.
+  WRITE /'Condition True'.
+ELSE.
+  WRITE /'Condition False'.
+ENDIF.

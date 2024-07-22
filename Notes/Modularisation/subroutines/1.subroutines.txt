@@ -1,0 +1,26 @@
+*&---------------------------------------------------------------------*
+*& Report  ZRTC_SUBROUTINES1
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+REPORT ZRTC_SUBROUTINES1.
+
+DATA NUM1 TYPE I VALUE 10.
+DATA NUM2 TYPE I VALUE 20.
+DATA RES TYPE I.
+
+
+*PERFORM ADDNUM(ZRTCPGM2)
+PERFORM ADDNUM USING NUM1 NUM2
+               CHANGING  RES.
+
+WRITE :/ 'The Result is:', RES.
+*________________________________________
+*
+*REPORT ZrtcPGM2.
+FORM ADDNUM USING VALUE(N1) VALUE(N2)
+       CHANGING R.
+  R = N1 + N2.
+ENDFORM.

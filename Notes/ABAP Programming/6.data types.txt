@@ -1,0 +1,46 @@
+*************************************************************
+
+ABAP Data Types
+
+TYPE                    Min     Max       Ex                           def.val
+
+Non-Numeric(CNDT)
+
+C-char                   1     65535   data email(35)    type c.        space
+
+N-numeric as  
+	char             1     65535   data accno(12)    type n.      '00000..'
+
+D-Date                   8       8     data doj          type d.      '00000000'
+						                      (DDMMYYYY)
+
+T-Time                   6       6     data dot          type t.      '000000'
+						                      (HHMMSSS)    
+
+
+HERE D, T are known as COMPLETE / FIXED LENGTH DATA TYPES.
+
+
+
+Numerics(PIF)
+
+I-Integer         4 4	data v1 type i.		  0
+F-float  	  8 8	data v2 type F.		'0.00'
+P-Packeddecimals  1 16  data v_price type P.	'0.000'
+			DECIMALS <n>.
+F - is rough calculations as it is rounded to 2 decimals always where as P for accurate cals.
+
+TYPE F is FASTER than TYPE P.
+
+*******************************************************************************************************
+
+STRING - is a data type-  for any number of chars 
+C      - only from 1 to 65535 chars
+
+FOR STRING, MEMORY ALLOCATION IS DYNAMIC i.e.
+as per the value stored at runtime and where as C-char, it is static, means at the time of declaration itself irrespective of its value.
+
+DATA - v_name(35) type c,          " memory for 35 chars
+       v_address type string.      " no memory at this stage
+
+All the string operations are applicable even for all non-numeric data types(C,N,D,T)

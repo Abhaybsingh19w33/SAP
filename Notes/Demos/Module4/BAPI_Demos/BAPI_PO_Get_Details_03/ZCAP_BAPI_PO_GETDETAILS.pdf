@@ -1,0 +1,708 @@
+%PDF-1.3
+101 0 obj
+<< /Length 10779 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 20 752 Tm
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*&---------------------------------------------------------------------*) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*& Report ZCAP_BAPI_PO_GETDETAILS) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*&---------------------------------------------------------------------*) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*&) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*&---------------------------------------------------------------------*) Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(REPORT ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(ZCAP_BAPI_PO_GETDETAILS) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(DATA) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(: ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(BEGIN ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OCCURS ) Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(0) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(      ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(INCLUDE ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(STRUCTURE ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(BAPIEKPO) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(. ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" BAPIEKPO Display/List PO Item) Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(DATA) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(: ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(END ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(PARAMETERS ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(P_EBELN ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TYPE ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(EKKO) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(EBELN) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.  ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Purchae document Number) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(CALL ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(FUNCTION ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('BAPI_PO_GETDETAIL') Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(  ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(EXPORTING) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(    ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(PURCHASEORDER ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(= ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(P_EBELN) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   ITEMS         = 'X') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   ACCOUNT_ASSIGNMENT               = ' ') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   SCHEDULES     = ' ') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   HISTORY       = ' ') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   ITEM_TEXTS    = ' ') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   HEADER_TEXTS  = ' ') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   SERVICES      = ' ') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   CONFIRMATIONS = ' ') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   SERVICE_TEXTS = ' ') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   EXTENSIONS    = ' ') Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(* IMPORTING) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_HEADER     =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_ADDRESS    =) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(  ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TABLES) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_HEADER_TEXTS                  =) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(    ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(PO_ITEMS      ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(= ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_ITEM_ACCOUNT_ASSIGNMENT       =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_ITEM_SCHEDULES                =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_ITEM_CONFIRMATIONS            =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_ITEM_TEXTS =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_ITEM_HISTORY                  =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_ITEM_HISTORY_TOTALS           =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_ITEM_LIMITS                   =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_ITEM_CONTRACT_LIMITS          =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_ITEM_SERVICES                 =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_ITEM_SRV_ACCASS_VALUES        =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   RETURN        =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   PO_SERVICES_TEXTS                =) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*   EXTENSIONOUT  =) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(  ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(LOOP ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(AT ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(  ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(WRITE  ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(: ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(/) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('PO Number: = ') Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(PO_NUMBER ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(COLOR ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(COL_HEADING) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(            ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('PO Item: = ') Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(PO_ITEM ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(            ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('Material Number: = ') Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(MATERIAL ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(            ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('Short Text: = ') Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(SHORT_TEXT ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(            ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('Company Code: = ') Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(CO_CODE ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(            ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('Plant: = ') Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(PLANT ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(            ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('Storage location: = ') Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(STORE_LOC ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(            ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('Purchase Order Quantity: = ') Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(QUANTITY ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(            ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('Order unit: = ') Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(UNIT ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(            ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('Net price: = ') Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(NET_PRICE ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(COLOR ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(COL_POSITIVE ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(            ) Tj
+0.30 0.65 0.10 rg
+0.30 0.65 0.10 RG
+('Net order value: = ') Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB) Tj
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(-) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(NET_VALUE ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(COLOR ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(COL_TOTAL ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(ENDLOOP) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+ET
+endstream
+endobj
+100 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/MediaBox [ 0 0 612 792 ]
+/Contents 101 0 R
+/Resources << /ProcSet 6 0 R
+/Font << /F1 7 0 R 
+/F2 8 0 R 
+/F3 9 0 R 
+/F4 10 0 R >>
+>>
+>>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [100 0 R ]
+/Count 1
+>>
+endobj
+% catalog object
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R
+>>
+endobj
+2 0 obj
+<< /Type /Outlines
+/Count 0
+>>
+endobj
+6 0 obj
+[ /PDF /Text ]
+endobj
+7 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F1
+/BaseFont /Courier
+/Encoding /MacRomanEncoding
+>>
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F2
+/BaseFont /Courier-Bold
+/Encoding /MacRomanEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F3
+/BaseFont /Courier-Oblique
+/Encoding /MacRomanEncoding
+>>
+endobj
+10 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F4
+/BaseFont /Courier-BoldOblique
+/Encoding /MacRomanEncoding
+>>
+endobj
+11 0 obj
+<<
+/CreationDate (D:20161213173213)
+/Creator (AB4Editor Control)
+/Producer (AB4Editor Control)
+/Title (ZCAP_BAPI_PO_GETDETAILS)
+>>
+endobj
+trailer
+<< /Info 11 0 R
+/Root 1 0 R
+ >>
+startxref
+0
+%%EOF

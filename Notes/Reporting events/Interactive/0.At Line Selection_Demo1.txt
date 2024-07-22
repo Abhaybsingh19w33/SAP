@@ -1,0 +1,17 @@
+REPORT z NO STANDARD PAGE HEADING.
+
+START-OF-SELECTION.
+  WRITE: / 'Hello'.
+  FORMAT HOTSPOT ON.
+  WRITE: / 'Click here'.
+  FORMAT HOTSPOT OFF.
+  WRITE: / 'Greetings'.
+  
+
+AT LINE-SELECTION.
+  WRITE: / 'This is secondary list'.
+  WRITE: / 'List no   is:', SY-LSIND.
+  WRITE: / 'Selection is:', SY-LISEL.
+  
+
+"When the user double clicks on Hello, or clicks on the magnifying glass or presses f2 - Hi is displayed.

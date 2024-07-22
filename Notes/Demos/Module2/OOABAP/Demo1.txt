@@ -1,0 +1,28 @@
+* Hard coding values like this is not recommended.
+* Parameters must be passed
+REPORT  Z.
+CLASS EMP DEFINITION.
+  PUBLIC SECTION.
+    METHODS SETEMP.
+    METHODS DISPEMP.
+  PRIVATE SECTION.
+    DATA: EMPNO(4)  TYPE N,
+          ENAME(10) TYPE C.
+ENDCLASS.
+
+CLASS EMP IMPLEMENTATION.
+  METHOD SETEMP.
+    EMPNO = 99.
+    ENAME = 'Ram'.
+  ENDMETHOD.
+  METHOD DISPEMP.
+    WRITE:/ 'Empno is:' , EMPNO.
+    WRITE:/ 'Ename is:' , ENAME.
+  ENDMETHOD.
+ENDCLASS.
+
+START-OF-SELECTION.
+  DATA EMP1 TYPE REF TO EMP.
+  CREATE OBJECT EMP1.
+  EMP1->SETEMP( ).
+  EMP1->DISPEMP( ).

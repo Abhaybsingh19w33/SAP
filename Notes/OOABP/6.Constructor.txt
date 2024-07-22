@@ -1,0 +1,48 @@
+REPORT ZAT_OOAP_DEM006.
+
+CLASS EMP DEFINITION.
+PUBLIC SECTION.
+METHODS: CONSTRUCTOR IMPORTING
+         IM_EMPNO TYPE N
+         IM_ENAME TYPE C.
+
+METHODS: DISPEMP.
+PRIVATE SECTION.
+DATA: EMPNO(4)      TYPE N,
+      ENAME(10)     TYPE C.
+ENDCLASS.
+
+CLASS EMP IMPLEMENTATION.
+ METHOD CONSTRUCTOR.
+   EMPNO = IM_EMPNO.
+   ENAME = IM_ENAME.
+ENDMETHOD.
+METHOD DISPEMP.
+    WRITE:/ 'Empno is:' , EMPNO.
+    WRITE:/ 'Ename is:' , ENAME.
+ENDMETHOD.
+ENDCLASS.
+START-OF-SELECTION.
+DATA: EMP1 TYPE REF TO EMP.
+DATA: EMP2 TYPE REF TO EMP.
+
+CREATE OBJECT EMP1 EXPORTING
+          IM_EMPNO = 100
+          IM_ENAME  = 'John'.
+
+EMP1->DISPEMP( ).
+
+*emp1->constructor( im_empno = '123'
+*                         im_ename = 'A321' ). "does not work- cannot call special method "constructor" directly
+
+
+CREATE OBJECT EMP2 EXPORTING
+         IM_EMPNO = 200
+         IM_ENAME = 'Mark'.
+"CREATE OBJECT EMP2 ( EMPNO = 200 ENAME = 'Mark').
+"The above does not work
+
+
+CALL METHOD EMP2->DISPEMP.
+"CALL METHOD EMP2->DISPEMP( ).
+"EMP2->DISPEMP( ).

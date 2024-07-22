@@ -1,0 +1,5 @@
+REPORT z.
+DELETE FROM z104329dept.
+
+WRITE: 'SY-SUBRC IS :',SY-SUBRC.
+WRITE: 'Number of records deleted :',SY-DBCNT.

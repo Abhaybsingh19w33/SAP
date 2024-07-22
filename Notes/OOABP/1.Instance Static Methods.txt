@@ -1,0 +1,38 @@
+REPORT ZYNY_OOABAP_00.
+
+CLASS zclass1 DEFINITION.
+  PUBLIC SECTION.
+    DATA:        v1 TYPE i VALUE 10. "instance var
+    CLASS-DATA : v2 TYPE i VALUE 100. "static var
+
+    METHODS add. "instannce method
+    CLASS-METHODS subtract. "static method
+ENDCLASS.
+
+CLASS zclass1 IMPLEMENTATION.
+  METHOD add.
+    WRITE:  /'This is the method Add.'.
+  ENDMETHOD.
+
+  METHOD subtract.
+    WRITE: / 'This is the method Subtract.'.
+  ENDMETHOD.
+ENDCLASS.
+
+START-OF-SELECTION.
+  DATA: obj TYPE REF TO zclass1.
+  CREATE OBJECT obj.
+
+"==============================Possibilites=================
+*Using instance both instance and static methods can be called.
+CALL METHOD obj->add.
+CALL METHOD obj->subtract.
+
+obj->add( ).
+obj->subtract( ).
+
+*==============================================
+*Using Class name only static methods can be called.
+
+*CALL METHOD zclass1=>add. " not possible
+CALL METHOD zclass1=>subtract."possible

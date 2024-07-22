@@ -1,0 +1,28 @@
+"Add button
+
+REPORT ZLT_CDS_ALV_6_ADDBUTTON.
+
+*cl_salv_gui_table_ida=>create_for_cds_view(
+*  EXPORTING
+*    iv_cds_view_name        = 'ZLT_CDS_JOIN_VIEW'
+*)->fullscreen( )->display( ).
+**  CATCH cx_salv_ida_contract_violation.
+*          or
+
+CL_SALV_GUI_TABLE_IDA=>create_for_cds_view(
+  EXPORTING
+    iv_cds_view_name               = 'ZLT_CDS_JOIN_VIEW'
+*    io_gui_container               =
+*    io_calc_field_handler          =
+  RECEIVING
+    ro_alv_gui_table_ida           = DATA(o_alv)
+).
+
+o_alv->TOOLBAR( )->ADD_BUTTON(
+  EXPORTING
+    IV_FCODE                       = 'DETAIL'
+    IV_TEXT                        = 'Detailed'
+).
+
+data(o_ful_scrn) = o_alv->fullscreen( ).
+o_ful_scrn->display( ).

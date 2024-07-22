@@ -1,0 +1,7 @@
+REPORT Z.
+TYPES t_itab TYPE SORTED TABLE OF i WITH UNIQUE KEY table_line.
+DATA(dref) = VALUE t_itab( ( 100 ) ( 200 ) ( 3000 ) ).
+"DATA(dref) = VALUE t_itab( ( 100 ) ( ) ( 3000 ) ).
+LOOP AT dref INTO DATA(WA).
+  WRITE WA.
+ENDLOOP.

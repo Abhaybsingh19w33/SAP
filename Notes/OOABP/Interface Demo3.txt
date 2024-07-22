@@ -1,0 +1,30 @@
+REPORT  z.
+INTERFACE lif_employee.
+  METHODS:
+    set_attributes
+      IMPORTING employee_no   TYPE i
+      EXPORTING employee_name TYPE string.
+ENDINTERFACE.
+
+CLASS employee DEFINITION.
+  PUBLIC SECTION.
+    INTERFACES lif_employee.
+ENDCLASS.
+
+CLASS employee IMPLEMENTATION.
+  METHOD lif_employee~set_attributes.
+  ENDMETHOD.
+ENDCLASS.
+
+DATA employee1  TYPE REF TO employee.
+DATA: no   TYPE i VALUE 10,
+      name TYPE string VALUE 'Shyam'.
+
+START-OF-SELECTION.
+  CREATE OBJECT employee1.
+  CALL METHOD employee1->lif_employee~set_attributes
+    EXPORTING
+      employee_no   = no
+    IMPORTING
+      employee_name = name.
+  WRITE:/ no , name.

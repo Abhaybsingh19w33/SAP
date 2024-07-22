@@ -1,0 +1,27 @@
+REPORT ZLT_CDS_ALV_5_REMOVEBUTTON.
+
+*cl_salv_gui_table_ida=>create_for_cds_view(
+*  EXPORTING
+*    iv_cds_view_name        = 'ZADM_CDS_SALES_JOINS'
+*)->fullscreen( )->display( ).
+**  CATCH cx_salv_ida_contract_violation.    " .
+*          or
+
+CL_SALV_GUI_TABLE_IDA=>create_for_cds_view(
+  EXPORTING
+    iv_cds_view_name               = 'ZLT_CDS_JOIN_VIEW'
+  RECEIVING
+    ro_alv_gui_table_ida           = DATA(o_alv)
+).
+
+data(o_ful_scrn) = o_alv->fullscreen( ).
+
+ data(o_fcat) = o_alv->FIELD_CATALOG( ).
+"to set title
+O_ALV->DISPLAY_OPTIONS( )->SET_TITLE( IV_TITLE = 'List of Sales Orders' ).
+
+"To remove print button from the custom alv toolbar
+
+o_alv->STANDARD_FUNCTIONS( )->SET_PRINT_ACTIVE( IV_ACTIVE = abap_false ).
+
+o_ful_scrn->display( ).

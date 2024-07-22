@@ -1,0 +1,41 @@
+*&---------------------------------------------------------------------*
+*& Report zadm_alv_ida_using_cds
+*&---------------------------------------------------------------------*
+REPORT zadm_alv_ida_using_cds.
+
+*cl_salv_gui_table_ida=>create_for_cds_view(
+*  EXPORTING
+*    iv_cds_view_name        = 'ZADM_CDS_SALES_JOINS'
+*)->fullscreen( )->display( ).
+**  CATCH cx_salv_ida_contract_violation.    " .
+*          or
+
+CL_SALV_GUI_TABLE_IDA=>create_for_cds_view(
+  EXPORTING
+    iv_cds_view_name               = 'ZADM_CDS_SALES_JOINS'
+*    io_gui_container               =
+*    io_calc_field_handler          =
+  RECEIVING
+    ro_alv_gui_table_ida           = DATA(o_alv)
+).
+*  CATCH cx_salv_db_connection.    "
+*  CATCH cx_salv_db_table_not_supported.    "
+*  CATCH cx_salv_ida_contract_violation.    "
+*  CATCH cx_salv_function_not_supported.    " _
+
+data(o_ful_scrn) = o_alv->fullscreen( ).
+*  CATCH cx_salv_ida_contract_violation.    "
+
+ data(o_fcat) = o_alv->FIELD_CATALOG( ).
+
+ o_fcat->SET_FIELD_HEADER_TEXTS(
+   EXPORTING
+     IV_FIELD_NAME                  = 'PRTY'
+     IV_HEADER_TEXT                 = 'Priority'
+*     IV_TOOLTIP_TEXT                =
+*     IV_TOOLTIP_TEXT_LONG           =
+ ).
+*   CATCH CX_SALV_IDA_UNKNOWN_NAME.    
+*   CATCH CX_SALV_CALL_AFTER_1ST_DISPLAY.    
+
+o_ful_scrn->display( ).

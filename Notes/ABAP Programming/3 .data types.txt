@@ -1,0 +1,14 @@
+Report z.
+DATA age TYPE I.        "////Default value of i is 0
+
+DATA name(15) TYPE C.
+
+DATA dob TYPE D.
+
+DATA status. "<=> DATA status(1) TYPE C.
+
+name = 'Chris'.
+status = 'cap'.
+
+
+write :/ age, name, dob,status.    "=> prints only 'c' for status

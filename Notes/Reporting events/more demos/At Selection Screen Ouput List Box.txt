@@ -1,0 +1,23 @@
+PROGRAM z.
+TYPE-POOLS VRM.
+
+DATA:    param TYPE vrm_id,
+       values     TYPE vrm_values,
+       value LIKE LINE OF values.
+
+PARAMETERS: p_name(10) AS LISTBOX VISIBLE LENGTH 10.
+AT SELECTION-SCREEN OUTPUT.
+  param = 'P_NAME'.
+  value-key = '1'.
+  value-text = 'JOHN'.
+  APPEND value TO values.
+  value-key = '2'.
+  value-text = 'PETER'.
+  APPEND value TO values.
+  CALL FUNCTION 'VRM_SET_VALUES'
+    EXPORTING id     = param
+              values = values.
+START-OF-SELECTION.
+WRITE p_name.
+
+  

@@ -1,0 +1,71 @@
+REPORT  Z.
+INTERFACE lif_employee.
+  METHODS:
+    set_attributes
+       IMPORTING  im_employee_no   TYPE i
+                  im_employee_name TYPE string
+                  im_wage TYPE i.
+ENDINTERFACE.
+
+CLASS employee DEFINITION.
+PUBLIC SECTION.
+INTERFACES lif_employee.
+ METHODS:
+     display_attributes.
+PRIVATE SECTION.
+    DATA:  no  TYPE i,
+          name TYPE string,
+          wage TYPE i.
+ENDCLASS.
+*-- CLASS LCL_CompanyEmployees IMPLEMENTATION
+CLASS employee IMPLEMENTATION.
+
+ METHOD lif_employee~set_attributes.
+*   Adds a new employee to the list of employees
+     no   = im_employee_no.
+    name = im_employee_name.
+    wage = im_wage.
+  ENDMETHOD.
+  METHOD display_attributes.
+*   Displays all employees and there wage
+    WRITE: / 'List of Employees'.
+      WRITE: / no, name, wage.
+  ENDMETHOD.
+
+ENDCLASS.
+
+*******************************************************
+* Sub class BlueCollar_Employee
+*******************************************************
+CLASS bluecollar_employee DEFINITION
+           INHERITING FROM employee.
+
+PUBLIC SECTION.
+    METHODS: lif_employee~set_attributes REDEFINITION.
+
+ENDCLASS.
+
+*---- CLASS BlueCollar_Employee IMPLEMENTATION
+CLASS bluecollar_employee IMPLEMENTATION.
+
+METHOD lif_employee~set_attributes.
+
+ CALL METHOD super->lif_employee~set_attributes
+      EXPORTING im_employee_no = im_employee_no
+                im_employee_name = im_employee_name
+                im_wage = im_wage.
+ ENDMETHOD.
+ENDCLASS.
+
+DATA:
+* Object references
+  o_bluecollar_employee1  TYPE REF TO bluecollar_employee.
+START-OF-SELECTION.
+* Create bluecollar employee object
+  CREATE OBJECT o_bluecollar_employee1.
+  CALL METHOD o_bluecollar_employee1->lif_employee~set_attributes
+      EXPORTING
+                im_employee_no  = 1
+                im_employee_name  = 'Karen Johnson'
+                im_wage = 1250.
+  CALL METHOD o_bluecollar_employee1->display_attributes.

@@ -1,0 +1,8 @@
+REPORT Z10439PGM1.
+WRITE:'The current user is ', SY-UNAME.
+WRITE:/'The current date is ', SY-DATUM.
+WRITE:/'The current time is ', SY-UZEIT.
+WRITE:/'The current report name ', SY-REPID.
+WRITE:/'The current report name ', SY-CPROG.
+WRITE:/'The current tcode is  ', SY-TCODE.
+WRITE:/'The current screen no is  ', SY-DYNNR.

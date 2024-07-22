@@ -1,0 +1,25 @@
+@AbapCatalog.sqlViewName: 'ZYTR_CDS_JOIN'
+@AbapCatalog.compiler.compareFilter: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'join'
+define view ZTR_CDS_JOIN as select from zadm_kna1 as o
+inner join zadm_sales as s
+    on o.kunnr = s.kunnr
+    {
+        o.kunnr,
+        o.name1,
+        o.ort01,
+        o.land1,
+        s.vbeln,
+        s.netpr,
+case 
+            when s.netpr between 1 and 100000 then 'LOW'
+            when s.netpr between 100001 and 300000 then 'MEDIUM'
+            when s.netpr > 300001 then 'HIGH'
+            
+    else 'NA'
+end as prty
+    
+}
+
+

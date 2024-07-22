@@ -1,0 +1,34 @@
+REPORT Z.
+TYPES: BEGIN OF TYDEPT,
+         MANDT  TYPE Z104329DEPT-MANDT,
+         DEPTNO TYPE Z104329DEPT-DEPTNO,
+         DNAME  TYPE Z104329DEPT-DNAME,
+         LOC    TYPE Z104329DEPT-LOC,
+       END OF TYDEPT.
+
+DATA WA TYPE TYDEPT.
+WA-MANDT = SY-MANDT.
+
+WA-DEPTNO =  10.
+WA-DNAME =  'ACCOUNTING'. WA-LOC =  'NEW YORK'.
+INSERT Z104329DEPT FROM WA. "will insert one record
+WRITE: 'SY-SUBRC IS :',SY-SUBRC.
+WRITE:/ 'Number of records inserted :',SY-DBCNT.
+
+WA-DEPTNO = 20. WA-DNAME =   'RESEARCH'.
+WA-LOC =   'DALLAS'.
+INSERT Z104329DEPT FROM WA. "will insert one record
+WRITE:/ 'SY-SUBRC IS :',SY-SUBRC.
+WRITE:/ 'Number of records inserted :',SY-DBCNT.
+
+WA-DEPTNO = 30. WA-DNAME =   'SALES'.
+WA-LOC = 'CHICAGO'.
+INSERT Z104329DEPT FROM WA. "will insert one record
+WRITE:/ 'SY-SUBRC IS :',SY-SUBRC.
+WRITE:/ 'Number of records inserted :',SY-DBCNT.
+
+WA-DEPTNO = 40. WA-DNAME =   'OPERATIONS'.
+WA-LOC =  'BOSTON'.
+INSERT Z104329DEPT FROM WA. "will insert one record
+WRITE:/ 'SY-SUBRC IS :',SY-SUBRC.
+WRITE:/ 'Number of records inserted :',SY-DBCNT.

@@ -1,0 +1,61 @@
+*&---------------------------------------------------------------------*
+*& Report ZRT_OPTIMISED9
+*&---------------------------------------------------------------------*
+REPORT zrt_optimised9c.
+"Inserting records using the NEW operator
+*As refernce is created,we must use the dereferncing operatior =>*
+
+*TYPES : BEGIN OF TY_SALARY,
+*          SALARY TYPE I,
+*        END   OF TY_SALARY.
+*
+*TYPES :TY_TT_SALARY TYPE SORTED TABLE OF TY_SALARY
+*                    WITH UNIQUE KEY SALARY.
+*
+"New keyword only creates reference
+***This will throw error
+**DATA(itab) = NEW ty_tt_salary( ( 100 )
+**                               ( )
+**                               ( salary = 500 )
+***                              ).
+*
+*"This is correct
+*DATA(ITAB) = NEW TY_TT_SALARY( ( SALARY = 100 )
+*                               ( )
+*                               ( SALARY = 500 )
+*                              ).
+*
+**CL_DEMO_OUTPUT=>DISPLAY( ITAB )."Will not display the data as only reference is passed.
+**cl_demo_output=>display( itab->* )."Will display the data
+**
+**" The operator ->* is used for dereferencing data object (meaning get value behind this "pointer" ).
+***
+***========================================================================
+
+***In the below statment , itab2 is created  using the pointer of itab so  while displaying itab2 no need to use pointer ->
+*
+*DATA(ITAB2) = ITAB->*.
+**.
+*CL_DEMO_OUTPUT=>DISPLAY( ITAB2 ).
+
+*****======================================================================
+*
+"Inserting records in internal table using the VALUE keyword.
+*As no refernce is created,need not use the dereferncing operatior =>*
+
+DATA TAB  TYPE SORTED TABLE OF SCARR
+                 WITH UNIQUE KEY CARRID.
+
+TAB = VALUE #(
+               ( mandt = '100'
+                 CARRID ='AA'
+                 CARRNAME = 'American Airlines'
+                 CURRCODE = 'USD'
+               )
+                ( mandt = '100'
+                 CARRID ='BB'
+                 CARRNAME = 'SecondRecord'
+                 CURRCODE = 'INR'
+               )
+             ).
+CL_DEMO_OUTPUT=>DISPLAY( TAB ).

@@ -1,0 +1,55 @@
+REPORT z.
+
+DATA : it_spfli TYPE TABLE OF spfli. "DECLARE INTERNAL TABLE FOR SPFLI
+DATA: it_listheader TYPE slis_t_listheader,
+      wa_listheader TYPE slis_listheader.
+
+START-OF-SELECTION.
+  SELECT * FROM spfli INTO TABLE it_spfli.
+
+  PERFORM build_alv_header.
+
+
+  CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY' "CALL FUNCTION MODULE TO DISPLAY ALV GRID
+    EXPORTING
+      i_structure_name       = 'SPFLI'
+      i_callback_program     = sy-repid
+      "i_callback_program     = 'ZRT_ALV3'
+      i_callback_top_of_page = 'TOPPAGE2'"Name of the subroutine
+    TABLES
+      t_outtab               = it_spfli. "PASS INTERNAL TABLE TO DISPLAY ALV FORMAT
+
+
+FORM build_alv_header .
+*  Type H is used to display headers i.e. big font
+  wa_listheader-typ  = 'H'.
+  wa_listheader-info ='Flight Details'.
+  APPEND wa_listheader TO it_listheader.
+  CLEAR wa_listheader.
+
+*  Type S is used to display key and value pairs
+  wa_listheader-typ = 'S'.
+  wa_listheader-key = 'Date :' .
+
+  CONCATENATE  sy-datum+6(2)
+               sy-datum+4(2)
+               sy-datum(4)
+               INTO wa_listheader-info
+               SEPARATED BY '/'.
+  APPEND wa_listheader TO it_listheader.
+
+  CLEAR wa_listheader.
+
+*    Type A is used to display italic font
+  wa_listheader-typ  = 'A'.
+  wa_listheader-info ='SAP ALV Report'.
+  APPEND wa_listheader TO it_listheader.
+  CLEAR wa_listheader.
+ENDFORM.                    " BUILD_ALV_HEADER
+
+FORM toppage2.
+  CALL FUNCTION 'REUSE_ALV_COMMENTARY_WRITE'
+    EXPORTING
+      it_list_commentary = it_listheader.
+
+ENDFORM.

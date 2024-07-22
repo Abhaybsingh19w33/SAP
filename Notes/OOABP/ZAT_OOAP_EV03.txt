@@ -1,0 +1,46 @@
+REPORT ZAT_OOAP_EV03.
+
+
+CLASS lcl_main DEFINITION.
+  PUBLIC SECTION.
+    DATA: v_num TYPE i.
+    METHODS: process IMPORTING iv_num TYPE i.
+    EVENTS: cutoff_reached.
+ENDCLASS.                    "lcl_main DEFINITION
+*
+CLASS lcl_event_handler DEFINITION.
+  PUBLIC SECTION.
+    METHODS: handle_cutoff_reached
+        FOR EVENT cutoff_reached OF lcl_main.
+ENDCLASS.                    "lcl_event_handler DEFINITION
+
+CLASS lcl_main IMPLEMENTATION.
+  METHOD process.
+    v_num = iv_num.
+    IF v_num GE 2.
+      RAISE EVENT cutoff_reached.
+    ELSEIF v_num LT 2.
+      WRITE 'Event is not raised'.
+      ENDIF.
+  ENDMETHOD.                    "process
+ENDCLASS.                    "lcl_main IMPLEMENTATION
+*
+CLASS lcl_event_handler IMPLEMENTATION.
+  METHOD handle_cutoff_reached.
+    WRITE: 'Event Processed'.
+  ENDMETHOD.                    "handle_cutoff_reached
+ENDCLASS.
+*
+START-OF-SELECTION.
+  DATA: lo_main TYPE REF TO lcl_main. "event is defined
+  DATA: lo_event_handler TYPE REF TO lcl_event_handler. "event handler method
+  PARAMETERS num type i.
+*
+  CREATE OBJECT lo_main.
+  CREATE OBJECT lo_event_handler.
+  SET HANDLER lo_event_handler->handle_cutoff_reached FOR lo_main.
+*
+  lo_main->process( num ).
+
+*
+             "lcl_event_handler IMPLEMENTATION

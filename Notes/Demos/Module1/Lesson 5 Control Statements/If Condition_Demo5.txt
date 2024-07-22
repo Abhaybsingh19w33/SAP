@@ -1,0 +1,18 @@
+DATA:       f1   VALUE 'A',
+	        f2   VALUE 'B',
+	        f3   VALUE 'B'.
+*Alternatively the following does the same
+
+if  f1  = f2.
+	write : / f1,   ' = ',  f2. 
+else.
+   if  f1 = f3.      
+	write : / f1,   '= ',  f3. 
+   else.
+        if   f2 = f3.
+	  write : / f2,   '= ',  f3. 
+        else. 
+	    write : /  'All fields are different'. 
+        endif. 
+    endif.
+endif. 

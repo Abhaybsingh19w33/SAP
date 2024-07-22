@@ -1,0 +1,55 @@
+1. In SE11, create a table type based on SCARR.
+NOTE: Line Type is SCARR.
+Name the table type as ZXXXXXXSCARRTAB.
+wHERE XXXXXX is your empcode.
+
+2. Create a function module having the above 
+table type as changing parameter
+
+3. Code in Function Module
+*The Changing parameter name in the below case is C_ITSCARR. 
+* Z104329ITSCARRTABTYPE is the table type.
+
+FUNCTION Z104329FM5.
+*"----------------------------------------------------------------------
+*"*"Local Interface:
+*"  CHANGING
+*"     REFERENCE(C_ITSCARR) TYPE  Z104329ITSCARRTABTYPE
+*"----------------------------------------------------------------------
+DATA WA TYPE SCARR.
+WA-CARRID = 99.
+*Remaining fields in WA will have initial values
+
+MODIFY C_ITSCARR FROM WA INDEX 3 TRANSPORTING CARRID.
+
+
+ENDFUNCTION
+.
+Note: For each participant, the table type name will be different.
+Parameter name i.e ITSCARR can remain the same.
+
+4. Code to call the above Function Module
+REPORT Z.
+REPORT Z.
+TYPES : BEGIN OF TYSCARR,
+          MANDT    TYPE MANDT,
+          CARRID   TYPE SCARR-CARRID,
+          CARRNAME TYPE SCARR-CARRNAME,
+          CURRCODE TYPE SCARR-CURRCODE,
+          URL TYPE SCARR-URL,
+        END OF TYSCARR.
+
+DATA ITSCARR TYPE TABLE OF TYSCARR.
+DATA WASCARR TYPE TYSCARR.
+
+SELECT MANDT CARRID CARRNAME CURRCODE URL UP TO 5 ROWS
+  FROM SCARR INTO TABLE ITSCARR.
+
+CL_DEMO_OUTPUT=>DISPLAY( ITSCARR ).
+
+CALL FUNCTION 'Z104329FM5'
+  CHANGING
+    C_ITSCARR       = ITSCARR.
+
+CL_DEMO_OUTPUT=>DISPLAY( 
+

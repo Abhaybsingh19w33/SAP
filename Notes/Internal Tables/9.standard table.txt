@@ -1,0 +1,41 @@
+*&---------------------------------------------------------------------*
+*& Report ZRT_IT_DEMO7
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zrt_it_demo7.
+
+
+TYPES: BEGIN OF it_t1 ,
+         sales    TYPE p DECIMALS 2,
+         name(10),
+       END OF it_t1.
+
+DATA : it TYPE STANDARD TABLE OF it_t1 INITIAL SIZE 3,
+       wa TYPE it_t1.
+
+wa-sales   =   100. wa-name  =  'Jack'.
+APPEND wa TO it SORTED BY sales.
+
+wa-sales   =  50. wa-name  =  'Jim'.
+APPEND wa TO it  SORTED BY sales.
+
+wa-sales   =  150. wa-name  =  'Jane'.
+APPEND wa TO it  sorted by sales.
+
+wa-sales   =  75. wa-name  =  'George'.
+APPEND wa  TO it  SORTED BY sales.
+
+wa-sales   =  200.wa-name  =  'Gina'.
+APPEND wa TO it SORTED BY sales.
+
+wa-sales   =  100. wa-name  =  'Jeff'.
+APPEND wa TO it SORTED BY sales.
+
+PERFORM  dispinttable.
+
+FORM dispinttable.
+  LOOP AT it INTO wa.
+    WRITE: /  wa-sales, wa-name.
+  ENDLOOP.
+ENDFORM.

@@ -1,0 +1,57 @@
+*&---------------------------------------------------------------------*
+*& Report ZRTC_GEN_DATA
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zrtc_gen_data.
+
+DATA: it_kna1 TYPE TABLE OF kna1,
+      wa_kna1 TYPE kna1.
+SELECT * INTO TABLE it_kna1 FROM kna1 UP TO 10 ROWS  WHERE land1 = 'IN'.
+
+LOOP AT it_kna1 INTO wa_kna1.
+  WRITE : / wa_kna1-kunnr,
+           wa_kna1-land1 color 1,
+           wa_kna1-name1 centered color 3,
+           wa_kna1-ort01.
+ENDLOOP.
+
+
+
+============================================================================
+with types 
+
+
+
+
+
+*&---------------------------------------------------------------------*
+*& Report ZRTC_GEN_DATA
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zrtc_gen_data.
+TYPES :
+  BEGIN OF ty_kna1,
+    kunnr TYPE kunnr,
+    land1 TYPE land1,
+    name1 TYPE name1,
+    ort01 TYPE ort01,
+  END OF ty_kna1.
+
+
+DATA: it_kna1 TYPE TABLE OF ty_kna1,
+      wa_kna1 TYPE ty_kna1.
+
+
+SELECT kunnr land1 name1 ort01
+  INTO TABLE it_kna1
+  FROM kna1 UP TO 10 ROWS
+  WHERE land1 = 'IN'.
+
+LOOP AT it_kna1 INTO wa_kna1.
+  WRITE : / wa_kna1-kunnr,
+           wa_kna1-land1 COLOR 1,
+           wa_kna1-name1 CENTERED COLOR 3,
+           wa_kna1-ort01.
+ENDLOOP.

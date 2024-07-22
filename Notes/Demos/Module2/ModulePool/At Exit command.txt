@@ -1,0 +1,12 @@
+PROCESS AFTER INPUT.
+  MODULE CANCEL AT EXIT-COMMAND.
+
+
+MODULE CANCEL INPUT.
+  IF OK_CODE = 'CANCEL'.
+    LEAVE PROGRAM.
+  ENDIF.
+ENDMODULE.
+
+
+The function type of the cancel button should be E.

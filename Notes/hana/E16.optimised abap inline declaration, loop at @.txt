@@ -1,0 +1,51 @@
+Report z.
+*INLINE Declaration
+DATA(RES) = 100 + 200.
+CL_DEMO_OUTPUT=>DISPLAY( RES ).
+
+===============================================================
+REPORT ZADM_OPTIMIZED_ABAP1.
+
+CONCATENATE 'CG LTD' 'Airoli' into data(v_address) SEPARATED BY ','.
+
+CL_DEMO_OUTPUT=>DISPLAY( v_address ).
+===============================================================
+
+"inline declaration
+"@ is used for host table 
+" here it_Sales is host table and ZMT_KNA1 is guest table.
+
+The one that is local and declared in the program is host table/variable
+The one that is declared in se11 or outside the porgram is guest table
+============================
+1) As we are using optimisised abap i.e optimised open sql, the ~ operator is used
+2) You  can also use case statements in select query.
+======================================
+report z.
+
+     SELECT   K~KUNNR,
+              upper( K~NAME1 ) as uname1,
+              K~NAME2,
+              K~ORT01,
+              K~LAND1,
+              K~AEDAT,
+              s~VBELN,
+              s~NETPR,
+       case
+          when NETPR <= 100000 then 'Low'
+          when NETPR between 100001 and 300000 then 'Medium'
+          when NETPR > 300000 then 'High'
+       else 'NA'
+       end as prty
+
+  FROM ZMT_KNA1 AS K INNER JOIN ZMT_SALES AS S
+  ON K~KUNNR  = S~KUNNR
+  INTO TABLE @data(IT_SALES). 
+
+LOOP AT it_sales into data(wa_sales).
+   write : / wa_sales-kunnr,wa_sales-uname1,wa_sales-vbeln,
+   wa_sales-netpr.
+ENDLOOP.
+
+*instead of loop endloop
+*cl_demo_output=>display( it_sales ).

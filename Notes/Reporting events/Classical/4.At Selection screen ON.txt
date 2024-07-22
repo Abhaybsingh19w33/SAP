@@ -1,0 +1,39 @@
+REPORT  Z.
+PARAMETERS CITY_FR(20), CITY_TO(20).
+
+AT SELECTION-SCREEN ON CITY_FR.
+  IF CITY_FR NE 'MUMBAI'.
+    MESSAGE E001(Z104329MSGCLAS) WITH 'City from must be Mumbai'.
+  ENDIF.
+
+AT SELECTION-SCREEN ON CITY_TO.
+  IF CITY_TO NE 'CHENNAI'.
+    MESSAGE E001(Z104329MSGCLAS) WITH 'City to must be Chennai'.
+  ENDIF.
+
+START-OF-SELECTION.
+  WRITE CITY_FR.
+  WRITE CITY_TO.
+*
+
+-----------------------------------
+REPORT  Z.
+PARAMETERS: CITY_FR(20), CITY_TO(20).
+
+AT SELECTION-SCREEN.
+  IF CITY_FR NE 'MUMBAI'.
+    MESSAGE E001(Z104329MSGCLAS) WITH 'City from must be Mumbai'.
+  ENDIF.
+  IF CITY_TO NE 'CHENNAI'.
+    MESSAGE E001(Z104329MSGCLAS) WITH 'City to must be Chennai'.
+  ENDIF.
+
+START-OF-SELECTION.
+  WRITE CITY_FR.
+  WRITE CITY_TO.
+*
+
+___________________________________________________________
+
+
+ 

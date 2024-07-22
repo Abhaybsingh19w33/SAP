@@ -1,0 +1,4 @@
+100	10	Computer Science 
+100	30	Electronics 
+100	40	Mechanics 
+100	50	Robotics 

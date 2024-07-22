@@ -1,0 +1,24 @@
+Here : is used to refer to the input parameter of th view ZMT_CDS_INPUT
+=======================================
+
+define view zMT_CDS_INPUT
+    with parameters cust_no : abap.char( 10 )
+as select from zmt_sales {
+     kunnr,
+    vbeln,
+    netpr,
+    :cust_no as Customer_Number,
+}  where kunnr = :cust_no
+
+========================================
+
+2) Consume view in SE38 program
+"Note : @ is used to refer to host variable "p_kunnr
+
+"p_kunnr is the host variable
+"cust_no is the guest variable
+
+PARAMETERS : p_kunnr type kunnr.
+select * from zMT_CDS_INPUT( cust_no = @p_kunnr )
+
+=======================================

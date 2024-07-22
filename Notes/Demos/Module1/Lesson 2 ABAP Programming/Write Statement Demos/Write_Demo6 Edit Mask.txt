@@ -1,0 +1,9 @@
+REPORT Z104329PGM1.
+DATA W_TIME1 TYPE T,
+DATA W_DATE1 TYPE D.
+
+W_TIME1 = SY-UZEIT.
+WRITE /(60)  W_TIME1 USING EDIT MASK 'The current time is __:__:__'.
+
+W_DATE1 = SY-DATUM.
+WRITE /(60)  W_DATE1 USING EDIT MASK 'The current date is __:__:__'.

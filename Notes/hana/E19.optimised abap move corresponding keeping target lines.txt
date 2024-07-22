@@ -1,0 +1,35 @@
+*&---------------------------------------------------------------------*
+*& Report ZRT_OPTIMISED12_MOVECORES
+*&---------------------------------------------------------------------*
+REPORT ZRT_OPTIMISED14.
+
+SELECT * FROM
+  Z104329EMP INTO TABLE @DATA(it_emp)
+  where DEPTNO = 10 .
+
+SELECT * FROM
+Z104329EMP INTO TABLE @DATA(it_emp1)
+where DEPTNO = 20 .
+
+*PERFORM MOVE1. " It will replace the old content
+PERFORM  MOVE2. " It will add to to the old content
+
+FORM MOVE1.
+	MOVE-CORRESPONDING it_emp to it_emp1.
+	WRITE:/ 'MOVE-CORRESPONDING'.
+	
+	PERFORM disp.
+ENDFORM.
+
+FORM MOVE2.
+	MOVE-CORRESPONDING it_emp to it_emp1 KEEPING TARGET LINES.
+	WRITE:/ 'MOVE-CORRESPONDING  KEEPING TARGET LINES'.
+	
+	PERFORM disp.
+ENDFORM.
+
+FORM disp.
+	LOOP AT it_emp1 INTO DATA(wa_emp).
+  		WRITE:/ wa_emp-empno, wa_emp-ename,wa_emp-deptno.
+	ENDLOOP.
+endform.

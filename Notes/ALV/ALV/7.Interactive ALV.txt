@@ -1,0 +1,88 @@
+REPORT ZAT_ALV_DEMO09.
+
+TYPES : BEGIN OF ty_spfli,  "User defined internal table type
+          carrid    TYPE spfli-carrid,
+          connid    TYPE spfli-connid,
+          countryfr TYPE spfli-countryfr,
+          cityfrom  TYPE spfli-cityfrom,
+        END OF ty_spfli.
+
+DATA : it_spfli TYPE TABLE OF ty_spfli, "SPFLI internal table
+       wa_spfli TYPE ty_spfli. "work area
+DATA : it_fcat_spfli TYPE slis_t_fieldcat_alv. "field catalog for SPFLI table
+DATA : wa_fcat_spfli LIKE LINE OF it_fcat_spfli.
+
+DATA s_events TYPE slis_t_event.
+DATA s_layout TYPE slis_layout_alv.
+s_layout-zebra = 'X'.
+
+PARAMETERS : p_carrid TYPE spfli-carrid. "CARRID type input
+
+START-OF-SELECTION.
+  PERFORM get_data_spfli.
+  PERFORM create_fcat_spfli.
+  PERFORM disp_alv_spfli.
+
+FORM get_data_spfli.
+  SELECT carrid connid countryfr cityfrom FROM spfli
+      INTO TABLE it_spfli
+    WHERE carrid =  p_carrid.
+ENDFORM.                    " GET_DATA
+
+FORM create_fcat_spfli .
+  wa_fcat_spfli-col_pos = '1' .
+  wa_fcat_spfli-fieldname = 'CARRID' . "Field Name of the DB table
+  wa_fcat_spfli-seltext_m = 'Airline' . "Col Heading to be displayed
+  wa_fcat_spfli-hotspot = 'X' .
+  APPEND wa_fcat_spfli TO it_fcat_spfli .
+  CLEAR wa_fcat_spfli .
+
+  wa_fcat_spfli-col_pos = '2' .
+  wa_fcat_spfli-fieldname = 'CONNID' .
+  " WA_FCAT_SPFLI-TABNAME = 'IT_SPFLI' .
+  wa_fcat_spfli-seltext_m = 'Flight Number' .
+  APPEND wa_fcat_spfli TO it_fcat_spfli .
+  CLEAR wa_fcat_spfli .
+
+  wa_fcat_spfli-col_pos = '3' .
+  wa_fcat_spfli-fieldname = 'COUNTRYFR' .
+  "WA_FCAT_SPFLI-REF_FIELDNAME = 'Country' .
+  wa_fcat_spfli-no_out = 'X' .
+  "WA_FCAT_SPFLI-REF_TABNAME = 'SPFLI' .
+*  WA_FCAT_SPFLI-TABNAME = 'IT_SPFLI' .
+  wa_fcat_spfli-seltext_m = 'Country From' .
+*  WA_FCAT_SPFLI-EDIT = 'X' .
+  APPEND wa_fcat_spfli TO it_fcat_spfli .
+  CLEAR wa_fcat_spfli .
+
+  wa_fcat_spfli-col_pos = '4' .
+  wa_fcat_spfli-fieldname = 'CITYFROM' .
+  wa_fcat_spfli-tabname = 'IT_SPFLI' .
+  wa_fcat_spfli-seltext_m = 'Departure City' .
+  wa_fcat_spfli-emphasize = 'C610'.
+  APPEND wa_fcat_spfli TO it_fcat_spfli .
+  CLEAR wa_fcat_spfli .
+
+ENDFORM.                    " CREATE_FCAT
+
+
+FORM disp_alv_spfli .
+  CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+    EXPORTING
+      i_callback_program = sy-repid "mandatory for event handling
+      i_callback_user_command = 'INTER'  "Interactive ALV
+      it_fieldcat             = it_fcat_spfli "PASS FIELD CATALOG TO ALV
+    TABLES
+      t_outtab                = it_spfli.
+ENDFORM.                    " DISP_ALV
+
+
+
+FORM inter USING r_ucomm LIKE sy-ucomm
+       rs_selfield TYPE slis_selfield.
+ "WRITE: 'rs_selfield:', rs_selfield.
+  CASE r_ucomm.
+    WHEN '&IC1'. "standard Function code for double click
+      CALL TRANSACTION 'SE11' .
+  ENDCASE.
+ENDFORM.

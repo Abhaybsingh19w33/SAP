@@ -1,0 +1,10 @@
+REPORT Z.
+DATA: V_CHAR(10).
+
+V_CHAR = '1234    '.
+WRITE 'Before CONVERSION'.
+WRITE V_CHAR.
+
+V_CHAR    = |{ V_CHAR ALPHA = IN  }|.
+WRITE / 'AFTER CONVERSION'.
+write  V_CHAR.

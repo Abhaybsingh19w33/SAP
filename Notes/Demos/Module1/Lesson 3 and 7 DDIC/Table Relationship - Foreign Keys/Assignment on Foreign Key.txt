@@ -1,0 +1,87 @@
+1) Can foreign key relationships be created
+on tables defined with fields based on predefined data types?
+Eg Deptno field in the emp and dept table is based on predefined 
+data types
+
+Ans:No
+We get error as: Foreign key relations is only possible 
+for fields with data elements.
+
+2a) Can foreign key relationships be created
+on tables defined with fields based on data elements only?  
+No Domains 
+Data Elements for fields are same in both tables
+
+Ans: Yes 
+
+Eg.
+For dept table DataElement name is z104329dedeptno . 
+It is based NOT based on domain.It is based on predefined data type.
+i.e NUMC 2.
+
+For emp table DataElement name is z104329dedeptno. 
+It is NOT based on domain. It is based on predefined data type
+i.e NUMC 2.
+
+
+2b) Can foreign key relationships be created
+on tables defined with fields based on data elements only?  
+No Domains
+Data Elements for fields are DIFFERENT in both tables
+
+Ans: No
+Eg.
+For dept table DataElement name is z104329dedeptno. 
+It is based NOT based on domain. It is based on predefined data type
+
+For emp table DataElement name is z104329de1deptno. 
+It is NOT based on domain. It is based on predefined data type
+
+2c) Can foreign key relationships be created
+on tables defined with fields based on data elements.
+Eg. One table has field with data element, but no domain.
+    Another table has field with data element and domain.
+For dept table DataElement name is z104329dedeptno1 . 
+It is based on domain Z104329DOMDEPTNO1.
+
+For emp table DataElement name is z104329dedeptno . 
+It is NOT based on domain. It is based on predefined data type.
+
+Ans No: While creating proposal we get an Information message Check table has no
+key field with the domain deptno.
+
+3) Can foreign key relationships be created
+on tables defined with fields based on data elements? 
+Domains are created but domains for both data elements are different
+Data Elements are also different
+
+For emp table DataElement name is z104329dedeptno. 
+It is based on domain Z104329DOMDEPTNO.
+
+For dept table DataElement name is z104329dedeptno1 . 
+It is based on domain Z104329DOMDEPTNO1.
+No: While creating proposal we get an Information message 
+Check table has no key field with the domain deptno
+
+
+4) Can foreign key relationships be created
+on tables defined with fields based on data elements? 
+Domains are created and domains for both data elements are same
+Yes
+
+5) Can foreign key relationships be created
+on tables defined with fields based on data elements? 
+Domains are created and domains for both data elements are  same 
+but data elements for the fields are different tables
+Yes
+
+
+
+
+
+
+
+
+
+
+ 

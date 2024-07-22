@@ -1,0 +1,16 @@
+REPORT Z.
+INITIALIZATION.
+PARAMETERS:PEMPNO(4)  TYPE N,
+           PENAME(10) TYPE C.
+
+AT SELECTION-SCREEN OUTPUT.
+  LOOP AT SCREEN.
+    IF SCREEN-NAME = 'PENAME'.
+       SCREEN-INPUT = 0. "Cannot enter values if screen-input is 0
+      MODIFY SCREEN.
+    ENDIF.
+  ENDLOOP.
+
+START-OF-SELECTION.
+  WRITE :/ 'Ename is :', PENAME.
+  WRITE :/ 'Empno is :', PEMPNO.

@@ -1,0 +1,48 @@
+=============================Discount==================
+
+@AbapCatalog.sqlViewName: 'ZYLT_CDS_INPUT'
+@AbapCatalog.compiler.compareFilter: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'with input parameters'
+define view ZLT_CDS_INPUT
+    with parameters sales_org : abap.char( 4 ),
+        div_per : abap.int1
+as select from zadm_sales {
+    kunnr,
+    vbeln,
+    netpr,
+    :div_per as discount_percent,
+    netpr * DIVISION( :div_per , 100 ,2 ) as percentage
+} where vkorg = :sales_org
+
+==============================SE38
+
+REPORT zlt_cds_inputs_discount.
+ PARAMETERS: pno TYPE vkorg,
+             p_dis TYPE int4.
+ 
+SELECT * FROM zlt_cds_input(
+   sales_org = @pno   "Pno is host variable so put @
+ , div_per = @p_dis
+)
+   INTO TABLE @DATA(it_tab).
+
+cl_demo_output=>display(  it_tab ).
+
+==================with customer no===
+
+@AbapCatalog.sqlViewName: 'ZYTR_SQL_INPUT'
+@AbapCatalog.compiler.compareFilter: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'cds view with input parameters'
+define view ZYTR_cds_inputs
+    with parameters cust_no : abap.char( 10 ),
+        div_per : abap.int
+as select from zadm_sales {
+    kunnr,
+    vbeln,
+    netpr,
+    :div_per as discount_percent,
+    netpr * DIVISION( :div_per , 100 ,2 ) as percentage
+} where kunnr = :cust_no
+

@@ -1,0 +1,40 @@
+*&---------------------------------------------------------------------*
+*& Report ZRT_OPTIMISED12
+*&---------------------------------------------------------------------*
+report ZRT_OPTIMISED13.
+
+data :IT_RESULTS   type standard table of SPFLI.
+
+*select *  from SPFLI
+*          into table @data(LT_FLIGHTS).
+
+*Without filter
+*IF sy-subrc = 0.
+*  LOOP AT lt_flights INTO DATA(ls_flight) WHERE carrid = 'AA'.
+*    APPEND ls_flight TO it_results.
+*  ENDLOOP.
+*ENDIF.
+
+*cl_demo_output=>display( it_results ).
+
+*==========================================================================
+
+"With filter we need key value so declare with non-unique key
+
+data LT_FLIGHTS type standard table of SPFLI
+                     with non-unique sorted key CARRID
+                     components CARRID  CONNID.  "Filter values
+
+select *  from SPFLI
+          into table @LT_FLIGHTS.
+
+"With filter we need key value so declare with non-unique key
+
+data   P_CONNID type S_CONN_ID value '0017'. "To avoid incompatibilty
+
+data(LT_RESULTS) = filter #( LT_FLIGHTS using key CARRID
+                                       where      CARRID = 'AA ' and
+                                                  CONNID = P_CONNID ).  "Give space as carrid is 3chars
+*                                                  CONNID = '0017' ).  "Give space as carrid is 3chars
+
+CL_DEMO_OUTPUT=>DISPLAY( LT_RESULTS ).

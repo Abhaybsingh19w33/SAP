@@ -1,0 +1,6 @@
+report z.
+parameters: num1(4)   type n  default 4,
+             num2      type n.
+
+         
+write: num1, num2.

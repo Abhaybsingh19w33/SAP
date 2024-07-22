@@ -1,0 +1,17 @@
+*&---------------------------------------------------------------------*
+*& Report ZRT_OPTIMISED12
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT ZRT_OPTIMISED12.
+
+"OLD METHOD
+*TYPES TY_MATNR TYPE MATNR.
+*DATA  TP_MATNR TYPE TY_MATNR VALUE 9001.
+*WRITE TP_MATNR.
+
+"NEW METHOD
+TYPES TY_MATNR TYPE MATNR.
+DATA(TP_MATNR) = NEW TY_MATNR( '9000' ).
+
+WRITE TP_MATNR->* . "TP_MATNR can be converted to a character-like value

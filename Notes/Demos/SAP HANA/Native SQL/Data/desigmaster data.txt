@@ -1,0 +1,6 @@
+100	101	HOD
+100	102	Professor
+100	103	Reader
+100	104	SrLecturer
+100	105	Lecturer
+100	106	Director

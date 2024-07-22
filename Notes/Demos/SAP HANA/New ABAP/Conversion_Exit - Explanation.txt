@@ -1,0 +1,16 @@
+REPORT z.
+
+*Conversion exit ALPHA, external->internal
+*
+*ALPHA conversion is often used with account numbers.
+*In conversions from the external to the internal format, the system checks to see whether input in the INPUT field is purely numeric
+*(that is, if this input consists only of numbers, possibly with spaces before and after them).
+*If this is the case, then the number string is inserted right-justified in the display field OUTPUT and all spaces to the left of the value are filled with zeros ('0').
+
+*If the input is not purely numeric, it is inserted in the display field from left to right and all extra spaces are filled with blanks.
+*
+*Examples: (Input field and output field are both eight characters in length)
+*
+*1. '1234    ' --> '00001234'
+*2. 'ABCD    ' --> 'ABCD    '
+*3. ' 1234   ' --> '00001234'

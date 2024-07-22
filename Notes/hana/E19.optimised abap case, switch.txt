@@ -1,0 +1,42 @@
+REPORT zrt_optimised6.
+*
+PARAMETERS p_day TYPE i .
+*
+*DATA v_day_name(10) TYPE c.
+*
+*CASE p_day.
+*  WHEN  1.
+*    v_day_name = 'Monday'.
+*  WHEN 2 .
+*    v_day_name = 'Tuesday'.
+*  WHEN 4 .
+*    v_day_name = 'Thursday'.
+*  WHEN 5 .
+*    v_day_name = 'Friday'.
+*  WHEN 7 .
+*    v_day_name = 'Sunday'.
+*  WHEN OTHERS .
+*    v_day_name = 'Invalid day'.
+*
+*ENDCASE.
+*
+*WRITE : / p_day , v_day_name COLOR 1.
+
+**=============================================================
+**New CASE Via SWITCH
+*
+*# is called fully identifiable
+*if # is used then it will set the legth of return character to the legth of first .Here MO.
+
+DATA(lv_day) = SWITCH #( p_day
+*DATA(lv_day) = SWITCH char9( p_day
+                  WHEN 1 THEN 'Mo'
+                  WHEN 2 THEN 'Tuesday'
+                  WHEN 3 THEN 'wednesday'
+                  WHEN 4 THEN 'Thursday'
+                  WHEN 5 THEN 'Friday'
+                  WHEN 6 THEN 'saturday'
+                  WHEN 7 THEN 'sundday'
+                  else 'Invalid' ).
+
+write : / p_day,lv_day COLOR 7.

@@ -1,0 +1,46 @@
+*&---------------------------------------------------------------------*
+*& Report  ZRTC_SUBROUTINES4_STOPEXIT
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+REPORT ZRTC_SUBROUTINES6_BYVALUE.
+
+*Note What is given on form decides whether its
+*pass by reference ,
+*pass by value or
+* E.g, if in perform u give using/changing
+* And in form u give, using value
+* It will be considered as pass by value
+
+*the keyword Changing carries the changed value
+DATA city type char20 value 'Mumbai'.
+
+WRITE: / 'Before invoking display:',city. "will display Mumbai
+PERFORM display using city.
+
+WRITE: / 'After  invoking display:',city. "will display california
+
+FORM display  changing VALUE(P1).
+  P1 = 'California'.
+WRITE: / 'In Subroutine display:',P1. "will display California
+endform.
+
+*  using VALUE - > Value is not changed..pass by value...
+*changing VALUE-> Value is changed... pass by reference.
+
+
+
+===================
+DATA city type char20 value 'Mumbai'.
+WRITE: / 'Before invoking display:',city. "will display Mumbai
+*PERFORM display using city.
+PERFORM display using city.
+
+WRITE: / 'After  invoking display:',city. "will display Mumbai
+
+FORM display  using VALUE(P1).
+  P1 = 'California'.
+WRITE: / 'In Subroutine display:',P1. "will display California
+endform.

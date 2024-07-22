@@ -1,0 +1,27 @@
+REPORT z.
+TABLES scarr.
+PARAMETERS pcarrid TYPE scarr-carrid.
+PERFORM selectfromdb.
+SKIP.
+
+FORM selectfromdb.
+  SELECT *
+    FROM scarr "into a fieldstring like
+                 " SCARR, implied
+    WHERE carrid = pcarrid.
+  ENDSELECT.
+  WRITE: / 'SY-SUBRC:' , sy-subrc.
+  IF sy-subrc = 0.
+    PERFORM disp.
+  ELSE.
+    WRITE:  /'Carrid does not exist:', pcarrid.
+  ENDIF.
+ENDFORM.
+
+FORM disp.
+  WRITE: /'Client is:',  scarr-mandt,
+   / 'Carrid is:', scarr-carrid,
+   / 'Carrname is:',scarr-carrname,
+   / 'Currcode is:',scarr-currcode,
+   / 'URL is:',scarr-url.
+ENDFORM.

@@ -1,0 +1,12 @@
+REPORT Z104329PGM1.
+*data firstname(20) type c VALUE 'Vandana'.
+*data lastname(20) type c VALUE 'Koleshwar'.
+*data mname like lastname value 'S'.
+*WRITE: / firstname, mname , lastname.
+
+types genname(20) type c.
+data firstname type genname VALUE 'vandana'.
+data lastname  type genname VALUE 'koleshwar'.
+"Cannot use like in the above statement
+WRITE: / firstname, lastname.
+

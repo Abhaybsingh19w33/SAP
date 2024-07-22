@@ -1,0 +1,38 @@
+*Simple program in two lines with a table
+*Create is a static method of the class CL_SALV_GUI_TABLE_IDA
+*If the parameters of the create method are observed, it is seen
+*that it has a Returning parameter RO_ALV_GUI_TABLE_IDA
+*RO_ALV_GUI_TABLE_IDA IS OF TYPE IF_SALV_GUI_TABLE_IDA.
+
+*IF_SALV_GUI_TABLE_IDA IS AN INTERFACE WHICH HAS THE METHOD FULLSCREEN.
+*METHOD FULLSCREEN RETURNS OBJECT OF TYPE IF_SALV_GUI_FULLSCREEN_IDA
+*IF_SALV_GUI_FULLSCREEN_IDA IS AN INTERFACE WHICH HAS THE METHOD DISPLAY.
+
+REPORT Z.
+
+DATA LO_ALV   TYPE REF TO IF_SALV_GUI_TABLE_IDA.
+DATA O_FULSCR TYPE REF TO IF_SALV_GUI_FULLSCREEN_IDA.
+
+LO_ALV = CL_SALV_GUI_TABLE_IDA=>CREATE( IV_TABLE_NAME =  'Z104329DEPT' ).
+O_FULSCR = LO_ALV->FULLSCREEN( ).
+O_FULSCR->DISPLAY( ).
+__________________________________________________________________________
+REPORT Z.
+DATA(LO_ALV) = CL_SALV_GUI_TABLE_IDA=>CREATE( IV_TABLE_NAME =  'Z104329DEPT' ).
+DATA(O_FULSCR) = LO_ALV->FULLSCREEN( ).
+O_FULSCR->DISPLAY( ).
+__________________________________________
+
+REPORT Z.
+DATA(LO_ALV) = CL_SALV_GUI_TABLE_IDA=>CREATE( IV_TABLE_NAME =  'Z104329DEPT' ).
+LO_ALV->FULLSCREEN( )->DISPLAY( ).
+______________________________________________________
+
+*Simple program in two lines with a cds VIEW
+
+REPORT Z.
+DATA(LO_ALV) = CL_SALV_GUI_TABLE_IDA=>CREATE_FOR_CDS_VIEW( 'ZVK_CDS2_EMP' ).
+LO_ALV->FULLSCREEN( )->DISPLAY( ).
+
+
+

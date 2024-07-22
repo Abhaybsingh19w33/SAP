@@ -1,0 +1,20 @@
+REPORT  Z.
+PERFORM PARA1.
+PERFORM PARA1.
+
+FORM PARA1.
+  DATA    LVAR1  TYPE I VALUE 10.
+  STATICS SVAR1  TYPE I VALUE 10.
+  LVAR1 = LVAR1  + 1.
+  SVAR1 = SVAR1 + 1.
+  WRITE: / 'lvar1 is:',LVAR1.
+  WRITE: / 'svar1 is:',SVAR1.
+  PERFORM PARA2.
+ENDFORM.
+
+FORM PARA2.
+  WRITE: / 'lvar1 is:',LVAR1.
+  WRITE: / 'svar1 is:',SVAR1.
+"lvar1 svar1 will not be available here
+ENDFORM.
+

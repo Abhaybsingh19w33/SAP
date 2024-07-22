@@ -1,0 +1,30 @@
+*&---------------------------------------------------------------------*
+*& Report zadm_alv_ida_using_cds
+*&---------------------------------------------------------------------*
+REPORT zadm_alv_ida_using_cds.
+
+*REPORT ZTR_ACCESS_CDS_CON.
+
+cl_salv_gui_table_ida=>create_for_cds_view(
+  EXPORTING
+    iv_cds_view_name               = 'YTR_CDS_SALES'  " Give the  SQL view name  and not the SE11 view name
+*    io_gui_container               = 
+*    io_calc_field_handler          =
+  RECEIVING
+    ro_alv_gui_table_ida           = data(o_alv)
+).
+
+data(o_fullscreen) = o_alv->fullscreen( ).
+*  CATCH cx_salv_ida_contract_violation.
+
+o_fullscreen->display( ).
+
+========================USING CHAINING METHOD================
+
+cl_salv_gui_table_ida=>create_for_cds_view(
+  EXPORTING
+    iv_cds_view_name        = 'YTR_CDS_SALES'
+)->fullscreen( )->display( ).
+*  CATCH cx_salv_ida_contract_violation.    " .
+
+

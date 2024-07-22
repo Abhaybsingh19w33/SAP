@@ -1,0 +1,22 @@
+=First create the  basic view ==================
+
+
+@AbapCatalog.sqlViewName: 'ZYTR_CDS_SALES '
+@AbapCatalog.compiler.compareFilter: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'cds sales'
+define view ZTR_CDS_SALES as select from zadm_sales {
+ key kunnr,
+ key vbeln,
+       netpr,
+       vkorg
+}
+
+===========Extend the basic view=======
+
+@AbapCatalog.sqlViewAppendName: 'ZYTR_EX_VIEW1'
+@EndUserText.label: 'extension view'
+extend view ZTR_CDS_SALES with ZTR_EX_VIEW1 {
+waers
+}
+

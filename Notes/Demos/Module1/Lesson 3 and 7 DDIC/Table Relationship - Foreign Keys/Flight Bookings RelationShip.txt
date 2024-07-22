@@ -1,0 +1,9 @@
+T000  - mandt pk
+SCARR - mandt+carrid pk
+SPFLI - mandt+carrid+CONNID pk
+SFLIGHT mandt+carrid+CONNID+FLDDATE pk
+SBOOK -  mandt+carrid+CONNID+FLDDATE+bookid
+Flight booking
+ 
+
+Understand Primary key , FkeY relation ship between these tables

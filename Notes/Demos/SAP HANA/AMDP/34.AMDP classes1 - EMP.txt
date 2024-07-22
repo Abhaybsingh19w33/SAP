@@ -1,0 +1,34 @@
+CLASS ZVK_AMDP2 DEFINITION PUBLIC FINAL CREATE PUBLIC .
+
+PUBLIC SECTION.
+  TYPES:BEGIN OF TY_EMP,
+        EMPNO TYPE Z104329EMP-EMPNO,
+        ENAME TYPE Z104329EMP-ENAME,
+        SAL   TYPE Z104329EMP-SAL,
+        END OF TY_EMP.
+   TYPES IT_EMP TYPE TABLE OF TY_EMP.
+   INTERFACES IF_AMDP_MARKER_HDB.
+   METHODS GET_EMP EXPORTING VALUE(OUT_EMP) TYPE IT_EMP.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+CLASS ZVK_AMDP2 IMPLEMENTATION.
+METHOD GET_EMP BY DATABASE PROCEDURE
+                  FOR HDB
+                  LANGUAGE SQLSCRIPT
+                  USING Z104329EMP.
+OUT_EMP = SELECT EMPNO,
+                   ENAME,
+                   SAL
+                   From Z104329EMP;
+ENDMETHOD.
+ENDCLASS.
+====================SE38========================
+REPORT Z.
+data(o_amdp) = new zvk_amdp2( ).
+o_amdp->get_emp(
+  IMPORTING
+    out_emp =  data(it_emp)
+).
+cl_demo_output=>display( it_emp ).

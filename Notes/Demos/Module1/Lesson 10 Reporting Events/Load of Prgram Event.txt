@@ -1,0 +1,1 @@
+The purpose of load of program is to load the program into system memory so that it can be execute the program and also this is the first event in the program.

@@ -1,0 +1,48 @@
+"Reading from internal table by index and by key value
+=======================================
+Report z.
+
+  SELECT   K~KUNNR,
+              upper( K~NAME1 ) as uname1,
+              K~NAME2,
+         concat_with_space( name1 , name2, 3 ) as full_name,
+              K~ORT01,
+              K~LAND1,
+              K~AEDAT,
+              s~VBELN,
+              s~NETPR,
+       case
+          when NETPR <= 100000 then 'Low'
+          when NETPR between 100001 and 300000 then 'Medium'
+          when NETPR > 300000 then 'High'
+       else 'NA'
+       end as prty
+
+  FROM ZMT_KNA1 AS K INNER JOIN ZMT_SALES AS S
+  ON K~KUNNR  = S~KUNNR
+  INTO TABLE @data(IT_SALES).
+
+* Classic  - 10th rec from it_sales
+* READ TABLE IT_SALES INTO data(WA_SALES) INDEX 10.
+* write : / wa_sales-kunnr, wa_sales-vbeln, wa_sales-netpr.
+* clear wa_sales.
+
+* optimised abap
+data(wa_sales) = it_sales[ 10 ].
+write : / wa_sales-kunnr, wa_sales-vbeln, wa_sales-netpr.
+
+"==========================================================================
+
+skip 2.
+write / 'result of read with key' COLOR 7.
+* * Classic  -  Customer 9000 and Sales Order S2 rec from it_sales
+* clear wa_sales.
+* READ TABLE IT_SALES INTO WA_SALES WITH  KEY kunnr = '0000009000'
+*                                             vbeln = 'S2'.
+
+* write : / wa_sales-kunnr, wa_sales-vbeln, wa_sales-netpr.
+* clear wa_sales.
+
+* optimised abap
+data(wa_sales1) = it_sales[ kunnr = '0000009000' vbeln = 'S2' ].
+write : / wa_sales1-kunnr, wa_sales1-vbeln, wa_sales1-netpr.

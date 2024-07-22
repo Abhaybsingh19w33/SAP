@@ -1,0 +1,49 @@
+REPORT ZYNY_OOABAP_00.
+
+CLASS lcl_airplane DEFINITION.
+   PUBLIC SECTION.
+       METHODS: set_attributes IMPORTING
+                      im_name      TYPE string
+                      im_planetype TYPE saplane-planetype,
+                display_attributes.
+   PRIVATE SECTION.
+         DATA: name      TYPE string,
+               planetype TYPE saplane-planetype.
+ENDCLASS.                    "lcl_airplane DEFINITION
+
+*------------------------------------------------------------------*
+
+*       CLASS lcl_airplane IMPLEMENTATION                          *
+*------------------------------------------------------------------*
+CLASS lcl_airplane IMPLEMENTATION.
+  "First method we set the values
+    METHOD set_attributes.
+        name          = im_name.
+        planetype     = im_planetype.
+    ENDMETHOD.                    "set_attributes
+
+    "Second method is used for dispalying the data
+    METHOD display_attributes.
+        WRITE:
+               / 'Name of airplane:',  name,
+               / 'Type of airplane', planetype.
+    ENDMETHOD.                    "display_attributes
+ENDCLASS.                    "lcl_airplane IMPLEMENTATION
+
+
+START-OF-SELECTION.
+
+DATA: r_plane1 TYPE REF TO  lcl_airplane,
+      r_plane2 TYPE REF TO  lcl_airplane.
+
+CREATE OBJECT r_plane1.
+
+"Call the method set_Attribute and pass the values to name and planetype
+r_plane1->set_attributes( im_name = 'LH Berlin'
+                          im_planetype = 'A321' ).
+r_plane1->display_attributes( ).
+
+CREATE OBJECT r_plane2.
+CALL METHOD r_plane2->set_attributes( im_name = 'AA New York'
+                                      im_planetype = '747-400' ).
+r_plane2->display_attributes( ).

@@ -1,0 +1,8 @@
+The separated by option is used as follows
+data : 	f1(20) value ‘A’,
+		F2(20) value ‘B’,
+		F3(20).
+concatenate f1 f2 into f3 separated by ‘*’.
+write f3.
+Gives the following output
+A*B.

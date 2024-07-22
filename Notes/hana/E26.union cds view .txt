@@ -1,0 +1,23 @@
+@AbapCatalog.sqlViewName: 'ZSQL_CDS_UNION'
+@AbapCatalog.compiler.compareFilter: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'CDS With Unions'
+define view ZADM_CDS_WITH_UNIONS as 
+select from zadm_kna1 {
+    kunnr as partner,
+             name1,
+             ort01,
+             land1,
+              'I' as type
+             
+}
+
+union
+select from zadm_ex_kna1 {
+    kunnr as partner,
+             name1,
+             ort01,
+             land1,
+             'E' as type
+             
+}

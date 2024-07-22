@@ -1,0 +1,30 @@
+Report z.
+parameters:     f1   default 'A',
+	        f2   default 'B',
+	        f3   default 'B'.
+	  
+if  f1  = f2.
+	write : / f1,   ' = ',  f2 , 'f1=f2'. 
+elseif  f1 = f3.      
+	write : / f1,   '= ',  f3,'f1=f3'. 
+elseif   f2 = f3.
+	write : / f2,   '= ',  f3,'f2=f3'. 
+else. 
+	write : /  'All fields are different'. 
+endif. 
+
+*Alternatively the following does the same
+
+if  f1  = f2.
+	write : / f1,   ' = ',  f2. 
+else
+   if  f1 = f3.      
+	write : / f1,   '= ',  f3. 
+   else
+        if   f2 = f3.
+	  write : / f2,   '= ',  f3. 
+        else. 
+	    write : /  'All fields are different'. 
+        endif. 
+    endif.
+endif. 

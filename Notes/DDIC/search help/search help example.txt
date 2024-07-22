@@ -1,0 +1,4 @@
+lnd3 server.
+Z149456_ADDRESS-- search help created from this table
+ZSEHELP01--- search help name
+Z149456_EMP-- 2nd table to which search help will be attached

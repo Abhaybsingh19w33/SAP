@@ -1,0 +1,18 @@
+REPORT  Z.
+PERFORM PARA1.
+PERFORM PARA1.
+"WRITE: / 'lvar1 is:',LVAR1.
+"lvar1 will not be available here. The above statement when uncommented will show an error.
+
+FORM PARA1.
+  DATA    LVAR1  TYPE I VALUE 10.
+  LVAR1 = LVAR1  + 1.
+  WRITE: / 'lvar1 is:',LVAR1.
+
+  PERFORM PARA2.
+ENDFORM.
+
+FORM PARA2.
+"WRITE: / 'lvar1 is:',LVAR1.
+"lvar1 will not be available here.The above statement when uncommented will show an error.  
+ENDFORM.

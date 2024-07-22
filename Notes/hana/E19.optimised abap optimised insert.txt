@@ -1,0 +1,67 @@
+*&---------------------------------------------------------------------*
+*& Report ZRT_OPTIMISED9
+*&---------------------------------------------------------------------*
+report ZRT_OPTIMISED9A.
+**"Demo 1
+*Decalre ITAB Of types and not DATA.
+*DATA :itab TYPE STANDARD TABLE OF i WITH DEFAULT KEY.
+types :itab TYPE STANDARD TABLE OF i WITH DEFAULT KEY.
+**
+*OLD SYNTAX to insert data in to internal table
+*APPEND: 10 TO itab,
+*        20 TO itab,
+*        30 TO itab.
+*CL_DEMO_OUTPUT=>DISPLAY( itab ).
+
+
+*new syntax to insert data into internal table.
+DATA(result) = value itab( ( 100 ) ( ) ( 3000 ) ).
+CL_DEMO_OUTPUT=>DISPLAY( result ).
+**==================================================
+
+*types T_ITAB type sorted table of I with unique key TABLE_LINE.
+*as no field is there use table_Line
+*
+*data(RESULT) = value T_ITAB( ( 100 ) ( 300 ) ( 200 ) ).
+
+*=========================================================================
+
+**NEW SYNTAX
+*types : begin of TY_ITAB,
+*          NUM1 type I,
+*        end   of TY_ITAB.
+*
+*types T_ITAB type sorted table of TY_ITAB with unique key NUM1.
+*data(RESULT) = value T_ITAB( ( NUM1 = 10 ) ( NUM1 = 20 ) ( NUM1 = 30 ) ).
+*
+*CL_DEMO_OUTPUT=>DISPLAY( RESULT ).
+
+*=========================================================================
+*
+**Demo2
+*types: begin of TYSCARR,
+*         SALARY type  I,
+**         carrname TYPE s_carrname,
+*       end of TYSCARR.
+*
+*"classical
+**DATA itab TYPE STANDARD TABLE OF tyscarr WITH HEADER LINE.
+**itab-carrid = 'AA'.
+**itab-carrname = 'American Airlines'.
+**APPEND itab.
+**CL_DEMO_OUTPUT=>DISPLAY( itab ).
+*
+***Optimised
+*
+*TYPES: BEGIN OF MYSCARR,
+*    CARRID TYPE S_CARR_ID,
+*    CARRNAME TYPE S_CARRNAME,
+*    END OF MYSCARR.
+*
+*"Decalre ITAB Of types and not DATA.
+*TYPES ITAB TYPE STANDARD TABLE OF MYSCARR WITH DEFAULT KEY.
+*DATA(result) = VALUE ITAB( ( CARRID = 'AA' CARRNAME = 'American Airlines' )
+*                           ( CARRID = 'AB' CARRNAME = 'Air Berlin' )
+*                      ).
+*
+*CL_DEMO_OUTPUT=>DISPLAY( result ).

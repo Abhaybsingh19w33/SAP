@@ -1,0 +1,76 @@
+*The HANA calculation view created in cannot be seen in SE11.
+*To  fetch  the view from ABAP editor we can use ADBC program
+*=========================================================
+*To get the procedure name:
+*Content-package-pkg-trainee04-calculation view-right click-Generate Select SQL-copy the procedure name in the from  section.
+*
+*
+*Change the V_SQL to the procedure name : "_SYS_BIC"."pkg-trainee01.Z104329/CALC_VIEW_SCRIPT3""
+
+REPORT Z.
+
+DATA : O_CONN   TYPE REF TO CL_SQL_CONNECTION,
+       O_SQL    TYPE REF TO CL_SQL_STATEMENT,
+       O_RESULT TYPE REF TO CL_SQL_RESULT_SET,
+       O_DATA   TYPE REF TO DATA,
+       V_SQL TYPE STRING.
+TYPES : BEGIN OF TY_RES,
+          KUNNR TYPE KUNNR,
+          NETPR TYPE ZADM_SALES-NETPR,
+        END   OF TY_RES.
+
+DATA : WA_RES TYPE TY_RES,
+       IT_RES TYPE TABLE OF TY_RES.
+
+START-OF-SELECTION.
+  CL_SQL_CONNECTION=>GET_CONNECTION(
+*    EXPORTING
+*      con_name         = ' '
+*      sharable         = SPACE    " General Flag
+    RECEIVING
+      CON_REF          =  O_CONN   " Connection Object
+  ).
+*    CATCH cx_sql_exception.    "
+
+  CREATE OBJECT O_SQL
+    EXPORTING
+      CON_REF = O_CONN     " Database Connection
+*     tab_name_for_trace =     " Table Name
+    .
+
+ "Below sql  fetches from the view MT_CV
+
+  "V_SQL = |SELECT * FROM "_SYS_BIC"."pkg-trainee01.Z104329/CALC_VIEW_SCRIPT3"|.
+  V_SQL = |SELECT	 "KUNNR", sum("NETPR") AS "NETPR" FROM "_SYS_BIC"."pkg-trainee01.Z104329/CALC_VIEW_SCRIPT3" GROUP BY "KUNNR" |.
+
+  O_SQL->EXECUTE_QUERY(
+    EXPORTING
+      STATEMENT     = V_SQL    " SELECT Statement Being Executed
+*    hold_cursor          = SPACE
+    RECEIVING
+      RESULT_SET           = O_RESULT    " Database Cursor
+  ).
+*  CATCH cx_sql_exception.    "
+*  CATCH cx_parameter_invalid.    "
+  GET REFERENCE OF IT_RES INTO O_DATA.
+  O_RESULT->SET_PARAM_TABLE(
+    EXPORTING
+      ITAB_REF             = O_DATA    " Reference to Output Variable
+*    corresponding_fields =     " List of Columns of the Internal Table
+*    lob_fields           =     " List of LOB Fields
+  ).
+*  CATCH cx_parameter_invalid.    "
+
+  O_RESULT->NEXT_PACKAGE(
+*    upto = 0
+*    upto = 0
+  ).
+*  CATCH cx_sql_exception.    "
+*  CATCH cx_parameter_invalid_type.    "
+  O_RESULT->CLOSE( ).
+
+
+  CL_DEMO_OUTPUT=>DISPLAY( IT_RES ).
+
+  O_CONN->CLOSE( ).
+*  CATCH cx_sql_exception.    "

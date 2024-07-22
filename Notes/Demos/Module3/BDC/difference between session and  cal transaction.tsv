@@ -1,0 +1,6 @@
+bdc_open_group			
+loop		loop	loop
+bdc_insert		call transaction	call transaction
+endloop		endloop	format_message
+bdc_close_group			write message
+			endloop

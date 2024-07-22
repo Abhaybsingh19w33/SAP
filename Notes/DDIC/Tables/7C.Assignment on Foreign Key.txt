@@ -1,0 +1,36 @@
+1) Can foreign key relationships be created
+on tables defined with fields based on  pre defined data types?
+
+
+2) Can foreign key relationships be created
+on tables defined with fields based on data elements only?  No Domains
+Data Elements for fields are different in both tables
+
+2a) Can foreign key relationships be created
+on tables defined with fields based on data elements only?  No Domains
+Data Elements for fields are same in both tables
+
+
+3) Can foreign key relationships be created
+on tables defined with fields based on data elements? Domains are created but domains for both data elements are different
+
+
+4) Can foreign key relationships be created
+on tables defined with fields based on data elements? Domains are created and domains for both data elements are same
+
+
+5) Can foreign key relationships be created
+on tables defined with fields based on data elements? Domains are created and domains for both data elements are but data elements for the fields are different tables
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,16 @@
+REPORT Z.
+DATA: BEGIN OF str_mat,
+matno(18),
+matname(30),
+mattype(4), " Material Type
+uom(10),"Unit of Measure
+END OF str_mat.
+DATA: it_mat LIKE TABLE OF str_mat,
+it_mat1 LIKE TABLE OF str_mat.
+str_mat-matno = 'M01'.
+str_mat-matname = 'NOTEPADS'.
+str_mat-mattype = 'STATIONERY'.
+str_mat-uom = 'PCS'.
+APPEND str_mat TO it_mat.
+MOVE it_mat to it_mat1. 
+"or it_mat1 = it_mat

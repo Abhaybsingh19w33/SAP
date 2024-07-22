@@ -1,0 +1,16 @@
+*&---------------------------------------------------------------------*
+*& Report ZRT_OPTIMISED8
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT ZRT_OPTIMISED8.
+*Classical - Obj Creation
+DATA O_CONT1 TYPE REF TO CL_GUI_CUSTOM_CONTAINER.
+
+CREATE OBJECT O_CONT1
+  EXPORTING
+    CONTAINER_NAME = 'ABCDE'.
+
+*New way - via NEW Keyword
+*New keyword is used instead of the  keyword create object
+DATA(O_CONT2)    = NEW CL_GUI_CUSTOM_CONTAINER( CONTAINER_NAME  = 'C2').

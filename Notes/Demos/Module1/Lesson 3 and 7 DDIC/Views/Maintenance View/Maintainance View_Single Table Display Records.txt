@@ -1,0 +1,18 @@
+REPORT z.
+DATA ITAB TYPE TABLE OF Z104329MAINVIEW1.
+DATA WA TYPE Z104329MAINVIEW1.
+
+SELECT  * FROM Z104329MAINVIEW1
+  INTO TABLE ITAB.
+
+LOOP AT ITAB INTO WA.
+   WRITE / WA-EMPNO.
+   WRITE WA-ENAME.
+   WRITE WA-SAL.
+
+ENDLOOP.
+
+
+Above gives error.'
+Z104329MAINVIEW1 is not defined in ABAP dictionary 
+as table as a table,projection view or database view

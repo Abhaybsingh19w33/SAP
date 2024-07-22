@@ -1,0 +1,26 @@
+The events in ABAP are:
+Classical Events: Or Events for Classical reports
+1)load of program
+2)Initilization
+3)At selection-screen OUTPUT
+After this selection screen is displyed
+4)At selection-screen
+5)At selection-screen on field
+6)At selection-screen on value request - Participants to explore
+7)At selection-screen on help request - Participants to explore
+8)start-of-selection
+9)end-of-selection
+10)top-of-page  AT beginning of page
+11)end-of-page  AT end of page
+
+Interactive events:Events for Interactive reports
+1)At line selection
+2)At pf status
+3)At user-command
+4)Top-of-page during line selection
+
+Module pool Events
+1)PBO-Process Before output
+2)PAI-process After Input
+3)POV-Process on value request(F1 help)
+4)POH-process on help request(F4 help)

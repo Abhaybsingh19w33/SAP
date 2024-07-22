@@ -1,0 +1,38 @@
+*SY-LSIND	Index for the current list.
+*SY-LISTI	Index of the last list displayed.
+*SY-LILLI	Absolute number of a selected line in the list displayed.
+*SY-CPAGE	Number of the upper-most displayed line in the list displayed.
+*SY-LISEL   Contents of the line from which the event was triggered.
+*SY-CUCOL Number of the column in the window where the cursor was       last positioned in the list displayed.
+*SY-CUROW Number of the line in the window where the cursor was last      positioned in the list displayed.
+*SY-STACO	Number of the first column displayed in the list displayed.
+*SY-STARO	Number of the first visible line in the top displayed page
+*   (SY- PAGE) in the list displayed (not including header lines).
+*10.SY-UCOMM Function code
+
+
+REPORT  Z NO STANDARD PAGE HEADING.
+DATA: VAR1(8) TYPE C VALUE 'Red',
+      VAR2(8) TYPE C VALUE 'Blue',
+      VAR3(8) TYPE C VALUE 'Green',
+      VAR4(8) TYPE C VALUE 'Pink',
+      VAR5(8) TYPE C VALUE 'Orange',
+      VAR6(8) TYPE C VALUE 'Magenta'.
+
+START-OF-SELECTION.
+  WRITE: / VAR1.
+  WRITE: / VAR2.
+  WRITE: / VAR3.
+  WRITE: / VAR4.
+  WRITE: / VAR5.
+  WRITE: / VAR6.
+
+  WRITE: / 'SY-LSIND:' , SY-LSIND.
+  WRITE: / 'SY-PAGNO:' , SY-PAGNO.
+
+AT LINE-SELECTION.
+  WRITE:/ 'This is secondary list no:', SY-LSIND.
+  WRITE:/ 'SY-LISEL:' , SY-LISEL.
+  WRITE:/ 'SY-CUROW:' , SY-CUROW.
+  WRITE:/ 'SY-CUCOL:' , SY-CUCOL.
+  WRITE:/ 'SY-LILLI:' , SY-LILLI.

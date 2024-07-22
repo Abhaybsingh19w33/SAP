@@ -1,0 +1,9 @@
+REPORT Z  NO STANDARD PAGE HEADING LINE-COUNT 5.
+
+DO 5 TIMES.
+    WRITE: / '1', / '2', / '3' , / '4' , /'5'.
+  ENDDO.
+
+TOP-OF-PAGE.
+  WRITE: 'In TOP:' .
+  

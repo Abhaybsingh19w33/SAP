@@ -1,0 +1,18 @@
+@AbapCatalog.sqlViewName: 'ZYTR_CDS_JOIN'
+@AbapCatalog.compiler.compareFilter: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'join'
+define view ZTR_CDS_JOIN as select from zadm_kna1 as a
+inner join zadm_sales as s
+    on a.kunnr = s.kunnr {
+    
+    a.kunnr,
+    a.name1,
+    a.name2,
+    a.aedat,
+    s.vbeln,
+    s.netpr
+    
+}
+
+

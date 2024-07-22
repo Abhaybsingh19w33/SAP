@@ -1,0 +1,35 @@
+===========================================================================
+Here field waers is not part of the join .Still the field waers can be written in fetch logic in SE38 program because of association
+_sales is the name osf association as well as the name of the second table
+===============================================
+
+@AbapCatalog.sqlViewName: 'ZADM_CDS_ASSC1'
+@AbapCatalog.compiler.compareFilter: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'CDS With Association'
+define view ZADM_CDS_ASSOC as select from zadm_kna1 as K
+association [1..*] to zadm_sales as _sales
+    on K.kunnr = _sales.kunnr
+{
+    key _sales.vbeln,
+        _sales.netpr,
+        K.kunnr,
+        K.name1
+//    _sales // Make association public
+}
+
+====================SE38 PROGRAM==============
+
+1)Run it commenting the \_sales-waers
+2)Run it with \_sales-waers
+
+select kunnr,
+       name1,
+       vbeln,
+       netpr,
+       \_sales-waers,
+ 
+from zpr_cds_Ass
+into TABLE @data(it_res).
+
+cl_demo_output=>display( it_res ).

@@ -1,0 +1,48 @@
+==============create class=================================================
+AMDP is a technique use to create a method that creates procedure which will internally implement native sql for HANA db
+============================================
+
+CLASS zMT_amdp1 DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+   TYPES TY_T_SALES TYPE TABLE OF ZMT_SALES.
+   INTERFACES : IF_AMDP_MARKER_HDB.
+   METHODS : GET_CUSTOMERS,
+             GET_SALES EXPORTING VALUE(OUT_SALES) TYPE TY_T_SALES.
+  PROTECTED SECTION.
+
+  PRIVATE SECTION.
+ENDCLASS.
+
+CLASS zadm_amdp1 IMPLEMENTATION.
+ METHOD GET_CUSTOMERS.
+   SELECT * FROM ZADM_KNA1 INTO TABLE @DATA(IT_KNA1).
+ ENDMETHOD.
+
+ METHOD GET_SALES BY DATABASE PROCEDURE
+                  FOR HDB
+                  LANGUAGE SQLSCRIPT
+                  USING ZADM_SALES.
+
+ OUT_SALES = SELECT * FROM ZMT_SALES ;
+
+ ENDMETHOD.
+
+ENDCLASS.
+
+======================================se38 program=========================
+REPORT zMT_access_amdp.
+
+data(o_amdp) = new zMT_amdp1( ).
+
+o_amdp->get_sales(
+  IMPORTING
+    out_sales = data(lt_sales)
+).
+cl_demo_output=>display( lt_sales ).
+
+
+

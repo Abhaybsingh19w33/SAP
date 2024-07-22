@@ -1,0 +1,32 @@
+REPORT Z149456_DAY3_PR1.
+
+*Offset +
+*length ()
+data:  var(17),
+       dat(7).
+start-of-selection.
+
+var  = 'BOY'.
+dat  = 'BIG'.
+var+0(1)  = 'T'.
+write / var.    "output is TOY
+var = var+0(1). 
+write / var." output is B
+****************
+var  = 'BOY'.
+var(1)  = 'J'.    "same as var+0(1)
+write / var.    "output is JOY
+************
+dat = 'RIG'.
+var(1)  = dat.    "same as var(1) = dat(1)
+write / var.    "output is ROY
+***********
+data newvar(4) type c.
+newvar = 'ROSE'.
+var+6  = newvar.   "same as var+6 = newvar 
+write / var.    "output is ROY   ROSE  " provided u increase size of var.
+*****************
+var = 'BIG'.
+dat = 'BOY'.
+var(3)  = dat(3).   "same as var+0(3) = dat+0(3)
+write / var.    "output is BOY

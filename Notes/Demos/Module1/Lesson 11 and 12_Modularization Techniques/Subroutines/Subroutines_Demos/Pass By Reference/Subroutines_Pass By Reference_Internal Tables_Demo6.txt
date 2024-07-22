@@ -1,0 +1,31 @@
+*Pass Internal table as parameters
+REPORT Z NO STANDARD PAGE HEADING.
+DATA ITAB TYPE TABLE OF I.
+DATA WA TYPE I.
+
+PERFORM FILLITAB.
+WRITE: / 'Before invoking S1:'.
+PERFORM DISPITAB.
+
+PERFORM S1 TABLES ITAB.
+
+WRITE: / 'After  invoking S1:'.
+PERFORM DISPITAB.
+
+FORM FILLITAB.
+  WA = 10. APPEND WA TO ITAB.
+  WA = 20. APPEND WA TO ITAB.
+  WA = 30. APPEND WA TO ITAB.
+  WA = 40. APPEND WA TO ITAB.
+ENDFORM.
+
+FORM S1 TABLES FITAB LIKE ITAB.
+  FITAB = 99. "Header line is automatically created in subroutine
+  MODIFY FITAB FROM FITAB INDEX 3. "Modify internal table(fitab) from header line(fitab)
+ENDFORM.
+
+FORM DISPITAB.
+  LOOP AT ITAB INTO WA.
+    WRITE WA.
+  ENDLOOP.
+ENDFORM.

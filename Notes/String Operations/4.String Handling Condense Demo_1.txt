@@ -1,0 +1,7 @@
+This command is used to remove superfluous spaces from a string. 
+After using the condense statement, all the words in the string are separated by 1 blank space only.
+Eg:	 data : alpha(20) value ‘lets get      on-line whatsay??’.
+	condense alpha.
+	write alpha.
+Will display
+lets get on-line whatsay??

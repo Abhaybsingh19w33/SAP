@@ -1,0 +1,13 @@
+REPORT z.
+data f1(14)    value 'ABCDEFG'.
+
+write: /  f1.
+write: / 'Edit mask_:__:_', f1 using edit mask '_:__:_'.
+WRITE: /'Edit mask_:__:_(6)',(6) f1 using edit mask '_:__:_'.
+
+
+
+
+WRITE: /'LL', f1 using edit mask 'LL_'.	       "output is A
+
+WRITE: / f1 using edit mask 'V__'.  "output is VABC

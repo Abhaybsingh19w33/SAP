@@ -1,0 +1,15 @@
+REPORT Z.
+DATA F1 VALUE 'X'.
+PERFORM S1.
+WRITE: / 'After invoking S1'.
+*
+END-OF-SELECTION.
+  WRITE:  'In end of selection'.
+
+FORM S1.
+ WRITE: / 'In S1'.
+ STOP.
+ WRITE / 'After Stop in S1'.
+ENDFORM.
+
+*A stop statement within the subroutine transfers control directly to end-of-selection.

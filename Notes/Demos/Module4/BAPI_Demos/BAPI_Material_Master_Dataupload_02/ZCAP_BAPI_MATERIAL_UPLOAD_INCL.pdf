@@ -1,0 +1,710 @@
+%PDF-1.3
+101 0 obj
+<< /Length 10523 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 20 752 Tm
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*&---------------------------------------------------------------------*) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*&  Include           ZCAP_BAPI_MATERIAL_UPLOAD_INCL) Tj
+0 -12 TD
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(*&---------------------------------------------------------------------*) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TABLES) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(: ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(BAPIMATHEAD) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,  ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Header Segment with Control Information) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(BAPI_MARA) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,    ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Material Data at Client Level) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(BAPI_MARAX) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,   ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Checkbox Structure for BAPI_MARA) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(BAPI_MARC) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,    ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Material Data at Plant Level) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(BAPI_MARCX) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,   ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Checkbox Structure for BAPI_MARC) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(BAPI_MAKT) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,    ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Material Descriptions) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(BAPIRET2) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.     ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Return Parameter) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TYPES ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(: ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(BEGIN ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(TY_TAB1) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,  ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Structure type) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(MATNR) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\() Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(18) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\)) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,     ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Material Number) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(MBRSH) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\() Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(1) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\)) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,      ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Industry sector) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(MTART) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\() Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(4) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\)) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,      ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Material type) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(MAKTX) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\() Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(40) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\)) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,     ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Material description) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(MEINS) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\() Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(3) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\)) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,      ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Base Unit of Measure) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(MATKL) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\() Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(9) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\)) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,      ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Material Group) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(END ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(TY_TAB1) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(DATA ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(:) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB1 ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TYPE ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(STANDARD ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TABLE ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(TY_TAB1) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,  ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Main Internal table) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(      ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(WA_TAB1 ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TYPE ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(TY_TAB1) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.                    ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Main Work area) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TYPES ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(: ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(BEGIN ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(TY_TAB2) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,  ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Structure type) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(LANGU) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\() Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(1) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\)) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,      ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Language Key) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(LANGU_ISO) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\() Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(2) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\)) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,  ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" 2-Character SAP Language Code) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(MATL_DESC) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\() Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(40) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\)) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Material description) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(DEL_FLAG) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\() Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(1) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(\)) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(,   ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Delete Data Record) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(        ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(END ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(TY_TAB2) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(DATA ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(:) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_TAB2 ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TYPE ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(STANDARD ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TABLE ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(TY_TAB2) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(, ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Material Description Internal table) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(      ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(WA_TAB2 ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(TYPE ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(TY_TAB2) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.                   ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Work area) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(DATA ) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(: ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(BEGIN ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_RETURN ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OCCURS ) Tj
+0.20 0.60 1.00 rg
+0.20 0.60 1.00 RG
+(0) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(       ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(INCLUDE ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(STRUCTURE ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(BAPIRET2) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(. ) Tj
+/F3 10 Tf
+0.50 0.50 0.50 rg
+0.50 0.50 0.50 RG
+(" Return Parameter Structure) Tj
+0 -12 TD
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+() Tj
+0 -12 TD
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(DATA) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(: ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(END ) Tj
+0.00 0.00 1.00 rg
+0.00 0.00 1.00 RG
+(OF ) Tj
+0.00 0.00 0.00 rg
+0.00 0.00 0.00 RG
+(IT_RETURN) Tj
+0.50 0.00 0.50 rg
+0.50 0.00 0.50 RG
+(.) Tj
+ET
+endstream
+endobj
+100 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/MediaBox [ 0 0 612 792 ]
+/Contents 101 0 R
+/Resources << /ProcSet 6 0 R
+/Font << /F1 7 0 R 
+/F2 8 0 R 
+/F3 9 0 R 
+/F4 10 0 R >>
+>>
+>>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [100 0 R ]
+/Count 1
+>>
+endobj
+% catalog object
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R
+>>
+endobj
+2 0 obj
+<< /Type /Outlines
+/Count 0
+>>
+endobj
+6 0 obj
+[ /PDF /Text ]
+endobj
+7 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F1
+/BaseFont /Courier
+/Encoding /MacRomanEncoding
+>>
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F2
+/BaseFont /Courier-Bold
+/Encoding /MacRomanEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F3
+/BaseFont /Courier-Oblique
+/Encoding /MacRomanEncoding
+>>
+endobj
+10 0 obj
+<< /Type /Font
+/Subtype /TrueType
+/Name /F4
+/BaseFont /Courier-BoldOblique
+/Encoding /MacRomanEncoding
+>>
+endobj
+11 0 obj
+<<
+/CreationDate (D:20161213110428)
+/Creator (AB4Editor Control)
+/Producer (AB4Editor Control)
+/Title (ZCAP_BAPI_MATERIAL_UPLOAD_INCL)
+>>
+endobj
+trailer
+<< /Info 11 0 R
+/Root 1 0 R
+ >>
+startxref
+0
+%%EOF

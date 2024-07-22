@@ -1,0 +1,11 @@
+REPORT Z.
+PARAMETERS NAME(10) TYPE C DEFAULT 'Falguni'. "how does default work here
+
+START-OF-SELECTION.
+  WRITE : / 'Name is:' , NAME.
+
+INITIALIZATION. " how is this working
+  NAME = 'Beena'.
+
+AT SELECTION-SCREEN OUTPUT.
+  NAME = 'Leena'.

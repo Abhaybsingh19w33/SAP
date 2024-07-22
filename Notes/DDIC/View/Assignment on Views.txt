@@ -1,0 +1,24 @@
+1) If a DBView points to 2  tables
+table maintainance generator is greyed out
+Can a se38 program insert records in DB view and hence the DB table
+through internal tables
+
+
+2) If a DBView points to a single table
+can table maintainance generator be used
+
+Can a se38 program insert records in DB view and hence the DB table
+through internal tables
+
+3) If a ProjView points to 2 tables
+can table maintainance generator be used
+
+Can a se38 program insert records in DB view and hence the DB table
+through internal tables
+
+
+4) If a ProjView points to a single table
+can table maintainance generator be used
+
+Can a se38 program insert records in DB view and hence the DB table
+through internal tables

@@ -1,0 +1,52 @@
+REPORT ZAT_OOAP_DEMOEX02.
+
+
+CLASS numbers DEFINITION.
+  PUBLIC SECTION.
+    METHODS: setnumbers.
+    METHODS: calc
+      RAISING cx_sy_zerodivide.
+
+    METHODS : displaynumbers.
+  PRIVATE SECTION.
+    DATA: num1 TYPE i,
+          num2 TYPE i,
+          res  TYPE i.
+ENDCLASS.
+
+CLASS numbers IMPLEMENTATION.
+  METHOD setnumbers.
+    num1 = 10.
+    num2 = 0.
+  ENDMETHOD.
+
+  METHOD calc.
+    res = num1 / num2.
+  ENDMETHOD.
+
+  METHOD displaynumbers.
+    WRITE:/ 'Res is:' , res.
+  ENDMETHOD.
+ENDCLASS.
+
+START-OF-SELECTION.
+  DATA orf_1 TYPE REF TO cx_root.
+  DATA position TYPE i.
+  DATA pgmname TYPE sy-repid.
+  DATA: num TYPE REF TO numbers.
+  CREATE OBJECT num.
+  num->setnumbers( ).
+  TRY.
+      num->calc( ).
+    CATCH cx_sy_zerodivide INTO orf_1.
+      WRITE / orf_1->kernel_errid.
+      WRITE / orf_1->get_text( ).
+      WRITE / orf_1->get_longtext( ).
+
+      orf_1->get_source_position(
+                  IMPORTING  source_line  = position
+                             program_name = pgmname ).
+      WRITE: / 'position:', position.
+      WRITE: / 'pgmname:', pgmname.
+  ENDTRY.
+  num->displaynumbers( ).

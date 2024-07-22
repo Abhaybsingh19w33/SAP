@@ -1,0 +1,81 @@
+REPORT ZAT_OOAP_IH02.
+*Inheritance Example-"actual parameters asigned to formal parameters
+CLASS employee DEFINITION.
+  PUBLIC SECTION.
+    METHODS:
+      set_attributes
+        IMPORTING im_employee_no   TYPE i
+                  im_employee_name TYPE string,
+      display_attributes.
+  PRIVATE SECTION.
+    DATA: no   TYPE i,
+          name TYPE string.
+ENDCLASS.
+*--- Employee - Implementation
+CLASS employee IMPLEMENTATION.
+  METHOD  set_attributes.
+    no = im_employee_no.
+    name = im_employee_name.
+  ENDMETHOD.
+
+  METHOD display_attributes.
+    WRITE:/ 'Employee', no, name.
+  ENDMETHOD.
+ENDCLASS.
+
+*******************************************************
+CLASS bluecollar_employee DEFINITION
+           INHERITING FROM employee.
+  PUBLIC SECTION.
+    METHODS:
+      set_attributes REDEFINITION,
+      display_attributes REDEFINITION.
+ENDCLASS.
+
+*---- CLASS BlueCollar_Employee IMPLEMENTATION
+CLASS bluecollar_employee IMPLEMENTATION.
+  METHOD  set_attributes.
+
+*  super->set_attributes
+*                    ( im_employee_no = im_employee_no
+*                    im_employee_name = im_employee_name ) . "actual parameters asigned to formal parameters
+
+  "OR as below
+*     CALL METHOD super->set_attributes( im_employee_no  = im_employee_no
+*        im_employee_name = im_employee_name ).
+  "OR as below
+
+     CALL METHOD super->set_attributes EXPORTING im_employee_no = im_employee_no
+      im_employee_name = im_employee_name.
+
+  ENDMETHOD.
+
+  METHOD display_attributes.
+    super->display_attributes( ).
+  ENDMETHOD.
+ENDCLASS.
+
+DATA:
+* Object references
+o_bluecollar_employee1  TYPE REF TO bluecollar_employee,
+o_bluecollar_employee2  TYPE REF TO bluecollar_employee.
+
+START-OF-SELECTION.
+* Create bluecollar employee obeject
+  CREATE OBJECT o_bluecollar_employee1.
+  CREATE OBJECT o_bluecollar_employee2.
+  CALL METHOD o_bluecollar_employee1->set_attributes
+    EXPORTING
+      im_employee_no   = 1
+      im_employee_name = 'Gylle Karen'.
+ CALL METHOD o_bluecollar_employee1->display_attributes.
+    CALL METHOD o_bluecollar_employee1->set_attributes(
+      im_employee_no   = 3
+      im_employee_name = 'Gyle Kren' ).
+  CALL METHOD o_bluecollar_employee1->display_attributes.
+
+  CALL METHOD o_bluecollar_employee2->set_attributes
+    EXPORTING
+      im_employee_no   = 2
+      im_employee_name = 'John Miller'.
+  CALL METHOD o_bluecollar_employee2->display_attributes.

@@ -1,0 +1,30 @@
+- Call screen..... calls a screen. Eg. 100
+If you leave this screen(100) with set screen 0, you return to the first 
+statement after the call screen statement. So this Dynpro is called on top 
+of the calling screen. 
+- set screen sets the number of the following dynpro. 
+- Leave screen: leave the Dynpro directly and start the PBO of the next 
+Dynpro. This next Dynpro can be set by SET SCREEN. 
+- Leave to screen nnnn: leaves current Dynpro and starts screen nnnn. You 
+must consider this as the next Dynpro in a chain of dynpro's. 
+leave to screen 100
+leave screen
+set screen 100
+
+____________________________________________________
+
+With SET SCREEN, the current screen simply specifies the next screen in the chain. control branches to this next screen as soon as the current screen has been processed. Return from next screen to current screen is not automatic. It does not interrupt processing of the current screen. If we want to branch to the next screen without finishing the current one, use LEAVE SCREEN. 
+
+With CALL SCREEN, the current (calling) chain is suspended, and a next screen (or screen chain) is called in. The called screen can then return to the suspended chain with the statement LEAVE to SCREEN 0.
+
+__________________________________________________________________________
+
+
+leave to screen 0 ? What is leave to screen 0?
+
+scr1
+scr2
+
+scr3
+
+

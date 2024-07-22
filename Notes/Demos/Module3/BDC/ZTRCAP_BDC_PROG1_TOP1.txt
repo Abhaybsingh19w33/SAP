@@ -1,0 +1,14 @@
+TYPES : BEGIN OF TY_TAB,
+          MATNR(18),
+          MBRSH(1),
+          MTART(4),
+          MAKTX(40),
+          MEINS(4),
+          MATKL(9),
+
+        END OF TY_TAB.
+
+DATA: IT_TAB TYPE STANDARD TABLE OF TY_TAB,
+      WA_TAB TYPE TY_TAB.
+
+DATA IT_BDCDATA TYPE BDCDATA OCCURS 0 WITH HEADER LINE.

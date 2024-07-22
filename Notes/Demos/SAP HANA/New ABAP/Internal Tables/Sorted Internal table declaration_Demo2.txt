@@ -1,0 +1,13 @@
+REPORT Z.
+*
+"NEW SYNTAX
+*TYPES : BEGIN OF TY_ITAB,
+*          NUM1 TYPE I,
+*        END   OF TY_ITAB.
+*
+*TYPES t_itab TYPE SORTED TABLE OF TY_ITAB WITH UNIQUE KEY NUM1.
+*DATA(itab_o) = VALUE t_itab( ( NUM1 = 10 ) ( NUM1 = 20 ) ( NUM1 = 30 ) ).
+*
+*LOOP AT itab_o INTO DATA(WA).
+*  WRITE WA-NUM1.
+*ENDLOOP.

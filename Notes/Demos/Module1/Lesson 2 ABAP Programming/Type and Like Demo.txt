@@ -1,0 +1,14 @@
+REPORT z.
+DATA VAR1(2) TYPE N VALUE 12.
+DATA VAR2 LIKE VAR1.
+"DATA VAR2 TYPE VAR1. "cannot use type here
+TYPES CHARTYPE(3) TYPE C. "cannot give value here
+DATA VAR4 TYPE CHARTYPE.
+"DATA VAR4 LIKE CHARTYPE. "cannot use like here
+"DATA MYCARRID LIKE SCARR-CARRID.
+DATA MYCARRID TYPE SCARR-CARRID.
+"Can use either type or like
+
+
+
+      

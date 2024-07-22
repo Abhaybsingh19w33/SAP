@@ -1,0 +1,2 @@
+After Executing ZTR_FILEHANDLING_UPLOAD the file will be read from App server and its contents will be visible in any local folder that has been specified in the program
+in this case d:\matmast1.txt

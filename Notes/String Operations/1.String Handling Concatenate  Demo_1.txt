@@ -1,0 +1,8 @@
+Is used to combine separate strings into a single string. 
+Eg:	data : 	f1(20) value ‘A’,
+		F2(20) value ‘B’,
+		F3(20).
+	concatenate f1 f2 into f3.
+	write f3.
+Gives the following output
+AB

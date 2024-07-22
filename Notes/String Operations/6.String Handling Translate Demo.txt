@@ -1,0 +1,29 @@
+report z.
+data : alpha(10) value 'abcd12'.
+* a->A : B->c : 1->2
+Translate alpha using 'aABc12'.
+Write alpha.
+*	Will output Abcd22.
+*---------------------------------------------
+DATA: t(10) TYPE c VALUE 'AbCdEfGhIj',
+       str like t,
+      rule(20) TYPE c VALUE 'AxbXCydYEzfZ'.
+      str = t.
+skip.
+write str.
+
+TRANSLATE str TO UPPER CASE.
+write str.
+*
+str = t.
+translate str to lower case.
+write str.
+*
+str = t.
+translate str using rule.
+WRITE / str."the odd places in str will be changed with the "even letters in rule.
+**	Output:
+**	AbCdEfGhIj
+**	ABCDEFGHIJ
+**	abcdefghij
+**	xXyYzZGhI

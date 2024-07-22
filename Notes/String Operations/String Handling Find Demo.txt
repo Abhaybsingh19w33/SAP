@@ -1,0 +1,10 @@
+REPORT z.
+data : name(25) type c value 'ramshyam'.
+data:  len type i. 
+*FIND first occurrence of 'shyam' in name.
+*FIND first occurrence of 'ram' in name MATCH LENGTH.
+FIND first occurrence of 'shyam' in name MATCH offset len .
+*FIND all occurrences of 'shyam' in name.
+*match offset len.
+WRITE sy-subrc.
+write len.

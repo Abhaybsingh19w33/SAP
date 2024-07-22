@@ -1,0 +1,104 @@
+Execute this in eclipse first
+SELECT o.kunnr,o.name1,o.ort01, o.land1, s.vbeln, s.netpr,
+
+case 
+			when s.netpr between 1 and 100000 then 'LOW'
+			when s.netpr between 100001 and 300000 then 'MEDIUM'
+			when s.netpr > 300001 then 'HIGH'
+			
+	else 'NA'
+end as prty
+
+ FROM SAPLS4.ZMT_KNA1 as o inner join   SAPLS4.ZMT_sales as s 
+  on o.kunnr = s.kunnr
+
+*&---------------------------------------------------------------------*
+*& Report ZRt_GET_BUS_PARTNERS1
+*&---------------------------------------------------------------------*
+*&With SQL qyery of  inner join and case in ABAP
+*&---------------------------------------------------------------------*
+REPORT ZRT.
+
+ tYPES: BEGIN OF ty_partner,
+         partner TYPE kunnr,
+         name1   TYPE name1,
+         ort01   TYPE ort01,
+         land1   TYPE land1,
+         vbeln   TYPE vbeln,
+         netpr   TYPE netpr,
+	 prty    type char25,
+
+       END OF ty_partner.
+DATA : wa_partner TYPE ty_partner,
+       it_partner TYPE TABLE OF ty_partner.
+
+DATA: o_conn   TYPE REF TO cl_sql_connection,
+      o_sql    TYPE REF TO cl_sql_statement,
+      o_result TYPE REF TO cl_sql_result_set,
+      v_sql    TYPE string,
+      o_data   TYPE REF TO data.
+
+*TRY.
+*Connect to the respective DB according connection
+CALL METHOD cl_sql_connection=>get_connection
+*  EXPORTING
+*    con_name = 'ADM_HDB'
+*    sharable = SPACE
+  RECEIVING
+    con_ref = o_conn.
+* CATCH cx_sql_exception .
+*ENDTRY.
+
+CREATE OBJECT o_sql
+  EXPORTING
+    con_ref = o_conn
+*   tab_name_for_trace =
+  .
+
+ v_sql = | SELECT o.kunnr,o.name1,o.ort01, o.land1, s.vbeln, s.netpr,case when s.netpr between 1 and 100000 then 'LOW' when s.netpr between 100001 and 300000 then 'MEDIUM'| &&
+         | when s.netpr > 300001 then 'HIGH' else 'NA' end as prty FROM ZMT_KNA1 as o inner join ZMT_sales as s on o.kunnr = s.kunnr|.
+
+*TRY.
+CALL METHOD o_sql->execute_query
+  EXPORTING
+    statement  = v_sql
+*   hold_cursor = SPACE
+  RECEIVING
+    result_set = o_result.
+
+gET REFERENCE OF it_partner INTO o_data.
+*TRY.
+CALL METHOD o_result->set_param_table
+  EXPORTING
+    itab_ref = o_data
+*   corresponding_fields =
+*   lob_fields           =
+  .
+* CATCH cx_parameter_invalid .
+*ENDTRY.
+
+DATA v_count TYPE i.
+*Data Records into internal table
+*TRY.
+CALL METHOD o_result->next_package
+*  EXPORTING
+*    upto     = 0
+  RECEIVING
+    rows_ret = v_count.
+* CATCH cx_sql_exception .
+* CATCH cx_parameter_invalid_type .
+*ENDTRY.
+
+cl_demo_output=>display( it_partner ).
+*Data Records into internal table
+*TRY.
+CALL METHOD o_result->next_package
+*  EXPORTING
+*    upto     = 0
+  RECEIVING
+    rows_ret = v_count.
+* CATCH cx_sql_exception .
+* CATCH cx_parameter_invalid_type .
+*ENDTRY.
+
+cl_demo_output=>display( it_partner ).

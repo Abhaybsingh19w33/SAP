@@ -1,0 +1,32 @@
+define view yt_CDS_para
+       with parameters sales_doc : abap.char( 10 ),
+                         percent : abap.int1
+as select from zrt_sales {
+    kunnr,
+    vbeln,
+    netpr,
+    :percent as discount_percent,
+    netpr * DIVISION( :percent , 100 ,2 ) as percentage
+ 
+} where vbeln = :sales_doc
+
+======================================
+
+se38 program
+"Note : @ is used to refer to host variable "p_kunnr
+"p_kunnr is the host variable
+"cust_no is the guest variable
+
+" Control SPace to autofill
+" Shift enter for selecting
+
+
+PARAMETERS : P_VBELN TYPE VBELN,
+             P_perc  TYPE INT1.
+
+  select * from YGT_CDS_PARAMETER( SALES_DOC = @p_vbeln,
+                                   PERCENT = @p_perc
+                                  )
+  INTO TABLE @DATA(IT_TAB).
+
+CL_DEMO_OUTPUT=>DISPLAY(  IT_TAB ).

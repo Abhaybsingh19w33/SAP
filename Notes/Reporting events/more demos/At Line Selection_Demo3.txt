@@ -1,0 +1,45 @@
+REPORT z.
+DATA : wa TYPE i.
+
+START-OF-SELECTION.
+  DO 10 TIMES.
+    wa = sy-index.
+    WRITE :/ wa.
+  ENDDO.
+
+AT LINE-SELECTION.
+  WRITE /:'This is secondary list:', sy-lsind.
+  WRITE /:'sylisel is:', sy-lisel.
+___________________________________________
+ 
+REPORT z.
+DATA : wa TYPE i.
+
+START-OF-SELECTION.
+  DO 10 TIMES.
+    wa = sy-index.
+    WRITE :/ wa.
+    HIDE WA.
+  ENDDO.
+
+AT LINE-SELECTION.
+  WRITE /:'This is secondary list:', sy-lsind.
+  WRITE /: 'WA IS :', WA.
+  WRITE /: 'sy-lisel IS :', sy-lisel.
+ ____________________________________________________________
+
+
+REPORT z.
+DATA : wa TYPE i.
+
+START-OF-SELECTION.
+  DO 10 TIMES.
+    wa = sy-index.
+    HIDE WA.
+    WRITE :/ wa.
+  ENDDO.
+
+AT LINE-SELECTION.
+  WRITE /:'This is secondary list:', sy-lsind.
+  WRITE /: 'WA IS :', WA.
+  WRITE /: 'sy-lisel IS :', sy-lisel.

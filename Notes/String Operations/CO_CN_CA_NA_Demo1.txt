@@ -1,0 +1,110 @@
+REPORT z.
+*
+PERFORM co1.
+PERFORM co2.
+*PERFORM cn1.
+*PERFORM cn2.
+*PERFORM ca1.
+*PERFORM ca2.
+*PERFORM na1.
+*PERFORM na2.
+
+
+
+FORM co1.
+* operator: CO
+*True, if operand1 only contains characters from operand2
+write / '''AABB''  co ''AB'''.         	"output is ‘AABB’  co ‘AB’
+if 'AABB' co 'AB'.		         	"True	
+	write 'True'.
+else.
+	write 'False'.
+endif.
+write: /  'sy-fdpos = ', sy-fdpos.
+write / '''ABCD''  co ''ABC'''.       "output is ‘ABCD’  co ‘ABC’
+ENDFORM.  
+
+
+FORM co2.
+  if 'ABCD' co 'ABC'.		           " False	
+	write 'True'.
+else.
+	write 'False'.
+endif.
+ write: / 'sy-fdpos = ', sy-fdpos.
+ENDFORM.  
+
+
+FORM cn1.
+* operator: CN
+*True if a logical expression with CO is false, that is, if operand1 contains not only *characters from operand2
+write / '''AABB''  cn ''AB'''.         	"output is ‘AABB’  cn ‘AB’
+if 'AABB' cn 'AB'.		         	" False	
+	write 'True'.
+else.
+	write 'False'.
+endif.
+write: / 'sy-fdpos = ', sy-fdpos.
+ENDFORM.
+
+
+
+FORM cn2.
+  
+write / '''ABCD''  cn ''ABC'''.        "output is ‘ABCD’  cn ‘ABC’
+if 'ABCD' cn 'ABC'.		            " True	
+	write 'True'.
+else.
+	write 'False'.
+endif.
+  write: / 'sy-fdpos = ', sy-fdpos.
+ENDFORM. 
+
+
+FORM ca1.
+* operator: CA
+* True, if operand1 contains at least one character from operand2
+write / '''AXCZ''  ca ''’AB'''.     "output is ‘AXCZ’  ca ‘AB’
+if 'AXCZ' ca 'AB'.		         "True	
+	write 'True'.
+else.
+	write 'False'.
+endif.
+write:/  'sy-fdpos = ', sy-fdpos.
+ENDFORM.
+
+
+FORM ca2.
+  
+write / '''ABCD''  ca ''XYZ'''.         "output is ‘ABCD’  ca ‘XYZ’
+if 'ABCD' ca 'XYZ'.		          	" False	
+	write 'True'.
+else.
+	write 'False'.
+endif.
+write: /  'sy-fdpos = ', sy-fdpos.
+ENDFORM. 
+
+FORM na1.
+* operator: NA
+write / '''AXCZ''’  na ''AB'''.        	"output is ‘AXCZ’  na ‘AB’
+if '‘AXCZ' na 'AB'.		         	" False	
+	write 'True'.
+else.
+	write 'False'.
+endif.
+write: /  'sy-fdpos = ', sy-fdpos.
+
+ENDFORM.
+
+
+
+FORM na2.
+  write / '''ABCD''  na ''XYZ'''.       "output is ‘ABCD’  na ‘ABC’
+if 'ABCD' na 'XYZ'.		           " True	
+	write 'True'.
+else.
+	write 'False'.
+endif.
+ write: / 'sy-fdpos = ', sy-fdpos.
+ENDFORM.            

@@ -1,0 +1,18 @@
+REPORT z.
+*The split command is used to split a string at a given delimiter. The format is
+*split <string> at <delimiter> into <f1> <f2> <f3>….
+ data :   string(40) value 'hello what was that??',
+    F1(10),
+    F2(30),
+    F3(30),
+    F4(30).
+*  split string at ' ' into f1 f2.
+*	F1 and f2 will contain ‘hello’ and ‘what was that’ respectively.
+*WRITE f1.
+*WRITE f2.
+split string at ' ' into f1 f2 f3 f4.
+
+WRITE : / f1.
+WRITE : / f2.
+WRITE : / f3.
+WRITE: / f4.

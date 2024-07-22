@@ -1,0 +1,39 @@
+REPORT ZAT_OOAP_DEMO10.
+
+DATA LV_MATNR TYPE MATNR.
+
+TYPES: BEGIN OF TY_TAB,
+      MATNR TYPE MATNR,
+      MBRSH TYPE MBRSH,
+      MTART TYPE MTART,
+      MEINS TYPE MEINS,
+      BRGEW TYPE BRGEW,
+      NTGEW TYPE NTGEW,
+  END OF TY_TAB.
+
+  DATA: IT_TAB TYPE STANDARD TABLE OF TY_TAB.
+
+  SELECT-OPTIONS S_MATNR FOR LV_MATNR.
+
+  START-OF-SELECTION.
+   DATA OBJ TYPE REF TO ZCL_AT_OOAP_DEMO10.
+  CREATE OBJECT OBJ.
+
+
+
+                  CALL METHOD obj->meth_matnr
+                         EXPORTING
+                           im_lmatnr      = S_MATNR-LOW
+                           im_hmatnr      = S_MATNR-HIGH
+                         IMPORTING
+                          i_tab          = IT_TAB
+                     EXCEPTIONS
+                          data_not_found = 1
+                         others         = 2
+                               .
+                       IF sy-subrc <> 0.
+*                        Implement suitable error handling here
+                       ENDIF.
+
+
+                       CL_DEMO_OUTPUT=>DISPLAY_DATA( IT_TAB ).

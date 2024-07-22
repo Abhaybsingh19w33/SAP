@@ -1,0 +1,22 @@
+data ctr type i value 1.
+
+while ctr ne 10.
+	write ctr.
+	ctr = ctr + 1.
+	
+endwhile. 
+
+
+_____________________________________________________
+
+
+data: length(2)     		type p value 0.
+parameters string(30)    	type c default  'testwhile'.
+start-of-selection. 
+while string ne space.
+	write string(1).
+	length = length + 1.
+	shift string.
+endwhile. 
+write: / 'Length of character string: ', length.
+

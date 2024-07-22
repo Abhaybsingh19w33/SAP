@@ -1,0 +1,54 @@
+REPORT Z.
+START-OF-SELECTION.
+DATA LV_MATNR TYPE MATNR.
+
+TYPES: BEGIN OF TY_TAB,
+      MATNR TYPE MATNR,
+      MBRSH TYPE MBRSH,
+      MTART TYPE MTART,
+      MEINS TYPE MEINS,
+      BRGEW TYPE BRGEW,
+      NTGEW TYPE NTGEW,
+  END OF TY_TAB.
+
+  DATA: IT_TAB TYPE STANDARD TABLE OF TY_TAB,
+        WA TYPE TY_TAB.
+
+  SELECT-OPTIONS S_MATNR FOR LV_MATNR.
+
+  START-OF-SELECTION.
+   DATA OBJ TYPE REF TO ZCL_AT_OOAP_DEMO10.
+  CREATE OBJECT OBJ.
+
+.
+
+  CALL METHOD OBJ->METH_MATNR
+   EXPORTING
+      im_lmatnr      = s_matnr-low
+      im_hmatnr      = s_matnr-high
+   IMPORTING
+      i_tab          = it_tab
+    EXCEPTIONS
+      DATA_NOT_FOUND  = 1
+      INCORRECT_MATNR = 2
+      OTHERS          = 3
+          .
+  IF SY-SUBRC <> 0.
+*   Implement suitable error handling here
+  CASE SY-SUBRC.
+    WHEN 1.
+      WRITE 'data not found'.
+    WHEN 2.
+      WRITE ' incorrect matnr'.
+
+  ENDCASE.
+  ENDIF.
+
+   LOOP AT IT_TAB INTO WA.
+    WRITE :/  WA-MATNR,
+    WA-MBRSH,
+    WA-MTART,
+    WA-MEINS,
+    WA-BRGEW,
+    WA-NTGEW.
+    ENDLOOP.

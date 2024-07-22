@@ -1,0 +1,27 @@
+LPOS -> Position of field in search help results report/table. 
+From here you select the value
+
+SPOS->  Position of the search help parameter in the dialog box 
+for limiting the hit list.
+
+Here is the example to make more clear.
+
+A. matnr      spos = 2  , lpos = 1 
+B. maktx      spos = 1  , lpos = 3 
+C. vbeln      spos = 3  , lpos = 2
+
+
+then when you press F4 ... the selection screen will be displayed with 
+SPOS
+
+1.MAKTX
+2.MATNR
+3.VBELN
+
+
+When press enter you will see the data displayed for above fields as 
+LPOS
+
+1.MATNR
+2.VBELN
+3.MATKX

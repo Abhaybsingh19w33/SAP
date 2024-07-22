@@ -1,0 +1,15 @@
+REPORT  Z_VK1.
+SELECTION-SCREEN BEGIN OF SCREEN 500 TITLE title 
+                                     AS WINDOW. 
+PARAMETERS name TYPE sy-uname. 
+SELECTION-SCREEN END OF SCREEN 500. 
+
+title = 'Input name'. 
+
+CALL SELECTION-SCREEN '0500' STARTING AT 10 10. 
+
+
+* In the above case if the above statement 
+*CALL SELECTION-SCREEN is not coded nothing happens
+* The selection screen is not displayed
+

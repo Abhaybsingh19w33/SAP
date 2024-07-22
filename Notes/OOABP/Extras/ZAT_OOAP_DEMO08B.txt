@@ -1,0 +1,87 @@
+REPORT  ZAT_OOAP_DEMO08B.
+* Class with functional method
+CLASS lcl_airplane DEFINITION.
+
+PUBLIC SECTION.
+"--------------------------------
+    CONSTANTS: pos_1 TYPE i VALUE 30.
+    DATA: pub_attr  TYPE i.
+    METHODS: set_attributes IMPORTING
+                   im_name      TYPE string
+                   im_planetype TYPE saplane-planetype,
+             display_attributes.
+
+    CLASS-METHODS: display_no_airplanes,
+                   get_no_airplanes RETURNING value(re_count) TYPE I.
+
+
+PRIVATE SECTION.
+"----------------------------------
+    DATA: name      TYPE string,
+          planetype TYPE saplane-planetype.
+
+    CLASS-DATA: no_airplanes TYPE i.
+
+ENDCLASS.                    "lcl_airplane DEFINITION
+
+*------------------------------------------------------------------*
+*       CLASS lcl_airplane IMPLEMENTATION                          *
+*------------------------------------------------------------------*
+CLASS lcl_airplane IMPLEMENTATION.
+
+  METHOD set_attributes.
+    name          = im_name.
+    planetype     = im_planetype.
+    no_airplanes = no_airplanes + 1.
+  ENDMETHOD.                    "set_attributes
+
+  METHOD display_attributes.
+     WRITE:
+           / 'Name of airplane:', AT pos_1 name,
+           / 'Type of airplane', AT pos_1 planetype.
+  ENDMETHOD.                    "display_attributes
+
+  METHOD display_no_airplanes.
+    WRITE: /, / 'Total number of airplanes',
+           AT pos_1 no_airplanes LEFT-JUSTIFIED, /.
+  ENDMETHOD.                    "display_n_o_airplanes
+
+  METHOD get_no_airplanes.
+   re_count = no_airplanes.
+  ENDMETHOD.
+ENDCLASS.                    "lcl_airplane IMPLEMENTATION
+
+DATA: r_plane1 TYPE REF TO lcl_airplane,
+      r_plane2 TYPE REF TO lcl_airplane,
+      r_plane3 TYPE REF TO lcl_airplane,
+      count TYPE i.
+START-OF-SELECTION.
+*##############################
+
+  lcl_airplane=>display_no_airplanes( ).
+
+  CREATE OBJECT r_plane1.
+  r_plane1->set_attributes( im_name = 'LH Berlin'
+                           im_planetype = 'A321' ).
+
+  CREATE OBJECT r_plane2.
+  r_plane2->set_attributes( im_name = 'AA New York'
+                           im_planetype = '747-400' ).
+
+  CREATE OBJECT r_plane3.
+   r_plane3->set_attributes( im_name = 'US Hercules'
+                           im_planetype = '747-500' ).
+
+
+* long syntax for functional call:
+* CALL METHOD lcl_airplane=>get_n_o_airplanes
+*   RECEIVING
+*     re_count = count.
+
+ "a little bit shorter:
+ "lcl_airplane=>get_n_o_airplanes( RECEIVING re_count = count ).
+
+* the shortest syntax for functional call:
+  count = lcl_airplane=>get_no_airplanes( ).
+SKIP 2.
+  WRITE: / 'The count is', count.

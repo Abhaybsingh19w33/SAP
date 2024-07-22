@@ -1,0 +1,17 @@
+DATA CARRID(3)     TYPE C.
+DATA CONNID(4)     TYPE N.
+DATA FLDATE        TYPE D.
+DATA PLANETYPE(10) TYPE C.
+DATA SEATSMAX      TYPE I.
+DATA SEATSOCC      TYPE I.
+
+CARRID = 'AA'.       CONNID = '17'.
+FLDATE = '20190731'. PLANETYPE = '747-400'.
+SEATSMAX = 385.      SEATSOCC = 375.
+
+WRITE: 'Carrid is:',          CARRID.
+WRITE:/'Connid is:',          CONNID.
+WRITE:/'Flight Date is:',     FLDATE.
+WRITE:/'Plane Type is:' ,     PLANETYPE.
+WRITE:/'Seats Maximum  is:',  SEATSMAX.
+WRITE:/'Seats Occupied is:',  SEATSOCC.

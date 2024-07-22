@@ -1,0 +1,87 @@
+================================create class===============
+
+
+CLASS z_admp_sales_class DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+  TYPES:BEGIN OF TY_SALES,
+        VBELN TYPE VBELN,
+        KUNNR TYPE KUNNR,
+        NETPR TYPE NETPR,
+        PRTY(10) TYPE C,
+        IDATE TYPE DATS,
+        IDAY(12) TYPE C,
+        PDATE TYPE DATS,
+        PDAY(12) TYPE C,
+        DUE_DATE TYPE I,
+        END OF TY_SALES.
+
+   TYPES IT_SALES TYPE TABLE OF TY_SALES.
+
+   INTERFACES : IF_AMDP_MARKER_HDB.
+
+   METHODS : GET_SALES EXPORTING VALUE(OUT_SALES) TYPE IT_SALES.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+CLASS z_admp_sales_class IMPLEMENTATION.
+
+METHOD GET_SALES BY DATABASE PROCEDURE
+                  FOR HDB
+                  LANGUAGE SQLSCRIPT
+                  USING ZADM_SALES.
+
+OUT_SALES = SELECT VBELN,
+                   KUNNR,
+                   NETPR,
+                   case
+                   when netpr between 0 and 100000 then 'LOW'
+                   when netpr between 100001 and 300000 then 'MEDIUM'
+                   when netpr >  300000 then 'HIGH'
+                   else 'NA'
+                   end as prty,
+                   IDATE,
+                   DAYNAME( IDATE ) AS IDAY,
+                  /* CASE
+                   WHEN weekday( IDATE ) = 0 THEN 'MONDAY'
+                   WHEN weekday( IDATE ) = 1 THEN 'TUESDAY'
+                   WHEN weekday( IDATE ) = 2 THEN 'WEDNESDAY'
+                   WHEN weekday( IDATE ) = 3 THEN 'THURSDAY'
+                   WHEN weekday( IDATE ) = 4 THEN 'FRIDAY'
+                   WHEN weekday( IDATE ) = 5 THEN 'SATURDAY'
+                   WHEN weekday( IDATE ) = 6 THEN 'SUNDAY'
+                   ELSE 'NA'
+                   END AS IDAY,*/
+                   PDATE,
+                   /*
+                   CASE
+                   WHEN weekday( PDATE ) = 0 THEN 'MONDAY'
+                   WHEN weekday( PDATE ) = 1 THEN 'TUESDAY'
+                   WHEN weekday( PDATE ) = 2 THEN 'WEDNESDAY'
+                   WHEN weekday( PDATE ) = 3 THEN 'THURSDAY'
+                   WHEN weekday( PDATE ) = 4 THEN 'FRIDAY'
+                   WHEN weekday( PDATE ) = 5 THEN 'SATURDAY'
+                   WHEN weekday( PDATE ) = 6 THEN 'SUNDAY'
+                   ELSE 'NA'
+                   END AS PDAY,*/
+                    DAYNAME( PDATE ) AS PDAY,
+                   days_between(IDATE, PDATE) AS DUE_DATE
+                   From ZADM_SALES ;
+
+ ENDMETHOD.
+ENDCLASS.
+
+======================================se38 program=========================
+REPORT zadm_access_amdp.
+
+data(o_amdp) = new z_admp_sales_class( ).
+
+o_amdp->get_sales(
+  IMPORTING
+    out_sales = data(it_sales)
+).
+cl_demo_output=>display( it_sales ).

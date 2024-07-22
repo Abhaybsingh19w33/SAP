@@ -1,0 +1,14 @@
+REPORT Z NO STANDARD PAGE HEADING.
+WRITE 'PLEASE FILL IN YOUR NAME:'.
+WRITE / ' ENTER NAME HERE ' INPUT ON. 
+WRITE / ' Input must be off here'.
+WRITE / 'Hello'.
+__________________________________
+
+
+REPORT Z NO STANDARD PAGE HEADING.
+WRITE 'PLEASE FILL IN YOUR NAME:'.
+FORMAT INPUT ON. 
+WRITE / ' ENTER NAME HERE '.
+FORMAT INPUT OFF. 
+WRITE / ' Input must be off here'.

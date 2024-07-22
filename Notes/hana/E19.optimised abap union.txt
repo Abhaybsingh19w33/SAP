@@ -1,0 +1,17 @@
+*&---------------------------------------------------------------------*
+*& Report ZRT_OPTIMISED10
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zrt_optimised10.
+SELECT kunnr , name1,ort01,land1,'I' AS type
+       FROM zrt_kna1
+
+   UNION
+
+SELECT kunnr ,name1,ort01,land1,'E' AS type
+     FROM zrt_ex_kna1
+
+  INTO TABLE @DATA(it_sales).
+
+cl_demo_output=>display( it_sales ).

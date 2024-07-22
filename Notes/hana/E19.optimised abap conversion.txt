@@ -1,0 +1,42 @@
+*&---------------------------------------------------------------------*
+REPORT zrt_optimised7.
+*PARAMETERS : v_char TYPE char2.
+*DATA :v_conv TYPE char10.
+*
+*v_conv = v_char .
+*
+*WRITE :'Before CONVERSION',v_char.
+* This function module will put leading zeroes..
+*CALL FUNCTION 'CONVERSION_EXIT_ALPHA_INPUT'
+*  EXPORTING
+*    input  = v_char
+*  IMPORTING
+*    output = v_conv.
+*
+*WRITE :/ 'After CONVERSION',v_conv.
+*
+**=====================================
+*"Optimised ABAP.
+PARAMETERS : v_char TYPE char2.
+DATA : v_conv TYPE char10.
+
+*V_CHAR = '1234    '.
+WRITE :'Before CONVERSION',v_char.
+
+v_conv    = |{ v_char ALPHA = IN  }|.
+WRITE : / 'AFTER CONVERSION', v_conv.
+
+*=========================
+*REPORT Z.
+*DATA: V_CHAR(10).
+*
+*V_CHAR = '00001234'.
+*
+*"This function module will remove leading zeroes..
+*CALL FUNCTION 'CONVERSION_EXIT_ALPHA_OUTPUT'
+*  EXPORTING
+*      INPUT = V_CHAR
+*  IMPORTING
+*      OUTPUT = V_CHAR.
+*
+*write: / v_char.

@@ -1,0 +1,35 @@
+*&---------------------------------------------------------------------*
+*& Report zadm_alv_ida_using_cds
+*&---------------------------------------------------------------------*
+REPORT zadm_alv_ida_using_cds.
+
+**cl_salv_gui_table_ida=>create_for_cds_view(
+*  EXPORTING
+*    iv_cds_view_name        = 'ZADM_CDS_SALES_JOINS'
+*)->fullscreen( )->display( ).
+**  CATCH cx_salv_ida_contract_violation.    " .
+*          or
+
+CL_SALV_GUI_TABLE_IDA=>create_for_cds_view(
+  EXPORTING
+    iv_cds_view_name               = 'ZADM_CDS_SALES_JOINS'
+  RECEIVING
+    ro_alv_gui_table_ida           = DATA(o_alv)
+).
+
+data(o_ful_scrn) = o_alv->fullscreen( ).
+
+data(o_fcat) = o_alv->FIELD_CATALOG( ).
+ 
+"Get total no.of fields
+o_fcat->GET_AVAILABLE_FIELDS(
+  IMPORTING
+    ETS_FIELD_NAMES = data(it_fields)
+).
+
+"Delete one field
+*though the view has NETPR it will still not appear in the alv
+
+delete it_fields where table_line = 'NETPR'.
+o_fcat->SET_AVAILABLE_FIELDS( ITS_FIELD_NAMES = it_fields ).
+o_ful_scrn->display( ).

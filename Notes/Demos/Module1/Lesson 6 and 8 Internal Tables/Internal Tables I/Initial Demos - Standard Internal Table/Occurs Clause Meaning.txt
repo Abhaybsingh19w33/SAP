@@ -1,0 +1,35 @@
+Whenever we declare internal tables or variables or constants, 
+system will allocate memory to each one based on the size 
+of the object while runtime.
+For variables and constants we can determine 
+the size from the definition. 
+
+For internal tables, size will be equal to 
+sum of sizes of all fields. 
+i.e. size of one row equal to sum of sizes of all fields. 
+Size of table equal to Size of each row * Number of rows.
+
+begin of .. with OCCURS statement is used to define an implicit work 
+area called header line while defining internal table. 
+ 
+OCCURS 0 is used to allocate initial memory of 8KB to the 
+internal table. 
+If the data loaded in the internal table
+exceeds 8 kb, another 8 kb of memory is allocated 
+and the process continues.
+
+OCCURS n, The value specified in n identifies number of 
+expected records in the internal table. 
+If the number of records exceeds, 
+then the system will allocate memory for next n records. 
+
+If the value of n is zero then it means that you don't know 
+how many records you are going to get. 
+So the system will allocate default memory of 8KB. 
+
+Use OCCURS 0 only if you are sure that your table contents crosses 8KB at some point. 
+Otherwise it will be simply waste of resource (Memory) while executing the program.
+
+
+
+

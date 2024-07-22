@@ -1,0 +1,27 @@
+REPORT ZAT_OOAP_DEMO02.
+
+CLASS emp DEFINITION.
+  PUBLIC SECTION.
+    METHODS setemp.
+    METHODS dispemp.
+  PRIVATE SECTION.
+    DATA: empno(4)  TYPE n,
+          ename(10) TYPE c.
+ENDCLASS.
+
+CLASS emp IMPLEMENTATION.
+  METHOD setemp.
+    empno = 12.
+    ename = 'John'.
+  ENDMETHOD.
+  METHOD dispemp.
+    WRITE:/ 'Empno is:' , empno.
+    WRITE:/ 'Ename is:' , ename.
+  ENDMETHOD.
+ENDCLASS.
+
+START-OF-SELECTION.
+  DATA: emp1 TYPE REF TO emp.
+  CREATE OBJECT emp1.
+  emp1->setemp( ).
+  emp1->dispemp( ).

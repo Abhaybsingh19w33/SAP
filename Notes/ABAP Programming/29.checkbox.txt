@@ -1,0 +1,12 @@
+REPORT z.
+DATA:   flag1(1) TYPE c VALUE '',
+        flag2(1) TYPE c VALUE 'X',
+        flag3(5) TYPE c VALUE 'xenon'.
+        "flag3(5) TYPE c VALUE 'Yenon'.
+
+WRITE: / 'Flag 1 ', flag1 AS CHECKBOX,
+       / 'Flag 2 ', flag2 AS CHECKBOX,
+       / 'Flag 3 ', flag3 AS CHECKBOX.
+SKIP.
+
+

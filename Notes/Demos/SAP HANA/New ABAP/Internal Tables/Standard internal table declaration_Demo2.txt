@@ -1,0 +1,22 @@
+REPORT Z.
+"OLD SYNTAX
+*TYPES t_itab TYPE STANDARD TABLE OF i WITH DEFAULT KEY.
+*DATA itab_o TYPE t_itab.
+*DATA WA TYPE I.
+*
+*APPEND: 10 TO itab_o,
+*        20 TO itab_o,
+*        30 TO itab_o.
+*
+*LOOP AT itab_o INTO WA.
+*  WRITE WA.
+*ENDLOOP.  
+*  
+"NEW SYNTAX
+TYPES t_itab TYPE STANDARD TABLE OF i WITH DEFAULT KEY.
+DATA(itab_o) = VALUE t_itab( ( 10 ) ( 20 ) ( 30 ) ).
+
+LOOP AT itab_o INTO DATA(WA).
+  WRITE WA.
+ENDLOOP.  
+*  

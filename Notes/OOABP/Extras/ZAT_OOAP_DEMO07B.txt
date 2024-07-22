@@ -1,0 +1,44 @@
+REPORT ZAT_OOAP_DEM007B.
+
+
+CLASS emp DEFINITION.
+  PUBLIC SECTION.
+    METHODS: setemp IMPORTING
+                      empno TYPE n
+                      ename TYPE c.
+
+    METHODS: dispemp.
+  PRIVATE SECTION.
+    DATA: empno(4)  TYPE n,
+          ename(10) TYPE c.
+ENDCLASS.
+
+CLASS emp IMPLEMENTATION.
+  METHOD setemp.
+    me->empno = empno.
+    me->ename = ename.
+  ENDMETHOD.
+
+  METHOD dispemp.
+    WRITE:/ 'Empno is:' , empno NO-ZERO.
+    WRITE:/ 'Ename is:' , ename.
+  ENDMETHOD.
+ENDCLASS.
+
+START-OF-SELECTION.
+  DATA: emp1 TYPE REF TO emp.
+  DATA: emp2 TYPE REF TO emp.
+
+  CREATE OBJECT emp1.
+  CREATE OBJECT emp2.
+
+  emp1->setemp( empno = 99 ename = 'Rohan' ).
+  emp1->dispemp( ).
+
+  CALL METHOD emp2->setemp
+    EXPORTING
+      empno = 100
+      ename = 'Shyam'.
+  CALL METHOD emp2->dispemp.
+  "CALL METHOD EMP2->DISPEMP( ).
+  EMP2->DISPEMP( ).

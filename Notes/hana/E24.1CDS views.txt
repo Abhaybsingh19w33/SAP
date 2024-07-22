@@ -1,0 +1,11 @@
+@AbapCatalog.sqlViewName: 'ZYTR_CDS_CUST' " Dictionary View name
+@AbapCatalog.compiler.compareFilter: true  "Filtering the view's  path expresion .eg. association etc.
+@AccessControl.authorizationCheck: #CHECK " Access rights
+@EndUserText.label: 'cds view' " description of view
+
+define view ZTR_CDS_CUST as select from zMT_kna1 {
+key kunnr,
+    name1,
+    name2,
+    land1
+} where land1 ='IN'

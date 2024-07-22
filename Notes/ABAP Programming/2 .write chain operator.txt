@@ -1,0 +1,11 @@
+Report z.
+"/ for new line
+
+write / 'WELCOME to CG'.
+	write / 'WELCOME to SAP'.
+	write / 'WELCOME to ABAP'.
+===========================================
+uline.
+write / : 'WELCOME to CG'.    // : chain operator
+	  'WELCOME to SAP'.
+	  'WELCOME to ABAP'.

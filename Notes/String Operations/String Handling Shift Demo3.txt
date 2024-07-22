@@ -1,0 +1,7 @@
+report z.
+
+data : alpha(10) value 'abcdef'.
+	Shift alpha up to 'cd'.
+	Write alpha.
+	Shift alpha up to 'cd' right.
+	Write / alpha.

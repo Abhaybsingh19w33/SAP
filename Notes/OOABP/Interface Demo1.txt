@@ -1,0 +1,36 @@
+REPORT  z.
+INTERFACE lif_employee.
+  METHODS:
+    set_attributes.
+ ENDINTERFACE.
+
+CLASS employee DEFINITION.
+  PUBLIC SECTION.
+    INTERFACES lif_employee.
+    METHODS:
+      display_attributes.
+ENDCLASS.
+*-- CLASS LCL_CompanyEmployees IMPLEMENTATION
+
+CLASS employee IMPLEMENTATION.
+  METHOD lif_employee~set_attributes.
+    WRITE /'Set attribute is called'.
+  ENDMETHOD.
+  METHOD display_attributes.
+    WRITE /'Display attribute is called'.
+  ENDMETHOD.
+
+ENDCLASS.
+
+DATA:
+ employee1  TYPE REF TO employee.
+
+START-OF-SELECTION.
+* Create employee object
+  CREATE OBJECT employee1.
+  CALL METHOD employee1->lif_employee~set_attributes.
+*  CALL METHOD employee1->set_attributes. "does not work
+  CALL METHOD employee1->display_attributes.
+
+
+

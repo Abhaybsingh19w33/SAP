@@ -1,0 +1,13 @@
+/* here ZADM_CDS_SALES is a view  with fields
+@AbapCatalog.sqlViewName: 'ZYTR_VIEWONVIEW'
+@AbapCatalog.compiler.compareFilter: true
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'vv'
+define view ZTR_VIEWONVIEW as select from zadm_kna1 as a
+inner join ZADM_CDS_SALES as v
+    on a.kunnr = v.kunnr {
+    a.kunnr,
+    a.name1,
+    v.vbeln,
+    v.netpr    
+}

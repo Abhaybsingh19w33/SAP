@@ -1,0 +1,30 @@
+report z.
+
+*cl_salv_gui_table_ida=>create_for_cds_view(
+*  EXPORTING
+*    iv_cds_view_name        = 'ZADM_CDS_SALES_JOINS'
+*)->fullscreen( )->display( ).
+**  CATCH cx_salv_ida_contract_violation.    " .
+*          or
+
+CL_SALV_GUI_TABLE_IDA=>create_for_cds_view(
+  EXPORTING
+    iv_cds_view_name               = 'ZLT_CDS_JOIN_VIEW'
+
+  RECEIVING
+    ro_alv_gui_table_ida           = DATA(o_alv)
+).
+
+data(o_ful_scrn) = o_alv->fullscreen( ).
+
+
+ data(o_fcat) = o_alv->FIELD_CATALOG( ).
+*o_fcat->DISABLE_AGGREGATION( IV_FIELD_NAME = 'NETPR' ).
+
+"disabling sorting ascending and descending for priority field right click)
+o_fcat->DISABLE_SORT( IV_FIELD_NAME = 'NAME1').
+
+
+"title
+O_ALV->DISPLAY_OPTIONS( )->SET_TITLE( IV_TITLE = 'List of Sales Orders' ).
+o_ful_scrn->display( ).

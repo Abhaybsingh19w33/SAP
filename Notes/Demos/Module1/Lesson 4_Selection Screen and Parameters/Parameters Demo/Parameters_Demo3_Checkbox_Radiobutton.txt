@@ -1,0 +1,51 @@
+REPORT Z.
+PARAMETERS:
+  P1  TYPE SCARR-CARRID,
+  P2  LIKE P1 OBLIGATORY,
+  P3  LIKE SY-DATUM DEFAULT SY-DATUM,
+  CB1	AS CHECKBOX,
+  CB2 AS CHECKBOX,
+  RB1	RADIOBUTTON GROUP G1,
+  RB2 RADIOBUTTON GROUP G1,
+  RB3 RADIOBUTTON GROUP G1,
+
+  RB4	RADIOBUTTON GROUP G2,
+  RB5 RADIOBUTTON GROUP G2,
+  RB6 RADIOBUTTON GROUP G2.
+CONSTANTS MARK VALUE 'X'.
+WRITE:   'You entered:',
+         /'  p1  = ',  P1 ,
+         /'  p2  = ',  P2 ,
+         /'  p3  = ',  P3 ,
+         /'  cb1 = ', CB1 ,
+         /'  cb2 = ', CB2 ,
+         /'  rb1 = ', RB1 ,
+         /'  rb2 = ', RB2 ,
+         /'  rb3 = ', RB3 ,
+         /'  rb4 = ', RB4 ,
+         /'  rb5 = ', RB5 ,
+         /'  rb6 = ', RB6 .
+
+IF CB1 = 'X'.
+  WRITE :/ 'CB1 is selected'.
+ENDIF.
+IF CB2 = 'X'.
+  WRITE:/ 'CB2 is selected'.
+ENDIF.
+
+IF RB1 = 'X'.
+  WRITE :/ 'RB1 is selected'.
+ELSEIF RB2 = 'X'.
+  WRITE :/ 'RB2 is selected'.
+ELSEIF RB3 = 'X'.
+  WRITE :/ 'RB3 is selected'.
+ENDIF.
+
+CASE MARK. "if mark = 'X' where X  indicates selected
+  WHEN RB4.
+    WRITE :/ 'RB4 is selected'.
+  WHEN RB5.
+    WRITE :/ 'RB5 is selected'.
+  WHEN RB6.
+    WRITE :/ 'RB6 is selected'.
+ENDCASE.

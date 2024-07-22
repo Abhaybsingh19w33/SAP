@@ -1,0 +1,72 @@
+*&---------------------------------------------------------------------*
+*& Report ZLSMW
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT ZLSMW.
+
+click on create-continue-
+cick on create--description of proj-continue
+subproj-description-continue
+object-description
+
+click on execute
+
+1)define object atributes
+execute-chnage/display mmode--select radio button(batch input recording)-secondicon(overview recodring icon)--create recording--give recording name-short descp-continue
+MM01-continue-give material-retail-finished product-enterbasic data-enter-descrip-kg-o2-save-place the cursor on recording name-defaultall-save-back-back-save(main radiobuttonscreen)check if description is populated to REC
+
+
+2)define the source structures
+execute-change-create-structur nameztr_STR9-description-continue-save-back
+
+3)define soruce fields
+execute-change-create-keep cursor on structure name create- give field name
+
+
+option2(preferred)
+click on structure name- table maintinece genrator-fieldnames-types-length-enter-save-back-save-back back
+
+4)define source stucture relationship
+execute-change-place cursor on recording name-relationships-continue on warning-save-back
+
+5)define field mapping and conversion rules
+execute-change-
+
+option1:place cursor on material-click on source field-double click on matnr soruce field-continue
+option2:place cursor on recording name-extras-autofieldmapping-with confirmation-continue
+
+place the cursor on 4th field (zsel)-constant-give X-continue
+
+save-back
+
+6)define fixed values, translations, user defined routines" this step is not required to open /create
+ we can write some piece of code using subroutines
+
+7)Specify  file-
+execute-place sursor on legacy data-change-add entry(second icon)-select the flat file from desktop-give namelsmw-tabulator-continue-save-back
+
+8)assign files
+execute-change-place cursor on source structure name- click on assignment-continue on warning-save-back
+
+9)Read data
+      execute-execute-reminder-allow-(list of records displayed)back
+      DO NOT SAVE- back
+
+10)Display read data
+      f8-continue-back
+
+
+ 11)Convert data
+       f8-f8-(file name is converted)-back
+       DO NOT SAVE-back
+
+12)Display converted data
+      f8-continue-back
+
+13)create batch input sessiion
+f8-select the check box'Keep bacth input'...(session name is same as object name)-f8-back
+
+
+14)Bacth input session
+f8-select -process-background-

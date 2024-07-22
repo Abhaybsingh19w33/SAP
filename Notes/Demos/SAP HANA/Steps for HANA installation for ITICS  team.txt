@@ -1,0 +1,40 @@
+Need admin password
+
+
+
+1) Copy from \\ndafile\Study Materials\SAP ABAP HANA\SAP HANA Installation the following 3 files on ur machine in d:
+
+	a).p2.zip
+	b)eclipse folder
+	c)jdk-8u141-windows-x64.exe
+
+
+2) Install java 
+	a)Run the jdk-8u141-windows-x64.exe.
+	b)Go to C:\Program Files\Java and see if           jre1.8.0_131 is present
+
+3) Extract eclipse from D: onto the desktop.
+
+4) Create folder amhoarir
+	a)Go to  c:\users
+	b)Create a folder by name amoharir
+
+5) Create directory .p2 inside folder 	amoharir
+	a)In command prompt write the below
+		cd..
+		cd amoharir
+		mkdir .p2
+	(This will create .p2  directory  inside  the 	         folder amoharir)
+
+	b) Go to C:\users\amhoarir and verify if .p2 	           is created in amoharir
+
+6) Extract .p2.zip from D Drive to the newly created .p2 directory i.e. c:\users\amoharir\.p2
+
+7) Open eclipse( copied on desktop)
+
+
+
+
+
+
+

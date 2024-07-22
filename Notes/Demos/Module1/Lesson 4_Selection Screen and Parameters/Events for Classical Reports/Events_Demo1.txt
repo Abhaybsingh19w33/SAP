@@ -1,0 +1,10 @@
+REPORT Z.
+
+START-OF-SELECTION.
+WRITE /'This is start of selection event'.
+
+INITIALIZATION.
+WRITE /'This is initialization event'.
+
+LOAD-OF-PROGRAM.
+WRITE 'This is load of program event'.

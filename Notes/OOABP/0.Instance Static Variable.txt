@@ -1,0 +1,24 @@
+REPORT ZYNY_OOABAP_00.
+
+CLASS ZCLASS_01 DEFINITION.
+  PUBLIC SECTION.
+    DATA: lv_iv type i value 100. "instance
+    CLASS-DATA: lv_sv type i value 20. "Static
+ENDCLASS.
+
+CLASS ZCLASS_01 IMPLEMENTATION.
+ENDCLASS.
+
+START-OF-SELECTION.
+   DATA: obj TYPE REF TO ZCLASS_01.
+   CREATE OBJECT obj.
+
+
+*  static variable can be directly accessed and changed by both ways
+   WRITE : /'Instance variable can be called only using the instance  : ',obj->lv_iv.
+
+   WRITE : /'static variable can be called using classname   : ',zclass_01=>lv_sv. "Recommended
+   WRITE : /'static variable can be called using instance as well  : ',obj->lv_sv.
+   obj->lv_sv = 30.
+   WRITE : /'static variable can be called using instance as well  : ',obj->lv_sv.
+   WRITE : /'static variable can be called using classname   : ',zclass_01=>lv_sv. "Recommended

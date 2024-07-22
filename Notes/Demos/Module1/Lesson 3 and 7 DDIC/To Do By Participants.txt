@@ -1,0 +1,2 @@
+1. DIFFERENCE BETWEEN SELECT SINGLE AND SELECT UPTO 1 ROW
+2. What is the meaning of Buffering allowed but switched off.

@@ -1,0 +1,31 @@
+*&---------------------------------------------------------------------*
+*& Report ZAT_OOAP_DEMO09B
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT ZAT_OOAP_DEMO09B.
+tables: sflight.
+SELECT-OPTIONS S_CARRID  FOR SFLIGHT-CARRID.
+
+DATA: IT_SFLIGHT TYPE ZTT_SFLIGHT_RT.
+DATA: wa_sFLIGHT TYPE Zlt_SFLIGHT.
+
+START-OF-SELECTION  .
+  DATA:  OBJ TYPE REF TO ZER_CLASS5.
+  CREATE OBJECT OBJ.
+
+CALL METHOD OBJ->GET_FLIGHT_DETAIL
+  EXPORTING
+    IM_CARRID1 = s_carrid-low
+    IM_CARRID2 = s_carrid-high
+  IMPORTING
+    EX_FLIGHT = it_Sflight
+    .
+
+
+
+  LOOP AT IT_SFLIGHT INTO WA_SFLIGHT.
+    WRITE :/  WA_SFLIGHT-CARRID,
+    WA_SFLIGHT-CONNID,
+    WA_SFLIGHT-FLDATE.
+    ENDLOOP.

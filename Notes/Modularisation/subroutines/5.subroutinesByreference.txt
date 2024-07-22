@@ -1,0 +1,21 @@
+*&---------------------------------------------------------------------*
+*& Report  ZRTC_SUBROUTINES4_STOPEXIT
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+REPORT ZRTC_SUBROUTINES5_BYREFERNCE.
+
+*the keyword Using retains the updated value
+DATA city type char20 value 'Mumbai'.
+
+WRITE: / 'Before invoking display:',city. "will display Mumbai
+PERFORM display using city.
+
+WRITE: / 'After  invoking display:',city. "will display California
+
+FORM display CHANGING P1.
+  P1 = 'California'.
+WRITE: / 'In Subroutine display:',P1. "will display California
+ENDFORM.

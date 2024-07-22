@@ -1,0 +1,46 @@
+REPORT ZAT_OOAP_DEMOEX01.
+
+CLASS NUMBERS DEFINITION.
+  PUBLIC SECTION.
+    METHODS: SET_VALUES,
+           CALCULATE RAISING cx_sy_zerodivide,
+           DISPLAY.
+  PRIVATE SECTION.
+    DATA : NUM1 TYPE I,
+          NUM2 TYPE I,
+          RESULT TYPE I.
+
+  ENDCLASS.
+
+
+  CLASS NUMBERS IMPLEMENTATION.
+    METHOD SET_VALUES.
+      NUM1 = 20.
+      NUM2 = 0.
+      ENDMETHOD.
+
+      METHOD CALCULATE.
+        RESULT = Num1 / num2.
+        ENDMETHOD.
+
+        METHOD DISPLAY.
+          WRITE : 'The result of dividing', num1, 'by', num2 ,'is', result.
+
+          ENDMETHOD.
+    ENDCLASS.
+
+    START-OF-SELECTION.
+    DATA OERROR TYPE REF TO CX_ROOT.
+    DATA OBJ TYPE REF TO NUMBERS.
+    CREATE OBJECT OBJ.
+    OBJ->SET_VALUES( ).
+    TRY.
+    OBJ->CALCULATE( ).
+    CATCH cx_sy_zerodivide INTO OERROR.
+      WRITE ' Exception has occured'.
+      WRITE / OERROR->kernel_errid.
+      WRITE / OERROR->get_text( ).
+      WRITE / OERROR->get_longtext( ).
+      ENDTRY.
+
+      OBJ->DISPLAY( ).
