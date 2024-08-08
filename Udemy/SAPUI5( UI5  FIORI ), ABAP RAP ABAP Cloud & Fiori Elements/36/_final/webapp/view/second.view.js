@@ -17,7 +17,7 @@ sap.ui.jsview("satya.prasad.mvcapp.view.second", {
 			{
 				title: "Details",
 				showNavButton: true,
-				navButtonPress: [oController.onNavPress, oController],
+				navButtonPress: [oController.onNavPress, oController], // onNavPress is defined in controller
 				content: [oObjectHeader]
 			});
 		return oDetailPage;

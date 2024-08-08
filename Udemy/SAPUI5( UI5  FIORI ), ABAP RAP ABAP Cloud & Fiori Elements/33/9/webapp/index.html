@@ -22,7 +22,9 @@
 				src: "images/image1.jpg",
 				press: onImagePressed,
 				width: "100px",
-				height: "100px"
+				height: "100px",
+				// we can adjust at control level
+				layoutData: new sap.ui.layout.GridData({ span: "XL12 L12 M12 S12" }) // to adjust the reponsiveness of layout
 			});
 			var oImage1 = new sap.m.Image("image2", {
 				src: "images/image1.jpg",
@@ -30,7 +32,8 @@
 				width: "100px",
 				height: "100px"
 			});
-			oImage.addStyleClass("sapUiSmallMargin"); // adding css style property
+
+			oImage.addStyleClass("sapUiSmallMargin");
 			oImage1.addStyleClass("sapUiSmallMargin");
 
 			var oRadioButton1 = new sap.m.RadioButton({
@@ -42,28 +45,43 @@
 			});
 
 			var oRadioButtonGroup = new sap.m.RadioButtonGroup({
-				columns: 2 // Specifies the maximum number of radio buttons displayed in one line
+				layoutData: new sap.ui.layout.GridData({ span: "XL12 L12 M12 S12" }),
+				columns: 2
 			});
 
-			oRadioButtonGroup.setAggregation("tooltip", "radio Button test tooltip"); // with cardinality of 0..1 so we need to use setAggregation
+			oRadioButtonGroup.setAggregation("tooltip", "radio Button test tooltip");
 			oRadioButtonGroup.addButton(oRadioButton1);
 			oRadioButtonGroup.addButton(oRadioButton2);
 
 			var oToolBar = new sap.m.Toolbar();
 			oToolBar.addContent(new sap.m.Label({ text: "Radio Buttons Below" }));
 
-			var oForm = new sap.ui.layout.form.SimpleForm({ layout: "ResponsiveGridLayout" });
-			oForm.addContent(oToolBar);
-			oForm.addContent(oRadioButtonGroup);
+			// demo : difference in layout
+			// var oForm = new sap.ui.layout.form.SimpleForm({ layout: "ResponsiveGridLayout" });
+			// oForm.addContent(oToolBar);
+			// oForm.addContent(oRadioButtonGroup);
 
-			oImage.placeAt("content");
-			oImage1.placeAt("content");
-			oForm.placeAt("content");
+			var oLayout = new sap.ui.layout.Grid({
+				// defaultSpan: "XL12 L12 M12 S12", // we can make this as defalt config from here
+				content: [
+					oImage,
+					oImage1,
+					oToolBar,
+					oRadioButtonGroup
+				]
+			});
+			// oImage.placeAt("content");
+			// oImage1.placeAt("content");
+			// oForm.placeAt("content");
+			// oToolBar.placeAt("content");
+			// oRadioButtonGroup.placeAt("content");
+
+			oLayout.placeAt("content");
 		});
 	</script>
 </head>
 
-<body class="sapUiBody" id="content">
+<body class="sapUiBody sapUiResponsiveMargin" id="content">
 </body>
 
 </html>

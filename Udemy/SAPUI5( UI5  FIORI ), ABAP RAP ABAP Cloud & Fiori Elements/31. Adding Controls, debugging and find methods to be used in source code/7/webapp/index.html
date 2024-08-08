@@ -5,9 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta charset="UTF-8">
 	<title>Our First Application</title>
+	<!-- data-sap-ui-theme - this will set the theme for the app ui -->
 	<!-- <script id='sap-ui-bootstrap' src='https://sapui5.hana.ondemand.com/resources/sap-ui-core.js'
 		data-sap-ui-theme='sap_bluecrystal' data-sap-ui-libs='sap.m'>
 		</script>
+	// this will set the library to be imported
 	<script> -->
 	<script id='sap-ui-bootstrap' src='./script.js'
 		data-sap-ui-theme='sap_bluecrystal' data-sap-ui-libs='sap.m'>
@@ -15,7 +17,7 @@
 	<script>
 		sap.ui.getCore().attachInit(function () {
 			var onImagePressed = function (oEvent1) {
-				var sImgId = oEvent1.getSource().getId();
+				var sImgId = oEvent1.getSource().getId(); // getId from where the event is called
 				if (sImgId === "image1") { 
 					alert("image1 is pressed") }
 				else {
@@ -23,6 +25,7 @@
 				}
 			};
 
+			// Image object, image ID, src, event
 			var oImage = new sap.m.Image("image1", {
 				src: "images/image1.jpg",
 				press: onImagePressed
@@ -33,7 +36,7 @@
 				press: onImagePressed
 			});
 
-			oImage.placeAt("content");
+			oImage.placeAt("content");	// this will replace the content for the given ID
 			oImage1.placeAt("content");
 		});
 	</script>

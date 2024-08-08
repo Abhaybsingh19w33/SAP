@@ -14,7 +14,7 @@ sap.ui.jsview("satya.prasad.mvcapp.view.First", {
 		// Table row template
 		var oTemplate = new sap.m.ColumnListItem({
 			type: "Navigation",
-			press: [oController.onListItemPress, oController],
+			press: [oController.onListItemPress, oController], // controller is added here
 			cells: [
 				new sap.m.ObjectIdentifier({ text: "{ID}" }),
 				new sap.m.ObjectIdentifier({ text: "{Name}" })

@@ -51,10 +51,14 @@
 			new sap.m.Column({ header: new sap.m.Text({ text: "Sweet Shop Name" }) })
 		];
 
-		// Table row template
+		// Table row template, mapping of json to the table
 		var oTemplate = new sap.m.ColumnListItem({
+			// this will have a edit button
 			type: "Detail",
+			// this is navigation as usual
+			// type: "Navigation",
 			cells: [
+				// this is relative binding
 				new sap.m.ObjectIdentifier({ text: "{ID}" }),
 				new sap.m.ObjectIdentifier({ text: "{Name}" })
 			]
@@ -62,6 +66,7 @@
 		
 		var oTableHeader = new sap.m.Toolbar({
 			content: [
+				// Display the first supplier name
 				new sap.m.Title({ text: "Number of sweet Suppliers: {/SweetsSupplier/1/Name}" })
 			]
 		});
@@ -71,13 +76,17 @@
 			headerToolbar: oTableHeader
 		});
 
+		// binding data from json to table
+		// this is an absolute binding
 		oTable.bindItems({ path: "/SweetsSupplier", template: oTemplate });
 
+		// creating a page
 		var oPageMaster = new sap.m.Page("masterpage", {
 			title: "Sweet Suppliers",
 			content: [oTable]
 		});
 
+		// now adding page to the app
 		var oApp = new sap.m.App("myApp");
 		oApp.addPage(oPageMaster);
 		oApp.placeAt("content");

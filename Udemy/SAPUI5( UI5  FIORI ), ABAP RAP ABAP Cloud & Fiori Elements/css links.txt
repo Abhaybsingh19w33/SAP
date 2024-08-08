@@ -1,0 +1,9 @@
+https://www.google.com/search?q=what+is+the+precedens+in+css&rlz=1C1UEAD_enIN1012IN1012&oq=what+is+the+precedens+in+css&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjIKCAcQABgPGBYYHjIKCAgQABgPGBYYHjIICAkQABgWGB7SAQg5MTg0ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+
+https://stackoverflow.com/questions/25105736/what-is-the-order-of-precedence-for-css
+
+https://vecta.io/blog/definitive-guide-to-css-styling-order
+
+https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/
+
+https://www.codeguage.com/courses/css/syntax

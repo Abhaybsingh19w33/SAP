@@ -1,0 +1,10 @@
+https://www.google.com/search?q=how+to+create+a+sap+fioriprojrct+from+scratch+using+sapui5&rlz=1C1UEAD_enIN1012IN1012&oq=how+to+create+a+sap+fioriprojrct+from+scratch+using+sapui5&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiiBBiJBTIKCAIQABiABBiiBDIKCAMQABiABBiiBNIBCTE1MDczajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+
+https://developers.sap.com/tutorials/appstudio-fioriapps-create.html
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/0b1903a1fcf04cb588985d7f01b0796e
+
+https://ui5.sap.com/#/entity/sap.m.Page/sample/sap.m.sample.Page/code
+
+https://sapui5.hana.ondemand.com/#/entity/sap.m.ActionSheet
+https://sdk.openui5.org/#/demoapps

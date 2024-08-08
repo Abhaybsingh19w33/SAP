@@ -1,7 +1,9 @@
 <mvc:View controllerName="satya.prasad.mvcapp.controller.First" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<Page title="Sweet Suppliers">
 		<content>
+		<!-- litte spacing has come before, because of this class -->
 			<Table items="{/SweetsSupplier}" class="sapUiResponsiveMargin" width="auto">
+			<!-- <Table items="{/SweetsSupplier}" > -->
 				<headerToolbar>
 					<Toolbar>
 						<Label text="Number of Sweets Suppliers :{/SweetsSupplier/1/ID}"/>

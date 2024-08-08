@@ -48,11 +48,13 @@
 		// so that it’s available in the whol application
 		sap.ui.getCore().setModel(oModel);
 
+		// link the appView here
 		var oView = sap.ui.view("appView", {
 			viewName: "satya.prasad.mvcapp.view.App",
 			type: sap.ui.core.mvc.ViewType.XML
 		});
 
+		// get the app from that view, then place it in content
 		var oApp = oView.byId("app");
 		oView.placeAt("content");
 
