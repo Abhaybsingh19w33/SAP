@@ -1,0 +1,1 @@
+Gateway - middleware between frontend and backend(like BAPI etc) 
