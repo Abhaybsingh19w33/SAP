@@ -16,18 +16,14 @@ create destination in BTP
 ![alt text](image-3.png)
 
 Destination Configuration
-Name:
-ES5
-Type:
-HTTP
-Description:
-SAP Gateway ES5
-URL:
-https://sapes5.sapdevcenter.com
-Proxy Type:
-Internet
-Authentication:
-BasicAuthentication
+|:-:|:-:|
+|:-:|:-:|
+|Name| ES5|
+|Type| HTTP |
+|Description| SAP Gateway ES5
+|URL| https://sapes5.sapdevcenter.com
+|Proxy Type|Internet
+Authentication|BasicAuthentication
 
 Additional Properties
 
@@ -50,6 +46,24 @@ WebIDEUsage
 odata_abap, dev_abap
 
 
-STEP 1 
+![alt text](image-5.png)
+
+Project setup 
 ![alt text](image-4.png)
 
+This will take care of routing part
+
+![alt text](image-6.png)
+
+take url from this
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+![alt text](image-9.png)
+
+![alt text](image-10.png)
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
