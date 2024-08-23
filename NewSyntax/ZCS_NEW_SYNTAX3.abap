@@ -154,6 +154,20 @@ DATA(gt_citys2) = VALUE ty_citys( FOR ls_ship IN gt_ships
                        WHERE ( route = 'R0001' ) ( ls_ship-city ) ).
 SKIP.
 
+DATA(lt_knbk_diff) = VALUE knbk_t
+                                ( FOR ls_knbk IN COND #( WHEN lines( lt_knbk1 ) >= lines( lt_knbk2 ) THEN lt_knbk1 ELSE lt_knbk2 )    
+                                ( LINES OF COND #( 
+                                                  WHEN lines( lt_knbk1 ) >= lines( lt_knbk2 ) AND 
+                                                    NOT line_exists( lt_knbk2[ table_line = ls_knbk ] ) 
+                                                    THEN VALUE #( ( ls_knbk ) )
+
+                                                  WHEN lines( lt_knbk2 ) > lines( lt_knbk1 ) AND 
+                                                    NOT line_exists( lt_knbk1[ table_line = ls_knbk ] ) 
+                                                    THEN VALUE #( ( ls_knbk ) ) 
+                                                ) 
+                                )
+                                ).
+
 *Chaining Operator
 WRITE : / 'Chaining Operator'.
 DATA: v_var1 TYPE char30,
