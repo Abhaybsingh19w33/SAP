@@ -152,6 +152,24 @@ Binding Types
 
 Northwind Service
 
-services.odata.org
+https://services.odata.org/
 
 ![alt text](image-38.png)
+
+Fragments - do not contain there controller of its own.
+![alt text](image-39.png)
+
+```
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="helloDialog" title="Hello">
+        <content>
+            <core:Icon id="_IDGenIcon1" src="sap-icon://hello-world" size="8rem" class="sapUiMediumMargin" />
+        </content>
+
+        <beginButton>
+            <Button id="_IDGenButton1" text="ok" press=".onCloseDialog" />
+        </beginButton>
+    </Dialog>
+</core:FragmentDefinition>
+```
+
