@@ -173,3 +173,8 @@ Fragments - do not contain there controller of its own.
 </core:FragmentDefinition>
 ```
 
+https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/
+
+![alt text](image-40.png)
+
+https://www.sap.com/documents/2018/02/f0148939-f27c-0010-82c7-eda71af511fa.html
