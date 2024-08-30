@@ -1,6 +1,6 @@
-![alt text](image.png)
+![alt text](./image/image.png)
 
-![alt text](image-1.png)
+![alt text](./image/image-1.png)
 
 [OData fundamentals](https://developers.sap.com/tutorials/odata-01-intro-origins.html)
 
@@ -19,9 +19,9 @@
 
 [create destination in BTP](https://developers.sap.com/tutorials/cp-portal-cloud-foundry-gateway-connection..html)
 
-![alt text](image-2.png)
+![alt text](./image/image-2.png)
 
-![alt text](image-3.png)
+![alt text](./image/image-3.png)
 
 |:-:|:-:|
 |:-:|:-:|
@@ -43,54 +43,54 @@ Authentication|BasicAuthentication
 |WebIDESystem|Gateway
 |WebIDEUsage|odata_abap, dev_abap
 
-![alt text](image-5.png)
+![alt text](./image/image-5.png)
 
 # Project setup 
-![alt text](image-4.png)
+![alt text](./image/image-4.png)
 
 - This will take care of routing part
 
-![alt text](image-6.png)
+![alt text](./image/image-6.png)
 - Managed Approuter - the SAP will take care of routing
 - after this sapui5demo folder has been generated, move to that folder
 
-![alt text](image-7.png)
+![alt text](./image/image-7.png)
 - take url from this
 
-![alt text](image-8.png)
+![alt text](./image/image-8.png)
 
-![alt text](image-15.png)
+![alt text](./image/image-15.png)
 
-![alt text](image-9.png)
+![alt text](./image/image-9.png)
 
-![alt text](image-10.png)
+![alt text](./image/image-10.png)
 
-![alt text](image-11.png)
+![alt text](./image/image-11.png)
 
-![alt text](image-12.png)
+![alt text](./image/image-12.png)
 
-![alt text](image-13.png)
+![alt text](./image/image-13.png)
 
 To manage the git in parent folder git.openRepositoryInParentFolders 
-![alt text](image-14.png)
+![alt text](./image/image-14.png)
 
 
 https://port8080-workspaces-ws-j9crb.us10.trial.applicationstudio.cloud.sap/test/flpSandbox.html?sap-client=002&sap-ui-xx-viewCache=false#nsproducts-display
 
 create a list and bind the /ProductSet
-![alt text](image-16.png)
+![alt text](./image/image-16.png)
 
 bind name to the list title
-![alt text](image-18.png)
-![alt text](image-17.png)
+![alt text](./image/image-18.png)
+![alt text](./image/image-17.png)
 
 build the mta
-![alt text](image-19.png)
+![alt text](./image/image-19.png)
 build will be created in mta_archives
-![alt text](image-20.png)
+![alt text](./image/image-20.png)
 
 api endpoint link from cloudfoundry env
-![alt text](image-21.png)
+![alt text](./image/image-21.png)
 
 to deploy the mta archive
 in console write 
@@ -104,60 +104,60 @@ cf api <api link from clound foundry>
 
 then right click on the tar file and click on deploy button
 
-![alt text](image-22.png)
+![alt text](./image/image-22.png)
 
 or in vs code to deply the last part 
-![alt text](image-23.png)
+![alt text](./image/image-23.png)
 
 to get the business partner link, through this we can access the app live
-![alt text](image-24.png)
+![alt text](./image/image-24.png)
 
 extend the work zone
 
 open the work zone
-![alt text](image-25.png)
+![alt text](./image/image-25.png)
 
 update the content channel
-![alt text](image-26.png)
+![alt text](./image/image-26.png)
 
 go to content manager -> content explorer
-![alt text](image-27.png)
+![alt text](./image/image-27.png)
 
 add the apps to the sub account
-![alt text](image-28.png)
+![alt text](./image/image-28.png)
 
 now adding the app to the group 
-![alt text](image-29.png)
+![alt text](./image/image-29.png)
 
 then add the app for everyoe role
-![alt text](image-30.png)
+![alt text](./image/image-30.png)
 
 in site directory, create a site
-![alt text](image-31.png)
+![alt text](./image/image-31.png)
 
 then go the launchpad via the link on site tile
-![alt text](image-32.png)
+![alt text](./image/image-32.png)
 
-![alt text](image-33.png)
+![alt text](./image/image-33.png)
 
 
 Connecting on premise system to the BAS via cloud connector
-![alt text](image-34.png)
-![alt text](image-35.png)
+![alt text](./image/image-34.png)
+![alt text](./image/image-35.png)
 
 Binding Types
-![alt text](image-36.png)
+![alt text](./image/image-36.png)
 
-![alt text](image-37.png)
+![alt text](./image/image-37.png)
 
 Northwind Service
 
 https://services.odata.org/
 
-![alt text](image-38.png)
+![alt text](./image/image-38.png)
 
 Fragments - do not contain there controller of its own.
-![alt text](image-39.png)
+![alt text](./image/image-39.png)
 
 ```
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
@@ -175,6 +175,6 @@ Fragments - do not contain there controller of its own.
 
 https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/
 
-![alt text](image-40.png)
+![alt text](./image/image-40.png)
 
 https://www.sap.com/documents/2018/02/f0148939-f27c-0010-82c7-eda71af511fa.html
