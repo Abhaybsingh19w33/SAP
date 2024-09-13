@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>SAPUI5 Walkthrough</title>
+    <script>
+    console.log("-------------Index.html script started called-------------");
+    </script>
     <script
       id="sap-ui-bootstrap"
       src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
@@ -14,7 +17,10 @@
       data-sap-ui-resourceroots='{
 		"sap.ui.demo.walkthrough": "./"
 	}'
-    ></script>
+    >
+  console.log("-------------Index.html script ended called-------------");
+  alert("Index.html script ended called");
+  </script>
   </head>
 
   <body class="sapUiBody" id="content"></body>
