@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>SAPUI5 Walkthrough</title>
     <script>
-    console.log("-------------Index.html script started called-------------");
+      console.log("-------------Index.html script started called-------------");
     </script>
     <script
       id="sap-ui-bootstrap"
@@ -13,15 +13,26 @@
       data-sap-ui-libs="sap.m"
       data-sap-ui-compatVersion="edge"
       data-sap-ui-async="true"
-      data-sap-ui-onInit="module:sap/ui/demo/walkthrough/index"
+      data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
       data-sap-ui-resourceroots='{
 		"sap.ui.demo.walkthrough": "./"
 	}'
     >
-  console.log("-------------Index.html script ended called-------------");
-  alert("Index.html script ended called");
-  </script>
+      console.log("-------------Index.html sap-ui-bootstrap script ended called-------------");
+      alert("Index.html script ended called");
+    </script>
+    <script>
+      console.log("-------------Index.html script ended called-------------");
+      // alert("Index.html script ended called");
+    </script>
   </head>
 
-  <body class="sapUiBody" id="content"></body>
+  <body class="sapUiBody" id="content">
+    <div
+      data-sap-ui-component
+      data-name="sap.ui.demo.walkthrough"
+      data-id="container"
+      data-settings='{"id" : "walkthrough"}'
+    ></div>
+  </body>
 </html>

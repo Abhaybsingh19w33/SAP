@@ -28,3 +28,7 @@ Below is the order in which SAPUI5 applications execute. The application files o
 - Models are available in the views
 - Evaluate view’s bindings
 - Retrieve model data
+
+## Manifest Json
+
+Moving the configuration to the manifest file
