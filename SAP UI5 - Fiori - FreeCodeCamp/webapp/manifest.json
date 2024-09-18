@@ -14,14 +14,7 @@
         "tags": {
             "keywords": []
         },
-        "dataSources": {
-            "<dataSourceAlias>": {
-                "uri": "<uri>",
-                "settings": {
-                    "localUri": "<localUri>"
-                }
-            }
-        }
+        "dataSources": {}
     },
     "sap.ui": {
         "_version": "1.1.0",
