@@ -18,30 +18,33 @@ sap.ui.define([
         onOpenDialog: function () {
 
             console.log("-------------HelloPanel.controller.js onOpenDialog func called-------------");
-            var oView = this.getView();
 
-            // this code will run only once if this fragment has not been called even once
-            // create the dialog lazily
-            if (!this.byId("helloDialog")) {
-                // load asynchronous XML fragment
-                Fragement.load({
-                    id: oView.getId(),
-                    name: "sap.ui.demo.walkthrough.view.HelloDialog",
-                    controller: this
-                }).then(function (oDialog) {
-                    // connect dialog to the root view of this component (models, lifecycle)
-                    oView.addDependent(oDialog);
-                    oDialog.open();
-                })
-            } else {
-                // once it is connected to the root view, no need to add again, directly call it
-                this.byId("helloDialog").open();
-            }
-        },
-        onCloseDialog: function () {
-            console.log("-------------HelloPanel.controller.js onCloseDialog func called-------------");
+            this.getOwnerComponent().openHelloDialog();
 
-            this.byId("helloDialog").close();
+            // var oView = this.getView();
+
+            // // this code will run only once if this fragment has not been called even once
+            // // create the dialog lazily
+            // if (!this.byId("helloDialog")) {
+            //     // load asynchronous XML fragment
+            //     Fragement.load({
+            //         id: oView.getId(),
+            //         name: "sap.ui.demo.walkthrough.view.HelloDialog",
+            //         controller: this
+            //     }).then(function (oDialog) {
+            //         // connect dialog to the root view of this component (models, lifecycle)
+            //         oView.addDependent(oDialog);
+            //         oDialog.open();
+            //     })
+            // } else {
+            //     // once it is connected to the root view, no need to add again, directly call it
+            //     this.byId("helloDialog").open();
+            // }
         }
+        // onCloseDialog: function () {
+        //     console.log("-------------HelloPanel.controller.js onCloseDialog func called-------------");
+
+        //     this.byId("helloDialog").close();
+        // }
     })
 });
