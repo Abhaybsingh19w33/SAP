@@ -28,11 +28,18 @@ sap.ui.define([
             if (sQuery) {
                 aFilter.push(new Filter("ProductName", FilterOperator.Contains, sQuery));
             }
-            
+
             // filter binding
             var oList = this.byId("invoiceList");
             var oBinding = oList.getBinding("items");
             oBinding.filter(aFilter);
+        },
+
+        onPress: function (oEvent) {
+            console.log("-------------InvoiceList.controller.js onPress func called-------------");
+
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("detail");
         }
     })
 })
