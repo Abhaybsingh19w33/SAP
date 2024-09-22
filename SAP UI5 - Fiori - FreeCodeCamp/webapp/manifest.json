@@ -78,7 +78,7 @@
                 "uri": ""
             },
             "invoice": {
-                "odataSource": "invoiceRemote"
+                "dataSource": "invoiceRemote"
             }
         },
         "rootView": {
