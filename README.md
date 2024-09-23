@@ -192,6 +192,11 @@ Install VSCode
 - [SAP official web site](https://sapui5.hana.ondemand.com/1.120.20/#/topic/2680aa9b16c14a00b01261d04babbb39)
 - [Installing the UI5 CLI](https://sap.github.io/ui5-tooling/stable/pages/GettingStarted/)
 
+    - His other ui5 videos
+        - [video](https://www.youtube.com/watch?v=zaeztGyqiBw&ab_channel=CodeWithBrandon)
+        - [github](https://github.com/brandoncaulfield/sap-ui5-data-binding/commits/master)
+        - [SAP website](https://sapui5.hana.ondemand.com/#/topic/e5310932a71f42daa41f3a6143efca9c)       
+
 ### Order Executes an SAPUI5 Application
 - https://inui.io/sapui5-application-execution-order/
 - https://inui.io/sapui5-controller-life-cycle/
