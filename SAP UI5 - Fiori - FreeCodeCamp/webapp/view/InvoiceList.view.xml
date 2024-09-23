@@ -14,7 +14,21 @@ xmlns:mvc="sap.ui.core.mvc">
                 group: true
                 }
             }"> -->
-    <Table
+    <Panel accessibleRole="Region">
+    <headerToolbar>
+        <Toolbar
+            class="sapUiResponsiveMargin">
+            <Title text="{i18n>invoiceListTitle}"/>
+            <ToolbarSpacer/>
+            <SearchField
+                width="50%"
+                search=".onFilterInvoices"
+                ariaLabelledBy="searchFieldLabel"
+                ariaDescribedBy="searchFieldDescription"
+                placeholder="{i18n>searchFieldPlaceHolder}"/>
+        </Toolbar>
+    </headerToolbar>
+    <!-- <Table
         id="invoiceList"
         headerText="{i18n>invoiceListTitle}"
         class="sapUiResponsiveMargin"
@@ -25,14 +39,25 @@ xmlns:mvc="sap.ui.core.mvc">
                 path: 'ShipperName',
                 group: true
                 }
+            }"> -->
+        <Table
+        id="invoiceList"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{
+            path: 'invoice>/Invoices',
+            sorter: {
+                path: 'ShipperName',
+                group: true
+                }
             }">
-        <headerToolbar>
+        <!-- <headerToolbar>
             <Toolbar>
             <Title text="{i18n>invoiceListTitle}"/>
             <ToolbarSpacer/>
             <SearchField width="50%" search=".onFilterInvoices"/>
             </Toolbar>
-        </headerToolbar>
+        </headerToolbar> -->
         <columns>
             <!-- hAlign="End" - align the text to the right -->
             <!-- demandPopin="true", this will pop the column and add them in single column in small screen sizes -->
@@ -110,4 +135,5 @@ xmlns:mvc="sap.ui.core.mvc">
         </items>
     <!-- </List> -->
     </Table>
+    </Panel>
 </mvc:View>
