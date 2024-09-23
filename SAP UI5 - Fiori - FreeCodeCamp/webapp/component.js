@@ -40,6 +40,21 @@ sap.ui.define([
             // create the views based on the url/hash
             this.getRouter().initialize();
         },
+
+        getContentDensityClass : function () {
+            
+            console.log("-------------Component.js getContentDensityClass func called-------------");
+            
+            if (!this._sContentDensityClass) {
+                if (!Device.support.touch) {
+                    this._sContentDensityClass = "sapUiSizeCompact";
+                } else {
+                    this._sContentDensityClass = "sapUiSizeCozy";
+                }
+            }
+            return this._sContentDensityClass;
+        },
+
         exit: function () {
             console.log("-------------Component.js exit func called-------------");
 
