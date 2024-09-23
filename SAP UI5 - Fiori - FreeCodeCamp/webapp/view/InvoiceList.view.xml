@@ -2,7 +2,19 @@
 controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
 xmlns="sap.m"
 xmlns:mvc="sap.ui.core.mvc">
-    <List
+    <!-- <List
+        id="invoiceList"
+        headerText="{i18n>invoiceListTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{
+            path: 'invoice>/Invoices',
+            sorter: {
+                path: 'ShipperName',
+                group: true
+                }
+            }"> -->
+    <Table
         id="invoiceList"
         headerText="{i18n>invoiceListTitle}"
         class="sapUiResponsiveMargin"
@@ -21,8 +33,61 @@ xmlns:mvc="sap.ui.core.mvc">
             <SearchField width="50%" search=".onFilterInvoices"/>
             </Toolbar>
         </headerToolbar>
+        <columns>
+            <!-- hAlign="End" - align the text to the right -->
+            <!-- demandPopin="true", this will pop the column and add them in single column in small screen sizes -->
+            <Column
+                hAlign="End"
+                minScreenWidth="Small"
+                demandPopin="true"
+                width="4em">
+                <Text text="{i18n>columnQuantity}"/>
+            </Column>   
+            <Column>    
+                <Text text="{i18n>columName}"/>
+            </Column>
+            <Column
+                minScreenWidth="small"
+                demandPopin="true">
+                <Text text="{i18n>columnStatus}"/>
+            </Column>
+            <!-- minScreenWidth="Tablet" - will show this column from tablets onwards -->
+            <!-- demandPopin="false" - will remove the column if not enough screen size -->
+            <Column 
+                minScreenWidth="Tablet"
+                demandPopin="false">
+                <Text text="{i18n>columnSupplier}"/>
+            </Column>
+            <Column
+                hAlign="End">
+                <Text text="{i18n>columnPrice}"/>
+            </Column>
+        </columns>
         <items>
-            <ObjectListItem
+        <ColumnListItem
+            type="Navigation"
+            press=".onPress">
+            <cells>
+                <ObjectNumber number="{invoice>Quantity}" emphasized="false"/>
+                <ObjectIdentifier title="{invoice>ProductName}"/>
+                <Text text="{
+                        path: 'invoice>Status',
+                        formatter: '.formatter.statusText'    
+                    }"/>
+                <Text text="{invoice>ShipperName}"/>
+                <ObjectNumber   
+                    number="{
+                        parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
+                        type: 'sap.ui.model.type.Currency',
+                        formatOptions: {
+                            showMeasure: false
+                        }
+                    }"
+                    unit="{view>/currency}"
+                    state="{= ${invoiceExtendedPrice} > 50 ? 'Error' : 'Success'}"/>
+            </cells>
+        </ColumnListItem>
+            <!-- <ObjectListItem
                 title="{invoice>Quantity} x {invoice>ProductName}"
                 number="{
                     parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
@@ -35,13 +100,14 @@ xmlns:mvc="sap.ui.core.mvc">
                 numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}"
                 type="Navigation"
                 press="onPress">
-                <firstStatus>
+                <firstStatus> -->
                 <!-- this formatter will call statusText func, it will pass the invoice>status to that function -->
-                    <ObjectStatus text="{
+                    <!-- <ObjectStatus text="{
                         path: 'invoice>Status',
                         formatter: '.formatter.statusText'}"/>
                 </firstStatus>
-                </ObjectListItem>
+                </ObjectListItem> -->
         </items>
-    </List>
+    <!-- </List> -->
+    </Table>
 </mvc:View>
