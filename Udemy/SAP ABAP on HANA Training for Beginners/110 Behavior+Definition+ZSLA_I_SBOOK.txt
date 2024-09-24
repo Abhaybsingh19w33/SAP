@@ -1,0 +1,102 @@
+//Possible implementation type is managed
+//Specifying unique is mandatory (each operation can only be implemented once)
+managed implementation in class zbp_sla_i_sbook unique;
+
+//Enabling the strict mode (and version) to apply additional syntax checks; handled by
+//the RAP framework; it is recommended that you use the most recent version
+strict ( 2 );
+
+//It is mandatory to specify an entity behavior definition for the RAP BO root entity.
+define behavior for ZSLA_I_SBOOK //alias <alias_name>
+
+// Specifying the database table a RAP BO is based on (only available/mandatory in managed BOs);
+// If the implementation type is managed, an additional persistent table is required for each entity of the BO to allow write access to the related database table.
+persistent table zsla_a_sbook
+
+// Specifying the locking mechanism for entities, e.g. to prevent a simultaneous modification.
+// only root entities are allowed as lock master
+// For the managed implementation type, it is also mandatory to set a lock type for each entity.
+// The root entity has to be set as lock master.
+lock master
+
+// Authorization control in RAP protects your business object against unauthorized access to data.
+// You can specify variants: global (e.g. for restricting certain operations) and/or
+// Instance (restrictions based on entity instances) or both of them (dedicated handler methods must be implemented)
+// Only root entities are allowed as authorization master
+// global
+// ● Limits access to data or the permission to perform certain operations for a complete RAP BO, independent of individual instances, for example, depending on user roles.
+// ● Must be implemented in the RAP handler method FOR GLOBAL AUTHORIZATION.
+// instance
+// ● Authorization check that is dependent on the state of an entity instance.
+// ● Must be implemented in the RAP handler method FOR INSTANCE AUTHORIZATION. For compatibility reasons FOR AUTHORITY is also supported.
+// global, instance
+// ● Combination of global and instance authorization control: Instance-based operations are checked in the global and in the instance authority check.
+// ● Both RAP handler methods, FOR GLOBAL AUTHORIZATION and FOR INSTANCE AUTHORIZATION, must be implemented.
+// ● The checks are executed at different points in time during runtime.
+authorization master ( instance )
+// authorization master ( global )
+
+
+//etag master <field_name>
+
+//RAP BO operations
+//Standard operations (Note: Read is implicitly enabled, no specification available)
+{
+  create;
+  update;
+  delete;
+
+//Validations
+//Checking the consitency of instances; validations are triggered based on conditions
+//Conditions (one or more are possible) can be specified for create, update, delete operations and modified fields;
+//Validations are always invoked during the save sequence
+//field: validation is executed when the value of the specified field(s) are changed by a create or update operation.
+//The execution order of validations is not fixed.
+//If there is more than one validation triggered by the same condition, you cannot know which validation is executed first.
+//In unmanaged scenarios, validations are only supported for draft instances, not for active instances.
+//Update works only in combination with the trigger operation create.
+validation validate_flight_date on save { field FlightDate; create; }
+
+// Keyword ACTION defines a non-standard modifying operation
+// The output parameter for actions is defined with the keyword RESULT
+// The result cardinality for actions determines the multiplicity of the output
+// It indicates whether the action produces [0..1], or [1], or [0..*], or [1..*] output instances
+// result [1] result parameter upto 1 data set
+// When you return a result entity with self in a UI service, the UI always stays on the same page where the action is executed.
+action set_status result [1] $self;
+
+  // Static field attribute.
+  // The RAP BO does not allow consumers to change the values of the specified field or fields.
+  // This is independent from the standard operation the consumers wants to perform (update, create).
+field ( readonly ) cancelled;
+
+// Determination
+// Modifying instances based on trigger conditions.
+// Conditions (one or more are possible) can be specified for create, update, delete operations and modified fields.
+// The triggering is possible for 'on modify' and 'on save’.
+// Determinations are available for managed scenarios and for unmanaged scenarios with draft.
+// They are not available for unmanaged, non-draft scenarios.
+// The execution order of determinations is not fixed.
+// For determinations defined as on save, trigger condition update; works only in combination with the trigger condition create
+// Example:
+// determination det1 on modify { update; delete; field field5, field6; }
+// determination det2 on save { create; field field7, field8; }
+
+determination default_status on save {create;}
+
+// Mapping
+  // When defining data models, developers often choose to introduce more readable element names in CDS
+  // provides the information about which RAP BO field belongs to which datbase table field.
+  // In the most complete form, the mapping contains a full list of all field names,
+  // with the CDS element names on the left and the DB table field names on the right.
+  mapping for zsla_a_sbook
+  {
+    AirlineID = carrid;
+    ConnectionID = connid;
+    FlightDate = fldate;
+    BookingID = bookid;
+    PassengerName = passname;
+    Cancelled = cancelled;
+
+  }
+}

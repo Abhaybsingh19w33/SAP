@@ -1,0 +1,23 @@
+managed implementation in class zbp_sla_i_sbook unique;
+strict ( 2 );
+
+define behavior for ZSLA_I_SBOOK //alias <alias_name>
+persistent table zsla_a_sbook
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  mapping for zsla_a_sbook
+  {
+    AirlineID = carrid;
+    ConnectionID = connid;
+    FlightDate = fldate;
+    BookingID = bookid;
+    PassengerName = passname;
+    Cancelled = cancelled;
+  }
+}

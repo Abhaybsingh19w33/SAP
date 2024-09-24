@@ -1,0 +1,55 @@
+CLASS lhc_ZSLA_I_SBOOK DEFINITION INHERITING FROM cl_abap_behavior_handler.
+  PRIVATE SECTION.
+
+    METHODS get_instance_authorizations FOR INSTANCE AUTHORIZATION
+      IMPORTING keys REQUEST requested_authorizations FOR zsla_i_sbook RESULT result.
+    METHODS validate_flight_date FOR VALIDATE ON SAVE
+      IMPORTING keys FOR zsla_i_sbook~validate_flight_date.
+
+ENDCLASS.
+
+CLASS lhc_ZSLA_I_SBOOK IMPLEMENTATION.
+
+  METHOD get_instance_authorizations.
+  ENDMETHOD.
+
+  METHOD validate_flight_date.
+
+    " Read the flight booking instance(s) of the transferred keys (keys) using the EML statement READ ENTITIES.
+    " The addition FIELDS is used to specify the fields to be read. Only FlightDate is relevant for the present validation.
+    " The addition IN LOCAL MODE is used to exclude feature controls and authorization checks
+    READ ENTITIES OF zsla_i_sbook IN LOCAL MODE
+    ENTITY zsla_i_sbook
+    ALL FIELDS WITH CORRESPONDING #( keys )
+    RESULT DATA(lt_key_flight_date).
+
+    LOOP AT lt_key_flight_date INTO DATA(ls_key_flight_date).
+
+      IF ls_key_flight_date-FlightDate < cl_abap_context_info=>get_system_date( ).
+
+        " FAILED is used for logging instances for which an operation has failed.
+        " validation can reject inconsistent instance data from being saved by passing the keys of failed instances
+        " to the corresponding table in the FAILED structure
+        " %tky is derived type component groups summarizing all primary keys of a RAP BO instance.
+        APPEND VALUE #( %tky = ls_key_flight_date-%tky ) TO failed-zsla_i_sbook.
+
+        " validation can return messages to the consumer
+        " by passing them to the corresponding table in the REPORTED structure.
+        " %tky is derived type component groups summarizing all primary keys of a RAP BO instance.
+        " %element is used to assign messages to target fields by marking data field in %element structure
+        " %msg provides an instance of the message interface IF_ABAP_BEHV_MESSAGE.
+        " If no self-implementation of the interface is needed,
+        " the inherited methods new_message_with_text( ) can be used to get a standard implementation.
+        APPEND VALUE #( %tky = ls_key_flight_date-%tky
+                        " if_abap_behv=>mk-on return type is RAW(1) and not CHAR(1).
+                        " Constants ABAP_TRUE, ABAP_FALSE or literals 'X' and ' ' are not compatible.
+                        %element-FlightDate = if_abap_behv=>mk-on
+                        %msg = new_message_with_text( severity = if_abap_behv_message=>severity-error
+                                                      text = 'Flight Date can not be past dated' )
+                      ) TO reported-zsla_i_sbook.
+      ENDIF.
+    ENDLOOP.
+
+  ENDMETHOD.
+
+ENDCLASS.

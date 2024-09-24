@@ -1,0 +1,51 @@
+//Possible implementation type is managed
+//Specifying unique is mandatory (each operation can only be implemented once)
+managed implementation in class zbp_sla_i_sbook unique;
+
+//Enabling the strict mode (and version) to apply additional syntax checks; handled by
+//the RAP framework; it is recommended that you use the most recent version
+strict ( 2 );
+
+//It is mandatory to specify an entity behavior definition for the RAP BO root entity.
+define behavior for ZSLA_I_SBOOK //alias <alias_name>
+
+//Specifying the database table a RAP BO is based on (only available/mandatory in managed BOs);
+persistent table zsla_a_sbook
+
+//Specifying the locking mechanism for entities, e.g. to prevent a simultaneous modification.
+lock master
+
+//Controlling authorization that is to be implemented
+//You can specify variants: global (e.g. for restricting certain operations) and/or
+//instance (restrictions based on entity instances) or both of them (dedicated handler methods must be implemented)
+authorization master ( instance )
+//etag master <field_name>
+
+//RAP BO operations
+//Standard operations (Note: Read is implicitly enabled, no specification available)
+{
+  create;
+  update;
+  delete;
+
+//Validations
+//Checking the consitency of instances; validations are triggered based on conditions
+//Conditions (one or more are possible) can be specified for create, update, delete operations and modified fields;
+//Validations are always invoked during the save sequence
+//field: validation is executed when the value of the specified field(s) are changed by a create or update operation.
+//The execution order of validations is not fixed.
+//If there is more than one validation triggered by the same condition, you cannot know which validation is executed first.
+//In unmanaged scenarios, validations are only supported for draft instances, not for active instances.
+//Update works only in combination with the trigger operation create.
+validation validate_flight_date on save { field FlightDate; create; }
+
+  mapping for zsla_a_sbook
+  {
+    AirlineID = carrid;
+    ConnectionID = connid;
+    FlightDate = fldate;
+    BookingID = bookid;
+    PassengerName = passname;
+    Cancelled = cancelled;
+  }
+}

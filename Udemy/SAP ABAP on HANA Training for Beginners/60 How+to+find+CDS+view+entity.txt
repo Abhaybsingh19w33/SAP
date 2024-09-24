@@ -1,0 +1,36 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@Metadata.ignorePropagatedAnnotations: true
+@EndUserText.label: 'find cds view based on data element name'
+define view entity ZFIND_CDS_VIEW_ENTITY
+  with parameters
+    field1 : abap.char(30),  // data element name
+    field2 : abap.char(30),  // data element name
+    field3 : abap.char(30)   // data element name
+    field4 : abap.char(30)   // data element name
+  as select from DDCDS_ENTITY_ELEMENTS
+{
+  entity_name as cds_view_entity
+}
+where  data_element = $parameters.field1
+
+intersect
+
+select from DDCDS_ENTITY_ELEMENTS
+{
+  entity_name as cds_view_entity
+}
+where  data_element = $parameters.field2
+
+intersect
+
+select from DDCDS_ENTITY_ELEMENTS
+{
+  entity_name as cds_view_entity
+}
+where  data_element = $parameters.field3
+intersect
+select from DDCDS_ENTITY_ELEMENTS
+{
+  entity_name as cds_view_entity
+}
+where  data_element = $parameters.field4

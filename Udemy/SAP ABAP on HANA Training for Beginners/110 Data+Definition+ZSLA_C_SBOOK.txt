@@ -1,0 +1,14 @@
+@EndUserText.label: 'Projection view of cds view zsla_i_sbook'
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@Metadata.allowExtensions: true
+define root view entity ZSLA_C_SBOOK
+  provider contract transactional_query as projection on ZSLA_I_SBOOK
+{
+    key AirlineID,
+    key ConnectionID,
+    key FlightDate,
+    key BookingID,
+    PassengerName,
+    Cancelled
+    
+}

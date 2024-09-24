@@ -1,0 +1,15 @@
+projection;
+strict ( 2 );
+
+define behavior for ZSLA_C_SBOOK //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+
+// Expose the actions in the BO behavior projection.
+// The keyword use action indicates that a behavior of the base BO is used on the projection layer.
+  use action set_status;
+}
+
+

@@ -1,0 +1,43 @@
+//Possible implementation type is managed
+//Specifying unique is mandatory (each operation can only be implemented once)
+managed implementation in class zbp_sla_i_sbook unique;
+
+//Enabling the strict mode (and version) to apply additional syntax checks; handled by
+//the RAP framework; it is recommended that you use the most recent version
+strict ( 2 );
+
+//It is mandatory to specify an entity behavior definition for the RAP BO root entity.
+define behavior for ZSLA_I_SBOOK //alias <alias_name>
+
+//Specifying the database table a RAP BO is based on (only available/mandatory in managed BOs);
+persistent table zsla_a_sbook
+
+//Specifying the locking mechanism for entities, e.g. to prevent a simultaneous modification.
+lock master
+
+//Controlling authorization that is to be implemented
+//You can specify variants: global (e.g. for restricting certain operations) and/or
+//instance (restrictions based on entity instances) or both of them (dedicated handler methods must be implemented)
+authorization master ( instance )
+//etag master <field_name>
+
+//RAP BO operations
+//Standard operations (Note: Read is implicitly enabled, no specification available)
+{
+  create;
+  update;
+  delete;
+// for action
+// result [1] result parameter upto 1 data set
+action set_status result [1] $self;
+
+  mapping for zsla_a_sbook
+  {
+    AirlineID = carrid;
+    ConnectionID = connid;
+    FlightDate = fldate;
+    BookingID = bookid;
+    PassengerName = passname;
+    Cancelled = cancelled;
+  }
+}

@@ -1,0 +1,38 @@
+@Metadata.layer: #CORE
+annotate view ZSLA_C_SBOOK with
+{
+  @UI.facet: [ { id:              'FlightBooking',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Flight Booking Details',
+                 position:        10 } ]
+  @UI: { lineItem: [ { position: 10, label: 'Airline ID', importance: #HIGH } ],
+          identification: [ { position: 10, label: 'Airline ID' } ],
+          selectionField: [ { position: 10 } ] }
+  AirlineID;
+  @UI: { lineItem: [ { position: 20, label: 'Connection ID', importance: #HIGH } ],
+         identification: [ { position: 20, label: 'Connection ID' } ] }
+  ConnectionID;
+  @UI: { lineItem: [ { position: 30, label: 'Flight Date', importance: #LOW } ],
+         identification: [ { position: 30, label: 'Flight Date' } ] }
+  FlightDate;
+  @UI: { lineItem: [ { position: 40, label: 'Booking ID', importance: #LOW } ],
+         identification: [ { position: 40, label: 'Booking ID' } ] }
+  BookingID;
+  @UI: { lineItem: [ { position: 50, label: 'Passenger Name', importance: #HIGH } ],
+         identification: [ { position: 50, label: 'Passenger Name' } ],
+         selectionField: [ { position: 50 } ] }
+  PassengerName;
+  
+  @UI: { lineItem: [ { position: 60, label: 'Booking Status', importance: #HIGH } ,
+                     // FOR_ACTION: use the dataField type to expose actions to the client
+                     // dataAction: The annotation references the technial name of an action 
+                     { type: #FOR_ACTION, 
+                       dataAction: 'set_status',
+                       label: 'set status' }  ],
+         identification: [ { position: 60, label: 'Status: X:Cancelled, O:Open' } ],
+         selectionField: [ { position: 60 } ] 
+         
+         }
+  Cancelled;
+}

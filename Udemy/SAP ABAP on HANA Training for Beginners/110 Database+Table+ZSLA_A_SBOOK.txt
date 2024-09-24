@@ -1,0 +1,36 @@
+@EndUserText.label : 'Books'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zsla_a_sbook {
+
+  key mandt  : abap.clnt not null;
+  key carrid : abap.char(3) not null;
+  key connid : abap.numc(4) not null;
+  key fldate : abap.dats not null;
+  key bookid : abap.numc(8) not null;
+  customid   : abap.numc(8);
+  custtype   : abap.char(1);
+  smoker     : abap.char(1);
+  @Semantics.quantity.unitOfMeasure : 'zsla_a_sbook.wunit'
+  luggweight : abap.quan(8,4);
+  wunit      : abap.unit(3);
+  invoice    : abap.char(1);
+  class      : abap.char(1);
+  @Semantics.amount.currencyCode : 'zsla_a_sbook.forcurkey'
+  forcuram   : abap.curr(15,2);
+  forcurkey  : abap.cuky;
+  @Semantics.amount.currencyCode : 'zsla_a_sbook.forcurkey'
+  loccuram   : abap.curr(15,2);
+  loccurkey  : abap.cuky;
+  order_date : abap.dats;
+  counter    : abap.numc(8);
+  agencynum  : abap.numc(8);
+  cancelled  : abap.char(1);
+  reserved   : abap.char(1);
+  passname   : abap.char(25);
+  passform   : abap.char(15);
+  passbirth  : abap.dats;
+
+}

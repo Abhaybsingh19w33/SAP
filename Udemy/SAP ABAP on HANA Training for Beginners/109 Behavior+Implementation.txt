@@ -1,0 +1,42 @@
+CLASS lhc_ZSLA_I_SBOOK DEFINITION INHERITING FROM cl_abap_behavior_handler.
+  PRIVATE SECTION.
+
+    METHODS get_instance_authorizations FOR INSTANCE AUTHORIZATION
+      IMPORTING keys REQUEST requested_authorizations FOR zsla_i_sbook RESULT result.
+    METHODS set_status FOR MODIFY
+      IMPORTING keys FOR ACTION zsla_i_sbook~set_status RESULT result.
+
+ENDCLASS.
+
+CLASS lhc_ZSLA_I_SBOOK IMPLEMENTATION.
+
+  METHOD get_instance_authorizations.
+  ENDMETHOD.
+
+  METHOD set_status.
+
+  " The EML statement MODIFY ENTITIES … UPDATE FIELDS is used to update specific fields of the instances
+  MODIFY ENTITIES OF zsla_i_sbook IN LOCAL MODE
+        ENTITY zsla_i_sbook
+        UPDATE FIELDS ( Cancelled )
+        WITH  VALUE #( FOR key IN keys ( %tky = key-%tky
+                      cancelled = abap_true )
+                    ) .  " The internal tables are filled inline using the constructor 
+                         " operator VALUE which made the need for explicit declaration obsolete.
+
+    " read changed data for action result
+    " The EML statement READ ENTITIES … ALL FIELDS WITH CORRESPONDING
+    " is used to read all fields of the updated instances from the buffer to fill the input parameter result
+    READ ENTITIES OF zsla_i_sbook  IN LOCAL MODE
+        ENTITY zsla_i_sbook
+        ALL FIELDS WITH
+        CORRESPONDING #( keys )
+        RESULT DATA(lt_sbook).
+
+    " set action result
+    result = VALUE #( FOR ls_sbook IN lt_sbook ( %tky   = ls_sbook-%tky
+                                                              %param = ls_sbook ) ).
+
+  ENDMETHOD.
+
+ENDCLASS.

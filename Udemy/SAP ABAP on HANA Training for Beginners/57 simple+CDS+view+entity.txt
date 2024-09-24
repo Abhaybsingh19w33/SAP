@@ -1,0 +1,26 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'simple CDS view entity'
+@Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
+}
+define view entity ZCDS_VIEW_ENTITY_DEMO1 as select from sbook
+{
+    carrid as airline_code,
+    connid as flight_number,
+    fldate as flight_date,
+    bookid as booking_number,
+    customid as customer_number,
+    @Semantics.amount.currencyCode: 'local_currrency_key'
+    loccuram as local_currency_amount,
+    //@Semantics.currencyCode: true
+    loccurkey as local_currrency_key,
+    smoker as smoker,
+    case
+    when smoker = 'X' then get_numeric_value( loccuram ) + 50
+    else get_numeric_value( loccuram )
+    end as extra_charge
+}

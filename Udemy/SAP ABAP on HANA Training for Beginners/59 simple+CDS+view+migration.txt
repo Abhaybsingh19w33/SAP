@@ -1,0 +1,23 @@
+@AbapCatalog.sqlViewName: 'ZCDSVIEWDEMO1'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'simple CDS view'
+@ClientHandling.type: #INHERITED
+@ClientHandling.algorithm: #AUTOMATED
+define view ZCDS_VIEW_DEMO1 as select from sbook
+{
+    carrid as airline_code,
+    connid as flight_number,
+    fldate as flight_date,
+    customid as customer_number,
+    @Semantics.amount.currencyCode: 'local_currrency_key'
+    loccuram as local_currency_amount,
+    @Semantics.currencyCode: true
+    loccurkey as local_currrency_key,
+    smoker as smoker,
+    case
+    when smoker = 'X' then loccuram + 50
+    else loccuram
+    end as extra_charge
+}

@@ -1,0 +1,28 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'CDS view for table ZSLA_A_SBOOK'
+define root view entity ZSLA_I_SBOOK as select from zsla_a_sbook
+{
+    key carrid as AirlineID,
+    key connid as ConnectionID,
+    key fldate as FlightDate,
+    key bookid as BookingID,
+    customid as CustomerID,
+    custtype as CustomerType,
+    smoker as Smoker,
+    luggweight as LuggageWeight,
+    wunit as WeightUnit,
+    invoice as Invoice,
+    class as Class,
+    forcuram as Amount,
+    forcurkey as Currency,
+    loccuram as LocalAmount,
+    loccurkey as LocalCurrency,
+    order_date as OrderDate,
+    counter as Counter,
+    agencynum as AgencyID,
+    cancelled as Cancelled,
+    reserved as Reserved,
+    passname as PassengerName,
+    passform as Passform,
+    passbirth as BirthDate
+}

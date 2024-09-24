@@ -1,0 +1,24 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'EXCEPT set operator'
+@Metadata.ignorePropagatedAnnotations: true
+define view entity ZCDS_VIEW_ENTITY_EXCEPT
+as select from scarr
+{
+    carrid   as AirlineCode,
+    carrname as AirlineName,
+    currcode as CurrencyCode,
+    url      as Website
+}
+where carrid like 'A_'
+
+except
+
+select from scarr
+{
+    carrid   as AirlineCode,
+    carrname as AirlineName,
+    currcode as CurrencyCode,
+    url      as Website
+}
+where currcode = 'USD'
