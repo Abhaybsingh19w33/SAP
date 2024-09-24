@@ -224,6 +224,11 @@ Below is the order in which SAPUI5 applications execute. The application files o
 - Evaluate view’s bindings
 - Retrieve model data
 
+# Youtube Channels 
+
+- [Pankaj Kumar - SAP Tech Trainer](https://www.youtube.com/@pankajkumaram/playlists)
+- [Anubhav Trainings (official channel)](https://www.youtube.com/@AnubhavOberoy/playlists)
+
 # To Do
 
 [Python](https://degreed.com/pathway/3pmvev2qpn/pathway)
