@@ -156,7 +156,7 @@ oEvent1 which is an argument for the event handler method and this argument will
 
 go to the console and oEvent1 is the argument, is our argument which we have placed for the event handler method and here we can see oEvent1 has some information has a lot of information in fact so here we can see there is a parameter for that oEvent1 this is a object basically oEvent1 is an object.
 
-let us observe what that mParameters is. get parameters why did i write get parameters. see for this event handler object this is an object basically we can say this is an object this is an object right.
+let us observe what that mParameters is. get parameters why did i write get parameters. see for this event handler object this is an object basically we can say this is an object
 
 parameters contains the id of the control which we clicked on so based on this id we can write further code.
 
