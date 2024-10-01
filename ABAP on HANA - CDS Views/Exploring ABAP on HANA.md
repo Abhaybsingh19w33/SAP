@@ -10,7 +10,8 @@
 - Parameter type can be either predefined ABAP types or a data element. Predefined ABAP types for CDS are not same as ABAP data dictionary and input help can be used (Ctrl + Space)
 - Default value can be assigned with annotation – @Environment.systemField: #SYSTEM_DATE
 - Parameters are optional only when default value is assigned. We can only use system fields such as #SYSTEM_DATE. Possible values are as below.
-![alt text](image.png)
+
+  ![alt text](image.png)
 - Parameters can be used in the select field list as it is or for calculation, and using alias for such fields is mandatory
 - Parameters can be used in where condition
 - Parameters are addressed as :<parameter_name>or $parameters.<parameter_name>
