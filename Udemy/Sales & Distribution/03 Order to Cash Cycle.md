@@ -13,6 +13,8 @@ Like if milk needs to be put in the freezer of Walmart. The procurement departme
 
 They'll get the goods into the stock, and they'll pay the invoices, meaning pay the money to their vendors. This cycle is called procure to pay.
 
+![alt text](image-153.png)
+
 Procure to pay or P2P. So similarly, there are different business cycles followed by the different departments.
 
 The sales department also follows a cycle. It's called the sales order cycle.
