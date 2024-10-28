@@ -246,3 +246,31 @@ Below is the order in which SAPUI5 applications execute. The application files o
 [Introduction to SAP BTP](https://blogs.sap.com/2021/12/01/sap-business-technology-platform/)
 	
 [Neo Vs Cloud Foundry](https://blogs.sap.com/2019/02/24/sap-cloud-platform-environment-cloud-foundry-vs-neo/)
+
+## Tools
+
+[Markdown index generator](https://github.com/darkmavis1980/markdown-index-generator?tab=readme-ov-file#md-index-generator)
+
+
+```sh-session
+$ npm install -g md-index-generator
+$ md-index-generator COMMAND
+running command...
+$ md-index-generator (-v|--version|version)
+1.0.0
+
+// Replace the passed markdown file
+$ md-index-generator <MarkDown.md>
+
+// Display the output on the shell
+$ md-index-generator <MarkDown.md> --dry-run
+
+// Store the output in a file
+$ md-index-generator <MARKDOWNFILE.md> --output <Index.md>
+
+// Generate the index using only h2 and h3 headings
+$ md-index-generator <MarkDown.md> --depth 3
+
+// Set the title of the index, output will start with "## Docs index"
+$ md-index-generator <MarkDown.md> --title "Docs index"
+```
