@@ -1221,3 +1221,2395 @@ This is enterprise structure.
 So in the next set of chapters, we are going to actually create these structures in the system as configuration
 
 using a sample template.
+
+# 33
+
+All right.
+
+Now that we have done the enterprise structure, in theory, we're going to configure enterprise structure
+
+in the system in SPRO.
+
+This will be our first exercise majorly in configuration.
+
+Now, we have already seen case scenario of how company code, company sales or plans are all assigned
+
+and what they really mean.
+
+Now we are going to talk about how to create them in the system.
+
+We will take this simple case study.
+
+Here is our company code.
+
+Company.
+
+And these are our company codes.
+
+Which is another way of saying this is the parent company and these are all the legal entities under
+
+which this whole enterprise is operating.
+
+So in the US we have GE Medical Systems, US and in the UK we have G met UK and Asia PAC for the Asia
+
+Pacific region will not create all these company codes, but we can just create one.
+
+And like I'll be telling you, we won't even be creating company codes for the simple reason that we
+
+would never ever create company codes, because this is all fiction.
+
+All right.
+
+So underneath that, we have a bunch of sales logs.
+
+Once again, like the thumb rule we mentioned most of the time, one sales org per company code like
+
+G medical US will have one sales org in the US and UK will have another sales org.
+
+But in case you want to create more more sales orgs, you could do it by geography, you could do it
+
+by any other number of parameters that your users ask you to create.
+
+So here is our set of sales orgs.
+
+And these are the distribution channels, Agency Wholesale Retail Direct.
+
+In this case, GE Medical Systems is selling direct and age through the direct and the agency distribution
+
+channels in the West sales org.
+
+So that's what these links over here mean.
+
+And we talked about divisions.
+
+Okay.
+
+And these are our divisions.
+
+We know divisions represent the product lines.
+
+In this case, GE Medical Systems is selling X-rays and CT equipment.
+
+So they have divided their product lines into two divisions.
+
+And now underneath this sales area, this sales area, meaning West Direct and x ray, let's say we
+
+have two sales offices, one in the Bay Area and one in Los Angeles.
+
+So for this exercise, we'll just create one sales area, which is the Bay Area.
+
+And underneath that we have two sales groups, one for field apps, which is a product line, and the
+
+other one for consumables, which could be another example of a product line.
+
+So this is sales group.
+
+Now, like I said, this is Fico, so we would probably not be creating this, but instead assume that
+
+GE Medical Systems is, um, either 1000 or 3000, which are standard existing company codes in any
+
+IDs system.
+
+But in a real project, remember, company company code will be created for you by your Fico consultant.
+
+There is a whole lot of setup that needs to be done behind the scenes.
+
+When you create a company code like the creation of GL accounts, chart of accounts, currency account
+
+determination, so on and so forth, which we don't care about at this point or at any point in the
+
+future.
+
+So that's the reason why I'm saying don't even bother creating company codes.
+
+Rather, assume that your Fico consultant has created a company code and call it either 1000 or 3000.
+
+Thousand is the German company code.
+
+So if you want to create your enterprise structure in Europe, use 1000.
+
+If you want to do it in us, start with 3000.
+
+So from an consultants perspective, we're going to be creating a sales org, distribution channels,
+
+divisions, sales offices, sales groups.
+
+Now, apart from this, there is a whole logistics part that needs to be created as well, like the
+
+creation of a plant, the creation of a storage location, the creation of a warehouse, and the creation
+
+of shipping point.
+
+Now the plant is very much used in sales and distribution, but nevertheless, it's not your job to
+
+create a plant.
+
+So who will create a plant for you?
+
+The consultant will create a plant.
+
+All right.
+
+So plants New Jersey or Arkansas will be created by your consultants.
+
+In this case, the example being GE Medical Systems US is associated with two plants, one in Arkansas,
+
+one in New Jersey.
+
+So they have to be created in the system as plants.
+
+While you can use the existing plants, 1000 or 3000 or 1200 if you want, you can create your own plants.
+
+And we'll try and do that in this example.
+
+So I'll change the color just to indicate the fact that, you know, these are not something you might
+
+need to do in a real project.
+
+All right.
+
+So this is six and seven is storage location.
+
+So underneath the plant, there are multiple storage locations.
+
+Each storage location contains the goods that you want to store or ship.
+
+And when you ship goods out, you'll be shipping goods out of a shipping point.
+
+Shipping point is mostly relevant for SD, but it's either the SD consultant or the consultant who can
+
+create that.
+
+So shipping point is eight.
+
+And there are in this case for the Arkansas plant, there are two doors.
+
+Each door could be responsible for a particular type of shipment.
+
+Like we discussed in the enterprise structure theory, there could be multiple doors in the warehouse
+
+that that could be assigned to a single shipping point, or each door could represent one shipping point,
+
+or all the doors in the warehouse could be represented by one shipping point, if that makes sense.
+
+And then warehouse, like I said, is always optional.
+
+Use the warehouse only if you implement warehouse management.
+
+If you do not want to implement warehouse management, do not create the warehouse.
+
+We will try and create the warehouse in this case just to see or rather complete the structure.
+
+But remember, warehouse management is optional.
+
+You don't need to have a warehouse management setup in order to do a sales order delivery and billing.
+
+But if you do not have a company code, I'm just marking them in star to indicate that these are mandatory.
+
+Company code sales or distribution channel division, plant shipping, point and storage location.
+
+So what are the things that are optional here?
+
+So let me change the color to green and then show you what is optional.
+
+So this is optional.
+
+This is optional.
+
+So sales offices and sales groups are optional.
+
+You don't need to have them.
+
+Warehouse management is optional.
+
+All right.
+
+Now that you have a good idea on what to create here.
+
+So let's go ahead and create them.
+
+And as we create, I'll try and capture the screenshots and paste it in our workbook.
+
+Okay.
+
+So I said we're not going to create the company code because we will never ever be creating it.
+
+So we'll start off with the sales org.
+
+Let's say US or West, we'll start off with West.
+
+Where do we go for this?
+
+So go to SP, which is our customizing transaction and we have already seen the examples of customization
+
+and we have already seen what is the purpose of customization, configuration and so on and so forth.
+
+All right.
+
+So I'm going to jump straight to the customization part.
+
+Go to enterprise structure.
+
+And you can see that there are mainly two parts to it.
+
+One is the definition.
+
+The second part is the assignment.
+
+The definition is where you create all these little boxes.
+
+So if you can look at the enterprise structure, again, the definition is where you create these sales
+
+org distribution, channel, division, plant and all these little boxes.
+
+The assignment is the arrows that links these boxes together.
+
+So one sales order could be assigned to multiple distribution channels, multiple divisions, and one
+
+sales area comprises of one sales org, one distribution channel division, so on and so forth.
+
+The assignment of these boxes or the connection of these boxes is what is represented by the assignment
+
+part.
+
+So the first part that you have to do is do the definition.
+
+The most of our work will be in these sections Logistics, sales and distribution.
+
+Logistics.
+
+Execution.
+
+So we'll start off with logistics, sales and distribution.
+
+Here is how we create the sales org.
+
+Okay, I'll capture all these screenshots so that you can refer to them at a later point.
+
+So the first job is to create a sales org.
+
+The one that we want to create is West.
+
+All right.
+
+So here is our sales org.
+
+So the first step is go to define copy check sales organization.
+
+Select it.
+
+And we have two options in this pop up.
+
+The first option is to define a sales org, and the second option is to copy, delete, check a sales
+
+organization.
+
+Now you will be very tempted to go to the first option, define sales organization, but never do that.
+
+And this theme repeats across many other enterprise structure elements.
+
+Don't define enterprise structure elements, rather copy them from an existing standard enterprise structure
+
+element.
+
+Now, you might be wondering why when you define a sales org, there is a whole bunch of things that
+
+are already assigned or rather that should be assigned that you might tend to forget or you might not
+
+even know sometimes.
+
+This could be a little difficult to comprehend initially.
+
+But as you go forward and start doing the configuration, you will notice that this is a recurring theme
+
+where you want to create configuration but would rather copy from an existing configuration set.
+
+Now let me show you what I'm going to copy it from and why.
+
+But before I do that, let me take this screenshot and then.
+
+Paste it over here.
+
+So this is the first part and this is our second part.
+
+Step one.
+
+And.
+
+Step two Select this and click Choose.
+
+Okay.
+
+So when we select that and then click choose what happens, you get this blank screen.
+
+I said we want to copy from something, right?
+
+So what do we want to copy from first part and why?
+
+If you want to copy something, click on this button.
+
+The second button, the one that looks like one page over the other.
+
+Right?
+
+Like a notepad over there.
+
+One notepad over another.
+
+This is the copy button that you consistently encounter across all of Sbarro.
+
+It's really easy to identify.
+
+As we'll see.
+
+Now there is a form entry on the two entry.
+
+This is the form entry.
+
+This is the two entry form is what you want to copy from and to is you want to want what you want to
+
+copy into.
+
+Now, in this case, we want to create a sales org.
+
+West Isn't it?
+
+West So the target is the two sales org, which is West Now, what's the source?
+
+Source is 0001.
+
+Now, why is 0001 and why not something else?
+
+For example, there are so many of them, right?
+
+Why am I only choosing 0001 for the simple reason that this is an ideal system which will contain a
+
+ton of data like, you know, 1000, 2000, 2000, 200, 2300, so on and so forth.
+
+But if you look at a blank system that you will be implementing SAP on in a real project, you will
+
+not have any of this test stuff.
+
+You'll only have one sales org, which is the template that you use to copy and create your own.
+
+This is a template provided by SAP in a blank SAP system, but since the one that we are working on
+
+is an ideas system, well, you have a ton of data.
+
+But don't expect to see this data in a real SAP system that you're going to implement SAP on.
+
+All right.
+
+So that's the reason why you will only use 0001 as the source.
+
+Now, let me take a quick screenshot of this so that you can remember the source.
+
+All right.
+
+So like I said, click on the copy button.
+
+So this is the copy button.
+
+The source.
+
+Always be 0001.
+
+So like I said, none of these other ones will be available.
+
+Only 001 will be available in a standard SAP system.
+
+Once again, these other elements here are available because this is a test system and there is a ton
+
+of test data.
+
+Somebody else has created them and given it to you.
+
+In this case, SAP is partners or SAP is internal testing team has created all these different sales
+
+logs, which would not be the case in a brand new implementation.
+
+All right.
+
+So start with 001 and then your target will be west.
+
+Click.
+
+Okay.
+
+And then if you get something like this, just click.
+
+Okay.
+
+So we'll discuss what number ranges are at a later point in time.
+
+What?
+
+Did we not copy this?
+
+Okay.
+
+Like, so.
+
+Okay.
+
+So next step is you get this message, click okay, we'll see what transport numbers are, why they
+
+are not transportable, what are number ranges, so on and so forth.
+
+Now, if you do not see this, all right, if you do not see this, then you know what to do.
+
+We have discussed this as part of our transport request creation.
+
+Remember, if you do not see this, if you don't see a number filled up and then some text here, then
+
+you have to click on this button.
+
+This button.
+
+If you if you do see this, then there is no need for you to click on this new button and create a new
+
+transport request.
+
+But as a practice, whenever you are creating a new configuration, always create a new transport request.
+
+So this is a way of recording what you have done so that you don't have to repeat this again.
+
+In a new environment, things can be copied over.
+
+So we'll discuss what this is at a later point.
+
+So create sales.
+
+Org.
+
+West So we're just setting up a small message there so that it's very easy to identify when somebody
+
+else looks at this and says, What is it exactly that we have done at this point?
+
+Okay, So the next step is you get this transport request.
+
+And.
+
+You go here, click on this new box and then enter a description and then click save.
+
+When I click on Save, a new transport request will be generated here.
+
+As you can see, there is a new transport request that has been generated.
+
+Okay, so here is your new transport request.
+
+This is called as a transport request or TR.
+
+Which is a unique way or a unique code that identifies what you have done.
+
+And here is your description.
+
+And then click the green button, which completes your act of creating the sales organization.
+
+Okay, Then you get this message.
+
+Sales org copied to West.
+
+Right.
+
+So this completes the creation of the sales org.
+
+And hit enter.
+
+We are done.
+
+We created a sales order called West.
+
+Now.
+
+After you have created the sales order, click on Define Sales Organization and then click Choose the
+
+one that we have created.
+
+Go search on it.
+
+Okay, so the creation part is complete here.
+
+Or rather, the copying part is complete.
+
+Copy is complete.
+
+Now, there might be some little changes that you might have to do to that sale.
+
+For example, you might the way to come here is.
+
+Click on define sales org and then click Choose.
+
+Oops.
+
+Let me move this a little bit here.
+
+And then here we go.
+
+So we have to click on define the sales org now and then click Choose.
+
+So go to the next page and I'll tell you why we are doing this step.
+
+So here we have a list of all the sales orgs that are available and that we have created, right?
+
+So now go to the position box.
+
+And then select the sales org that you have created.
+
+Go to position then we have created vast.
+
+Right.
+
+So enter that sales or click.
+
+Okay.
+
+Select it and then go to the details.
+
+Okay, so here is what you have to do.
+
+Sorry.
+
+There are a couple of steps that you have to do here, and then I'll explain all of them.
+
+So what have we done here?
+
+Once again?
+
+You went to define sales organization.
+
+Click on Choose.
+
+Go to position and then selected West as the sales org that you want to see and change.
+
+And I'll put that step as well here.
+
+So on to position.
+
+Enter the sales org and then select the sales org.
+
+And then.
+
+Click on the details button.
+
+So select, click on the details.
+
+So here we specify a bunch of things.
+
+At this point, not very important, but at a later point you will see that a sales org will also have
+
+certain parameters like what is the currency?
+
+What is the number?
+
+If you are doing any text messages, what, where?
+
+What is the if you are printing, the address of your sales are going to form like an order, an invoice,
+
+what should be the address, so on and so forth.
+
+Okay.
+
+Apart from that, there are other areas like intercompany rebates, um, so on and so forth which,
+
+um, we will not be very worried about at this point.
+
+But what I want you to take away from here is that this sales org has certain properties, okay?
+
+Now if you go to the this little box, okay, this little box where you specify the address.
+
+Okay.
+
+What is the name?
+
+West.
+
+Uh, whatever.
+
+West something.
+
+Something.
+
+And then you can specify the address.
+
+Where is it?
+
+So West is in 1100 south west, uh, Andrews Road.
+
+And then 67009 California.
+
+Uh, no.
+
+It's like, um, San Francisco.
+
+Okay.
+
+And then us and then so on and so forth.
+
+Whatever you want to enter here, you can enter all that stuff in there and then click okay, which
+
+is a way to change the address of the sales order that you have just created.
+
+All right.
+
+So the first step was to open that sales org and then click on the address details and change the address
+
+to the exact address that you want that sales org to be headquartered at.
+
+Okay.
+
+So finish that.
+
+Oops.
+
+Uh, California.
+
+Okay.
+
+Okay.
+
+Save it.
+
+And every time you save it, this pop up box comes up.
+
+Now, if you look at this box, I might not want to create a new transport request here.
+
+Why?
+
+For the simple reason that, you know, what I've just done is also part of creating that sales order,
+
+like changing the address.
+
+But the next step, which is maybe creation of a distribution channel or whatever, is a totally different
+
+step that requires its own transport request.
+
+Right.
+
+In that case, I'll be creating a new transport request.
+
+So for now I'm just going to say, okay, whereby these two different activities that I've done just
+
+now.
+
+The first one being creation of a sales org, the second one being changing the address of the sales
+
+org are all recorded under a single transport request.
+
+Okay, I'm done here.
+
+Going back.
+
+Going back.
+
+And the next step is the distribution channel.
+
+Now.
+
+Next step is distribution channel.
+
+If you remember that picture, the distribution channels were agency and then something of that sort,
+
+right?
+
+What was that?
+
+Oops.
+
+Okay.
+
+Agency and then direct.
+
+Right.
+
+We want to create direct as the distribution channel and then x ray as the division.
+
+Okay, so let's create the distribution channel as agency.
+
+So again, where do we go?
+
+We go here to create a distribution channel.
+
+Click.
+
+And what do we do?
+
+As usual.
+
+Copy.
+
+We don't do define.
+
+Right.
+
+Copy.
+
+Go to copy.
+
+And then from zero one, which is a source here again, there might be many distribution channels,
+
+but we copy from zero one.
+
+Okay.
+
+And we want to call this division as, as as agency distribution channel as agency.
+
+So you can call it a G.
+
+Right.
+
+So I'll take a screenshot here to say that we are creating a distribution channel here of type.
+
+AG which we are copying from.
+
+Zero one.
+
+So we click okay, and then you get this transport number problem, which is fine.
+
+Now here I'll be creating a new transport request because in the previous one we have created a sales
+
+org.
+
+But in this one we are going to do a distribution channel, right?
+
+Two separate things.
+
+One is independent of the other.
+
+So create
+
+distribution channel.
+
+AG standing for agency.
+
+Okay, save it.
+
+And this will create another number here, which is a different transport request number, different
+
+from the previous one.
+
+And then click okay.
+
+Distribution channel eg copied to e.g..
+
+We are done here, right?
+
+Copy.
+
+All of this stuff moved a little bit here.
+
+And then we are we have completed the creation of the distribution channel.
+
+Next is the division.
+
+Where is the division?
+
+Here is the division.
+
+Okay, so there are little haphazard.
+
+So you just have to make sure that, you know, you search all of the places in the enterprise structure
+
+section.
+
+To find out where all the different elements that you're going to create are.
+
+Okay.
+
+They're not in the order that we have learned, meaning sales or distribution channel division, sales
+
+office, they're not in that order.
+
+They're a little haphazard.
+
+So you have to be a little careful in where you search.
+
+But nevertheless, everything will be under that enterprise structure branch.
+
+It's not a very big branch, so you don't have to really worry about it.
+
+Okay.
+
+The division that we want to create is x ray, isn't it?
+
+So again, we start with zero one and then create x ray as the division.
+
+Okay.
+
+Create new division.
+
+X r standing for x ray.
+
+Enter and then it will create a new transport request as usual.
+
+Click.
+
+Okay.
+
+Division is copied and then we are done.
+
+What have we done here?
+
+Created new division.
+
+X r.
+
+Right.
+
+So distribution channel is done, Division is done.
+
+Then we have sales office.
+
+Again, this is an optional entry, but just for the sake of completeness, we'll be doing this sales
+
+org as well.
+
+Sales office.
+
+I mean, so go to sales office then you can either create a new entry or you can choose to copy from
+
+001.
+
+Okay, now.
+
+I'm taking a different beat here.
+
+I'm saying you can either copy or you can choose from 001 why you can sales office.
+
+So I'm saying you can either copy or you can create your own.
+
+But that was not what I said when we were creating sales orgs or distribution channels, especially
+
+sales.
+
+Org.
+
+The reason being anywhere in the configuration where you have that magnifying glass kind of a button.
+
+So here is a thumb rule again.
+
+So if you have magnifying glass.
+
+Safer to choose.
+
+Copy.
+
+Copy.
+
+In this case, there is no magnifying glass.
+
+Right.
+
+So you can just choose new entries.
+
+No problem.
+
+Or you can as well select 001 and then click on copy.
+
+Okay, so I'll choose new entries just to illustrate that.
+
+It doesn't really bother.
+
+All right.
+
+So what is the sales office that we should be creating?
+
+The sales office is, let's say Bay Area, right?
+
+B, A, Y, A The description is Bay Area area.
+
+And then we have to enter some address here.
+
+Now, I'm not going to enter the full address here.
+
+Bay Area Sales Office, it's in the US, blah blah blah.
+
+Then you can enter all that address anytime you like and then save again.
+
+Create a new address, new transport request create.
+
+Sales office.
+
+B a y.
+
+A four bay area.
+
+So give as much of a meaningful description as you can because it's going to be really useful after
+
+a certain point in time where you might want to dig back into the system and see, you know, what are
+
+the things that are being done, especially after a go live.
+
+If you want to find out a particular rogue transport that might be causing some problems, it's very
+
+easy to identify if you have a request description that's more meaningful.
+
+All right.
+
+So similarly, you can create any any other number of sales orders that your sales officer that you
+
+want.
+
+But for now, we just we're just going to go ahead and create sales groups.
+
+Again, the sales group that we'll be creating is, let's say, a consumables CEO and consumables.
+
+Consumables enter.
+
+Okay.
+
+The one that we'll be creating here is consumables.
+
+Okay?
+
+Sales office is that and then sales group is consumables.
+
+Okay.
+
+So in fact, we can copy all of this stuff into the previous slide.
+
+Right?
+
+Like so.
+
+So here is our sales group and sales office.
+
+Save it, then.
+
+Create.
+
+Create.
+
+# 34
+
+New sales group can enter.
+
+Okay.
+
+So we have done our sales part, which is creation of a sales organization, creation of a distribution
+
+channel, creation of a division, sales office, sales group, company code and company will be created
+
+by your Fico consultant.
+
+But we will also do the part of consultant which is creation of a plant and storage location.
+
+Okay.
+
+Sometimes, you know, as an SD consultant in smaller projects, you might have to do this, but it's
+
+very, very rare.
+
+But nevertheless, we will see it just for the sake of completion.
+
+Okay.
+
+Next one is Plant.
+
+So how do you create a plant?
+
+Here is how you create a plant.
+
+Next is.
+
+Plant.
+
+So here is how you create a plant.
+
+Go to define copy check plant and as usual copy but don't define So copy, delete, check.
+
+Click on choose.
+
+Click the copy button.
+
+Choose the source as 0001.
+
+And the target is going to be.
+
+And we're going to choose the source as 0001 as usual.
+
+And the target is going to be the plant in New Jersey, let's say.
+
+So it's going to be New Jersey and then hit enter, you know, the same transport number, message click
+
+okay.
+
+And as you see in the left bottom corner, it's trying to read the tables and do a bunch of stuff behind
+
+the scenes that we know don't need to bother about at this point.
+
+So it's a pretty intensive series of steps that SAP is doing behind the scenes, which we should we
+
+need not be aware of as it's not very important.
+
+But what is important is to understand that you should you shouldn't create plans, but rather copy
+
+plans from standard setup.
+
+And here we go, same old familiar transport request, click on new and then what are we doing here?
+
+Create new plant, new J and try to be as descriptive as you can.
+
+As usual.
+
+So according the transport.
+
+Look at the left bottom corner for any messages or, you know, as any progress that SAP is doing in
+
+terms of copying or any other stuff like that.
+
+Okay.
+
+The message finally that you get is plant 001 copy to New Jersey without number ranges, understandably.
+
+And we don't really care at this point as long as we see that our plant has been created.
+
+New Jersey is the plant that's created.
+
+Okay.
+
+Now, as usual, go back to define and then click Choose.
+
+Then select verse.
+
+Sorry, Uh, select new plant and either go inside the plant like this and then change the configuration
+
+is required or go to the address details and change whatever address, um, that you want to change.
+
+Okay.
+
+In this case, I will let it remain as it is.
+
+But you might want to change the address of the plant in a real scenario, because if the plant is in
+
+San Francisco, you don't want this address to be there.
+
+The world of Germany address.
+
+Right?
+
+That's the plant.
+
+But I'm going to remain as it is and move forward.
+
+Okay.
+
+Plant is done.
+
+And then we have storage location.
+
+Right?
+
+So where is our storage location?
+
+Go to material management and we have maintain storage location.
+
+Right.
+
+So here is storage location configuration.
+
+So we want to create a storage location.
+
+Where?
+
+Storage location for the plant.
+
+New Jersey.
+
+Right.
+
+So enter your plant as New Jersey.
+
+So in order to create your storage location, the first thing that you have to do is enter the plant.
+
+Right.
+
+So enter the plant.
+
+Enter the plant and then click okay.
+
+And you see that there are already three different storage locations assigned to that plant.
+
+If you want to create your own storage location as usual, select 001 and then create new entries by
+
+copying.
+
+Or you can use.
+
+Just start creating new entries and then, uh, create your own storage location.
+
+Right?
+
+And then click copy.
+
+Or you can use new entries to create your own storage location.
+
+Now, if you think these storage locations are not relevant, you can delete them.
+
+Okay, select all of them and click on this button to delete most of the cases.
+
+That's what you'll be doing because you don't require those standard storage locations.
+
+You might want to create your own storage location like so.
+
+Okay, then click on new entries.
+
+What is the storage location that we want to create?
+
+The one that we want to create under the New Jersey plant is, let's say in New Jersey.
+
+In Jersey City.
+
+Jersey City.
+
+There is a storage location, There is Jersey City storage location.
+
+Okay.
+
+And select it.
+
+Go to address.
+
+If you want any addresses, you can specify that here.
+
+Oops, sorry.
+
+Specify that.
+
+Here.
+
+Address of storage location.
+
+All right.
+
+I don't know why I'm not able to do it, but that's fine.
+
+So create storage location.
+
+Jersey.
+
+Jersey City.
+
+Right.
+
+Save.
+
+Then our warehouse.
+
+Like I said, warehouse is optional, so I'm just going to show it for the sake of completeness.
+
+But when you want to do it, you can just definitely skip this step.
+
+So here is the warehouse step under logistics execution.
+
+Okay, Warehouse.
+
+Like I said, this is optional.
+
+Okay, here is our warehouse.
+
+Select this and then as usual, define copy.
+
+Delete.
+
+Check.
+
+What warehouse do you want to select it from?
+
+We want to select it from 001 and then call it the warehouse WH1, let's say.
+
+All right.
+
+So you want to create a new warehouse?
+
+You copy from 001 and create your own warehouse WH1.
+
+So create new warehouse WH1.
+
+Okay.
+
+Then warehouse 001 copy to WH1.
+
+Sorry.
+
+Okay.
+
+This is the warehouse step.
+
+And hit.
+
+Enter.
+
+Go back.
+
+Okay.
+
+You can, as usual, go and change.
+
+Um, the address of the warehouse, the address formats and all that stuff.
+
+The next is the shipping point.
+
+So we know this is where we ship and create the shipping point.
+
+Go click on Choose as usual, click copy.
+
+0001 And then the shipping point.
+
+We are, uh, let's say we are shipping, uh, delicate medical equipment, right?
+
+So or consumables, let's say consumables.
+
+Consumables are like they are consumed by the equipment, like, you know, gels that they write for
+
+on your body when you want to do when they want to do a CT scan or any of those consumables like syringes
+
+or stuff like that.
+
+So if you want to ship consumables, you'll definitely ship it in a different format than when you ship
+
+those capital equipment.
+
+So for shipping point, we can define two shipping points, one for capital One for those sensitive
+
+equipment, and the other is for, um, temperature sensitive equipment, like, you know, those vials
+
+of bottles or all that kind of stuff like gels that need to be kept under a particular temperature.
+
+Now this is sensitive equipment and I'm just using a term there called sense create shipping point C
+
+and S for sensitive equipment.
+
+Okay.
+
+The shipping point that we are creating is SNS.
+
+Oops.
+
+Okay.
+
+So we are doing that there and we are doing that here.
+
+Warehouse is done.
+
+Shipping point is done.
+
+All right.
+
+So we have done most of the stuff here, like creation of plants, storage, location, shipping, point
+
+and warehouse.
+
+So the definition part is done.
+
+So you close the definition part and move on to assignment.
+
+Now, let me go back to that picture there where I think it was a long way back.
+
+Where we see all the different, um, uh, enterprise structure elements.
+
+And then you see we have created most of these things.
+
+We have created West, we have created direct, we have created x ray, we have created Bay Area.
+
+We have created Field App sales Group, New Jersey, plant some shipping point storage location, warehouse,
+
+right.
+
+Optional as well as mandatory.
+
+We have done all that stuff.
+
+Now for the next part, what we are going to do is link them up together and we're going to start here.
+
+We're going to start with assigning the plant sorry, the store, this sales organization to the company
+
+code.
+
+Well, we're going to choose 1000.
+
+In this case, you can choose 3000 or 1000.
+
+Then the actual number will be given by your Fico consultant.
+
+Right?
+
+So the definition part is done.
+
+And now we're going to start with assignment.
+
+Go there.
+
+Start with sales and distribution.
+
+Assign sales org to company code.
+
+So the sales org that we have created is.
+
+But before I go there, let me take a screenshot.
+
+Okay.
+
+First part is create assign a sales order to company code.
+
+The sales org that we have created I guess is West West is assigned to 0001 company code.
+
+We don't want that.
+
+We want it to be assigned to 1000.
+
+Now, you might have a question here.
+
+So who has assigned the sales?
+
+Org west 20001 company code.
+
+We didn't do that until this point.
+
+Right.
+
+So SAP has automatically done that under the assumption that that's what you want because we have copied
+
+it from 0001.
+
+If you remember the sales org West was created as a copy of company of sales.
+
+Org 0001 and internally 0001 sales org is already assigned to company code 0001.
+
+But that's not the assignment that we want.
+
+We want West to be assigned to company code 1000 or 3000 or any other company code of our choice, and
+
+we can change it here.
+
+All right.
+
+So you can change it here like so.
+
+Okay.
+
+We can change that assignment.
+
+Here.
+
+So change it.
+
+Yes, of course.
+
+We want to change it.
+
+Assign sales org west to company code 1000.
+
+Again.
+
+Like I said, you can be as descriptive as you want.
+
+The more descriptive you are, the better it is.
+
+All right, so what have we done here?
+
+We have chosen west as the sales org and.
+
+We have us copied.
+
+Sorry.
+
+We have assigned West to the company code 1000.
+
+So this is the change that has been done.
+
+Changed from 000 1 to 1000 or a company code of your choice.
+
+Okay.
+
+Next is distribution channel to sales organization.
+
+What distribution channel do you want to assign it to?
+
+The one that we are interested is in West and you see, West is assigned to so many different sales
+
+organization distribution channels, right?
+
+But we are not interested in this or this or this.
+
+We are only interested in AG, which is the one that we have created, which is agency sales.
+
+Again, you might have a question Who has done all these assignments?
+
+Remember, these assignments are done as a part of the copying process behind the scenes by SAP, okay?
+
+And it's a side effect of copying.
+
+So if there is any other assignments that SAP has already done for 0001 sales, org, it will already
+
+be done for you.
+
+But it's very easy to correct.
+
+All you have to do is select whatever is not necessary and click on the delete button and then all the
+
+stuff that is not necessary will be gone.
+
+Right.
+
+So go here.
+
+And what we are doing here is this step.
+
+So select whatever is not necessary and then click on delete.
+
+Delete Unnecessary assignments.
+
+Okay.
+
+So delete.
+
+Say again.
+
+What are we doing here?
+
+Assign sales.
+
+Org west to distribution channel agency.
+
+EG
+
+okay.
+
+Save go back, assign divisions to sales.
+
+Org.
+
+What is the divisions that we are interested to assign West to?
+
+We are interested to assign it to x rays, isn't it?
+
+So select whatever is not necessary again, and then only assign it to x rays.
+
+Oops.
+
+Or maybe we can go back and set it up right there.
+
+Okay.
+
+Oops.
+
+Sorry.
+
+Pick up this window.
+
+Put it here.
+
+And this is that.
+
+Select whatever is not necessary and then click on delete.
+
+Right.
+
+So we have done three things.
+
+Assign sales org to company code, assign distribution channel to sales organization and assign division
+
+to sales organization.
+
+Now copy this guy because this is what we'll be using again in the next picture, because we have just
+
+done only three pieces in this menu path.
+
+This is done.
+
+This is done.
+
+This is done.
+
+Now we need to do this part.
+
+Setting up of sales area.
+
+Assign finishing up the previous configuration, which is assigning West sales org to division.
+
+X ray.
+
+Okay.
+
+Save it.
+
+Go back.
+
+Now the next is setting up our sales area.
+
+Go here.
+
+Click on this button.
+
+It will set up this.
+
+It will show you the sales area.
+
+The one that we are interested in is to set up West distribution channel, age and Division x ray.
+
+Do we have anything like that?
+
+Of course we have it.
+
+But as usual, apart from that, there are a ton of other things that we are not interested in, isn't
+
+it?
+
+So we are not interested in everything that I'm highlighting here.
+
+We are only interested in this one row West age x SR.
+
+So everything that is not relevant, you know what to do.
+
+You just have to delete that stuff.
+
+Okay.
+
+Once again that assign that that extra assignments is automatically made by SAP because.
+
+We have copied West from 0001.
+
+Okay.
+
+That's that.
+
+And save.
+
+Assign create rather sales area West and Distribution Channel Agency, and then Division X, R, which
+
+stands for X Rays.
+
+Okay.
+
+Next is assigned sales office to sales area.
+
+Okay.
+
+What sales office needs to be assigned to the sales area.
+
+Go to sales office and select West.
+
+West should be assigned to sales area sorry West and Distribution Channel, Division, Agency and SR.
+
+This one needs to be assigned to a different sales area which is sales office sorry, which is Bay Area.
+
+If you remember, the sales office that we have created is Bay Area, but that assignment is not here.
+
+So delete everything.
+
+That is not necessary.
+
+Delete and go create new entries for West.
+
+Distribution channel Agency Division X Ray and Sales Office Bay Area.
+
+Okay.
+
+This is the entry that we want to create.
+
+Save it.
+
+New entry assign sales area West.
+
+Distribution Channel Agency and Division SR to Sales Office.
+
+What is the sales office that you want to assign it to?
+
+Bay Area.
+
+Enter and then click.
+
+Okay.
+
+We are done here.
+
+It's pretty simple, isn't it?
+
+As simple as it can get.
+
+You know, once you get a hang of what we are doing here, this whatever we are doing here is really,
+
+really easy.
+
+There's no complication here at all.
+
+All right.
+
+You just have to have an understanding of what we are doing on paper.
+
+Once you have that understanding, whatever we are doing is pretty simple.
+
+The steps.
+
+The actual steps are pretty simple.
+
+They if you know one step, all the other steps are very easy.
+
+Okay.
+
+But understanding those concepts and understanding what a sales office is, sales area is, is more
+
+important.
+
+Next step is assign sales groups to sales area.
+
+Okay.
+
+Sales office is Bay Area and is it assigned to anything else?
+
+I don't even see that entry.
+
+So click on new entries and then create Bay Area.
+
+Assign it to sales group Con, which is our consumable sales area, isn't it?
+
+So this is the next step.
+
+Oops.
+
+The next step is assign sales group to sales area.
+
+So this step is done as usual.
+
+Create your meaningful transport request.
+
+Assign sales group to sales.
+
+Office.
+
+You can specify the names very clearly so that it's easy to understand.
+
+Okay, then the next step is assign the sales organization to plant and distribution channel combination
+
+to plant.
+
+So select that.
+
+The ones that we have created is West and distribution channel is agency right for West and agency.
+
+We want it.
+
+This is the assignment that we are interested in.
+
+West and agency should be assigned to the plant.
+
+New Jersey and the rest of them can be deleted.
+
+Right.
+
+Oops.
+
+This is this entry.
+
+Delete everything that's not necessary.
+
+Like by doing that and click save assign distribution channel and sales.
+
+Org west egg to plant.
+
+New Jersey.
+
+Okay.
+
+That's done.
+
+And then you can close this guy.
+
+Go to logistics, execution and assign warehouse number two plant and shipping point two plant combination.
+
+Okay.
+
+This one is very simple as well.
+
+No sweat.
+
+Go to the next one and assign.
+
+Warehouse number two, plant storage location.
+
+The one that we want is Plant New Jersey.
+
+And New Jersey is assigned to a storage location 0088.
+
+If you have created it as a storage location, you can use that.
+
+If you want to have a new storage location, you can choose that.
+
+See, this one is Jersey City, right?
+
+Which is Jersey City.
+
+So go to New Jersey.
+
+New Jersey Storage location is Jersey City and warehouse number is, I think, warehouse one.
+
+If you don't know these entries, you don't need to remember them.
+
+You can just go here and search.
+
+Like I said, it's very easy if you set this on paper first and then do it on the system, hands on,
+
+assign, plant, New Jersey and storage location.
+
+Jersey City.
+
+Two Warehouse one.
+
+Okay.
+
+This is the assignment of the warehouse part.
+
+Okay, let me go.
+
+I think we are getting closer to our final results.
+
+The next one is assign shipping point.
+
+Sorry, assign shipping point to plant this one.
+
+So you go there and select assign shipping points to plant.
+
+This one looks a little different than the other ones.
+
+As you can see, you know, the interface looks a little different.
+
+So the way to search for it is click on the search button, okay?
+
+And then find the plant plant.
+
+In this case being new J Right.
+
+This one is a little different.
+
+Okay.
+
+Okay.
+
+Search.
+
+Go to search.
+
+Enter the plant.
+
+And as soon as you enter the plant, it will show you the plant that you have selected.
+
+And then select it and see if the storage location is assigned.
+
+Shipping point is assigned to a plant.
+
+In this case, sense is assigned to this plant and any assignment, if it is there, you're done.
+
+If not, how do you assign this?
+
+If you want to assign, let's say, 3000 to plant New Jersey, how do you assign it?
+
+So select your plant.
+
+And then click on Assign your possible list of shipping points comes up.
+
+Select it and then go to the next page.
+
+In this case, first step is select plant.
+
+First step.
+
+Second step, click on assign in the third step, the pop up comes up.
+
+So select the plant.
+
+This is step number four and click on this for step number five.
+
+Okay.
+
+Similarly, if you want to delete, you can select a row and then click on delete.
+
+This is assigning shipping point to plant in this case since is already assigned to New Jersey so I'm
+
+safe assign shipping point sense to plant New Jersey.
+
+Then click on Save.
+
+We are done with our enterprise structure.
+
+We have done a whole bunch of things today.
+
+Want to see what we have done because we have been doing so many descriptions in the transport request.
+
+Right?
+
+So go to SE zero one.
+
+Okay, so go to C0 one, which is the transport organiser or transport request views.
+
+Okay.
+
+And then select modifiable and released.
+
+Okay.
+
+I would rather.
+
+Yeah.
+
+This this should be good enough.
+
+Okay.
+
+Select.
+
+This.
+
+I'll tell you what modifiable is and release this at a later point, but make sure you have selected
+
+both of them because some transport might not be released and some transport might be released.
+
+If you want to see a comprehensive list, this is the easiest thing to do.
+
+Okay, then click on display.
+
+Okay.
+
+The entire list of transports that you have done will be shown here.
+
+So if you collapse this, you can see that these are all the transport requests that you have done here.
+
+See.
+
+The list of.
+
+Customization.
+
+Done by you against your username and the client and the description that you are given and the unique
+
+numbers is all here.
+
+Okay, Now another chapter called Landscape is where we'll be discussing transport requests, how to
+
+create transport requests, how to modify transport requests, how to release transport requests, what
+
+is the process of release?
+
+What are the contents of a transport request?
+
+What is the landscape?
+
+Is all something that we need to discuss as part of a different class.
+
+So until that point, you can just leave this concept right here.
+
+All right, so this is transport requests and this is enterprise.
+
+Sorry, this is enterprise structure for you.
+
+We have just completed a full enterprise structure, as you will be doing in a in a full setup.
+
+Any questions you have, we can discuss them as part of the hands on that we are going to do on Tuesday.
+
+Okay.
+
+Thank you very much.
+
+# 35 - Common Distribution Channels and Divisions
+
+In this chapter, we are going to talk about common distribution channels and divisions.
+
+Before we talk about the details, let me do a quick experiment.
+
+Can you create a customer master?
+
+With a blank or a wild card distribution channel or division.
+
+Meaning when you create the customer master sales view.
+
+You enter the details.
+
+Of sales.
+
+Org.
+
+Say 1000.
+
+Distribution channel.
+
+You know, ten or 20 or 30 and division is zero zero.
+
+Can you wild card this?
+
+Meaning put a star or a blank.
+
+Let's try it.
+
+To go to logistics.
+
+Uh, sales and distribution master data.
+
+And business partners.
+
+Customer Create V01.
+
+Enter the customer of 1000.
+
+Sales.
+
+Org of 1000.
+
+And typically we would put a ten year or 20 or whatever distribution channel division of zero zero.
+
+Now, the experiment that we are making here is what if you just put a blank or just put a star?
+
+Does it work?
+
+Let's see.
+
+Whoops.
+
+It says that the sales area 1010 is not defined for customers.
+
+So what does it tell you?
+
+It tells you that you cannot create a customer with a blanket or a wild card distribution channel or
+
+division.
+
+So before I explain why I'm doing this, let me give you a business scenario.
+
+Say there's Dell Computers.
+
+It's trying to sell to a customer.
+
+Say ABC Electronics.
+
+And the sales org that is trying to sell is in 1000.
+
+Now.
+
+Devil could be selling to ABC Electronics.
+
+In different formats.
+
+ABC could be buying from Dell as a retail customer for their own internal consumption.
+
+Or it could be buying from Dell as a reseller.
+
+Intending to sell it to other customers, maybe after value adding some components.
+
+Or it could be buying just as a distributor to distribute goods to other customers down the line.
+
+Now, when you want to create ABC Electronics across all these channels, you will be forced to create
+
+this customer three times.
+
+Say retail is distribution Channel ten and reseller is distribution Channel 12.
+
+Distributor is distribution.
+
+Channel 13.
+
+You'll have to create this customer three times.
+
+So one is for sales.
+
+Org 1000.
+
+Distribution Channel ten, which is a retail division that say.
+
+Zero zero.
+
+Let's make it less complicated.
+
+And another record for.
+
+A reseller and another record for distributor.
+
+Why?
+
+Because a customer always has to be created for a combination of sales.
+
+Org.
+
+Distribution channel and division.
+
+Even if the data is same across all the distribution channels or all divisions.
+
+In this case, it's the same customer.
+
+The data.
+
+Across the retail channel or the reseller channel or the distribution channel is not really changing.
+
+So why are we forced to create this customer three times?
+
+We have to do this.
+
+Do we have another option?
+
+Can't we just say, Hey, you know what, I'm going to create this customer for this combination?
+
+Thousand ten zero zero.
+
+And just.
+
+Refer to the same data.
+
+For all other distribution channels or divisions.
+
+Because the data remains the same.
+
+So all we're trying to say is instead of wildcarding this and saying, you know, this is the data for
+
+all distribution channels, can we pinpoint, can we just select a certain set of distribution channels,
+
+say 12 and 13in this case?
+
+And say that this data always refers to ten.
+
+Yes, you can.
+
+The way to do it is with Common.
+
+Distribution.
+
+Shall.
+
+Or common divisions.
+
+Sometimes it's also called reference.
+
+Distribution channels or reference divisions.
+
+So I'm saying that if you maintain data for this combination, you don't need to maintain it for this
+
+combination because it's already exists.
+
+Why does it exist?
+
+Because 12 refers to ten and 13 refers to ten, and there is no need to create data again for 12 and
+
+13.
+
+Now let's do another experiment.
+
+Let's try to create.
+
+The customer for the combination.
+
+1012 zero zero.
+
+Very easy.
+
+Just put.
+
+12 year.
+
+Whoops.
+
+It says that the sales area 1012 zero zero does not exist.
+
+So what does this tell you?
+
+Tells you that when you create ten as a reference distribution channel for 12 and 13.
+
+You can't really create data again for 12 and 13.
+
+Now, you might have a question here based on this error message sales area thousand 12 zero zero is
+
+not defined for customers.
+
+Is it really true that thousand 12 and zero zero are not defined for or are not defined as a sales area?
+
+Well, let's find out.
+
+Go to SPR.
+
+IMG.
+
+Enterprise structure, assignment, sales and distribution.
+
+You can set up sales areas and go to selection by contents.
+
+I'm going to select sales org and say division.
+
+Because we want to search by division zero zero and sales.
+
+Org 1000 Jews.
+
+We have 1010 zero zero.
+
+Thousand 12 zero zero and 1013 zero zero created as sales areas.
+
+That means that even though the sales area 1012 zero zero exists in the enterprise structure, still
+
+SAP does not allow you to create a customer for this combination.
+
+It only allows you to create it for this combination.
+
+Where is this configuration that allows you to reference one distribution channel to another and go
+
+to SPRO?
+
+And instead of going to enterprise structure, you might be tempted to go there, but it's not there.
+
+Go to sales and distribution and then go to master data.
+
+And this is where the configuration for common distribution channels and divisions is.
+
+So let's go inside the common distribution channel configuration.
+
+Go to position.
+
+Select 1000 and.
+
+You'll see.
+
+Ten, 12 and 13.
+
+Was the first column represents the sales org.
+
+The second column represents the distribution channel.
+
+And for ten, the reference distribution is channel is ten.
+
+And for 12, the reference distribution channel is ten, and for 13 the reference distribution channel
+
+is ten.
+
+So ten is really referring to ten, meaning ten is the reference distribution channel, which is good.
+
+And Paul is also referring to ten.
+
+And 13 is also referring to ten.
+
+So this is the configuration that says that ten in this case is the common distribution channel for
+
+12 and 13.
+
+Now you see two columns here that references ten, for example, distribution channel 12 references
+
+ten here and here.
+
+The one that we are interested in is this column, because that is the reference distribution channel
+
+for customers and materials.
+
+For now, just understand that reference distribution channels or common distribution channels are not
+
+just for customers or materials, they are also for condition records.
+
+So they refer to pricing condition records or other kind of condition records.
+
+And this column refers to master data.
+
+Like customer.
+
+Or material.
+
+You could have a different combination for each of them, but it's very rare.
+
+You always go with the same combination.
+
+Now we know the configuration and we know the result of the configuration.
+
+When you create the record.
+
+Again, let's do another experiment.
+
+Let's change this.
+
+Something else.
+
+Let's say 13.
+
+13.
+
+What should happen now when you try to create a customer master for 1000?
+
+12 zero zero combination system should say no because it really refers to ten.
+
+But when you try to create it for 13.
+
+Housing sales.
+
+Org 13 distribution channel zero zero division it should say.
+
+Okay.
+
+Right.
+
+Let's try that.
+
+So let's change this.
+
+213.
+
+And this 213.
+
+Save it and try to create a customer.
+
+Which is VD01.
+
+And it's going to be 1000.
+
+Instead of 12, we are going to put 13 because we just dereferenced 13 to refer to itself instead of
+
+the common distribution channel ten.
+
+This works fine.
+
+So what does this tell you?
+
+As long as you reference another distribution channel, you can't really create master data for the
+
+referenced distribution channel or the referenced division.
+
+Couple more learnings here.
+
+All along we have been talking about distribution channels.
+
+The same logic, the same logic as in common distribution channel or reference distribution channel
+
+plies to common divisions as well.
+
+You could see that in the example here.
+
+So this configuration for common distribution channel and this configuration for common divisions.
+
+And the second point is the same logic applies to not just customer master but material master and condition
+
+records.
+
+Okay, so what does it mean?
+
+This means that when you create a customer, you only need to create one record because 12 and 13 already
+
+reference.
+
+And what if there are more divisions?
+
+Say there are zero zero ten and say 20?
+
+Ideally, if you don't reference another division, you would still have to have the same problem that
+
+you started with.
+
+You'd have as many records as there are possible sales areas.
+
+So which means you have to do this one record, plus you'll have to do 1000 plus ten plus 20.
+
+That will be another record and 1000 plus ten plus 30.
+
+That will be another record.
+
+So if you have three distribution channels, ten, 12 and 13 and three divisions, zero, ten, 20,
+
+you'd have to create three records.
+
+Can we minimize that?
+
+Yes.
+
+You could have ten reference zero zero 20 reference zero zero.
+
+In which case there is no need to maintain these two records as well as these two.
+
+You could just have 1010 001 record and all the other sales areas really reference the 1010 zero zero
+
+record.
+
+Right.
+
+What are we doing here?
+
+We are reducing the data maintenance.
+
+So instead of nine records.
+
+That you would probably have to maintain if you did not have common distribution channels and divisions.
+
+You are just maintaining one record.
+
+What about the material Master?
+
+Same thing.
+
+If you go to a material master, say zero one.
+
+And select the materials say M01.
+
+Hit.
+
+Enter.
+
+And then.
+
+We are only interested in.
+
+These days, right?
+
+So click okay and you'll see that you'll have to enter a sales org and distribution channel to maintain
+
+sales data for that material.
+
+Now, granted, you don't see a division here.
+
+The material master case, because divisions are really part of the material master maintenance.
+
+You still have distribution channel.
+
+So in this case, when you reference 12, 13, 14 to 10, you don't need to maintain data for 12, 13,
+
+14 sales or distribution channel combinations.
+
+You can just maintain for ten.
+
+And the rest of the data really references ten.
+
+And same is the case with condition records.
+
+Let's try and maintain a condition record.
+
+Go to week 11.
+
+And enter PR00.
+
+Select the combination material.
+
+Click okay and you'll see that sales or distribution channel is typically a possible combination in
+
+most of the pricing condition records.
+
+So if you maintain for ten, you don't really need to maintain for 12 or 13.
+
+If you try and maintain for say, 12, which really references ten hit.
+
+Okay.
+
+You'll have a message here saying that condition records cannot be created for distribution Channel
+
+12.
+
+So if you try to create condition data for distribution channel that really references a common distribution
+
+channel, you get an error message saying that you cannot maintain conditions for that possible combination.
+
+So that's about condition records.
+
+So let me summarize what we have discussed here.
+
+Okay.
+
+Creating Master data for all possible sales areas is not necessary.
+
+So this is master data proliferation.
+
+You don't really need to do it.
+
+And the way to avoid this master data proliferation is common distribution channels and divisions.
+
+Another point is when you create a reference distribution channel division model data only needs to
+
+be created for the common distribution channel division combination.
+
+The rest of the distribution channel division sales area combinations need not be maintained and cannot
+
+be maintained.
