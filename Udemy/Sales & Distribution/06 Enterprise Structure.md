@@ -3613,3 +3613,315 @@ be created for the common distribution channel division combination.
 The rest of the distribution channel division sales area combinations need not be maintained and cannot
 
 be maintained.
+
+# 36 - Why is Enterprise Stucture required ?
+
+Okay.
+
+Now, when we think of this enterprise structure and our price structure.
+
+And ask yourself the question, Why are we doing this?
+
+Enterprise structure.
+
+Most people will be tempted to say, Yeah, we're doing this enterprise structure because we want to
+
+structure our enterprise.
+
+Meaning we're going to put some organization around the company.
+
+That will be a very tempting answer, but unfortunately, that's not correct.
+
+That's not the reason why why we do enterprise structure.
+
+Barring a few exceptions, 1 or 2.
+
+Most of the elements in the enterprise structure like sales.
+
+Org distribution channel division.
+
+Sales office sales group.
+
+These things are really useful for reporting.
+
+This is the most fundamental reason why we do enterprise structure.
+
+What I mean by this reporting thing and I mean reporting.
+
+Okay, how many how much of sales did we do in this distribution channel?
+
+How many new, let's say, sales and let's dollar 100 million in retail and dollar 150 million in franchise
+
+sales.
+
+So that gives somebody up in the value chain, say the CEO or CIO, some picture on which distribution
+
+channel to concentrate on, which needs more efforts, which gives them more leverage, so on and so
+
+forth.
+
+And you can probably think about a million reports like this based on sales or based on divisions,
+
+which product lines are doing more, which product lines need more and more R&D because the sales is
+
+increasing, which is an upcoming and promising product line.
+
+So on and so forth.
+
+And you can talk about sales offices.
+
+How what kind of sales did this particular sales office do?
+
+How much commissions did the sale, the particular sales group sales group, how much commission did
+
+he get?
+
+These are all examples of reports that can be pulled once you create your master data and transactional
+
+data according to a particular structure.
+
+And that structure in this case being the enterprise structure.
+
+So reporting is the primary reason why you use enterprise structure.
+
+Okay.
+
+There is another reason which is more operational.
+
+Okay.
+
+Let me write here.
+
+Operational.
+
+Meaning you want to give a special discount.
+
+Example you want to give a special discount to all, let's say coupon, right?
+
+You want to give a special coupon to only retail distribution channel.
+
+So unless you classify as a customer belong to retail or a transaction like a sales order belonging
+
+to a retail, you know, section or segment, you can really give that coupon out.
+
+Right.
+
+You only want to give that out to a retail.
+
+So giving a coupon is an example, giving a discount, any other kind of discount like a promotional
+
+offer where you do 10% discount to all corporate customers?
+
+Sure.
+
+I can only be possible if you classify the customer or the transaction as being corporate, right?
+
+You want to have special pricing for it.
+
+You want to have special freight for it.
+
+These are all operational reasons, meaning they are useful for your day to day operations.
+
+So unless you classify your data like the customer master or the transactions as belonging to one particular
+
+segment, you can't really, you know, create all these operational.
+
+You can't really give these or do these operational interactions like giving coupons, discounts or
+
+having special freight, so on and so forth.
+
+So these are the two main uses of enterprise structure.
+
+One is operational, second is reporting, the third is almost a subset of reporting, I would say is
+
+what I would call.
+
+So we have two uses.
+
+Right?
+
+Let me just summarize that.
+
+So you got your enterprise structure.
+
+And you have two uses for that, I said.
+
+One is operational.
+
+Where on a day to day basis you would need your data to be structured in a particular way.
+
+And another is reporting.
+
+Okay.
+
+Now as a subset of reporting.
+
+Is internal versus external.
+
+Internal is all the reports that we have discussed in reporting, like sales reports, operational reports,
+
+like what's the total discount that we have given?
+
+Are we going to losses or profits?
+
+That's internal.
+
+It's only relevant for our own company's employees or the decision the decision makers.
+
+But external is.
+
+Probably for the government.
+
+Or for the SEC or for any other external board that requires some data.
+
+If it's a publicly traded company, let's say if it's a private limited, Yeah, the government is probably
+
+needs your transactions for tax records, but if it's a public limited company, yeah, like Apple or
+
+any of those big companies, they would need to file their returns with the SEC because they deal with
+
+public money.
+
+The bottom line is.
+
+This is a special kind of reporting that not just used internally within the company, but it's sent
+
+out to somebody else like the government or SEC.
+
+The key element that is used for this external reporting is company code.
+
+Okay.
+
+So it's a pretty important argument.
+
+That's why all business transactions are performed under this head.
+
+So irrespective of whatever the business transaction is, anything that happens in the company, Well,
+
+most things.
+
+Okay.
+
+Have to happen under a particular company code.
+
+Okay, so company code is company code is super important.
+
+Company code is very important.
+
+The reason being, like I said, everything has to be done under a head.
+
+Now, when we talk about sales, we talk about sales.
+
+Org.
+
+So everything happens under a sales org.
+
+And we talk about purchasing.
+
+Everything happens under the purchasing org.
+
+When we talk about warehouse management, everything happens under a plant.
+
+But when we talk about the company in general.
+
+The big Daddy for all of these different ARG elements is the company code.
+
+And any transaction that you do here or here or here has to be finally linked to a particular company
+
+code.
+
+That's why each sales order is linked to a company code.
+
+But like.
+
+And similarly, purchase org is linked to a company code and similarly plant is linked to a company
+
+code and so on.
+
+Okay, so company code has a special place in that.
+
+It's, it's the head under which you do all your transactions so that anything that you want finally
+
+when you pull your balance sheets and profit and loss, it's done at the company code level.
+
+This is the place at which you do your profit and loss account.
+
+So which is basically accounting for how much did we make this year and how much did we lose this year.
+
+Right.
+
+And balance sheet.
+
+So how much assets we have, how many liabilities we have, so on and so forth.
+
+This is the importance of enterprise structure.
+
+So let me quickly summarize what you've just learned.
+
+We were trying to discuss the importance of.
+
+Enterprise structure.
+
+So we said enterprise structure is not just created because you want to put our org into structure,
+
+but.
+
+The two main reasons why we do enterprise structure is one is reporting.
+
+And another is operational.
+
+Reporting, because unless you organize your transactions into different sections or sectors or other
+
+any other kind of org elements, you can't really do any kind of reporting on it.
+
+And we have seen some examples of reporting like sales reports, purchase reports, discount reports
+
+or channel reports.
+
+These are the types of reports that can be pulled out of the raw data, like the raw customer data or
+
+raw sales data or raw purchasing data.
+
+Raw invoices, data.
+
+Operational, on the other hand, is giving.
+
+Or rather performing certain operational activities based on the way you have structured your enterprise.
+
+So we want to give special discounts to to a particular channel or you want to give coupons to a particular
+
+customer group unless you really classify a customer as belonging to a particular channel or a sales
+
+order belonging to a particular channel, you can't really do these operational things that are required
+
+generally in the enterprise.
+
+So reporting and operational purposes are the main reasons why an enterprise structure is created and
+
+used.
+
+So a special case of reporting is company code.
+
+Company code where we said the reporting that happens in company code is not just used for internal
+
+purposes, but it's used externally also like reporting to the government for tax and other reasons.
+
+So company code plays a very special role when we talk about reporting.
+
+So like I said, all transactions have to be accounted for in the company code.
+
+So that's the head under which all accounting is done.
+
+If you move goods from one place to another, the company code has has to record it.
+
+If you sell some goods to the customer, the company code has to record it.
+
+If you purchase some goods, the company code has to report it.
+
+So a special sub case of reporting that is especially used for legal and government purposes is the
+
+company code.
+
+So this is a pretty important piece of enterprise structure that that's used, you know, both for operational
+
+as well as reporting and especially on the legal and government front.
