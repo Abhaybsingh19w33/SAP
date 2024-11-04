@@ -646,4 +646,530 @@ Why?
 
 Because that's where the change of value is happening.
 
-# 
+# 53. 3rd Party Scenario
+
+What is the next control we talked about?
+
+Order type.
+
+Item Category and account Assignment Category.
+
+We don't have to understand about configuring these entries.
+
+But what we have to understand here is the order type here.
+
+It's not a sales order.
+
+It's a purchase order type.
+
+That's why I said we don't configure it.
+
+Consultants configure it.
+
+We just use it.
+
+But what exactly is the business scenario here?
+
+This scenario is called third party drop ship.
+
+What is the third party dropship scenario?
+
+Let's take an example.
+
+There is an order coming in.
+
+In the US company code and that product is not here.
+
+What do you do?
+
+You just say to the customer that the product is not there and we'll get for you somehow in, say,
+
+ten days.
+
+But the customer needs it right away.
+
+What do you do in that case?
+
+You don't want to lose the customer, right?
+
+You just say, give me three days.
+
+Say I'll deliver it somehow.
+
+Say, today is the third.
+
+And you promised delivery by the sixth.
+
+But you don't have the material.
+
+What do you do?
+
+How do you get it?
+
+Since you are in that industry, you would be knowing a lot of vendors that make the same kind of product.
+
+So will immediately make a bunch of phone calls to these vendors.
+
+Say one of these vendors respond and says that he can ship it to you right away.
+
+You don't want that.
+
+Instead, you ask the vendor to ship the goods directly to some other address.
+
+We don't say that it's our customer.
+
+We just say ship it to this address.
+
+So you take the address from the customer master.
+
+Pass it on to the vendor.
+
+And this guy will ship it directly to the customer.
+
+Look at what is happening here.
+
+This vendor is what we are calling as the third party.
+
+And he is dropping the shipment directly to the customer.
+
+That's why the term third party dropship.
+
+Or you can just call it dropship.
+
+Now, what is the change to the order to cash cycle?
+
+Here the one that we typically know.
+
+For this order.
+
+From our company's perspective, there is or.
+
+There is lf there is F2.
+
+This is our standard cycle, right?
+
+Order will be created for line item ten material M0 one.
+
+Is there a delivery happening?
+
+No.
+
+Directly.
+
+We are going to build the customer who is going to do the delivery.
+
+The vendor will ship the goods directly to the customer.
+
+But we don't care about it as long as it reaches the customer.
+
+We are not bothered about how the goods reaches the customer.
+
+So how is this scenario configured?
+
+Very simple.
+
+Add the line item level instead of ten.
+
+You have to put s t.
+
+A.
+
+S.
+
+This item category is used for third party dropship.
+
+Pass item category will automatically determine a different scheduling category.
+
+Not CP but CS.
+
+And how is CSS configured?
+
+CSS does not have a movement type.
+
+That means for this schedule and category, no movement type is relevant.
+
+So you cannot really do a PGI in the delivery.
+
+But there is something else here that is relevant and that's the order type.
+
+So let's create an order.
+
+Customer 1000 M01.
+
+Quantity one.
+
+Change the item category from ten to Tess and save it.
+
+Let's open the order now and see what's happened.
+
+I'm opening the order again.
+
+Going to line item ten, going to the schedule line because of tasks.
+
+Our schedule in category has been changed.
+
+It's CSS now.
+
+And CSS has triggered what's called as a purchase requisition.
+
+What is a purchase requisition?
+
+It's also called Prec for short.
+
+A purchase requisition is a request to raise a purchase order.
+
+So the purchase requisition will be converted to a purchase order.
+
+By who?
+
+Either the MRP process or the purchasing department.
+
+The pile will be raised with the vendor.
+
+And the vendor will just drop ship the goods to the customer.
+
+That's the configuration behind the third party dropship.
+
+Now, this pool that's created here.
+
+What is created?
+
+So a purchase order will also have a purchase order type.
+
+Just like the way you have a sales order type or or Z or similarly you have a purchase order type.
+
+That purchase order type is defined here in the order type field of the scheduling category.
+
+So NB is actually a purchase order type, not a sales order type.
+
+It's a purchase order type.
+
+Now, don't get confused with the wording here.
+
+Order type.
+
+It's a purchase order type.
+
+What item category to use.
+
+What account assignment category to use will be borrowed from the consultant and plugged in here.
+
+Period.
+
+So we don't worry about how they are configured.
+
+We just borrow them from the consultant and plug them in.
+
+Maybe he doesn't give you B.
+
+He gives you Z and B just use it.
+
+# 54 54. Availability and Transfer of Requirements
+
+The next piece of control in the scheduling category is availability.
+
+Availability is a much broader topic.
+
+But you should just understand some of the basics now.
+
+Availability is the process of checking if the goods are available to be delivered.
+
+That part should be pretty easy to understand, right?
+
+Now, why would anyone check this off?
+
+This availability flag.
+
+Simple in cases like CSS third party.
+
+Availability is not relevant.
+
+We know that we don't have that material, so there's no point in doing an availability check.
+
+This is just one example of a scenario where availability check is turned off.
+
+Other examples are service.
+
+You don't do availability check for service.
+
+Example is a warranty product or even a service product.
+
+There is no point in doing availability on service products.
+
+We'll see.
+
+One more example when we talk about an example at the very end of this section.
+
+But we don't need to understand anything more about availability at this point.
+
+All you need to understand here is that availability check can be turned on or off at the schedule line
+
+category level.
+
+The next piece of configuration is this guy here.
+
+Requirement slash assembly.
+
+Don't worry about assembly.
+
+Let's just look at a requirement.
+
+What is the requirement?
+
+The word requirement here is a shortcut for a much bigger term.
+
+T o r.
+
+It stands for transfer of requirements.
+
+What is the requirement?
+
+Why is it transferred?
+
+Where is it transferred to?
+
+To understand this, we have to understand some of the basics of MRP.
+
+MRP is a very big concept.
+
+Consultant studied.
+
+So we're not worried too much about MRP.
+
+But to get a full picture, we have to understand a little bit about MRP.
+
+MRP stands for material requirement.
+
+Planning.
+
+What materials need to be prepared.
+
+How much of the material needs to be prepared?
+
+Why it needs to be prepared.
+
+These are the questions that works with.
+
+Why does any company prepare or manufacture materials?
+
+Because there is a demand for it.
+
+The word demand can also be called as a requirement.
+
+So these requirements need to be documented.
+
+Where does the requirement for a material come from?
+
+Sales.
+
+Some customer is asking for a particular material via a particular sales order, so as soon as a sales
+
+order is saved, the requirement get transferred to MRP.
+
+That's one input.
+
+Another input for MRP is historic sales.
+
+Inputs from historic sales also go to MRP.
+
+For example, let's say Apple is launching iPhone five.
+
+When the launching iPhone five, how many of those should be manufactured per month?
+
+They should have some kind of an estimate, right?
+
+They just can't manufacture 10 million iPhones at the same time.
+
+They cannot afford to manufacture just a thousand of them.
+
+So how do we get to that reasonable number that they should manufacture?
+
+Simple.
+
+They get it from history.
+
+Historic sales.
+
+Okay, So iPhone four is how many did we manufacture for the launch?
+
+We manufactured, say, 3 million.
+
+So add buffer to it, say 25%, maybe manufactured, 3.5 million or 4 million for the launch.
+
+But going forward on a day to day basis, how many should be manufactured per month?
+
+Maybe not 4 million, maybe 1 million a month.
+
+But we cannot just keep manufacturing 1 million a month, right.
+
+We have to also consider the current demand.
+
+And that input comes from the current sales.
+
+So in the last month there was a total of 0.75 million in sales.
+
+Then are we right in manufacturing a million per month?
+
+Let's see for one more month.
+
+So the next one there is only 0.65 million.
+
+Whoa.
+
+Something is wrong.
+
+Maybe we need to cut down on the production.
+
+Go back to 0.9 million.
+
+Probably.
+
+The next month, the sales rose to 0.9 million.
+
+Maybe it's a holiday season.
+
+The point being the process has to consider inputs from a variety of different sources to really understand
+
+how much can be manufactured or even procured.
+
+The key inputs being historic sales.
+
+And current sales.
+
+Now that's about the inputs.
+
+What about the outputs?
+
+What are the outputs of MRP?
+
+Mainly two outputs.
+
+Purchase, requisition and planned orders.
+
+It can generate purchase orders.
+
+It can only generate purchase requisitions.
+
+Pyrex or purchase requisitions are a precursor to purchase order.
+
+They have to be manually or automatically converted to purchase order.
+
+Who does that?
+
+Typically somebody from the purchasing department.
+
+Once a purchase order is ready, it will be sent to the vendor.
+
+And the vendor will procure the material for us.
+
+Now, what's a planned order?
+
+A planned order.
+
+Similar to a purchase requisition is a precursor to production order.
+
+What is a production order?
+
+A production order is an instruction to the shop floor to manufacture goods.
+
+If we are Honda, the car manufacturer, and if we have a planned order, it means we plan to manufacture,
+
+say, a Honda Accord with these particular specifications.
+
+And that will be converted to a production order by somebody in the production department who understands
+
+their system well.
+
+So so overall, you understand the inputs to the MRP and you also understand the outputs to MRP.
+
+Now, what is a transfer of requirement?
+
+Every sales order transfers requirements to MRP.
+
+The user who created the order would not know anything about it.
+
+As soon as the sales order is saved, a requirement will be transferred to MRP.
+
+If you want to really see the requirement that's transferred, I'll give you an example.
+
+Let's take a standard order, some quantity.
+
+Say M01, say 27.
+
+Save it.
+
+And the order number is 13404.
+
+Now go to the transaction.
+
+MD04.
+
+That's where you can see the requirements that have been transferred to MRP.
+
+Now, remember, these requirements have just been transferred to MRP.
+
+MRP has not yet taken any action on it.
+
+Just a raw list of requirements.
+
+When the process runs, it will look at all the requirements, analyze them, summarize them, compare
+
+with historic requirements, basically do a whole bunch of logic.
+
+We're not bothered about that.
+
+But just remember that the list of sales requirements that we have transferred to MRP can be seen in
+
+MD04.
+
+Here you can see which element has triggered each of these rows.
+
+Is it a delivery?
+
+Is it a purchase order and how much did each element transfer?
+
+This keeps scrolling down.
+
+Here is your order.
+
+13404.
+
+Line item ten.
+
+Has triggered a quantity of 27.
+
+That's why I entered an easy to remember number 27.
+
+Instead of 1 or 10.
+
+So we can easily track it here.
+
+Now the process knows that there is an order for M0, one for a quantity of 27.
+
+And what action he takes, we don't care.
+
+Our duty as an SD consultant is to ensure that the sales requirements are transferred to MRP.
+
+This happens behind the scenes without the intervention of the user.
+
+Because we have turned on the requirements flag here in the schedule line category.
+
+Just turning it on is enough to transfer the requirement to.
+
+There are other pieces of configuration that control how it should be transferred.
+
+You know, if there should be transferred individually or collectively, so on and so forth.
+
+We're not worried about it at this point.
+
+So for now, just understand four things.
+
+What is the requirement?
+
+Why requirements need to be transferred to.
+
+How requirements are transferred to MRP.
+
+How to view the requirements transfer to MRP.
+
+That's it.
