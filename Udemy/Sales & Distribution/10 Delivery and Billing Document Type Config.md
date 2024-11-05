@@ -2076,4 +2076,670 @@ And point number six, we have seen reference numbers in the accounting document 
 
 play in customer.
 
-#
+# 59. Copy Controls - Possible Data Flows 
+ 
+We have seen other types, item categories and schedule lines at the sales delivery and billing level.
+
+When you string them up together, the data flow that happens between the different elements is what
+
+copy controls is all about.
+
+Before we go there, we have to talk for a bit about the possible document flows.
+
+Let me give you a picture that will make you easily remember all the document flows.
+
+Make a triangle.
+
+These are the three edges.
+
+Calling this as a.
+
+Over here.
+
+I call it El.
+
+This is F.
+
+It means sales.
+
+L is delivery and F is billing.
+
+Easy to remember, right?
+
+Sales is V01.
+
+Delivery is VL01.
+
+Billing is VF01.
+
+From one sales document to another.
+
+Document flow is possible.
+
+Example quotation is an example of a sales order.
+
+Order is also an example of a sales document.
+
+You can create an order with reference to a quotation.
+
+Both are sales documents and you can create one document with reference to another.
+
+And that's what this little loop represents.
+
+Look at this item.
+
+From the sales document to a delivery.
+
+Can we create an order and with reference to that order, create a delivery.
+
+Of course you can.
+
+Standard order or two.
+
+Standard delivery is an example that we already know.
+
+Similarly, can you create one delivery with reference to another?
+
+The answer is no.
+
+A delivery document with reference to another is not possible in SAP and creation of a point with reference
+
+to a delivery.
+
+Yes, of course.
+
+With reference to a delivery document, you can always create a billing document standard invoice with
+
+respect to standard delivery.
+
+We know that example or a credit for returns with reference to a return delivery alarm.
+
+That's another example.
+
+What about this?
+
+We have seen some examples already in the billing scenarios.
+
+What is it?
+
+Invoice Cancellation Document type S1.
+
+You can have a standard invoice F2 and cancel it with an S2 S1.
+
+Or you can think of invoice lists.
+
+Create an invoice list with reference to an F2.
+
+With reference to a billing document.
+
+Can you create a sales document?
+
+With reference to an invoice, you can create a credit memo request.
+
+Similarly, the reverse is also possible with reference to a credit request.
+
+You can create a credit memo.
+
+And it doesn't have to go through delivery like order delivery, billing.
+
+Now these are the only possible flows.
+
+Like I said, deliberative delivery is not possible, and any other arrow that I have not shown here
+
+is not possible in SDG.
+
+The only possible flows are the ones that I've shown in this picture.
+
+These data flows that you see here.
+
+Are configured through a different set of transactions.
+
+Meaning each of these arrows are configured using a different transaction.
+
+For example, the copy controls for sales to sales.
+
+Example quotation to order is configured in VTR.
+
+Again, you don't need to remember, it's just a mnemonic.
+
+The first letter is the target and the second letter is the source.
+
+Similarly, if you take this order to delivery, where would this be?
+
+V is the first two letters that's common anyway.
+
+And then the target is L and the source is A.
+
+So this is the transaction code that you could go configure copy controls between sales and delivery.
+
+We t l a.
+
+You can just follow this logic and find out the transaction codes to use in any of the flow cases.
+
+For example, if you look at this, what would be the transaction code be?
+
+What would be the transaction code?
+
+We t f f.
+
+Right.
+
+Once again, you don't need to remember these transactions.
+
+You can always go to the menu pathway.
+
+But there's a reason why I'm asking you to remember these, if possible.
+
+Because the copy control transactions, they're not all in one place.
+
+For some, you'll have to go to delivery, and for some you'll have to go to billing.
+
+It's sometimes confusing for me.
+
+So if you just remember this logic, you can directly go to any copy control configuration.
+
+Well, now that we have figured out the possible flows, let's move on and figure out what's really
+
+flowing.
+
+# 60. Copy Controls - Requirements and Data Transfer Routines
+
+Let me give an example to understand some of the things better and copy controls when you approach the
+
+border.
+
+In your car, say you'll be asked to show your papers or passport or whatever to prove that you are
+
+entering the U.S. legally.
+
+Think of this side as the order on this side as a delivery.
+
+The decision of whether you can create a television disorder is similar to the decision that happens
+
+here at the border.
+
+It looks pretty obvious, you might say, yeah, I can always get a delivery from an order.
+
+Most of the time true, but there are situations where that is not possible.
+
+You are legally authorized to enter the U.S., but not everybody on the other side is authorized to
+
+enter the US.
+
+If you take a quotation and try and deliver it, see this as an example of a sales document, this is
+
+an example of a delivery document.
+
+So sales to delivery is possible.
+
+Right.
+
+And that's not really the case.
+
+You cannot create a delivery with reference to a quotation.
+
+It's not possible.
+
+So who is stopping it when you try to create a delivery from a corporation?
+
+What exactly is happening behind the scenes?
+
+Somewhere in the process, some check is happening.
+
+Is this is a is this a legal flow, if not, stop it if you want to try to create a quotation and try
+
+to deliver that quotation.
+
+Obviously, it'll throw another.
+
+So where exactly is this check happening like this checkpoint when you cross the border?
+
+A similar thing happens in SFP in Sappi.
+
+It's called copy control requirement.
+
+Sometimes it's also called a requirement routine.
+
+These requirement routines or routines are not just used in copy controls, but used in many places.
+
+That use in many other places where requirement routines are used to evaluate certain things and finally
+
+give a decision if you are allowed to do it or not.
+
+There is another thing you need to understand here, the officer at the bottom says, yeah, you can
+
+go, that's a yes or no.
+
+But what's the luggage you can carry?
+
+Meaning just because the officer says, yes, you can carry anything you want, also, who is carrying
+
+these goods?
+
+A car got the goods in the car.
+
+Similarly with copy controls, there are a set of routines called data transfer routines.
+
+These routines carry the data from the quotation to the order or from the order to the delivery.
+
+They're just little snippets of code, very similar to copy control requirements, the look at the source
+
+document.
+
+Extract the data and push the data into the target document.
+
+Now, how the data is extracted, what kind of code is it?
+
+These are things you don't need to care about in order to end up.
+
+So why are we trying to know these routines?
+
+Your role as a functional consultant is to plug the corresponding routines at the right place, your
+
+technical consultant will write routines for you, girl, but you are responsible to configure them
+
+in the right place.
+
+You'll see some examples in the system with his background.
+
+Let's go to SFP and see the configuration behind copy controls.
+
+# 61. Copy Controls - Standard Requirement Routines
+
+Let's say the copy controls between one sales document to another, which is VTR.
+
+Sorry.
+
+Let's start with the copy controls between one sales document to another.
+
+What is it?
+
+We da.
+
+And we'll take the most familiar example.
+
+Order the quotation.
+
+We have two columns here.
+
+The target on the left and the source on the right.
+
+Both are sales documents.
+
+Remember we said sales to sales.
+
+We to.
+
+So the source is a and the target is a both are sales.
+
+Click on position.
+
+And then start with the target first.
+
+Target is or.
+
+And the sauce is cute.
+
+Hit.
+
+Enter.
+
+It is a source.
+
+Here is a target.
+
+Now click on details.
+
+So from the source to the target, what's the copy control requirement?
+
+001.
+
+It doesn't look like much, but if you go click on this button and in the pop up, select one.
+
+Don't click on the check mark.
+
+Instead, click on the second button.
+
+Looks like a text.
+
+I can.
+
+All right.
+
+What do we do here?
+
+We went to VTR.
+
+We have chosen the source target as or click on the magnifying glass.
+
+We get the screen.
+
+Then we have selected the requirement, number one.
+
+And we're trying to look at the code behind 001 requirement routine.
+
+But 002 you select 2301.
+
+You select 301.
+
+So once you click on that button, you go to the code.
+
+Don't worry about the code.
+
+I'm not going to go into the details of the code here, but I'll briefly go over the routine.
+
+Based on the comments in the code.
+
+Look at these lines.
+
+These are called structures.
+
+These are structures that are filled up by SAP at that point in time.
+
+Sometimes they are available to be filled up for subsequent execution.
+
+If that sounds like Greek and Latin, no worries.
+
+It's not important at this point.
+
+Mixed look at this line is a reference document complete?
+
+What does this mean?
+
+This case from a quotation to an order.
+
+The reference document is the quotation.
+
+So let's try and create an incomplete quotation.
+
+Go to 21.
+
+And see what happens.
+
+You know how to create a quotation document type.
+
+Cutie Enter customer.
+
+Enter some material and then save it.
+
+It says the document is incomplete.
+
+Yeah, I really don't want to edit and complete at this point.
+
+Just save it.
+
+That's what we want to try, right?
+
+Let's pick up the quotation number and try to create an order with reference to the quotation.
+
+Go to VR zero one.
+
+Use with reference.
+
+Paste your quotation and click on copy.
+
+What does it say?
+
+It says reference incomplete.
+
+This is what we expected, right?
+
+But where is this message coming from?
+
+The message that you see there.
+
+Is this message.
+
+This piece of code is checking whether the source document is complete or not.
+
+In this example, we have taken a quotation that's incomplete.
+
+So the system is throwing you an error or a warning or whatever.
+
+I know it's an error because it starts with an E.
+
+I happen to know that with experience.
+
+But you don't have to.
+
+Is the currency the same as the source and target document?
+
+If you're trying to create a quotation in Euro and try to create an order in USD, that's a problem.
+
+Mixed check.
+
+Check the validity period of the reference quotation.
+
+It's a problem to.
+
+If you're trying to create an order with reference to an expired quotation, this routine will check
+
+and post a message.
+
+Once again, you don't need to understand all this stuff.
+
+I don't understand some of it either.
+
+But the reason why I'm explaining this is.
+
+You'll get a first hand understanding of what's really happening behind the scenes.
+
+There's a problem, you know where to look at.
+
+You'd be able to easily speak to your Abap consultant and help him quickly debug the problem.
+
+Hey, you know what?
+
+These are some places where you could go check for potential problems.
+
+You could give him advice.
+
+In this case, for example, if the reference document is an inquiry or a quotation and the validity
+
+period is out of range.
+
+There is a validity period.
+
+The document is complete.
+
+Say March to April is complete.
+
+Now, if you are trying to create an order in the month of May and referring to this quotation.
+
+Those prices are no longer valid, right?
+
+They expired.
+
+So this part of the code ensures that expired quotations are not referenced.
+
+You could go on and on and on.
+
+There are a whole bunch of things that are checked payment cards.
+
+The division is the same as a source and target documents.
+
+Is the customer the same?
+
+There are so many checks that are made.
+
+# 62. Copy Controls - Custom Requirement Routines
+
+Now, what if you want to do your own checks?
+
+This routine is provided by standard SAP.
+
+What if you want to do your own?
+
+Let's take a simple example.
+
+Custom routines.
+
+Say there is a quotation and in the quotation in additional data be.
+
+You have introduced a new set of fields.
+
+Say Z Z Installation date.
+
+You've created it based on your business requirements.
+
+And say another field The Z Installation Toolkit.
+
+These are two additional fields that you've captured as part of your business requirements.
+
+Now, when you try to create an order, your standard requirement zero zero 1 or 0 zero two, they don't
+
+understand these fields.
+
+But these wheels are required in the order as well.
+
+So it's your duty as a functional consultant to figure out how these fields need to be used when creating
+
+an order from a quotation.
+
+So what do you do in this case?
+
+If installation date is not in range.
+
+See you have promised an installation date of May 20th, and if that is out of range, then do not create
+
+an order with reference to the quotation.
+
+Just like how the standard routine checks the validity date in the quotation, Right?
+
+Think of these as additional set of dates that need to be checked.
+
+Nothing new.
+
+We're just trying to satisfy the business requirements.
+
+What is the business scenario here?
+
+Say, hey, we have promised an installation date of May 20th, so if you come before that date, then
+
+we'll be able to fulfill that quotation.
+
+Maybe because the technicians are lined up that way for that installation.
+
+The customer comes beyond a certain date.
+
+Then the company will not be able to provide services against that quotation.
+
+No, we're not saying no.
+
+We're just asking the customer to start all over again with a new quotation.
+
+New set of service dates.
+
+But the standard SAP system does not check that right.
+
+This feels like installation feel is a new field.
+
+So SAP is routines are not aware of these fields.
+
+So here are the steps.
+
+Step number one.
+
+Identify the copy control requirement routine between the source and the order.
+
+I'm saying cut and order because it's easy to understand.
+
+So how do we identify the copy control routines?
+
+Go to VTR.
+
+Select your source and target documents.
+
+Go to details and then find out the requirement routines.
+
+Say it's 001.
+
+Step two, by the way, from 001 through 600 is reserved for SAP.
+
+And from 601 through 999 is custom routines.
+
+You can create your own.
+
+But you're not supposed to create a new routine in the 0 to 600 space.
+
+You already know this in some way.
+
+Just like the way you create an order type.
+
+Starting only with a Y or Z.
+
+Right?
+
+Anything starting with a, B, C, all the way through X.
+
+This reserved for Standard ACP.
+
+We're not supposed to touch them.
+
+Right.
+
+So step number two is after you found out the routine.
+
+Figure out if the routine is standard or custom.
+
+If it's standard, it's between 1 and 6 or one, and if it's custom, it's between 6 or 1 and 999.
+
+What's the difference if it is a standard routine, we cannot change it.
+
+Copy the routine and create a new routine.
+
+If it's custom, you can go ahead and modify it.
+
+New routines.
+
+Where do you go and modify new routines?
+
+That is step number three.
+
+Modify or create new routines.
+
+Where do you do that?
+
+The transaction code is v o f m.
+
+This is a very important transaction.
+
+These routines are also called routines.
+
+For the simple reason that we owe them is a transaction code where these routines can be created.
+
+These routines are configured or plugged into the document flow using VTA or TFL or any of these transactions.
+
+But where these routines are created is the transaction.
+
+One part is creation.
+
+The second part is use.
+
+This is a very simple code.
+
+Transaction code to look at.
+
+All you see is a different configuration areas like copy control requirements and orders.
+
+See we are talking order level copy control requirements.
+
+So you go there and look at the requirements.
+
+See you have 12301.
+
+These are copy control requirement routines.
+
+Let me log into another window and show you the copy control requirements between and or.
+
+You see on the right, you see the copy control requirement routines.
+
+And on the left you see the view of proteins.
+
+So from quotation to the order, the copy control requirement routine is 001.
+
+And what is 001001 is created here.
+
+If you want to create your own routines, you go and define the routines here.
+
+And once you go and define them and activate them here, you'll get them as a number in the.
