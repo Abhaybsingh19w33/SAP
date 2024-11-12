@@ -678,4 +678,816 @@ Sales area plays a role.
 
 All these three parameters put together can be used in any combination to determine your pricing procedure.
 
+# 69. Condition Technique - Condition Records
+
+Number seven.
+
+Is not configuration.
+
+It's a user step.
+
+It's called condition record.
+
+Everything that you do until step number six.
+
+Is all done in Sbarro.
+
+They're all configuration steps.
+
+But step seven is easy access.
+
+The business users do it themselves.
+
+What do they do there?
+
+They maintain the actual prices, for example, until step number six.
+
+We never mentioned a value.
+
+Meaning we never said the discount is going to be 6% or $60 or the pricing is going to be $400.
+
+For example, we are only saying that price is going to be based on the customer material combination
+
+or customer group combination.
+
+Discounts are based on customer group material distribution channel combination.
+
+Meaning we are only determining the basis.
+
+We don't specify the actual value until step number six.
+
+They configure the system, give it to the business.
+
+They determine the actual price.
+
+The actual discount percentage.
+
+And they do it where in step number seven condition records.
+
+# 70. Configuration Walk through - 1
+
+You can configure pricing at Sbarro.
+
+IMG.
+
+Sales and distribution.
+
+Basic functions.
+
+Pricing.
+
+Pricing control.
+
+This is where you have all the configuration for the entire condition technique.
+
+But I don't go there.
+
+I use an area menu.
+
+V oq0.
+
+It's an old transaction, but you can do everything here that you can do in pricing control.
+
+So either way it's fine.
+
+You could do one of both.
+
+So I'm going to use zero because it saves me time because, you know, we do it again and again and
+
+again.
+
+So instead of going to the menu path, I use this transaction and everything related to pricing is here.
+
+So go to zero and you get a blank screen like this.
+
+And everything you need is here.
+
+Where?
+
+In the menus.
+
+The first thing that we want to do is step number one field catalog, right?
+
+In this chapter, we're not going to solve the problems that we discussed, the Dell problem or whatever,
+
+as a first pass.
+
+We are just going to see the configuration.
+
+Just an overview.
+
+In the next chapters, when we do a hands on, we'll actually solve a problem.
+
+We'll create a condition table, we'll create a condition type, we'll create our own access sequence.
+
+But for now, we'll just see what these things are.
+
+It's more or less a walkthrough of the configuration.
+
+So to get to the field catalog, go to environment condition table.
+
+Field catalog.
+
+What is a field catalog?
+
+How does it look like?
+
+It looks like this.
+
+See, I told you there are 200 odd fields there.
+
+Right?
+
+These are the fields provided by SCP.
+
+City Company Code Country Order.
+
+Region Sales Document Type.
+
+Customer.
+
+Customer Hierarchy Incoterms.
+
+You can have your pricing discounts or taxes, anything based on these fields.
+
+The amount of flexibility that condition technique gives you is enormous.
+
+You just don't feel that yet.
+
+When you start facing the scenarios in real time, you will feel the flexibility that condition technique
+
+gives you.
+
+Anything that's in the field catalog.
+
+Field catalog is a list of fields that can be used as the basis for pricing.
+
+Once again, when I mean pricing, I'm just using it as a generic word.
+
+It could mean price discounts, taxes, surcharges or freight any of these.
+
+The next step is the condition table.
+
+We will not create a condition table in this chapter.
+
+Like I said.
+
+But we will see an existing condition table.
+
+We'll create condition tables when we go to the hands on.
+
+A conditioned table is a three digit numeric number.
+
+Starting from one all the way through 9999 like 002004005.
+
+So on until 9999.
+
+The thing that you have to remember here is one through 600.
+
+Are reserved for SAP.
+
+Meaning just like the way anything starts with a through X is configured for SAP only.
+
+So whenever you create your own order type, you use you start either with a Y or with a Z.
+
+Right?
+
+So that's the customer namespace.
+
+Anything before that is SAP namespace.
+
+Similarly, for condition tables, one through 600 is reserved for SAP.
+
+So you cannot create condition tables in that space.
+
+Technically you can, but you're not supposed to.
+
+So what is your namespace?
+
+6012999.
+
+If you want to create your own condition table, sure.
+
+Create it in that namespace.
+
+Let's view a condition table.
+
+If you take, let's say customer material combination 702 enter customer and material combination.
+
+Where do you pull these fields from?
+
+From the field catalog.
+
+The section on the right here is the field catalog.
+
+Now, when you do a hands on, when you do a hands on, we'll see how to pull these fields from the
+
+field catalog.
+
+But for now, just understand that the fields on the left are actually pulled from the field catalog
+
+onto the right.
+
+In this case, there are two fields, customer and material.
+
+And this table.
+
+702.
+
+Is a combination of customer and material.
+
+Again, when we do hands on, we'll see how to generate this table, how to view the technical details,
+
+the description of these fields.
+
+How to cross verify them with the actual technical names.
+
+We'll see all of that in the next set of chapters.
+
+Go back to the third step.
+
+Third step is the access sequence.
+
+Where is the access sequence?
+
+Here.
+
+An access sequence is a sequence in which you put your condition tables together.
+
+An access sequence is set up hierarchically.
+
+If you look here and expand the hierarchy, you see you select the access sequence first and then double
+
+click on access.
+
+And what do we have here?
+
+We have four condition tables,
+
+005007009 and 004.
+
+And they're all put in a sequence.
+
+Ten, 11, 13, 14.
+
+So the first preference is given to this.
+
+So if price is found for customer material, it picks this.
+
+If not, it defaults to division customer.
+
+If not, it defaults to priceless type currency material.
+
+And finally, if nothing is found, defaults to material.
+
+That's an access sequence, right?
+
+It's a sequence in which you put your condition tables for access.
+
+We'll look at fields and the next step in when we do the hands on because we'll have to do the field
+
+mapping and all that stuff.
+
+But for now, just understand that access sequence is the sequence in which you access the condition
+
+tables.
+
+Okay.
+
+The next step is condition type.
+
+A condition type represents the type of calculation, right?
+
+For example, standard condition type is PR zero zero.
+
+If you go to PR zero zero, look at it.
+
+It's associated with an access sequence and it has a condition class.
+
+The calculation type condition category.
+
+What kind of rounding should be applied?
+
+Whether it's a header condition or an item condition, what kind of scales should be used, if at all?
+
+Scale is used.
+
+Can you delete it manually?
+
+Can you enter it manually in the pricing procedure or the sales order?
+
+There are so many controls behind the condition type.
+
+We don't need to go behind all the different things, but just understand that condition type represents
+
+the type of calculation.
+
+Basically there are five different types of condition types.
+
+Prizes.
+
+Discounts.
+
+Taxes, surcharges and freight.
+
+In case you are wondering what other modules use condition Technique.
+
+So in case you are wondering which other modules use the condition Technique module uses the condition
+
+technique.
+
+It's called schema.
+
+It's basically used for purchase price, determination, input, tax determination and all that stuff.
+
+Even CRM module uses it.
+
+So overall, um, as the CRM are the main modules that use the condition technique for pricing.
+
+# 71. Configuration Walk through - 2
+
+Step number five is the pricing procedure.
+
+There are typically defined by country.
+
+For example, RVA01 is a German standard pricing procedure.
+
+If you look at the controls behind it, you see the different pricing condition types all put together
+
+in a particular sequence.
+
+Step number eight through 21 is pricing.
+
+And then we have discounts, sales, promotions, price group based discounts, all different kinds
+
+of discounts.
+
+And the list goes on and on and on.
+
+After that, there is surcharges if we keep scrolling down.
+
+You'll get surcharges like incomplete pallet surcharges, mixed pallet surcharges.
+
+And then we have freight, different kinds of freight could be there header based freight line item
+
+level freight, so on and so forth.
+
+Then there could be taxes.
+
+Of course there are rebates, but we don't care much about rebates in this course.
+
+MWC is an example of a tax condition type.
+
+And finally a total will come up at the very bottom.
+
+This is surprising procedure.
+
+We'll discuss more on this later when we do a hands on in the next set of chapters.
+
+But beyond that, don't worry too much about pricing procedure.
+
+There's there are so many things there, like from two mandatory statistical subtotal requirements,
+
+alternate calculation types, accrual keys, accounting keys, so many different things.
+
+Again, focus only on the fundamentals and we'll discuss all of these things, all these different columns
+
+in the coming chapters of this section.
+
+Before we discuss them, though, we should get a good feel for the condition technique.
+
+So just focus on the condition technique, the sequence and the steps and the logic.
+
+Step number six is the determination.
+
+So how is the determination done?
+
+Determination is based on three parameters sales area.
+
+Document pricing procedure.
+
+And customer pricing procedure.
+
+Where do you see the document pricing procedure?
+
+If you go to any document type, the document pricing procedure is here.
+
+If you go to or cut any document type, you can see the document pricing procedure here.
+
+Where can you see the customer pricing procedure in the customer master?
+
+Where exactly in the sales view?
+
+So go to the sales view of the customer and go to the sales tab and you can find the customer pricing
+
+procedure.
+
+Which is just a fancy word for a single character.
+
+It could be a one, two, three, four, five or a, A, B, C, D, or any special character.
+
+Like an ampersand or a carrot or a dollar.
+
+It just labels a particular customer as relevant for a particular pricing procedure so that when a pricing
+
+procedure is determined.
+
+This parameter from the customer master will be used.
+
+Step number seven is the condition record and.
+
+And like I said, it's a user transaction.
+
+You can go to it via week 11.
+
+The transaction code for it is week 11.
+
+So go to week 11, specify your condition type, say PR zero zero and enter your combination.
+
+Enter the material and say enter a price of $250 for M01.
+
+It could be euros or dollars or whatever the currency is.
+
+So you can create as many pieces of prices as you want.
+
+You can keep going on and on and on based on whatever parameters you want and pricing will be created
+
+in that order.
+
+Where do you see the price?
+
+So go to zero one, enter your order or whatever you want to test and then enter your material.
+
+Say M01 and hit enter and you should see the price where did you get that price from?
+
+Select your line item and then click on this button.
+
+The one that looks like a nickel.
+
+In the next chapters, we'll see how to do a detailed analysis on how these prices come up.
+
+Which condition type was used to arrive at the price, why they have been picked up.
+
+All those details will be seen when you click on the analysis.
+
+But when you do a hands on the next set of chapters, we will understand how we can do this analysis
+
+and what analysis can reveal and how to troubleshoot pricing through analysis.
+
+# 73. Pricing Hands-on - Master Data Set-up and Scenario Walkthrough
+
+So here is an exercise that will be solving on pricing.
+
+It's a very small exercise, but the main focus is condition technique.
+
+The condition technique theory that we have seen only focuses on one scenario.
+
+The base price.
+
+In this example, we'll see more than one price list.
+
+And we'll see how to configure it in SAP.
+
+Just a little more elaborate.
+
+Nothing beyond what we have already learned in condition technique.
+
+To work on this exercise, though, we need to create some master data.
+
+Let's start with the first one.
+
+Let's create a customer similar to 1400.
+
+Why 1400?
+
+1400 is already configured with everything you need.
+
+Partner determination and all that configuration.
+
+You can choose 1000 also.
+
+So open ASAP.
+
+Go to zero one.
+
+Select Customer account group 0001.
+
+So to set the company code to 1000.
+
+Sales.
+
+Org Distribution channel division as usual.
+
+2010 zero zero.
+
+Select the reference customer as, say, 1000 or 1400.
+
+Your choice.
+
+And of course the same set of org elements 1010 zero zero.
+
+Let's give the customer a name test pricing and just you can fill the rest of the details.
+
+They are not very, very important.
+
+Now go to the company code view.
+
+Nothing to fill here.
+
+Now, sales area data Sales.
+
+Shipping billing.
+
+Enter the default tax classification.
+
+Then partner functions have nothing to do here and save.
+
+The customer that is created is 128.
+
+You can see it at the bottom of the screen.
+
+Let's note it down for reference.
+
+Next step, create a new document pricing procedure.
+
+How do we do that?
+
+Go to VOC zero.
+
+Go to the pricing procedure and document pricing procedure.
+
+Click on Maintain.
+
+We can either create a new one or choose an existing one.
+
+I've already created a new one here.
+
+It's o test DPP.
+
+If not, we can create a new one.
+
+Click on the new entries.
+
+Create a new entry, say Colon.
+
+Give it a description and save it.
+
+Again, let's note it down for reference in our notes.
+
+The next step is customer pricing procedure.
+
+Where is it?
+
+Go to pricing procedures and then customer pricing procedure.
+
+Select it.
+
+And then again go to new entries.
+
+Looks like colon is already taken.
+
+So since it's only one character, it's a little difficult to think of a new one.
+
+Let's see.
+
+Um, there is a slot between 6 and 8.
+
+So let's create seven.
+
+Go to new entries.
+
+Seven test CP and save.
+
+Again, note it down here.
+
+Make sure you create this master data step by step.
+
+Don't skip these steps.
+
+It's time taking.
+
+I understand.
+
+But it will definitely help you solve the scenario much faster than if you are trying to do this without
+
+creating your own master data.
+
+Now other configuration.
+
+Why am I asking you to create a new sales document type so that you don't mess up with or or cute?
+
+These are standard document types.
+
+In this case, creating a new document type takes a lot of time.
+
+You already know the process for it, right?
+
+As long as it's not a standard document type.
+
+Just choose any document type that you've been using.
+
+I'm choosing Z one.
+
+Make a note of it.
+
+You don't need the second step.
+
+Creation of the item category at this point.
+
+As long as you're using ten or a copy of ten, that should work fine.
+
+If you want to do some other manipulation, though.
+
+Like what?
+
+Make the item category not relevant for pricing and see the effect of it.
+
+Then I suggest you create your own item category.
+
+And how do you create your own item category?
+
+Go to ov7.
+
+If you don't remember the transaction code, just go to SPRO.
+
+IMG Sales and Distribution Sales.
+
+Sales.
+
+Documents.
+
+Sales Document item.
+
+Define item categories.
+
+Go there, select ten, make a copy of it, call it Z, Anything.
+
+This is going to take some time because any time a new item category is created, you know, the corresponding
+
+copy controls behind them will also be copied.
+
+I'm going to leave that transaction for now, but I'm going to make a note of it.
+
+ZST1.
+
+That's my item category.
+
+The next step is item category determination.
+
+So Z one plus norm is ZST1.
+
+Save it.
+
+This is the item category that we just created.
+
+Right?
+
+And this is for the document type.
+
+We just created the C one.
+
+Why are we doing this?
+
+When we create an order for a material M0 one or a material like that.
+
+Which has an item category group of norm.
+
+So the norm here represents an item category group, right?
+
+If you have questions, go back to item category nodes.
+
+Our custom item category XSD one should be determined.
+
+All right.
+
+Now, let's start with our business scenario A, B, C, computers.
+
+Wants to price its desktop range of products.
+
+Belonging to some material group.
+
+And here is the logic.
+
+First price should be checked for customer material combination.
+
+So this is the first priority.
+
+In business terms.
+
+It's also called a customer specific price list.
+
+If you want to imagine why this would happen, think of a scenario like this.
+
+All elementary schools in Pennsylvania will buy from ABC computers.
+
+The government has negotiated a contract with ABC computers that way.
+
+And that's a big contract for ABC computers, right?
+
+ABC computers would be more than willing to give a special prize for this deal for all these elementary
+
+schools.
+
+So if a desktop costs $500, ABC computers would be willing to sell it at, say, $80 or $70 to the
+
+schools.
+
+Why?
+
+Because it's a big market and the sales volume alone will justify the margins.
+
+This is an example of customer based pricing, meaning we are creating a price list specifically for
+
+one customer.
+
+The next priority is customer group based pricing.
+
+Not all customers are as big as the US Department of Education, right?
+
+So not every customer can be given a separate price list.
+
+For example, corporate customers can be in all corporate customers.
+
+You know, not one per GE, General Electric or not one per J.P. Morgan.
+
+What are we doing here?
+
+We are categorizing customers as belonging to a particular group, in this case corporate customers.
+
+And how do you categorize customers?
+
+One criteria is customer group.
+
+It's a field in the customer master.
+
+So that could be one parameter based on which you create a price list.
+
+It's called customer based pricing.
+
+So how are these prices determined?
+
+Mean M0 one will be given at $400 to a corporate customer.
+
+350 for online customers, 450 for retail customers.
+
+Why?
+
+Well, there would be a variety of parameters based on which the business will will determine a particular
+
+price.
+
+For example, online customers will be given a lower price, say $350.
+
+Why?
+
+Because the storage costs are lower.
+
+The marketing costs are lower.
+
+Think about retail.
+
+The cost of maintaining a PC on the shelf is very high, right?
+
+Unless the customer sees it on the shelf, he doesn't buy it.
+
+So what prize to give to each customer group is based on a variety of parameters.
+
+Now, coming back to the scenario, if such a prize is also not found.
+
+Then default to the base price.
+
+What is a base price list?
+
+Material.
+
+M01 costs $500.
+
+Material M02 cost $600.
+
+So irrespective of any parameter that affects the price like customer group, customer specific.
+
+Or country or region.
+
+So here is an example of a base price list material.
+
+M01 costs $100.
+
+Material.
+
+M02 costs 120.
+
+That's it.
+
+No other parameter comes into play.
+
+Similarly, this is a customer specific price list.
+
+The same material M01 for customer 1400 is going to cost $90.
+
+And then we have customer group specific price list.
+
+The same material for customer group zero one costs $95.
+
+So let's start the configuration.
+
 # 
