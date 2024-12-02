@@ -2,51 +2,91 @@
 
 SAP learnings and projects
 
+[SAP Discovery center](https://discovery-center.cloud.sap/protected/index.html#)
+
+[SAP BTP](https://account.hanatrial.ondemand.com/trial/#/home/trial)
+
+## Resources
+- Discovering ABAP Blogs
+    - [SAP ABAP Training](https://discoveringabap.com/sap-abap-training/)
+    - [SAP ABAP, SAP ABAP Training - Important Learning Resources for SAP Developers](https://discoveringabap.com/2023/06/24/important-learning-resources-for-sap-developers/)
+    - [Important Resources for SAP ABAP Developers for working with S/4 HANA](https://discoveringabap.com/2023/06/25/important-resources-for-sap-abap-developers-for-working-with-s-4-hana/)
+
+- SAP Developer Website
+    - [Build an SAP Fiori App Using the ABAP RESTful Application Programming Model [RAP100]](https://developers.sap.com/mission.sap-fiori-abap-rap100.html)
+
+- SAP Community Website
+    - [ABAP RESTful Application Programming Model (RAP)](https://pages.community.sap.com/topics/abap/rap)
+
+- BTP
+    - [Discovering SAP Business Technology Platform](https://learning.sap.com/learning-journeys/discover-sap-business-technology-platform)
+
+- Github
+    - [abap-platform-refscen-flight](https://github.com/SAP-samples/abap-platform-refscen-flight?tab=coc-ov-file)
+
+
 ## Reference
-- [SAP ABAP RAP](https://help.sap.com/doc/abapdocu_754_index_htm/7.54/en-US/index.htm?file=abennews-754-restful.htm)
-- [Embedded CDS View exposure to Fiori](https://community.sap.com/t5/technology-blogs-by-members/embedded-cds-view-exposure-to-fiori/ba-p/13397811)
+- RAP
+    - [ABAP RESTful Programming Model in Release Documentation](https://help.sap.com/doc/abapdocu_754_index_htm/7.54/en-US/index.htm?file=abennews-754-restful.htm)
+    - [Build composition tree with ABAP CDS views](https://community.sap.com/t5/technology-blogs-by-sap/build-composition-tree-with-abap-cds-views/ba-p/13464640)
+    - [The SAP Fiori Elements feature showcase with RAP and ABAP CDS annotations](https://community.sap.com/t5/technology-blogs-by-sap/the-sap-fiori-elements-feature-showcase-with-rap-and-abap-cds-annotations/ba-p/13552411)
+
+- Fiori
+    - [SAP Fiori - Launchpad](https://www.tutorialspoint.com/sap_fiori/sap_fiori_launchpad.htm)
+    - [Fiori app configuration in SAP Fiori Launchpad](https://community.sap.com/t5/technology-blogs-by-members/fiori-app-configuration-in-sap-fiori-launchpad/ba-p/13336320)
+    - [Embedded CDS View exposure to Fiori](https://community.sap.com/t5/technology-blogs-by-members/embedded-cds-view-exposure-to-fiori/ba-p/13397811)
+    - [Running a Fiori application on Business Application Studio with data from on-premise system](https://community.sap.com/t5/technology-blogs-by-sap/running-a-fiori-application-on-business-application-studio-with-data-from/ba-p/13522987)
+    - [Using Basic Annotations for Object Pages](https://learning.sap.com/learning-journeys/develop-sapui5-applications/using-basic-annotations-for-object-pages_c9af88ae-54a3-4fe2-a858-4f722afbee6d)
+
+- ABAP Programming on HANA
+    - [Introduction - ABAP Programming on HANA](https://community.sap.com/t5/application-development-blog-posts/introduction-abap-programming-on-hana/ba-p/13371422) 
+    - [New ABAP for HANA features in SAP NW 7.4 SP5](https://community.sap.com/t5/application-development-blog-posts/new-abap-for-hana-features-in-sap-nw-7-4-sp5/ba-p/13067993)
+
 
 ## [ABAP Expressions (7.4+)](https://discoveringabap.com/abap-7-4-syntaxes-abap-expressions/)
 
 ## New Syntax learnings
--> [ZCS_NEW_SYNTAX3](NewSyntax/ZCS_NEW_SYNTAX3.abap)
-- Inline Declaration
-- CASE Statements In OPEN SQL
-- Performing Calculations within SQL Statements
-- NEW Constructor Operator
-- Value Constructor Operator
-- FOR Iteration Expression
-- Chaining Operator
-- String Templates
-- Method Chaining
-- Avoiding TYPE MISMATCH Errors in ABAP
-- Filter Operator |WITOUT EXCEPT| WITH EXCEPT|
-- MAPPING |EXCEPT|
-- Table Comprehension
-- Table Comprehension : MULTIPLE FOR
-- Table Comprehension : Local Auxiliary Fields
-- Table Comprehension : Join
-- Table Comprehension : Multiple Rows
-- MESHES
-- IS INSTANCE OF
-- CASE TYPE OF
-- GROUP BY for Internal Tables
-- REDUCE
-- REDUCE |UNTIL|
-- FOR ... WHILE
-- FOR ... UNTIL
-- Predicative Method Calls
-- New Boolean Function
-- COND
-- SWITCH
+- [ZCS_NEW_SYNTAX3](NewSyntax/ZCS_NEW_SYNTAX3.abap)
+    - Inline Declaration
+    - CASE Statements In OPEN SQL
+    - Performing Calculations within SQL Statements
+    - NEW Constructor Operator
+    - Value Constructor Operator
+    - FOR Iteration Expression
+    - Chaining Operator
+    - String Templates
+    - Method Chaining
+    - Avoiding TYPE MISMATCH Errors in ABAP
+    - Filter Operator |WITOUT EXCEPT| WITH EXCEPT|
+    - MAPPING |EXCEPT|
+    - Table Comprehension
+    - Table Comprehension : MULTIPLE FOR
+    - Table Comprehension : Local Auxiliary Fields
+    - Table Comprehension : Join
+    - Table Comprehension : Multiple Rows
+    - MESHES
+    - IS INSTANCE OF
+    - CASE TYPE OF
+    - GROUP BY for Internal Tables
+    - REDUCE
+    - REDUCE |UNTIL|
+    - FOR ... WHILE
+    - FOR ... UNTIL
+    - Predicative Method Calls
+    - New Boolean Function
+    - COND
+    - SWITCH
 
--> [ZCS_NEW_SYNTAX4](NewSyntax/ZCS_NEW_SYNTAX4.abap)
-- reading internal table using index
-- reading internal table using key
-- sorted table examples
-- Deep Structure
-- Dereferencing
+- [ZCS_NEW_SYNTAX4](NewSyntax/ZCS_NEW_SYNTAX4.abap)
+    - reading internal table using index
+    - reading internal table using key
+    - sorted table examples
+    - Deep Structure
+    - Dereferencing
 
+## [SAP Code Samples](https://discoveringabap.com/sap-code-samples/) Only link
+## [ABAP Editor](https://discoveringabap.com/abap-editor/) Only link
+## [ABAP Debugger](https://discoveringabap.com/abap-debugger/)
 ## [SAP Tips & Tricks](https://discoveringabap.com/sap-tips/)
 - Send emails with .xlsx Attachment
 - Read Excel File from Presentation Server
@@ -59,32 +99,34 @@ SAP learnings and projects
 
 ## [OData](https://discoveringabap.com/odata-development-in-sap/)
 
-- Building OData Services [1] : OData Overview
-- Building OData Services [2] : Understanding OData Service
-- Building OData Services [3] : Create OData Service
-- Building OData Services [4] : Register and Test OData Service
-- Building OData Services [5] : Working With OData URIs
-- Building OData Services [6] : Implementing all URIs
-- Building OData Services [7] : JSON Formatter Extension
-- Building OData Services [8] : How to find SEGW project from Service Name
-- Building OData Services [9] : Testing CRUD-Q operations from Gateway Client
-- Building OData Services [10] : Difference between Put, Merge and Patch
-- Building OData Services [11] : Trouble-shooting OData services and Debugging
-- Building OData Services [12] : Handle Deep Structures using $expand
-- Building OData Services [13] : Create Data using Deep Entity
-- Building OData Services [14] : Service Generators – Search Help
-- Building OData Services [15] : Service Generators – RFC/ BOR Interface / BAPI
-- Building OData Services [16] : Concurrency handling using ETag with time-stamp field
-- Building OData Services [17] : Concurrency handling using ETag with Entity Hash
-- Building OData Services [18] : Using POSTMAN for testing OData Services
-- Building OData Services [19] : X-CSRF Tokens
-- Building OData Services [20] : Media Handling
-- Building OData Services [21] : Batch Management ($batch)
-- Building OData Services [22] : Draft Management
-- Building OData Services [23] : CDS View mapped to OData Service
-- Building OData Services [24] : CDS View with OData.Publish
-- Building OData Services [25] : CDS View BOPF
+- [1] : OData Overview
+- [2] : Understanding OData Service
+- [3] : Create OData Service
+- [4] : Register and Test OData Service
+- [5] : Working With OData URIs
+- [6] : Implementing all URIs
+- [7] : JSON Formatter Extension
+- [8] : How to find SEGW project from Service Name
+- [9] : Testing CRUD-Q operations from Gateway Client
+- [10] : Difference between Put, Merge and Patch
+- [11] : Trouble-shooting OData services and Debugging
+- [12] : Handle Deep Structures using $expand
+- [13] : Create Data using Deep Entity
+- [14] : Service Generators – Search Help
+- [15] : Service Generators – RFC/ BOR Interface / BAPI
+- [16] : Concurrency handling using ETag with time-stamp field
+- [17] : Concurrency handling using ETag with Entity Hash
+- [18] : Using POSTMAN for testing OData Services
+- [19] : X-CSRF Tokens
+- [20] : Media Handling
+- [21] : Batch Management ($batch)
+- [22] : Draft Management
+- [23] : CDS View mapped to OData Service
+- [24] : CDS View with OData.Publish
+- [25] : CDS View BOPF
 
+## [ABAP on HANA : AMDP](https://discoveringabap.com/exploring-abap-on-hana-amdp/) Only link 
+## [SAP ALV with IDA](https://discoveringabap.com/sap-alv-with-ida/) Only link
 ## [ABAP on HANA : CDS Views](https://discoveringabap.com/abap-on-hana-cds-views/)
 
 - Introduction to CDS Views
@@ -102,6 +144,7 @@ SAP learnings and projects
 - Virtual Elements in CDS
 - Union in CDS
 
+## [SAPUI5/Fiori](https://discoveringabap.com/sap-ui5-fiori-development/) All the topics are covered in RAP model
 ## [RAP Model](https://discoveringabap.com/abap-rap-model/)
 
 ### ABAP RESTful Application Programming Model
@@ -136,14 +179,6 @@ SAP learnings and projects
 - Determine Actions
 - Behavior Implementation Class
 - Naming Conventions for Development Objects
-
-#### Links 
-
-[Build an SAP Fiori App Using the ABAP RESTful Application Programming Model [RAP100]](https://developers.sap.com/mission.sap-fiori-abap-rap100.html)
-
-[ABAP RESTful Application Programming Model (RAP)](https://pages.community.sap.com/topics/abap/rap)
-
-[abap-platform-refscen-flight](https://github.com/SAP-samples/abap-platform-refscen-flight?tab=coc-ov-file)
 
 # Udemy
 ## Sales & Distibution Module
