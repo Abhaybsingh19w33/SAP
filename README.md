@@ -3,8 +3,18 @@
 SAP learnings and projects
 
 [SAP Discovery center](https://discovery-center.cloud.sap/protected/index.html#)
+- Missions
+    - [Link to ReadMe](/Discovery%20Center/ReadMe.md)
+- Youtube
+    - [SAP Discovery Center: Get Started with SAP BTP](https://www.youtube.com/watch?v=JrVElFCfuVI&ab_channel=SAPCommunity)
 
 [SAP BTP](https://account.hanatrial.ondemand.com/trial/#/home/trial)
+- Youtube
+    - [SAP BTP Cockpit: Get Started with SAP BTP](https://www.youtube.com/watch?v=CFLW2hrsbUc&ab_channel=SAPCommunity)
+
+[SAP Developer](https://developers.sap.com/)
+
+[SAP BTP Onboarding Resource Center](https://support.sap.com/en/product/onboarding-resource-center/business-technology-platform.html)
 
 ## Resources
 - Discovering ABAP Blogs
@@ -20,6 +30,8 @@ SAP learnings and projects
 
 - BTP
     - [Discovering SAP Business Technology Platform](https://learning.sap.com/learning-journeys/discover-sap-business-technology-platform)
+
+    - [SAP Business Technology Platform - An introduction for Enterprise Architects](https://blogs.sap.com/2021/12/01/sap-business-technology-platform/)
 
 - Github
     - [abap-platform-refscen-flight](https://github.com/SAP-samples/abap-platform-refscen-flight?tab=coc-ov-file)
@@ -226,7 +238,6 @@ Install VSCode
 - [Github](https://github.com/brandoncaulfield/sap-ui5-walkthrough/commits/main/)
 - [SAP official web site](https://sapui5.hana.ondemand.com/1.120.20/#/topic/2680aa9b16c14a00b01261d04babbb39)
 - [Installing the UI5 CLI](https://sap.github.io/ui5-tooling/stable/pages/GettingStarted/)
-
     - His other ui5 videos
         - [video](https://www.youtube.com/watch?v=zaeztGyqiBw&ab_channel=CodeWithBrandon)
         - [github](https://github.com/brandoncaulfield/sap-ui5-data-binding/commits/master)
@@ -263,24 +274,18 @@ Below is the order in which SAPUI5 applications execute. The application files o
 
 - [Pankaj Kumar - SAP Tech Trainer](https://www.youtube.com/@pankajkumaram/playlists)
 - [Anubhav Trainings (official channel)](https://www.youtube.com/@AnubhavOberoy/playlists)
+- [How to prepare for ABAP Certification ?]( https://www.youtube.com/@VikramFotani)
+- [Sap Training - SD](https://www.youtube.com/watch?v=kre9ZzCY0W8&list=PLN17Nn94liuyxk9q6gwHyV9bTwdvrzb7d&index=17&ab_channel=SapTraining)
+- [SAP ABAP by Rahul Mehta](https://www.youtube.com/@sapabapbyrahulmehta/playlists)
+- [Rana W Mehmood](https://www.youtube.com/@ranawmehmoodsap/featured)
 
 # To Do
 
-[Python](https://degreed.com/pathway/3pmvev2qpn/pathway)
-
-[NodeJS](https://degreed.com/pathway/w9dwkwzkpj/pathway)
-
-[JavaScript](https://degreed.com/pathway/k9wmz1y784/pathway)
-
-[React](https://degreed.com/pathway/08q77mx49r/pathway)
-
-[SAP BTP in a Nutshell](https://open.sap.com/courses/btp1)
-
-[Discover SAP BTP](https://learning.sap.com/learning-journey/discover-sap-business-technology-platform)
-
-[Introduction to SAP BTP](https://blogs.sap.com/2021/12/01/sap-business-technology-platform/)
-	
-[Neo Vs Cloud Foundry](https://blogs.sap.com/2019/02/24/sap-cloud-platform-environment-cloud-foundry-vs-neo/)
+- [Python](https://degreed.com/pathway/3pmvev2qpn/pathway)
+- [NodeJS](https://degreed.com/pathway/w9dwkwzkpj/pathway)
+- [JavaScript](https://degreed.com/pathway/k9wmz1y784/pathway)
+- [React](https://degreed.com/pathway/08q77mx49r/pathway)
+- [Neo Vs Cloud Foundry](https://blogs.sap.com/2019/02/24/sap-cloud-platform-environment-cloud-foundry-vs-neo/)
 
 ## Tools
 
