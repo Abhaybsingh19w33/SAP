@@ -4,7 +4,7 @@ CDS Views or CDS Entities can be exposed as OData Services using annotation ODat
 
 In case the service requires create/update/delete capabilities, the BOPF (Business Object Processing Framework).
 
-![alt text](image-381.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-381.png)
 
 Using BOPF now is not a great idea as BOFP is kind of obsolete already with the rise of RAP Model for ABAP. SAP guarantees that any investment in BOPF is not wanted as it will still be maintained. However, going forward no new developments will use BOPF.
 
@@ -15,7 +15,7 @@ This is also a reason that you don’t see a much posts (this is the only one so
 ## Create new CDS View
 Create a basic CDS view where the data is selected from a Custom table. Custom table is used as a Base here to demonstrate how the BOFP object integration with CDS works.
 
-![alt text](image-382.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-382.png)
 
 Create and activate the CDS View.
 
@@ -110,21 +110,21 @@ define view ZJP_PO_BOPF_02
 
 The line 13 below has an icon in front of it to indicate that there is a generated object. The generated object navigates to a BOPF object.
 
-![alt text](image-383.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-383.png)
 
 ## BOPF object details
 
 Click on the ROOT node link.
 
-![alt text](image-384.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-384.png)
 
 Use Ctrl + left mouse click to open the object.
 
-![alt text](image-385.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-385.png)
 
 If you want to check the object in the backend, use BOBX transaction.
 
-![alt text](image-386.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-386.png)
 
 Note:
 
@@ -143,7 +143,7 @@ URI: /sap/opu/odata/sap/ZJP_PO_BOPF_02_CDS/PO?$format=json
 HTTP Method: GET
 ```
 
-![alt text](image-387.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-387.png)
 
 ### Update Operation
 ```
@@ -152,7 +152,7 @@ HTTP Method: PUT
 Payload: Copy from GET request
 ```
 
-![alt text](image-388.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-388.png)
 
 ### Create Operations
 ```
@@ -160,7 +160,7 @@ URI: /sap/opu/odata/sap/ZJP_PO_BOPF_02_CDS/PO
 HTTP Method: POST
 Payload: Copy from GET request and change the PO Number in field ebeln
 ```
-![alt text](image-389.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-389.png)
 As mentioned earlier, as BOPF is obsolete, I will not cover it further, but in case you are still on the Fiori Model and not on RAP, below is a good starting point to understanding BOPF.
 
 [Introduction to Business Object Processing Framework](https://community.sap.com/topics/abap/bopf)

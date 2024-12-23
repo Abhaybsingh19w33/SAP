@@ -11,53 +11,53 @@ In this post, you will learn about the Service Generators i.e. Creating a Servic
 
 Right-click on Data Model and choose Import > RFC/BOR Interface. In this example, BAPI BAPI_PO_GETITEMS is used.
 
-![alt text](image-222.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-222.png)
 
 In the Data Source Attributes, Type is selected Remote Function Call as BAPIs are RFCs. Provide the BAPI name as well and click Next.
 
-![alt text](image-223.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-223.png)
 
 Select PO Items and Click Next.
 
-![alt text](image-224.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-224.png)
 
 Select keys and click Finish.
 
-![alt text](image-225.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-225.png)
 
 The entity is imported.
 
-![alt text](image-226.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-226.png)
 
 ## Map Query Operation to BAPI
 
 Right-click on GetEntity(Query) under Service Implementation > POItemsSet and choose Map to Data Source.
 
-![alt text](image-227.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-227.png)
 
 Chose Target System as Local. Type as Remote Function Call and BAPI_PO_GETITEMS as the Name.
 
-![alt text](image-228.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-228.png)
 
 This is the same as before where the Entity Type is created. The below mapping screen is loaded. Click on Propose Mapping to automatically generate the mapping.
 
-![alt text](image-229.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-229.png)
 
 The mapping would be generated automatically.
 
-![alt text](image-230.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-230.png)
 
 After this, the primary key of the BAPI i.e. PO Number must be mapped manually. Click the icon to insert a row.
 
-![alt text](image-231.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-231.png)
 
 Use F4 to complete the mapping as below.
 
-![alt text](image-232.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-232.png)
 
 Generate the project.
 
-![alt text](image-233.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-233.png)
 
 Test with the below URL. As PoNumber is mapped to BAPI, we need to provide the number.
 
@@ -65,7 +65,7 @@ Test with the below URL. As PoNumber is mapped to BAPI, we need to provide the n
 /sap/opu/odata/SAP/ZJP_DEMO_GENERATORS_SRV/PoItemsSet?$filter=PoNumber eq '4500000011'&$format=json
 ```
 
-![alt text](image-234.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-234.png)
 
 Similar steps can be used to map other operations as well.
 
@@ -73,19 +73,19 @@ Similar steps can be used to map other operations as well.
 
 This is very similar to BAPI. The only difference is that the field names would differ and instead of BAPI name, a method from BOR needs to be selected.
 
-![alt text](image-235.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-235.png)
 
 Expand PurchaseOrder Object, and then choose method GetItems.
 
-![alt text](image-236.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-236.png)
 
 The method name would appear as below.
 
-![alt text](image-237.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-237.png)
 
 The next step where blank mapping appears, clicking on Propose Mapping etc remain the same.
 
-![alt text](image-238.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-238.png)
 
 In both methods, the right BAPI OR right method needs to be selected as per the operation.
 

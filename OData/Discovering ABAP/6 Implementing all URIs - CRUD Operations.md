@@ -6,7 +6,7 @@ When OData Project is generated in the SEGW transaction, a Data Provider Base Cl
 
 This is the extension class – usually called as DPC_EXT class.
 
-![alt text](image-91.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-91.png)
 
 Each of the operations will have a dedicated method in the data provider class. The method names indicate which operation they should be used to implement.
 

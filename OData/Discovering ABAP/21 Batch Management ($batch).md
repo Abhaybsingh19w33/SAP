@@ -13,7 +13,7 @@ In this post you will learn about sending a batch request to the OData service, 
 - The URI has an indicator in form of $batch addition
 - The payload contains the URIs for actual request and body content as well
 
-![alt text](image-319.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-319.png)
 
 ## Batch Response
 - The response of all operations in the same sequence as that of the request
@@ -26,15 +26,15 @@ As our focus is on testing the batch, to keep the payload content minimum, creat
 
 1. Create a table ZJP_BATCH
 
-![alt text](image-320.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-320.png)
 
 2. Create a project ZJP_BATCH and add an entity with the table reference
 
-![alt text](image-321.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-321.png)
 
 3. Generate the project and register the service.
 
-![alt text](image-322.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-322.png)
 
 4. The code used to implement the methods for CRUD-Q operations is as below. The code can be optimized but this would still work for the batch functionality demonstration.
 
@@ -101,11 +101,11 @@ ENDMETHOD.
 
 Add $batch using the button Add URI Option
 
-![alt text](image-323.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-323.png)
 
 This way a sample payload is also loaded in HTTP request section.
 
-![alt text](image-325.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-325.png)
 
 ## Important Points to note
 
@@ -117,7 +117,7 @@ This way a sample payload is also loaded in HTTP request section.
 
 Let us test simple batches first. The data uploaded to table is as below.
 
-![alt text](image-326.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-326.png)
 
 ## Testing batch with single GET operation
 Why would you create a batch for single operation? Just to understand the payload syntax.
@@ -133,7 +133,7 @@ GET MovieSet(Id='01') HTTP/1.1
 --batch--
 ```
 
-![alt text](image-327.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-327.png)
 
 ## Important notes:
 
@@ -145,7 +145,7 @@ GET MovieSet(Id='01') HTTP/1.1
 
 The boundary also gets converted to a hex string in the response.
 
-![alt text](image-329.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-329.png)
 
 ## Testing batch with multiple GET operations
 This time, let us test with 2 GET operations in the batch.
@@ -168,11 +168,11 @@ GET Movie(Id='02') HTTP/1.1
 --batch--
 ```
 
-![alt text](image-330.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-330.png)
 
 The response looks like below.
 
-![alt text](image-331.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-331.png)
 
 ## Testing batch with a change operations
 The change operation in itself is a multi-part i.e. it has a URI and a Payload.
@@ -198,7 +198,7 @@ Content-Type: application/json
 
 --batch--
 ```
-![alt text](image-332.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-332.png)
 
 ## An example with multiple changesets
 In this example, a create and update operation is added in one batch.
@@ -243,7 +243,7 @@ Content-Type: application/json
 
 The table entry is created and updated.
 
-![alt text](image-334.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-334.png)
 
 This way multiple requests can be grouped into a batch. However, the operations are getting executed one by one by their own methods. What if we want to pass multiple create operations in a batch and create them together? In that case we need to defer the operations and execute them together.
 
@@ -256,7 +256,7 @@ Redefine methods in DPC_EXT class.
 | /IWBEP/IF_MGW_APPL_SRV_RUNTIME~CHANGESET_PROCESS | Actual processing logic |
 | /IWBEP/IF_MGW_APPL_SRV_RUNTIME~CHANGE SET_END	 | Commit Work to save the changes |
 
-![alt text](image-335.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-335.png)
 
 ### Code Reference
 
@@ -312,7 +312,7 @@ ENDMETHOD.
 ### Signature
 The operation data is sent in importing parameter IT_CHANGESET_REQUEST and the response needs to be populated in changing parameter CT_CHANGESET_RESPONSE.
 
-![alt text](image-336.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-336.png)
 
 ```
 "Important Code Blocks
@@ -331,9 +331,9 @@ ls_resp-operation_no = ls_req-operation_no. "--> Move the operation number from 
 
 ### Operation Types
 
-![alt text](image-337.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-337.png)
 
-![alt text](image-338.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-338.png)
 
 ## IT_CHANGESET_REQUEST for multiple requests.
 
@@ -373,10 +373,10 @@ Content-Type: application/json
 --batch--
 ```
 
-![alt text](image-339.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-339.png)
 
 The response shows the response for both the requests.
 
-![alt text](image-340.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-340.png)
 
 This is a flexible way to implement the operations in batch mode and can be implemented as per the application requirements.

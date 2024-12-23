@@ -12,16 +12,16 @@ So, when you know the service name, just remove the _SRV and you get the project
 
 To demonstrate, I created a custom service with a different name.
 
-![alt text](image-103.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-103.png)
 
 To find the Project Name, use table /IWBEP/I_SBD_GA. Enter the service name in TROBJ_NAME and hit execute.
 
-![alt text](image-104.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-104.png)
 
 You will get the project name in the Project Field.
 
-![alt text](image-105.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-105.png)
 
 There are many such tables starting with /IWBEP/I_SBD in the system and can be explored to get some information.
 
-![alt text](image-106.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-106.png)

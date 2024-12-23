@@ -9,7 +9,7 @@ A draft is the state of the business object when its data is not persisted in th
 
 # Draft Management Process-Flow
 
-![alt text](image-341.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-341.png)
 
 Consider an application with Sales Order (SO) Header and Item data. The data can be displayed and updated or new SOs can be created.
 
@@ -27,35 +27,35 @@ Create Draft tables to store the data temporarily. In this case, draft tables wi
 
 # Tables for draft data
 
-![alt text](image-342.png)
-![alt text](image-343.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-342.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-343.png)
 
 ## Entity types
 
-![alt text](image-344.png)
-![alt text](image-345.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-344.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-345.png)
 
 In addition to this one more entity with just a text field is defined to be used as the return type.
 
-![alt text](image-346.png)
-![alt text](image-347.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-346.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-347.png)
 
 ## Association
-![alt text](image-348.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-348.png)
 
 ## Function Imports
 
 3 function imports, CreateDraft, DeleteDraft, and SaveOrder are created to achieve the functionality. All use the Return Type as the entity type Return.
 
-![alt text](image-349.png)
-![alt text](image-350.png)
-![alt text](image-351.png)
-![alt text](image-352.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-349.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-350.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-351.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-352.png)
 
 ## Code Reference from ZCL_JP_SO_DRAFT_DPC_EXT
 The code is implemented considering the below process flow.
 
-![alt text](image-353.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-353.png)
 
 ### READ and QUERY operations
 These operations usually will refer to the actual tables / standard BAPI etc., to get the data.
@@ -137,7 +137,7 @@ This method will check whether the draft exists for the order. If it does and it
 
 To keep the logic simple, the method uses incremental logic to generate a key. In an actual scenario, we will either use a hash generator or number range to create the draft key.
 
-![alt text](image-354.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-354.png)
 
 ```
 METHOD create_draft.

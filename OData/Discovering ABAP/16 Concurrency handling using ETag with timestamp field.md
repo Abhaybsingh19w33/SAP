@@ -24,33 +24,33 @@ Table 1: Various ETAG Mechanisms
 Implementing ETAG with a timestamp field
 1. Create a custom table using transaction SE11 with a timestamp field.
 
-![alt text](image-239.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-239.png)
 
 2. Add data using transaction SE16 or a temporary program.
 
-![alt text](image-240.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-240.png)
 
 3. Create a new Project in SEGW and add Entity with the table ZJP_CUSTOMER as a reference.
 
-![alt text](image-242.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-242.png)
 
 4. Double-click on the Entity Customer and add the field name 'Changetime' in the ETag field.
 
-![alt text](image-243.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-243.png)
 
 5. Generate the project.
 
-![alt text](image-244.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-244.png)
 
 6. Implement Create, Update, Read, and Query Operations. We need to test only the Update but we will implement other operations to help with adding the entries and preparing payloads.
 
-![alt text](image-245.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-245.png)
 
-![alt text](image-246.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-246.png)
 
-![alt text](image-247.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-247.png)
 
-![alt text](image-248.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-248.png)
 
 Code Reference
 ```
@@ -112,7 +112,7 @@ ENDMETHOD.
 
 7. Register the Service
 
-![alt text](image-249.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-249.png)
 
 8. Use Gateway Client (/IWFND/GW_CLIENT) to test the service
 
@@ -120,7 +120,7 @@ ENDMETHOD.
 Service URI : /sap/opu/odata/SAP/ZJP_ETAG_SRV/?$format=xml
 ```
 
-![alt text](image-250.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-250.png)
 
 9. Test Update without providing ETag field
 
@@ -130,7 +130,7 @@ Execute a GET request. Use the response as a request and format the payload.
 /sap/opu/odata/SAP/ZJP_ETAG_SRV/CustomerSet('1')?$format=json
 ```
 
-![alt text](image-251.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-251.png)
 
 Execute a PUT request without Etag
 
@@ -146,17 +146,17 @@ Payload:
 }
 ```
 
-![alt text](image-252.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-252.png)
 
 This results in an error as ETag is active for the entity but it is not provided in the request. We need to provide ETag using a head If-Match as specified in the error text.
 
-![alt text](image-253.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-253.png)
 
 Click on Add Header button, and then add Header Name 'If-Match' with Value like W/”datetime'2022-10-25T13%3A37%3A04′”.
 
 The template for the value is W/”datetime'YYYY–MM–DDTHH%3AMM%3ASS'”. You get this as a response header in GET request, so it can be copied from there.
 
-![alt text](image-254.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-254.png)
 
 Now, execute the PUT request with ETag.
 
@@ -172,13 +172,13 @@ Payload:
 }
 ```
 
-![alt text](image-255.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-255.png)
 
 This time the change is successful as the ETag has matched.
 
 What if ETag does not match? Use the same request to execute a PUT again and you get the error – Precondition Failed.
 
-![alt text](image-256.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-256.png)
 
 The entity is not protected against concurrent updates.
 

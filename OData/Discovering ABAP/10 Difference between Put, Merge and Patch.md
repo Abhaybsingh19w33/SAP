@@ -2,7 +2,7 @@
 
 In this post, you will learn the difference between 3 HTTP methods that can be used for updating an entity.
 
-![alt text](image-143.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-143.png)
 
 There are 3 HTTP methods provided for updating an entity.
 
@@ -25,39 +25,39 @@ The basic difference is that
 
 Technically, when PUT is used, UPDATE_ENTITY method is triggered in the data provider class and for PATCH, PATCH_ENTITY method is called.
 
-![alt text](image-144.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-144.png)
 
 If READ_ENTITY and UPDATE_ENTITY is implemented, the PATCH operation will work, however as it calls READ and then UPDATE it is not as effective as updating only certain fields. If this is intended then the method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~PATCH_ENTITY can be redifined.
 
-![alt text](image-145.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-145.png)
 
 ## Testing PUT and PATCH
 
 Let us consider below entry to be updated.
 
-![alt text](image-146.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-146.png)
 
 PUT Request
 
-![alt text](image-149.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-149.png)
 
 Response
 
-![alt text](image-150.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-150.png)
 
 Table Entry
 
-![alt text](image-151.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-151.png)
 
 PATCH Request
 Let us only update the Carrier Name (CARRNAME) and URL.
 
-![alt text](image-152.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-152.png)
 
 Response
 
-![alt text](image-153.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-153.png)
 
 Table Entry
 
-![alt text](image-154.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-154.png)

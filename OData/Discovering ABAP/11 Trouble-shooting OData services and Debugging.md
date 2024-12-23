@@ -29,19 +29,19 @@ In the earlier post Testing CRUD-Q operations from Gateway Client, all the succe
 
 400 (Bad Request) – Extra ' character after key-value AI in the request causes the error. When you get a such an error, check the URI.
 
-![alt text](image-156.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-156.png)
 
 403 (Forbidden) – incorrect service name in the URI can lead to this error.
 
-![alt text](image-157.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-157.png)
 
 405 ( Method not allowed ) is triggered when the HTTP method and URI combination are not correct. The below example shows that a POST method is used with URI that has key information which makes it invalid.
 
-![alt text](image-158.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-158.png)
 
 501 (Not Implemented) occurs when the operation is called but relevant method is not implemented in DPC_EXT class.
 
-![alt text](image-159.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-159.png)
 
 ## Error Log Transactions
 One of the most important tools to troubleshoot is Error Log. As Gateway can be either embedded or deployed as a central hub, there are front-end and back-end components to SAP Gateway. Similarly, there are front-end and back-end error log transactions.
@@ -56,17 +56,17 @@ One of the most important tools to troubleshoot is Error Log. As Gateway can be 
 
 From this transaction, you can go to ST22, or backend error log. You can see the request and response data and replay the request as well.
 
-![alt text](image-160.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-160.png)
 
 ### /IWBEP/ERROR_LOG
 
 This transaction shows the error and you can go to the Service Implementation from this transaction.
 
-![alt text](image-161.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-161.png)
 
 The error logs can be called from the Gateway Client right after getting the results as well using the error log button.
 
-![alt text](image-162.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-162.png)
 
 ## Trace
 Trace can be enabled and viewed using /IWFND/TRACES. As the transaction code suggests, it is a frontend component transaction.
@@ -74,23 +74,23 @@ Trace can be enabled and viewed using /IWFND/TRACES. As the transaction code sug
 - The trace level can be set using the drop-down for field Error Log Level.
 - Trace is enabled or disabled with the checkboxes
 
-![alt text](image-163.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-163.png)
 
 If the trace is required for some other user, the user can be changed using the user icon.
 
-![alt text](image-164.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-164.png)
 
 Once the trace is set, execute a request and check the results.
 
-![alt text](image-165.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-165.png)
 
 ### Performance Trace
 
-![alt text](image-166.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-166.png)
 
 ### Payload Trace
 
-![alt text](image-167.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-167.png)
 
 ## Exception Handling
 One important aspect of developing the OData service is to use the exceptions correctly to convey errors to front-end consumers.
@@ -143,23 +143,23 @@ Cache Clean Up Programs
 
 Apart from this, /IWFND/GW_CLIENT also has menu Metadata to clear / rebuild cache.
 
-![alt text](image-168.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-168.png)
 
-![alt text](image-169.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-169.png)
 
 ## Debugging
 
 Simply, identify the method which is expected to be triggered and add an external break-point.
 
-![alt text](image-170.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-170.png)
 
 Then execute the service request.
 
-![alt text](image-171.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-171.png)
 
 Debugger it started with the break-point set.
 
-![alt text](image-172.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-172.png)
 
 This way works from Gateway Client, external tool like Postman or from UI5/Fiori Application as well.
 
@@ -169,15 +169,15 @@ This way works from Gateway Client, external tool like Postman or from UI5/Fiori
 - External Break-point is selected and not session break-point
 - Debugging settings for the user are accuarate.
 
-![alt text](image-173.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-173.png)
 
 If all these are followed and if the debugger is still not started, then use SICF to activate the debugging. Enter the Service Name and Execute.
 
-![alt text](image-174.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-174.png)
 
 On the next screen, follow the menu path Edit > Debugging > Activate Debugging.
 
-![alt text](image-175.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-175.png)
 
 Then re-execute the request and debugger would be triggered.
 

@@ -4,7 +4,7 @@ OData is an open standard that is both a data format and a protocol for consumin
 
 What you are going to learn in this post is <b>What is OData from ABAP Developer's point of view.</b>
 
-![alt text](image.png)
+![alt text](/OData/Discovering%20ABAP/Images/image.png)
 
 OData is the way of communication between frontend which is SAP UI5 / FIORI and SAP backend.
 
@@ -22,7 +22,7 @@ As OData is not a SAP protocol, any front end technology, or any system that han
 
 A [sample OData model](https://services.odata.org/V3/Northwind/Northwind.svc/) looks like below.
 
-![alt text](image-1.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-1.png)
 
 Part of OData model. Use https://services.odata.org/V3/Northwind/Northwind.svc/ to see complete model
 
@@ -38,14 +38,14 @@ Metadata contains information about all the components of the data model for ODa
 
 Link: https://services.odata.org/V3/Northwind/Northwind.svc/$metadata
 
-![alt text](image-2.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-2.png)
 
 Entity Type
 
-![alt text](image-3.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-3.png)
 Association
 
-![alt text](image-4.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-4.png)
 Entity Set and Association Set
 
 ## OData Entities
@@ -56,6 +56,6 @@ For example, Customer Information
 
 https://services.odata.org/V2/Northwind/Northwind.svc/Customers
 
-![alt text](image-5.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-5.png)
 
-![alt text](image-6.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-6.png)

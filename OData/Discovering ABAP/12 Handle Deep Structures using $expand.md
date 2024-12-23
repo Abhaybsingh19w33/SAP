@@ -4,32 +4,32 @@ In this post, you will learn about handling Deep Structures in OData. We need to
 
 Consider the below scenario with Sales Order data where SO Header, Item, Product, and Customer are associated as shown below.
 
-![alt text](image-176.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-176.png)
 
 ## Project Creation
 The SEGW project ZG00_JP_SO should be created as below. The creation steps are explained in earlier posts in this series and not repeated in this post.
 
 Entity Types (SOStatus can be ignored for this post)
 
-![alt text](image-177.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-177.png)
 
 Reference structures for all entities are as below. Create Entity Sets are the same time.
 
-![alt text](image-178.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-178.png)
 
-![alt text](image-179.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-179.png)
 
-![alt text](image-180.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-180.png)
 
-![alt text](image-181.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-181.png)
 
 Then create Associations to represent the data model. Create Association Sets at the same time.
 
-![alt text](image-182.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-182.png)
 
 Below Navigation Properties are created along with Associations. The property names are very important in this scenario.
 
-![alt text](image-183.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-183.png)
 
 Now, generate the project and register the service. Important classes generated are as below.
 
@@ -40,7 +40,7 @@ Now, generate the project and register the service. Important classes generated 
 
 The deep structure to represent the complete sales order would look like the below. Structure <b>ZJP_SO_DS</b> represents the Header data and also has a component structure TOCUSTOMER which refers to the Customer Type and a component table TOITEM which refers to Item Table. In turn, the item table has a component structure TOPRODUCT that refers to the product structure. Customer and Product structures are same earlier ones used for Entities.
 
-![alt text](image-184.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-184.png)
 
 <h3> <b>
 <span style="color:red" > 
@@ -52,7 +52,7 @@ Another option to create the structure is to create one in MPC_EXT class i.e. in
 
 Go to the tab – Type in the class and add type TY_SO_ALL with visibility Public. Then click on the green arrow highlighted below to navigate to the editor.
 
-![alt text](image-185.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-185.png)
 
 Complete the type definition as below.
 
@@ -106,7 +106,7 @@ public section.
 
 Now redefine the method, DEFINE and add the below code to set the deep structure as the type for the SOHeader Entity. It is important to call the super->define() method to ensure all other Entity Types are defined correctly at runtime.
 
-![alt text](image-186.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-186.png)
 
 ```
 METHOD define.
@@ -296,18 +296,18 @@ This error occured while adding the service saying he TY_SO_ALL does not exist
 
 This was happening becuase I made mistake while the class name in redifine menthod
 
-![alt text](image-193.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-193.png)
 ## Test using Gateway Client
 
 |Operation |	HTTP Method |	URI |
 | :-: | :-: | :-: |
 |GetEntitySet – Single Association | GET |	/sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet?$expand=ToCustomer?$format=json |
 
-![alt text](image-187.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-187.png)
 
 The response shows multiple records, Association ToCustomer is expanded with data but Association ToItem is deferred.
 
-![alt text](image-188.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-188.png)
 
 |Operation |	HTTP Method |	URI |
 | :-: | :-: | :-: |
@@ -315,9 +315,9 @@ The response shows multiple records, Association ToCustomer is expanded with dat
 
 Since we have 2 association related to SOHeader, we can specify them directly
 
-![alt text](image-189.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-189.png)
 
-![alt text](image-190.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-190.png)
 
 |Operation |	HTTP Method |	URI |
 | :-: | :-: | :-: |
@@ -325,13 +325,13 @@ Since we have 2 association related to SOHeader, we can specify them directly
 
 In this case, if the navigation property is NPL1 for level 1 and NPL2 for level 2 then it needs to be specified as NPL1/NPL2.
 
-![alt text](image-191.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-191.png)
 
 |Operation |	HTTP Method |	URI |
 | :-: | :-: | :-: |
 |GetEntitySet – Multi-level and Mutliple Associations	| GET	| /sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet?$expand=ToCustomer,ToItem/ToProduct&$format=json |
 
-![alt text](image-192.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-192.png)
 
 Similarly, the Entity Type i.e. READ operations can be tested with the below URIs. The only difference is that the SOHeaderSet key needs to be used in the URIs. HTTP method for all below URIs is GET.
 

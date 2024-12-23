@@ -43,37 +43,37 @@ define view ZJP_SO_NEW
 
 Activate the CDS View created.
 
-![alt text](image-372.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-372.png)
 
 ### Find the Service Name
 Post Activation, a yellow warning symbol appears in the line @OData.publish: true. Hover the cursor over the line to get a pop up like below.
 
 The Service Name appears in the pop-up and the warning says that the Service is not active. The service name will be the CDS View name followed by _CDS.
 
-![alt text](image-373.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-373.png)
 
 ### Register the Service
 
 Register the service ZJP_SO_NEW_CDS using transaction /IWFND/MAINT_SERVICE. Use the add service button.
 
-![alt text](image-374.png)
-![alt text](image-375.png)
-![alt text](image-376.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-374.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-375.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-376.png)
 
 And the service is registered.
 
 ### Test the Service
 Use Filter to get the registered service. Start from the transaction /IWFND/MAINT_SERVICE. Click on the Filter button.
 
-![alt text](image-377.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-377.png)
 
 Use the exact service name or something like ZJP* to filter the services.
 
-![alt text](image-378.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-378.png)
 
 Click on the right service and use SAP Gateway Client to test the service.
 
-![alt text](image-379.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-379.png)
 
 This service has 2 sets, ZJP_SO_NEW and VBAP. VBAP can be called directly or with Association.
 
@@ -88,6 +88,6 @@ This service has 2 sets, ZJP_SO_NEW and VBAP. VBAP can be called directly or wit
 
 An example response with Read operation testing is shown as below.
 
-![alt text](image-380.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-380.png)
 
 This way, the CDS view can be exposed to OData with one simple annotation.

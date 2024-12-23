@@ -32,18 +32,18 @@ Now, let us look at each URL more closely.
 ### $metadata
 Shows metadata for the service. From the metadata you can understand the structure of the service. Metadata is a large document with information on all the Entity Types, Entity Sets, Associations etc.
 
-![alt text](image-81.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-81.png)
 
-![alt text](image-82.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-82.png)
 
-![alt text](image-83.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-83.png)
 
 ## Entity Set
 Get all records for the entity.
 
 ## /Customers
 
-![alt text](image-84.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-84.png)
 
 Another URL that can be checked is – https://services.odata.org/V2/Northwind/Northwind.svc/Orders/
 
@@ -52,33 +52,33 @@ Another URL that can be checked is – https://services.odata.org/V2/Northwind/N
 
 This gives number of records in entity set.
 
-![alt text](image-85.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-85.png)
 
 ## Single Entity
 ### /Customers('ALFKI')
 
 As this Entity Type has single field as a key, it is not needed to mention the key name.
 
-![alt text](image-86.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-86.png)
 
 ### /Order_Details(OrderID=10248,ProductID=11)
 
 Here, we need to mention the key names and values separated by comma (,) .
 
-![alt text](image-87.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-87.png)
 
 ## Association
 ### /Customers('ALFKI')/Orders
 
 This means get all Orders for Customer entity with key 'ALFKI'. This is one to many association.
 
-![alt text](image-88.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-88.png)
 
 ### /Order_Details(OrderID=10248,ProductID=11)/Product
 
 This is one to one association where Product details for a product from the selected Order_Detail entity are shown.
 
-![alt text](image-89.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-89.png)
 
 Similarly rest of the URLs can be tested.
 
@@ -86,4 +86,4 @@ Similarly rest of the URLs can be tested.
 ### /GetFlightNumbers?CarrierID='AA'
 This is not available in Northwind service. This is an example created to depict how the function import is called. Here, GetFlightNumbers is the name of the Function Import and 'AA' is passed to the parameter CarrierID.
 
-![alt text](image-90.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-90.png)

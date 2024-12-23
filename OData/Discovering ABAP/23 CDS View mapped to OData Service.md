@@ -18,68 +18,68 @@ You will need to create a CDS view for this tutorial. Follow below tutorials
 
 ## Create a CDS View
 
-![alt text](image-355.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-355.png)
 
 ### Create New Project and Map CDS
 1. Create a project in SEGW.
 
-![alt text](image-356.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-356.png)
 
 2. Right-click on Data Model and choose Reference > Data Source
 
-![alt text](image-357.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-357.png)
 
 3. Provide CDS View /CDS Entity Name, Click Next
 
-![alt text](image-358.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-358.png)
 
 4. CDS Entity Exposed is listed, click Finish
 
-![alt text](image-359.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-359.png)
 
 5. Data Source Reference node will show the mapped CDS
 
-![alt text](image-360.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-360.png)
 
 <b>
 Note that there can be only one reference per project.
 </b>
 
-![alt text](image-361.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-361.png)
 
 6. Generate the project
 
-![alt text](image-362.png)
-![alt text](image-363.png)
-![alt text](image-364.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-362.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-363.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-364.png)
 
 7. Register the service
 
-![alt text](image-365.png)
-![alt text](image-366.png)
-![alt text](image-367.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-365.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-366.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-367.png)
 
 ### Testing the Service
 Start Gateway client.
 
-![alt text](image-368.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-368.png)
 
 ```
 HTTP Method : GET
 URI : /sap/opu/odata/SAP/ZJP_CDS_SIMPLE_SRV/ZJP_SO_DATA?$format=json
 ```
 
-![alt text](image-369.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-369.png)
 
 ```
 HTTP Method : GET
 URI : /sap/opu/odata/SAP/ZJP_CDS_SIMPLE_SRV/ZJP_SO_DATA('109')?$format=json
 ```
 
-![alt text](image-370.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-370.png)
 
 The Services Based on CDS View / Entities will only have read capability as CDS by itself does not have a CREATE/UPDATE/DELETE functionality.
 
 If we try to force a create operation, it fails with the below error –
 
-![alt text](image-371.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-371.png)

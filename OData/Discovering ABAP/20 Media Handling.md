@@ -16,28 +16,28 @@ In this post, we will consider Image files for demonstration.
 
 1. Create a table to store image data.
 
-![alt text](image-297.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-297.png)
 
 2. Create a project ZJP_MH_IMAGE
 
-![alt text](image-298.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-298.png)
 
 3. Import the DDIC table ZJP_IMAGE to create an entity
 
-![alt text](image-299.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-299.png)
 
-![alt text](image-300.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-300.png)
 
 4. Check the Media checkbox in the Entity Type settings.
 
 This is an important step as this checkbox tells the OData framework that this Entity Type contains media and it enables special methods from the runtime classes that are used for handling the medial.
 
-![alt text](image-301.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-301.png)
 
 5. Generate the project and Register the service.
 
-![alt text](image-302.png)
-![alt text](image-303.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-302.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-303.png)
 
 # Implement Media Handling Methods
 Once the entity is marked as media, the below methods can be implemented to handle the media part of the entity.
@@ -49,11 +49,11 @@ Once the entity is marked as media, the below methods can be implemented to hand
 
 It is possible to also implement the usual CRUD-Q methods such as those below, but these are not mandatory unless required by the application.
 
-![alt text](image-304.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-304.png)
 
 Let us observe the method signature and how the parameters as used in the code for the method CREATE_STREAM.
 
-![alt text](image-305.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-305.png)
 
 | Parameter |	Information in the parameter |
 | :-: | :-: |
@@ -144,31 +144,31 @@ URI : /sap/opu/odata/SAP/ZJP_MH_IMAGE_SRV/ImageSet
 
 Click on Add File and select any image file you want to test with.
 
-![alt text](image-306.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-306.png)
 
 The File is uploaded and a header with Content-Type is added.
 
-![alt text](image-307.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-307.png)
 
 Click on Add Header button to add one more header.
 
-![alt text](image-308.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-308.png)
 
 Add a header with Name SLUG and Value as the file name.
 
-![alt text](image-309.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-309.png)
 
 The quest should look like the below image. Execute.
 
-![alt text](image-310.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-310.png)
 
 Response
 
-![alt text](image-311.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-311.png)
 
 Table Entry
 
-![alt text](image-312.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-312.png)
 
 ### READ
 The uploaded Image can now be read using the below request. Note the new keyword in URI i.e. $value.
@@ -178,15 +178,15 @@ HTTP Method : GET
 URI: /sap/opu/odata/SAP/ZJP_MH_IMAGE_SRV/ImageSet('DAQR')/$value
 ```
 
-![alt text](image-313.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-313.png)
 
 Response
 
-![alt text](image-314.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-314.png)
 
 Same request from Postman
 
-![alt text](image-315.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-315.png)
 
 ### UPDATE
 ```
@@ -196,7 +196,7 @@ URI: /sap/opu/odata/SAP/ZJP_MH_IMAGE_SRV/ImageSet('DAQR')/$value
 
 In the payload upload a new file, similar to create mode.
 
-![alt text](image-316.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-316.png)
 
 ### DELETE
 
@@ -205,11 +205,11 @@ HTTP Method : DELETE
 URI: /sap/opu/odata/SAP/ZJP_MH_IMAGE_SRV/ImageSet('DAQR')/$value
 ```
 
-![alt text](image-317.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-317.png)
 
 Entry is deleted from the table.
 
-![alt text](image-318.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-318.png)
 
 This method can also be used for files like Excel, DATA, CSV, and scenarios like sending a smartform as PDF through OData service. All you need to do is convert the data in XSTRING format and set a valid document type.
 

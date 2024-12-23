@@ -4,11 +4,11 @@ In this post, you will learn about handling Deep Structures in OData. We need to
 
 The scenario considered is the same as the earlier post which also has the project creation details.
 
-![alt text](image-194.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-194.png)
 
 For creating / updating the data using deep strcuture, method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~CREATE_DEEP_ENTITY needs to be redefined.
 
-![alt text](image-195.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-195.png)
 
 Here is a sample code that can be used to implement Sales Order create a scenario using a BAPI. Here, using the key VBELN for the header entity, it can be checked whether it's a 'create scenario' or an 'update scenario', and accordingly the BAPI can be called. I have only added code with CREATE BAPI and the code for UPDATE BAPI is something that you can write if needed.
 
@@ -118,7 +118,7 @@ To get the details, first execute a GET request with $expand=ToItem. Then, use t
 
 URI : /sap/opu/odata/SAP/ZG00_JP_SO_SRV/SOHeaderSet('109')?$expand=ToItem&$format=json
 
-![alt text](image-196.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-196.png)
 
 Alternatively, below well formatted payload can also be used.
 
@@ -155,18 +155,18 @@ Alternatively, below well formatted payload can also be used.
 
 Execute the request as below.
 
-![alt text](image-197.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-197.png)
 
 As the sales order number is passed, it is interpreted as an Update scenario that is not implemented as per the code, and hence exception is triggered. Note that even though this is an update scenario, the method used here is POST and not PUT.
 
-![alt text](image-198.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-198.png)
 
 Now, remove the sales order number from the payload and execute again.
 
-![alt text](image-199.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-199.png)
 
 The order gets created. The result that you will get would depend on the data and configuration in your system.
 
-![alt text](image-200.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-200.png)
 
-![alt text](image-201.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-201.png)

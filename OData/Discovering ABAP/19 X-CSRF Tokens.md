@@ -18,7 +18,7 @@ HTTP Method : GET
 URI : /sap/opu/odata/SAP/ZJP_ETAG_HASH_SRV/CustomerSet('01')?$format=json
 ```
 
-![alt text](image-291.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-291.png)
 
 When a PUT is executed the X-CSRF token gets automatically added to the Request Header itself.
 
@@ -35,11 +35,11 @@ Payload:
 
 Before the response is executed.
 
-![alt text](image-292.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-292.png)
 
 After the request is executed the X-CSRF token appears in the request header. Note that it appears in the request header, which means the SAP Gateway Client adds it before the request is sent for execution.
 
-![alt text](image-293.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-293.png)
 
 This means that when we are testing in the Gateway client, we do not need to handle the token explicitly.
 
@@ -56,7 +56,7 @@ Payload:
 }
 ```
 
-![alt text](image-294.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-294.png)
 
 The request ends in error with the error code 403 and with the message 'CSRF token validation failed'.
 
@@ -72,7 +72,7 @@ Note that a new header is added as below.
 
 Request Header
 
-![alt text](image-295.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-295.png)
 
 # PUT Request with X-CSRF token
 
@@ -83,6 +83,6 @@ Request Header
 
 # Request Header
 
-![alt text](image-296.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-296.png)
 
 This time the request gets executed successfully. The If-Match is only required if ETag is implemented in the request.

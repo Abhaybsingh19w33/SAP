@@ -10,25 +10,25 @@ ETags can also be managed using a field like a timestamp. This concept is covere
 
 The hash field need not be put in the table but can be simply generated in the READ / GetEntity method. For simplicity and visualization
 
-![alt text](image-257.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-257.png)
 
-![alt text](image-258.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-258.png)
 
 2. Create Project & Entity based on the table
 
-![alt text](image-259.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-259.png)
 
 3. Set up the ETag field for the Entity
 
-![alt text](image-260.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-260.png)
 
 4. Generate the project.
 
-![alt text](image-261.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-261.png)
 
 5. Create a new method to get a hash value for the entity. This can be created in the DPC_EXT class or in a separate utility class
 
-![alt text](image-262.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-262.png)
 
 Code reference
 
@@ -60,7 +60,7 @@ ENDMETHOD.
 
 The hash needs to be calculated in the READ operation.
 
-![alt text](image-263.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-263.png)
 
 ```
 METHOD customerset_get_entity.
@@ -85,7 +85,7 @@ ENDMETHOD.
 
 In case you have the hash field in the table you can update the hash as well.
 
-![alt text](image-264.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-264.png)
 
 ```
 METHOD customerset_update_entity.
@@ -109,7 +109,7 @@ ENDMETHOD.
 Implementing ETAG with a Partial-Entity Hash
 In this method, the only change is in the method that generates the hash. Pass a structure that has only the required fields from the entity type that are required for hash calculation. The same fields should be used in READ / UPDATE etc.
 
-![alt text](image-265.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-265.png)
 
 ## Testing ETag with Hash
 
@@ -120,7 +120,7 @@ Test GET/READ operation
 ```
 Request URI /sap/opu/odata/SAP/ZJP_ETAG_HASH_SRV/CustomerSet('01')?$format=json
 ```
-![alt text](image-266.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-266.png)
 
 Use the ETag and payload from the response to create and execute a PUT request.
 
@@ -137,16 +137,16 @@ Payload:
 
 Add a new header with Name If-Match and Value as the ETag from the response.
 
-![alt text](image-267.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-267.png)
 
 Request
 
-![alt text](image-268.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-268.png)
 
 Response
 
-![alt text](image-269.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-269.png)
 
 The same request when executed again gives an error as the hash no longer matches.
 
-![alt text](image-270.png)
+![alt text](/OData/Discovering%20ABAP/Images/image-270.png)
