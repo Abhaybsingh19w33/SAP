@@ -55,7 +55,7 @@ SAP learnings and projects
     - [New ABAP for HANA features in SAP NW 7.4 SP5](https://community.sap.com/t5/application-development-blog-posts/new-abap-for-hana-features-in-sap-nw-7-4-sp5/ba-p/13067993)
 
 
-## [ABAP Expressions (7.4+)](https://discoveringabap.com/abap-7-4-syntaxes-abap-expressions/)
+
 
 ## New Syntax learnings
 - [ZCS_NEW_SYNTAX3](NewSyntax/ZCS_NEW_SYNTAX3.abap)
@@ -96,100 +96,112 @@ SAP learnings and projects
     - Deep Structure
     - Dereferencing
 
-## [SAP Code Samples](https://discoveringabap.com/sap-code-samples/) Only link
-## [ABAP Editor](https://discoveringabap.com/abap-editor/) Only link
-## [ABAP Debugger](https://discoveringabap.com/abap-debugger/) Only link
-## [SAP Tips & Tricks](https://discoveringabap.com/sap-tips/) [File](SAP%20Tips%20&%20Tricks/_index.md)
-- Send emails with .xlsx Attachment
-- Read Excel File from Presentation Server
-- Write Excel File to Presentation Server
-- Read Excel File from Application Server
-- Write Internal Table as Excel File on SAP Application Server
-- ABAP Code Samples : Send emails with .xlsx Attachment
+## Discovering ABAP Blogs
+-  [ABAP Expressions (7.4+)](https://discoveringabap.com/abap-7-4-syntaxes-abap-expressions/) Not all topics covered in ZCS_NEW_SYNTAX files
+    - [1] : Inline Data Declarations
+    - [2] : Read Internal Tables with New Syntax
+    - [3] : Loop At Groups
+    - [4] : Constructor Operators
+    - [5] : ‘New’ in Class
+    - [6] : Open SQL Enhancements Part 1
+    - [7] : Open SQL Enhancements Part 2
+    - [8] : Open SQL Enhancements Part 3
+    - [9] : FOR LOOP for Internal Tables
+    - [10] : Debugging Complex ABAP Expressions
+    - [11] : Concatenation, ALPHA and ITAB Lines
+    - [12] : ABAP SQL Aggregate Queries and For All Entries
+    - [13] : SQL Window Expression
+    - [14] : SQL Window Expression with Frames
+    - [15] : SQL Window Function (Rank and Value)
+-  [SAP Code Samples](https://discoveringabap.com/sap-code-samples/) Only link
+-  [ABAP Editor](https://discoveringabap.com/abap-editor/) Only link
+-  [ABAP Debugger](https://discoveringabap.com/abap-debugger/) Only link
+-  [SAP Tips & Tricks](https://discoveringabap.com/sap-tips/) [File](SAP%20Tips%20&%20Tricks/_index.md)
+    - Send emails with .xlsx Attachment
+    - Read Excel File from Presentation Server
+    - Write Excel File to Presentation Server
+    - Read Excel File from Application Server
+    - Write Internal Table as Excel File on SAP Application Server
+    - ABAP Code Samples : Send emails with .xlsx Attachment
+- [OO ABAP](https://discoveringabap.com/object-oriented-abap-ooabap/) Only link
+- [OData](https://discoveringabap.com/odata-development-in-sap/) [File](OData/_index.md)
+    - [1] : OData Overview
+    - [2] : Understanding OData Service
+    - [3] : Create OData Service
+    - [4] : Register and Test OData Service
+    - [5] : Working With OData URIs
+    - [6] : Implementing all URIs
+    - [7] : JSON Formatter Extension
+    - [8] : How to find SEGW project from Service Name
+    - [9] : Testing CRUD-Q operations from Gateway Client
+    - [10] : Difference between Put, Merge and Patch
+    - [11] : Trouble-shooting OData services and Debugging
+    - [12] : Handle Deep Structures using $expand
+    - [13] : Create Data using Deep Entity
+    - [14] : Service Generators – Search Help
+    - [15] : Service Generators – RFC/ BOR Interface / BAPI
+    - [16] : Concurrency handling using ETag with time-stamp field
+    - [17] : Concurrency handling using ETag with Entity Hash
+    - [18] : Using POSTMAN for testing OData Services
+    - [19] : X-CSRF Tokens
+    - [20] : Media Handling
+    - [21] : Batch Management ($batch)
+    - [22] : Draft Management
+    - [23] : CDS View mapped to OData Service
+    - [24] : CDS View with OData.Publish
+    - [25] : CDS View BOPF
 
-## [OO ABAP](https://discoveringabap.com/object-oriented-abap-ooabap/) Only link
+- [ABAP on HANA : AMDP](https://discoveringabap.com/exploring-abap-on-hana-amdp/) [File](/ABAP%20on%20HANA%20-%20AMDP/Exploring%20ABAP%20on%20HANA.md) not all topics are covered
+- [SAP ALV with IDA](https://discoveringabap.com/sap-alv-with-ida/) Only link
+- [ABAP on HANA : CDS Views](https://discoveringabap.com/abap-on-hana-cds-views/) [File](/ABAP%20on%20HANA%20-%20CDS%20Views/Exploring%20ABAP%20on%20HANA.md)
+    - Introduction to CDS Views
+    - Joins in CDS Views
+    - CDS View with parameters
+    - Extend a CDS View
+    - Associations in CDS View
+    - Currency/Unit Conversion in CDS Views
+    - Expressions & Operations in CDS Views
+    - CDS Table Function
+    - CDS View Entity
+    - CDS View mapped to OData Service
+    - CDS View with OData.Publish
+    - CDS View BOPF
+    - Virtual Elements in CDS
+    - Union in CDS
 
-## [OData](https://discoveringabap.com/odata-development-in-sap/) [File](OData/_index.md)
-
-- [1] : OData Overview
-- [2] : Understanding OData Service
-- [3] : Create OData Service
-- [4] : Register and Test OData Service
-- [5] : Working With OData URIs
-- [6] : Implementing all URIs
-- [7] : JSON Formatter Extension
-- [8] : How to find SEGW project from Service Name
-- [9] : Testing CRUD-Q operations from Gateway Client
-- [10] : Difference between Put, Merge and Patch
-- [11] : Trouble-shooting OData services and Debugging
-- [12] : Handle Deep Structures using $expand
-- [13] : Create Data using Deep Entity
-- [14] : Service Generators – Search Help
-- [15] : Service Generators – RFC/ BOR Interface / BAPI
-- [16] : Concurrency handling using ETag with time-stamp field
-- [17] : Concurrency handling using ETag with Entity Hash
-- [18] : Using POSTMAN for testing OData Services
-- [19] : X-CSRF Tokens
-- [20] : Media Handling
-- [21] : Batch Management ($batch)
-- [22] : Draft Management
-- [23] : CDS View mapped to OData Service
-- [24] : CDS View with OData.Publish
-- [25] : CDS View BOPF
-
-## [ABAP on HANA : AMDP](https://discoveringabap.com/exploring-abap-on-hana-amdp/) [File](/ABAP%20on%20HANA%20-%20AMDP/Exploring%20ABAP%20on%20HANA.md) not all topics are covered
-## [SAP ALV with IDA](https://discoveringabap.com/sap-alv-with-ida/) Only link
-## [ABAP on HANA : CDS Views](https://discoveringabap.com/abap-on-hana-cds-views/) [File](/ABAP%20on%20HANA%20-%20CDS%20Views/Exploring%20ABAP%20on%20HANA.md)
-
-- Introduction to CDS Views
-- Joins in CDS Views
-- CDS View with parameters
-- Extend a CDS View
-- Associations in CDS View
-- Currency/Unit Conversion in CDS Views
-- Expressions & Operations in CDS Views
-- CDS Table Function
-- CDS View Entity
-- CDS View mapped to OData Service
-- CDS View with OData.Publish
-- CDS View BOPF
-- Virtual Elements in CDS
-- Union in CDS
-
-## [SAPUI5/Fiori](https://discoveringabap.com/sap-ui5-fiori-development/) All the topics are covered in RAP model
-## [RAP Model - ABAP RESTful Application Programming](https://discoveringabap.com/abap-rap-model/) [File](/RAP%20Model/)
-
-- Introduction
-- Managed Scenario
-- Create Fiori Element App from RAP Service – Managed Scenario
-- Unmanaged Scenario Part 1
-- Unmanaged Scenario Part 2
-- Unmanaged Scenario Part 3
-- Create Fiori Element App from RAP Service – Unmanaged Scenario
-- RAP Generator Wizard
-- Travel Service – Use demo generator to create a Travel Service
-- Travel Service – Generated Objects
-- Travel Service – Annotations for List Page
-- Travel Service – Annotations for Object Page
-- Travel Service – Annotations for adding associated entity table
-- Travel Service – Understanding CDS Entities
-- Travel Service – Behavior Definition
-- Travel Service – Miscellaneous Improvements
-- Managed with unmanaged save
-- Custom Entity
-- Application with Editable List Report
-- Field Validations & Prechecks
-- Adding fields to existing custom service
-- Determinations and Side Effects
-- Actions and Feature Control
-- External Numbering and Managed Early Numbering
-- Unmanaged Early Numbering
-- Unmanaged Late Numbering
-- Concurrency Control
-- Authorization Control
-- Determine Actions
-- Behavior Implementation Class
-- Naming Conventions for Development Objects
+- [SAPUI5/Fiori](https://discoveringabap.com/sap-ui5-fiori-development/) All the topics are covered in RAP model
+- [RAP Model - ABAP RESTful Application Programming](https://discoveringabap.com/abap-rap-model/) [File](/RAP%20Model/)
+    - Introduction
+    - Managed Scenario
+    - Create Fiori Element App from RAP Service – Managed Scenario
+    - Unmanaged Scenario Part 1
+    - Unmanaged Scenario Part 2
+    - Unmanaged Scenario Part 3
+    - Create Fiori Element App from RAP Service – Unmanaged Scenario
+    - RAP Generator Wizard
+    - Travel Service – Use demo generator to create a Travel Service
+    - Travel Service – Generated Objects
+    - Travel Service – Annotations for List Page
+    - Travel Service – Annotations for Object Page
+    - Travel Service – Annotations for adding associated entity table
+    - Travel Service – Understanding CDS Entities
+    - Travel Service – Behavior Definition
+    - Travel Service – Miscellaneous Improvements
+    - Managed with unmanaged save
+    - Custom Entity
+    - Application with Editable List Report
+    - Field Validations & Prechecks
+    - Adding fields to existing custom service
+    - Determinations and Side Effects
+    - Actions and Feature Control
+    - External Numbering and Managed Early Numbering
+    - Unmanaged Early Numbering
+    - Unmanaged Late Numbering
+    - Concurrency Control
+    - Authorization Control
+    - Determine Actions
+    - Behavior Implementation Class
+    - Naming Conventions for Development Objects
 
 # Udemy
 ## Sales & Distibution Module
