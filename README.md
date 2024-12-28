@@ -200,72 +200,64 @@ SAP learnings and projects
     - Behavior Implementation Class
     - Naming Conventions for Development Objects
 
-## # [Just2Share](https://www.youtube.com/@just2shareji/playlists)
+## [Just2Share](https://www.youtube.com/@just2shareji/playlists)
 
-## [ABAP CDS Views Playlist](https://www.youtube.com/watch?v=_846kzfcANc&list=PLmajIBPiks13oUjO95ojKJSjoqZUeRIdd)
-- Video:1 ABAP CDS Views Introduction
-- Video 2 HANA Studio Intro, Simple CDS Views, Access in SE38 & SE11
-- Video 3 CDS with I/P, CDS in SE38, Call CDS from another CDS, CDS to ALV
-- Video 4 About Versions and Explore Standard CDS Views
-- Video 5 Session Variable & Simple Data Manipulation in CDS Views
-- Video 6 CDS Views Joins (Inner, left outer and right outer)
-- Video 7 CDS View Association Part 1
-- Video 8 CDS View Association Part 2
-- Video 9 CDS View Table Function Part 1
-- Video 10 CDS View Table Function Part 2
-- Video 11 CDS View Table Function Part 3
-- Video 12 CDS View VDM Type and Data Category
-- Video 13 CDS View - AMDP Procedure Part 1
-- Video 14 CDS View AMDP Procedure Part 2 (Import multiple records, select-options and ranges).
-- Video 15 CDS View - AMDP CURD Operations
-- Video 16 CDS View - Extend View, Casting & Performance Measure
-- Video 17 CDS View consumption in OData Service
-- Video 20: CDS View Cardinality in association process
-- Video 21: CDS View with sorting process
-- Video 25: CDS View Virtual Elements
-- Video 26: CDS View Invalid Key Predicate Issue
-- Video 27: CDS View Date Functionalities
-- Video 28: CDS Views AMDP Exceptions
-- Video 29: CDS Views AMDP with Sub Query
-- Video 30: CDS View How to call a method from AMDP procedure?
-- Video 31: CDS View Migration to View Entities Part 1
-- Video 32: CDS View Unit and Currency Conversion
-- Video 33: CDS View SQL Aggregation functions
-- Video 34: CDS View AMDP Procedure - Exit handler
-- Video 35: CDS View Ranking Functions
-- Video 35: CDS View $parameters options
+- [ABAP CDS Views Playlist](https://www.youtube.com/watch?v=_846kzfcANc&list=PLmajIBPiks13oUjO95ojKJSjoqZUeRIdd) [File](/CDS/_index.md)
+    - Video:1 ABAP CDS Views Introduction
+    - Video 2 HANA Studio Intro, Simple CDS Views, Access in SE38 & SE11
+    - Video 3 CDS with I/P, CDS in SE38, Call CDS from another CDS, CDS to ALV
+    - Video 4 About Versions and Explore Standard CDS Views
+    - Video 5 Session Variable & Simple Data Manipulation in CDS Views
+    - Video 6 CDS Views Joins (Inner, left outer and right outer)
+    - Video 7 CDS View Association Part 1
+    - Video 8 CDS View Association Part 2
+    - Video 9 CDS View Table Function Part 1
+    - Video 10 CDS View Table Function Part 2
+    - Video 11 CDS View Table Function Part 3
+    - Video 12 CDS View VDM Type and Data Category
+    - Video 13 CDS View - AMDP Procedure Part 1
+    - Video 14 CDS View AMDP Procedure Part 2 (Import multiple records, select-options and ranges).
+    - Video 15 CDS View - AMDP CURD Operations
+    - Video 16 CDS View - Extend View, Casting & Performance Measure
+    - Video 17 CDS View consumption in OData Service
+    - Video 20: CDS View Cardinality in association process
+    - Video 21: CDS View with sorting process
+    - Video 25: CDS View Virtual Elements
+    - Video 26: CDS View Invalid Key Predicate Issue
+    - Video 27: CDS View Date Functionalities
+    - Video 28: CDS Views AMDP Exceptions
+    - Video 29: CDS Views AMDP with Sub Query
+    - Video 30: CDS View How to call a method from AMDP procedure?
+    - Video 31: CDS View Migration to View Entities Part 1
+    - Video 32: CDS View Unit and Currency Conversion
+    - Video 33: CDS View SQL Aggregation functions
+    - Video 34: CDS View AMDP Procedure - Exit handler
+    - Video 35: CDS View Ranking Functions
+    - Video 35: CDS View $parameters options
 
-# Udemy
-## Sales & Distibution Module
-[SAP SD Training - in Plain English](https://www.udemy.com/course/sap-sd-training/) [File](/Udemy/Sales%20&%20Distribution/00.%20Notes.md)
+## Udemy
+### Sales & Distibution Module
+- [SAP SD Training - in Plain English](https://www.udemy.com/course/sap-sd-training/) [File](/Udemy/Sales%20&%20Distribution/00.%20Notes.md)
 
-## ABAP
-[Learn SAP ABAP by Doing](https://www.udemy.com/course/learn-sap-abap-by-doing) [File](/Udemy/Learn%20SAP%20ABAP%20by%20Doing/)
+### ABAP
+- [Learn SAP ABAP by Doing](https://www.udemy.com/course/learn-sap-abap-by-doing) [File](/Udemy/Learn%20SAP%20ABAP%20by%20Doing/)
+- [Learn SAP ABAP Objects - Online Training Course](https://www.udemy.com/course/abap-objects) [File](/Udemy/Learn%20SAP%20ABAP%20Objects%20-%20Online%20Training%20Course/)
+- [SAP ABAP New Language Features - Learn ABAP 7.4 & 7.5 syntax](https://www.udemy.com/course/sap-abap-new-language-features) [File](/Udemy/SAP%20ABAP%20New%20Language%20Features%20-%20Learn%20ABAP%207.4%20&%207.5%20syntax/)
+- [SAP ABAP Programming For Beginners - Online Training](https://www.udemy.com/course/sap-abap-programming-for-beginners) [File](/Udemy/SAP%20ABAP%20Programming%20For%20Beginners%20-%20Online%20Training/)
+- [SAP OOPS ABAP ( With complete MaterialDocumentation )](https://www.udemy.com/course/sapoopsabap) [File](/Udemy/SAP%20OOPS%20ABAP%20(%20With%20complete%20MaterialDocumentation%20)/)
 
-[Learn SAP ABAP Objects - Online Training Course](https://www.udemy.com/course/abap-objects) [File](/Udemy/Learn%20SAP%20ABAP%20Objects%20-%20Online%20Training%20Course/)
+### ABAP Enhancement & Modification
+- [SAP ABAP  Enhancement & Modification to SAP Standard](https://www.udemy.com/course/sap-abap-enhancement-modification) [File](/Udemy/SAP%20ABAP%20%20Enhancement%20&%20Modification%20to%20SAP%20Standard/)
 
-[SAP ABAP New Language Features - Learn ABAP 7.4 & 7.5 syntax](https://www.udemy.com/course/sap-abap-new-language-features) [File](/Udemy/SAP%20ABAP%20New%20Language%20Features%20-%20Learn%20ABAP%207.4%20&%207.5%20syntax/)
+### ABAP on HANA
+- [SAP ABAP on HANA Training for Beginners](https://www.udemy.com/course/abap-for-hana/learn/lecture/37431220#overview) [File](/Udemy/SAP%20ABAP%20on%20HANA%20Training%20for%20Beginners/)
+- [SAP ABAP Core Data Services for S4 HANA](https://www.udemy.com/course/sap-abap-core-data-services) [File](/Udemy/SAP%20ABAP%20Core%20Data%20Services%20for%20S4%20HANA/)
+- [SAP S4HANA - Learn ABAP Programming model for SAP S4 HANA](https://www.udemy.com/course/abap-development-in-s4hana) [File](/Udemy/SAP%20S4HANA%20-%20Learn%20ABAP%20Programming%20model%20for%20SAP%20S4%20HANA/)
+- [SAP S4HANA Training - in Plain English](https://www.udemy.com/course/sap-s4hana-training) [File](/Udemy/SAP%20S4HANA%20Training%20-%20in%20Plain%20English/)
 
-[SAP ABAP Programming For Beginners - Online Training](https://www.udemy.com/course/sap-abap-programming-for-beginners) [File](/Udemy/SAP%20ABAP%20Programming%20For%20Beginners%20-%20Online%20Training/)
-
-[SAP OOPS ABAP ( With complete MaterialDocumentation )](https://www.udemy.com/course/sapoopsabap) [File](/Udemy/SAP%20OOPS%20ABAP%20(%20With%20complete%20MaterialDocumentation%20)/)
-
-## ABAP Enhancement & Modification
-[SAP ABAP  Enhancement & Modification to SAP Standard](https://www.udemy.com/course/sap-abap-enhancement-modification) [File](/Udemy/SAP%20ABAP%20%20Enhancement%20&%20Modification%20to%20SAP%20Standard/)
-
-## ABAP on HANA
-[SAP ABAP on HANA Training for Beginners](https://www.udemy.com/course/abap-for-hana/learn/lecture/37431220#overview) [File](/Udemy/SAP%20ABAP%20on%20HANA%20Training%20for%20Beginners/)
-
-[SAP ABAP Core Data Services for S4 HANA](https://www.udemy.com/course/sap-abap-core-data-services) [File](/Udemy/SAP%20ABAP%20Core%20Data%20Services%20for%20S4%20HANA/)
-
-[SAP S4HANA - Learn ABAP Programming model for SAP S4 HANA](https://www.udemy.com/course/abap-development-in-s4hana) [File](/Udemy/SAP%20S4HANA%20-%20Learn%20ABAP%20Programming%20model%20for%20SAP%20S4%20HANA/)
-
-[SAP S4HANA Training - in Plain English](https://www.udemy.com/course/sap-s4hana-training) [File](/Udemy/SAP%20S4HANA%20Training%20-%20in%20Plain%20English/)
-
-## UI5 & Fiori
-[SAP FIORI - Configuring Fiori Environment and Security](https://www.udemy.com/course/sap-fiori-setup-and-security) [File](/Udemy/SAP%20FIORI%20-%20Configuring%20Fiori%20Environment%20and%20Security/)
-
-[SAPUI5( UI5 / FIORI ), ABAP RAP/ ABAP Cloud & Fiori Elements](https://www.udemy.com/course/professional-sapui5-web-application-development-part-1/learn/lecture/43584054#overview) [File](/Udemy/SAPUI5(%20UI5%20%20FIORI%20),%20ABAP%20RAP%20ABAP%20Cloud%20&%20Fiori%20Elements/)
+### UI5 & Fiori
+- [SAP FIORI - Configuring Fiori Environment and Security](https://www.udemy.com/course/sap-fiori-setup-and-security) [File](/Udemy/SAP%20FIORI%20-%20Configuring%20Fiori%20Environment%20and%20Security/)
+- [SAPUI5( UI5 / FIORI ), ABAP RAP/ ABAP Cloud & Fiori Elements](https://www.udemy.com/course/professional-sapui5-web-application-development-part-1/learn/lecture/43584054#overview) [File](/Udemy/SAPUI5(%20UI5%20%20FIORI%20),%20ABAP%20RAP%20ABAP%20Cloud%20&%20Fiori%20Elements/)
 ```
 Install node js
     Confirm installation is successful in CMD:- node -v or npm -v
@@ -277,14 +269,14 @@ Confirm installation with command :- fiori --help
 Install VSCode
 ```
 
-[SAP UI5 / Fiori - Full Course - FreeCodeCamp](https://www.youtube.com/watch?v=C9cK2Z2JDLg&ab_channel=freeCodeCamp.org)
-- [Github](https://github.com/brandoncaulfield/sap-ui5-walkthrough/commits/main/)
-- [SAP official web site](https://sapui5.hana.ondemand.com/1.120.20/#/topic/2680aa9b16c14a00b01261d04babbb39)
-- [Installing the UI5 CLI](https://sap.github.io/ui5-tooling/stable/pages/GettingStarted/)
-    - His other ui5 videos
-        - [video](https://www.youtube.com/watch?v=zaeztGyqiBw&ab_channel=CodeWithBrandon)
-        - [github](https://github.com/brandoncaulfield/sap-ui5-data-binding/commits/master)
-        - [SAP website](https://sapui5.hana.ondemand.com/#/topic/e5310932a71f42daa41f3a6143efca9c)       
+- [SAP UI5 / Fiori - Full Course - FreeCodeCamp](https://www.youtube.com/watch?v=C9cK2Z2JDLg&ab_channel=freeCodeCamp.org)
+    - [Github](https://github.com/brandoncaulfield/sap-ui5-walkthrough/commits/main/)
+    - [SAP official web site](https://sapui5.hana.ondemand.com/1.120.20/#/topic/2680aa9b16c14a00b01261d04babbb39)
+    - [Installing the UI5 CLI](https://sap.github.io/ui5-tooling/stable/pages/GettingStarted/)
+        - His other ui5 videos
+            - [video](https://www.youtube.com/watch?v=zaeztGyqiBw&ab_channel=CodeWithBrandon)
+            - [github](https://github.com/brandoncaulfield/sap-ui5-data-binding/commits/master)
+            - [SAP website](https://sapui5.hana.ondemand.com/#/topic/e5310932a71f42daa41f3a6143efca9c)       
 
 ### Order Executes an SAPUI5 Application
 - https://inui.io/sapui5-application-execution-order/
@@ -313,7 +305,7 @@ Below is the order in which SAPUI5 applications execute. The application files o
 - Evaluate view’s bindings
 - Retrieve model data
 
-# Youtube Channels 
+## Youtube Channels 
 
 - [Pankaj Kumar - SAP Tech Trainer](https://www.youtube.com/@pankajkumaram/playlists)
 - [Anubhav Trainings (official channel)](https://www.youtube.com/@AnubhavOberoy/playlists)
@@ -323,7 +315,7 @@ Below is the order in which SAPUI5 applications execute. The application files o
 - [Rana W Mehmood](https://www.youtube.com/@ranawmehmoodsap/featured)
 - [Just2Share - S/4HANA RAP](https://www.youtube.com/watch?v=f7OtqJvQwtc&list=PLmajIBPiks12McDPQhs4Q8VEHbKNhanxm&ab_channel=Just2Share)
 
-# To Do
+## To Do
 
 - [Python](https://degreed.com/pathway/3pmvev2qpn/pathway)
 - [NodeJS](https://degreed.com/pathway/w9dwkwzkpj/pathway)
