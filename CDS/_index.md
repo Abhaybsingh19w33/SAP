@@ -1,6 +1,22 @@
 # Index
 
-## # [Just2Share](https://www.youtube.com/@just2shareji/playlists)
+## [ABAP on HANA : CDS Views](https://discoveringabap.com/abap-on-hana-cds-views/)
+- Introduction to CDS Views
+- Joins in CDS Views
+- CDS View with parameters
+- Extend a CDS View
+- Associations in CDS View
+- Currency/Unit Conversion in CDS Views
+- Expressions & Operations in CDS Views
+- CDS Table Function
+- CDS View Entity
+- CDS View mapped to OData Service
+- CDS View with OData.Publish
+- CDS View BOPF
+- Virtual Elements in CDS
+- Union in CDS
+
+## [Just2Share](https://www.youtube.com/@just2shareji/playlists)
 - Video:1 ABAP CDS Views Introduction
 - Video 2 HANA Studio Intro, Simple CDS Views, Access in SE38 & SE11
 - Video 3 CDS with I/P, CDS in SE38, Call CDS from another CDS, CDS to ALV

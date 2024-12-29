@@ -150,7 +150,7 @@ SAP learnings and projects
 
 - [ABAP on HANA : AMDP](https://discoveringabap.com/exploring-abap-on-hana-amdp/) [File](/ABAP%20on%20HANA%20-%20AMDP/Exploring%20ABAP%20on%20HANA.md) not all topics are covered
 - [SAP ALV with IDA](https://discoveringabap.com/sap-alv-with-ida/) Only link
-- [ABAP on HANA : CDS Views](https://discoveringabap.com/abap-on-hana-cds-views/) [File](/ABAP%20on%20HANA%20-%20CDS%20Views/Exploring%20ABAP%20on%20HANA.md)
+- [ABAP on HANA : CDS Views](https://discoveringabap.com/abap-on-hana-cds-views/) [File](/CDS/Discovering%20ABAP/ABAP%20on%20HANA%20-%20CDS%20Views/Exploring%20ABAP%20on%20HANA.md)
     - Introduction to CDS Views
     - Joins in CDS Views
     - CDS View with parameters
