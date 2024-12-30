@@ -235,6 +235,27 @@ SAP learnings and projects
     - Video 35: CDS View Ranking Functions
     - Video 35: CDS View $parameters options
 
+- [Just2Share OData Service](https://www.youtube.com/playlist?list=PLmajIBPiks11NU41T8G149D5hf-o1oBqs)
+    - Video 1: OData Service Introduction
+    - Video 2: OData Service Model, Entity and MPC & DPC Class
+    - Video 3: OData Service Filter and Multiple Entity Sets
+    - Video 4: OData Service Association & Navigation
+    - Video 5: OData Service CURD Operations & HTTP method
+    - Video 6: OData Service Deep Entity Set Part 1
+    - Video 7 OData Service - Deep Entity Set Part 2
+    - Video 8: OData Service Deep Entity Set Part 3
+    - Video 9 OData Service - Function Import
+    - Video 11 OData Service - Consumed in Excel - not completed
+    - Video 12 OData Service - Gateway Server Config. to get OData Service from different source system.
+    - Video 13: OData ETag Functionality Part 1
+    - Video 14: OData Multilevel Deep Entity Set (GET) Method
+    - Video 15: OData Dynamic Where Condition, Sort and Filter Process
+    - Video 16: OData Service Batch Process (GET) Part 1
+    - Video 17: OData Service Batch Process Part2
+    - Video 18: OData Service Media Handling
+    - Video 19: OData Service Exception handling
+    - Video 20: OData Service UI File to DMS Server
+
 ## Udemy
 ### Sales & Distibution Module
 - [SAP SD Training - in Plain English](https://www.udemy.com/course/sap-sd-training/) [File](/Udemy/Sales%20&%20Distribution/00.%20Notes.md)
@@ -326,7 +347,7 @@ Below is the order in which SAPUI5 applications execute. The application files o
 ## Tools
 
 ```
-ReGex to select between ()
+RegEx to select between ()
 
 \((#.*?)\)
 ```

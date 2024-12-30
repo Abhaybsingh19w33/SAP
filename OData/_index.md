@@ -25,3 +25,24 @@
     - [23 CDS View mapped to OData Service](/OData/Discovering%20ABAP/23%20CDS%20View%20mapped%20to%20OData%20Service.md)
     - [24 CDS View with OData.Publish](/OData/Discovering%20ABAP/24%20CDS%20View%20with%20OData.Publish.md)
     - [25 CDS View BOPF](/OData/Discovering%20ABAP/25%20CDS%20View%20BOPF.md)
+
+- [Just2Share](/OData/Just2Share/OData%20Notes.md)
+    - Video 1: OData Service Introduction
+    - Video 2: OData Service Model, Entity and MPC & DPC Class
+    - Video 3: OData Service Filter and Multiple Entity Sets
+    - Video 4: OData Service Association & Navigation
+    - Video 5: OData Service CURD Operations & HTTP method
+    - Video 6: OData Service Deep Entity Set Part 1
+    - Video 7 OData Service - Deep Entity Set Part 2
+    - Video 8: OData Service Deep Entity Set Part 3
+    - Video 9 OData Service - Function Import
+    - Video 11 OData Service - Consumed in Excel - not completed
+    - Video 12 OData Service - Gateway Server Config. to get OData Service from different source system.
+    - Video 13: OData ETag Functionality Part 1
+    - Video 14: OData Multilevel Deep Entity Set (GET) Method
+    - Video 15: OData Dynamic Where Condition, Sort and Filter Process
+    - Video 16: OData Service Batch Process (GET) Part 1
+    - Video 17: OData Service Batch Process Part2
+    - Video 18: OData Service Media Handling
+    - Video 19: OData Service Exception handling
+    - Video 20: OData Service UI File to DMS Server

@@ -1,5 +1,48 @@
 # [Just2Share](https://www.youtube.com/watch?v=KrEVuuuiXfI&list=PLmajIBPiks11NU41T8G149D5hf-o1oBqs&ab_channel=Just2Share)
 
+<!-- index-start -->
+## Index
+
+- [Video 1: OData Service Introduction
+](#video-1-odata-service---introduction)
+- [Video 2: OData Service Model, Entity and MPC & DPC Class
+](#video-2-odata-service---model-entity-and-mpc--dpc-class)
+- [Video 3: OData Service Filter and Multiple Entity Sets
+](#video-3-odata-service---filter-and-multiple-entity-sets)
+- [Video 4: OData Service Association & Navigation
+](#video-4-odata-service---association--navigation)
+- [Video 5: OData Service CURD Operations & HTTP method
+](#video-5-odata-service---curd-operations--http-method)
+- [Video 6: OData Service Deep Entity Set Part 1
+](#video-6-odata-service---deep-entity-set-part-1)
+- [Video 7 OData Service - Deep Entity Set Part 2
+](#video-7---odata-service---deep-entity-set-part-2)
+- [Video 8: OData Service Deep Entity Set Part 3
+](#video-8-odata-service---deep-entity-set-part-3)
+- [Video 9 OData Service - Function Import
+](#video-9---odata-service---function-import)
+- [Video 11 OData Service - Consumed in Excel - not completed
+](#video-11---odata-service---consumed-in-excel---not-completed)
+- [Video 12 OData Service - Gateway Server Config. to get OData Service from different source system.
+](#video-12---odata-service---gateway-server-config-to-get-odata-service-from-different-source-system)
+- [Video 13: OData ETag Functionality Part 1
+](#video-13-odata---etag-functionality-part-1)
+- [Video 14: OData Multilevel Deep Entity Set (GET) Method
+](#video-14-odata---multilevel-deep-entity-set-get-method)
+- [Video 15: OData Dynamic Where Condition, Sort and Filter Process
+](#video-15-odata---dynamic-where-condition-sort-and-filter-process)
+- [Video 16: OData Service Batch Process (GET) Part 1
+](#video-16-odata-service---batch-process-get-part-1)
+- [Video 17: OData Service Batch Process Part2
+](#video-17-odata-service---batch-process-part2)
+- [Video 18: OData Service Media Handling
+](#video-18-odata-service---media-handling)
+- [Video 19: OData Service Exception handling
+](#video-19-odata-service---exception-handling)
+- [Video 20: OData Service UI File to DMS Server
+](#video-20-odata-service---ui-file-to-dms-server)
+<!-- index-end -->
+
 ## Video 1: OData Service - Introduction
 
 ![alt text](image.png)
@@ -273,3 +316,73 @@ iv_filter_string - dynamic where condition
 
 ## Video 16: OData Service - Batch Process (GET) Part 1
 
+![alt text](image-150.png)
+![alt text](image-151.png)
+![alt text](image-152.png)
+![alt text](image-153.png)
+![alt text](image-154.png)
+![alt text](image-155.png)
+
+![alt text](image-156.png)
+
+## Video 17: OData Service - Batch Process Part2
+![alt text](image-157.png)
+give separate changeset for post, put, delete. not needed for get
+
+![alt text](image-158.png)
+![alt text](image-159.png)
+![alt text](image-161.png)
+![alt text](image-160.png)
+
+## Video 18: OData Service - Media Handling
+
+![alt text](image-162.png)
+![alt text](image-163.png)
+![alt text](image-164.png)
+
+![alt text](image-165.png)
+![alt text](image-166.png)
+mark media for entity type
+
+![alt text](image-167.png)
+![alt text](image-168.png)
+![alt text](image-169.png)
+we will receive image file name in iv_slug parameter
+
+![alt text](image-170.png)
+![alt text](image-171.png)
+![alt text](image-172.png)
+Here we have not implemented the get_entity_set method, but we can get the imae with the /$value url
+
+![alt text](image-173.png)
+
+## Video 19: OData Service - Exception handling
+
+![alt text](image-174.png)
+![alt text](image-175.png)
+![alt text](image-176.png)
+![alt text](image-177.png)
+![alt text](image-178.png)
+
+![alt text](image-179.png)
+![alt text](image-180.png)
+![alt text](image-181.png)
+![alt text](image-182.png)
+![alt text](image-183.png)
+
+![alt text](image-184.png)
+Multiple message returned from method
+
+![alt text](image-185.png)
+message text only
+
+![alt text](image-186.png)
+exception raised
+![alt text](image-187.png)
+
+![alt text](image-188.png)
+![alt text](image-189.png)
+
+## Video 20: OData Service - UI File to DMS Server
+
+![alt text](image-190.png)
