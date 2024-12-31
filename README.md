@@ -17,6 +17,7 @@ SAP learnings and projects
 [SAP BTP Onboarding Resource Center](https://support.sap.com/en/product/onboarding-resource-center/business-technology-platform.html)
 
 ## Resources
+- [SAPAPPLICATION.COM](https://www.sapapplication.com/sap-abap-controlbreak.php)
 - Discovering ABAP Blogs
     - [SAP ABAP Training](https://discoveringabap.com/sap-abap-training/)
     - [SAP ABAP, SAP ABAP Training - Important Learning Resources for SAP Developers](https://discoveringabap.com/2023/06/24/important-learning-resources-for-sap-developers/)
