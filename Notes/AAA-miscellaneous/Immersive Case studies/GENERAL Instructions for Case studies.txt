@@ -18,8 +18,7 @@ Z4607899Sprint
 7) Use Pretty printer. Key words UpperCase/All report upper case
 8) Check SY-SUBRC after relevent statements e.g (Read/select/insert/update/delete)
 9) Make the program modular.
-10) Give appropriate field headings Not VBELN/FKART which are DB field headings)
-in all reports(Classical/Interactive/ ALV / Smart form/ Adobe Form)
+10) Give appropriate field headings Not VBELN/FKART which are DB field headings in all reports(Classical/Interactive/ ALV / Smart form/ Adobe Form)
 11) Give names to Parameters/Select Options. Eg Parameter Labels
 13) Ensure that best practices are followed
 12) Always ensure that program is indented.
