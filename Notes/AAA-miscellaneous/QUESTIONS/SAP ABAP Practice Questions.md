@@ -463,6 +463,10 @@ Reusability	-> Limited to specific tables/structures. -> Append structures are u
 65. A transparent table in the dictionary has a one-to-one relationship with a table in the database.
 66. The data class determines the table space that the table is assigned to.
 67. An index can be used to up the selection of data records from a table.
+68.	Structure : It is a Data type used to define a structured data object like Work area. 
+69.	Table Type: It is a Data type used to define a Internal data object.
+70. The primary index contains the key fields of the table and a pointer to the non-key fields of the table. The system creates the primary index automatically when the table is created in the database.
+71. A secondary index is a data structure that contains a subset of attributes from a table, along with an alternate key to support Query operations.
 
 ## Internal Table
 
@@ -757,7 +761,6 @@ table.
 2. Parameter names that appear on the form statement are called formal parameters.
 
 ## Module Pool Programming
-
 
 1. What does screen-active = 0 imply?
     - The screen field is inactive, meaning it will not be displayed.
@@ -1136,6 +1139,18 @@ table.
     - Validate integration points and workflows.
     - Verify data accuracy and completeness.
 
+20. LY_FILTER( ) function can be used on internal table or DB tables to get all the items that match the filter condition.
+
+21. AMDPs allow you as an ABAP developer to write database procedures directly in ABAP.
+
+22. ADBC can always be used when access to a database using the Native SQL interface instead of the ABAP SQL interface is necessary.
+
+23. ALV with IDA (SAP List Viewer with Integrated Data Access) helps tables that contain very large quantities of data to be displayed on the UI. 
+
+24. An SAP HANA system is composed of three main components: the host, the system, and the instance.
+    - A host is the operating environment in which the SAP HANA database runs. The host provides all the resources and services (CPU, memory, network, and operating system) that the SAP HANA database requires.
+    - Unlike any other databases which use to store data on the hard drive, SAP HANA stores it in-memory. That means when you need the data; the system can access it directly from the in-memory storage rather than calling it up from the hard drive.
+
 ## File Handling
 
 1. If the dataset is opened in write mode and the If the file already exists, its existing content is deleted. True
@@ -1156,6 +1171,11 @@ table.
 
 1. Interfaces is used to transfer application data to the form definition.
 2. Text modules are included in forms using text nodes.
+3. You use Smart Forms to create and maintain forms for mass printing in SAP systems. Besides using the printer for standard output, you can also select the Internet (by using a generated HTML output), a fax, or e-mail as the output medium.
+4. SAP Smart Forms tool can be used to print and send documents. This tool is useful in developing forms, PDF files, e-mails and documents for the Internet. The tool provides an interface to build and maintain the layout and logic of a form.
+    - Forms are for data entry - one record at a time. Reports are for output - all relevant records.
+    - A report is a presentation of data in an organized structure.
+    - A calculation view is a flexible information view that you can use to define more advanced slices on the data available in the SAP HANA database. Calculation views are simple and yet powerful because they mirror the functionality found in both attribute views and analytic views, and also other analytic capabilities.
 
 ## AdobeForms
 
@@ -1164,3 +1184,74 @@ table.
 
 2. ______ help to rearrange several objects at a different place in the form.
     - The correct answer is Subforms (Subforms in SAP Adobe Forms are used to group and rearrange objects and provide better control over layout and alignment.)
+
+3. Adobe Forms reads the associated master and transaction data from the SAP system. The application then displays the data in the desired and predefined form, for example, as a print form. It is also possible to enter data in forms. SAP Interactive Forms by Adobe is the successor to SAPscript and SmartForms.
+
+4. Why PDF Forms?
+    1. It's an open standard
+    2. An Ideal document format
+    3. It provides security options like
+        - Digital signature validation
+        - Disable save option
+        - Disable select option
+        - Disable print option.
+
+5. Benefits Adobe Provides for SAP -
+    1. Use of PDF format ensures that the appearance of the form remains same, irrespective of the environment it is being used in.
+    2. It helps in optimization of business process by automating the creation of data for SAP systems. Thus, saving time and costs (in case of interactive forms).
+    3. Integrate business processes with more users.
+    4. Overcome limitations of paper-based forms like -manual data entry, error prone and easily outdated, traceability, high costs in production and storage.
+
+    - A form interface that sends the application data to the form. 
+    - Context - mapping parameters from interface. A form context that contains the form logic. This logic controls the dynamic formatting of the form. In the context (also known as the form context), you specify which data is copied from the interface to the form.
+
+## CDS
+
+1. CDS views exist in 2 flavours, namely, ABAP CDS views and HANA CDS views.
+
+2. A CDS view serves to define the structure of an SQL view and represents a projection onto one or several Dictionary tables or Dictionary views
+
+3. The data of an application is distributed across several database tables. Using ABAP CDS views, you can rearrange the table fields according to application-specific needs from the ABAP source code of your implementation.
+
+4. CDS views can be created to read and process data at DB layer. Whereas AMDP can be created to process and modify data at DB layer.
+
+## Matchcode
+
+1.	A match code is a means of finding data records stored in the system.
+
+## Syntax
+
+1. Move corresponding
+    - If there are components with the same name, the target table itab2 is deleted without the addition KEEPING TARGET LINES and the same number of initial rows are inserted as exist in the source table itab1. The rows of the source table are then extracted sequentially (in the same order as in the statement LOOP) and the content of each row is assigned to the corresponding row in the target table in accordance with the rules for MOVE-CORRESPONDING [EXACT] for structures. Finally, the table keys and associated table indexes are updated (if necessary) in the target table in accordance with the rules insertions in internal tables. The relevant exceptions are raised if uniqueness is violated.
+    - If there are no components with the same name, no assignment is made and the target table is left unchanged.
+
+2. KEEPING TARGET LINES
+    - This addition stops the target table itab2 from being deleted. Instead, it appends the same number of initial rows as exist in the source table itab1. 
+
+3. SY-SUBRC
+    - it is a return code, set by the following ABAP statements. As a rule, if SY-SUBRC = 0, the statement was executed successfully. ASSIGN sets SY-SUBRC to 0 if the field symbol assignment was possible, otherwise to 4.
+    
+4. AT NEW    
+    - Within the Loop command, AT NEW statement detects when the VBAP structure has a different VBELN (document number) then the previous one.
+    - When a new VBELN Sales Order number is detected in the loop, the order number is printed. And a bracket is opened for the item positions of that sales order.
+    - LOOP AT END statement also detects the different vbeln number and enables ABAP developers to do work with the previous structure in the loop.
+
+5. Refresh vs clear
+    - ![alt text](image-1.png)
+    - CLEAR : It will clear only Header of the internal Table.
+    - Refresh : It will clear the Data in that internal table, but allocated memory will remain.
+    - Free : It will clear the data as well as allocated memory for that internal table.
+
+6. FM
+    - Receiving - typed value returned by the method - maximum one of these
+    - Importing - value returned by the method - many possible, all optional
+    - Exporting - value sent to the method - many possible, some optional
+    - Changing - value sent to the method , changed within the method, sent back from method - many possible some optional
+    
+    For DEFINING a method
+    - Returning - typed value returned to the caller- maximum one of these
+    - Exporting - value sent to the caller - many possible, all optional
+    - Importing - value sent by the caller - many possible, some optional
+    - Changing - value sent by the caller, changed within the method, sent back to caller - many possible some optional
+    
+    Note - only for returning/receiving must the parameter have a specific type.

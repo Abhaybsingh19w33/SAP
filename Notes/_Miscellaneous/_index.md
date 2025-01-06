@@ -1,6 +1,9 @@
+- [BADI](./BADI.md)
+- [BAPI Extension for Customer added Fields](./BAPI%20Extension%20for%20Customer%20added%20Fields.md)
 - [Difference between Conversion and Interface](./Difference%20between%20Conversion%20and%20Interface.md)
-
--[Mixed](./Mixed.docx)
+- [Function Module](./Funtion%20Module.md)
+- [MatchCode](./MatchCode.md)
+- [Mixed](./Mixed.docx)
     - DDIC
     - HANA
     - Smartforms
@@ -8,18 +11,15 @@
     - CDS
     - Syntax
     - Matchcode
-
--[Module 3](./module%203.docx)
+- [Module 3](./module%203.docx)
     - RICEF
     - Smartforms
     - BDC
     - Adobeforms
-
--[TMG, Maintenance and Help View](./TMG,%20Maintenance%20and%20Help%20View.docx)
+- [Parallel Cursor](./Parallel%20Cursor.abap)
+- [TMG, Maintenance and Help View](./TMG,%20Maintenance%20and%20Help%20View.docx)
     - TMG
     - Maintenance View
     - Help View
-
--[ZYNY_CASE_STUDY_SOURCE_SCAN](./ZYNY_CASE_STUDY_SOURCE_SCAN.abap)
+- [ZYNY_CASE_STUDY_SOURCE_SCAN](./ZYNY_CASE_STUDY_SOURCE_SCAN.abap)
     - Scan the report for specific keyword or string
-
