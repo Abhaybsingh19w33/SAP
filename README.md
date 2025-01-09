@@ -55,6 +55,10 @@ SAP learnings and projects
     - [Introduction - ABAP Programming on HANA](https://community.sap.com/t5/application-development-blog-posts/introduction-abap-programming-on-hana/ba-p/13371422) 
     - [New ABAP for HANA features in SAP NW 7.4 SP5](https://community.sap.com/t5/application-development-blog-posts/new-abap-for-hana-features-in-sap-nw-7-4-sp5/ba-p/13067993)
 
+- VS Code Extensions
+    - [Blog](https://community.sap.com/t5/application-development-blog-posts/abap-development-in-vs-code/ba-p/13433976)
+    - We can log in using VS Code
+
 ## New Syntax learnings
 - [ZCS_NEW_SYNTAX3](NewSyntax/ZCS_NEW_SYNTAX3.abap)
     - Inline Declaration

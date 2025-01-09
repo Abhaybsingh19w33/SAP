@@ -1,0 +1,2360 @@
+- AAA-miscellaneous
+     - DAL Artifacts
+          - Conversion Rules for Elementary Data Objects.pdf
+          - ERP SAP.pdf
+          - Insert, Update and Delete in DB Table - Using Internal table Or Work Area.pdf
+          - Internal Table Operations in SAP ABAP.pdf
+          - Introduction to ERP.pdf
+          - Sequence of Events in ABAP.pdf
+     - Immersive Case studies
+          - 1.Material master.xlsx
+          - 10.Module Pool Assignment.xlsx
+          - 11.Material master ALV.xlsx
+          - 12.Vendor ALV .xls
+          - 13.AccountDocument.xlsx
+          - 14.Sales order.xlsx
+          - 15.Bill Of Material.xlsx
+          - 16.Billing.xls
+          - 17.Shipment.xlsx
+          - 18.Purchase Order .xlsx
+          - 19.Purchase Vendor.xlsx
+          - 2.Vendor.xls
+          - 20.Module Pool .xlsx
+          - 21.Production_Orders.xlsx
+          - 22.Material_Reservations_For_PO.xlsx
+          - 23.Material_ReOrdering_By_Plant.xlsx
+          - 24.Material_Stock_By_Plant.xlsx
+          - 25.Storage_LocatationWise_Stock_Details.xlsx
+          - 26.Purchasing_Info_Records_by_vendor.xlsx
+          - 27.Purchasing_Requisitions(PRs)_For_vendor.xlsx
+          - 28.Customers_Quotations_Country.xlsx
+          - 29.Customers_Payment_History_Country.xlsx
+          - 3.AccountDocument.xlsx
+          - 30.Assets_their_Depreciation_By_AssetClass.xlsx
+          - 31.Assets_their_Depreciation_By_CompanyCode.xlsx
+          - 32.Assets_their_Insurance_By_AssetClass.xlsx
+          - 33.DeliveryHeader.xls
+          - 34.SchedulingAgreement.xls
+          - 35.TransferOrder.xls
+          - 36.TransferRequirement.xls
+          - 37. Dynamic Table Update From Excel.xlsx
+          - 38. Material consumptions releated to PM orders.xlsx
+          - 39. Business Partner Blueprint disply in ALV Format.xlsx
+          - 4.Sales order.xlsx
+          - 40. Purchases_ ALV_via_CL_SALV_TABLE Methods.xlsx
+          - 41. Sales_and_Delivery_ ALV_YP.xlsx
+          - 42.GL_Items ALV_Reports_and_File_Interface.xlsx
+          - 43.Module Pool Assignment_abhilasha.xlsx
+          - 5.Bill Of Material.xlsx
+          - 6.Billing.xls
+          - 7.Shipment.xlsx
+          - 8.Purchase Order .xlsx
+          - 9.Purchase Vendor.xlsx
+          - Case Study #61 ProfitCenter_Wise_ProductionOrders.xlsx
+          - Case study 58Material Valuation.xlsx
+          - Case Study 59 Material-to-vendor assignment in price maintenance (promo.).xlsx
+          - CaseStudy 47 Profit Centre Accounting Details ALV edit and change logs.xlsx
+          - CaseStudy 52 # BOM Component Stock Details_Module Pool along with AdobeForm.xlsx
+          - CaseStudy_#53_HR object details with subscreen ALV.xlsx
+          - CaseStudy_#54_HR object details with subscreen ALV.xlsx
+          - CaseStudy_#55_Task Deatls ALV and Extend details of selected row.xlsx
+          - CaseStudy_#56_Maintenance order details OOALV and Smartform along with planner group edit functionality.xlsx
+          - CaseStudy_#57_Purchase order & Vendor details OOALV Record updation along with PO Invoice generation.xlsx
+          - CaseStudy_44 Shipping details interactive ALV and SmartForm.xlsx
+          - CaseStudy_45 Convert internal table data to excel and download form.xlsx
+          - CaseStudy_46 Equipment_Detail_ALV Record updation along with Smartform.xlsx
+          - CaseStudy_48 PM Object Location and Equipment Segment Details.xlsx
+          - CaseStudy_49 BOM Component Stock Details_OOALV Record updation along with AdobeForm.xlsx
+          - CaseStudy_50  Service Order_Partner Bank Details_OOALV Record updation along with AdobeForm.xlsx
+          - CaseStudy_51 BP data validation and update for single and multiple records using excelsheet.xlsx
+          - Documents
+               - 1.Technical Specification .doc
+               - 2. Unit test .doc
+               - 3.Code review Checklist.docx
+               - Best Practices .docx
+               - Coding Standards .docx
+               - iSAP_Code Review Checklist Template.docx
+               - SAP ABAP Naming Conventions.doc
+               - SAP ABAP Technical Specification TEMPLATE.DOCX
+          - GENERAL Instructions for Case studies.txt
+          - _ 60 G_L Account Master-Chart of Accounts.xlsx
+     - MISCELLANEOUS
+          - CASE AND FONT COLOUR CHANGE ON BUTTON CLICK.txt
+          - case study 3.docx
+          - case study 4.docx
+          - case study.docx
+          - Innovation Theater.pptx
+          - SAP SD Fundamentals for Beginners - Pluralsight.docx
+          - SAPLOGO.bmp
+          - sprint2info.docx
+          - ZYNY_CASE_STUDY_SOURCE_SCAN.docx
+     - Module 1.docx
+     - module 3.docx
+     - QUESTIONS
+          - ABAP Part I_2019_Set5.doc
+          - ABAP Part I_2019_Set6.doc
+          - ABAP Part I_MPT_2022_Set-1.pdf
+          - ABAP Part I_MPT_2022_Set-2.pdf
+          - ABAP Part I_MPT_2022_Set-5.pdf
+          - ABAP Part I_MPT_2024_Set-11.pdf
+          - ABAP Part I_MPT_2024_Set-12.pdf
+          - ABAP_Part3_FAQs.docx
+          - Check list for Sprint Presentation.docx
+          - Frequently Asked Questions and Answers_Module1 and Module2.docx
+          - Frequently Asked Questions and Answers_Module2 and Module3.docx
+          - Frequently Asked Questions and Answers_Module4.docx
+          - QPA and SE Practice Questions.xlsx
+          - SAP ABAP Practice -  Only Questions M2.xlsx
+          - SAP ABAP Practice -  Only Questions M3.xlsx
+          - SAP HANA Practice -  Only Questions.xlsx
+          - Smartforms_Interview Questions.docx
+          - Ui5_Fiori_ABAP Part I_2022_Set-1 (1).doc
+          - Ui5_Fiori_ABAP Part I_2022_Set-1.doc
+          - Ui5_Fiori_ABAP Part I_2022_Set-2.doc
+     - SAP ABAP - 48 Days
+          - ABAP Part I
+               - ClassBook-Lessons-ABAP Part I Lesson1 R3 ARCHITECTURE.pdf
+               - ClassBook-Lessons-ABAP Part I Lesson10 REPORTING EVENTS.pdf
+               - ClassBook-Lessons-ABAP Part I Lesson11 SUBROUTINES.pdf
+               - ClassBook-Lessons-ABAP Part I Lesson12 FUNCTION MODULES.pdf
+               - ClassBook-Lessons-ABAP Part I Lesson2 ABAP PROGRAMMING.pdf
+               - ClassBook-Lessons-ABAP Part I Lesson3 DDIC 1.pdf
+               - ClassBook-Lessons-ABAP Part I Lesson4 SELECTION SCREEN.pdf
+               - ClassBook-Lessons-ABAP Part I Lesson5 COMMON CONTROL STATEMENTS.pdf
+               - ClassBook-Lessons-ABAP Part I Lesson6 INTERNAL TABLES 1.pdf
+               - ClassBook-Lessons-ABAP Part I Lesson7 DDIC 2.pdf
+               - ClassBook-Lessons-ABAP Part I Lesson8 INTERNAL TABLES 2.pdf
+               - ClassBook-Lessons-ABAP Part I Lesson9 STRING OPERATIOSN.pdf
+          - ABAP Part II
+               - ClassBook-Lessons-ABAP Part II  Lesson1.pdf
+               - ClassBook-Lessons-ABAP Part II  Lesson2.pdf
+               - ClassBook-Lessons-ABAP Part II  Lesson3.pdf
+               - ClassBook-Lessons-ABAP Part II  Lesson3_ALV.pdf
+               - ClassBook-Lessons-ABAP Part II  Lesson4.pdf
+          - ABAP Part III
+               - ClassBook-Lessons-ABAP Part III  Lesson1.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson10 BAPI - Business.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson2 LSMW.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson3.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson3_Adobe Forms.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson4.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson4_Enhancement.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson5.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson5_Performance Tuning.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson6 Business Add-Ins.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson6_Transports.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson7 ALE IDOCS.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson8 Performance Tuning.pdf
+               - ClassBook-Lessons-ABAP Part III  Lesson9 Transports.pdf
+          - ABAP with HANA Day Wise BreakUp - 48 Days.pdf
+          - ABAP with HANA Day Wise BreakUp - 48 Days.xlsx
+          - ABAP with HANA Day Wise BreakUp - 60 Days.pdf
+          - ABAP with HANA Day Wise BreakUp - 60 Days.xlsx
+          - Lab Book
+               - ABAP_Part I LabBook.doc
+               - ABAP_Part I LabBook.pdf
+               - ABAP_Part II LabBook.doc
+               - ABAP_Part II LabBook.pdf
+               - ABAP_Part III LabBook.doc
+               - ABAP_Part III LabBook.pdf
+               - Assignment on Function Module.txt
+               - Assignment on Interactive List.txt
+               - Assignment on subroutine.txt
+               - Instructions for HANA Lab Book
+                    - deptmaster.txt
+                    - desigmaster.txt
+                    - Pgm to Insert Records.txt
+                    - Readme.txt
+                    - role1.txt
+                    - role2.txt
+                    - staffmaster.txt
+                    - Tables_Created.docx
+               - Interactive List - Assignment- Read Me.docx
+               - Interactive List - Assignment.txt
+               - SAP - HANA LabBook.doc
+               - SAP - HANA LabBook.pdf
+               - SAP HANA ABAP Lab book.docx
+               - ~$AP_Part I LabBook.doc
+          - ODATA and Gateway
+               - Assignment
+                    - GW Assignment 1.docx
+                    - GW Assignment 2.docx
+                    - GW Assignment 3.docx
+                    - GW Assignments 4.docx
+               - Demo Documents
+                    - SAP GW Training - Day 1A service demo document.docx
+                    - SAP GW Training - Day 1B service demo document.docx
+                    - SAP GW Training - Day 2A service demo document.docx
+                    - SAP GW Training - Day 2B Part 1 service demo document.docx
+                    - SAP GW Training - Day 2B Service demo document.docx
+                    - SAP GW Training - Day 2C service demo document.docx
+               - LND Server Specific Odata details.docx
+               - Training PPTs
+                    - SAP  Gateway Training-Day1A.pptx
+                    - SAP  Gateway Training-Day1B.pptx
+                    - SAP  Gateway Training-Day2A.pptx
+                    - SAP  Gateway Training-Day2B.pptx
+                    - SAP  Gateway Training-Day2C.pptx
+                    - Thumbs.db
+          - SAP HANA
+               - Lesson 1 Introduction to SAP HANA (2).pdf
+               - Lesson 1 Introduction to SAP HANA (3).pdf
+               - Lesson 1 Introduction to SAP HANA.pdf
+               - Lesson 10 ABAP New Syntax and New Open SQL (2).pdf
+               - Lesson 10 ABAP New Syntax and New Open SQL (3).pdf
+               - Lesson 10 ABAP New Syntax and New Open SQL.pdf
+               - Lesson 11 ABAP Managed Database Procedures (2).pdf
+               - Lesson 11 ABAP Managed Database Procedures (3).pdf
+               - Lesson 11 ABAP Managed Database Procedures.pdf
+               - Lesson 12 Fuzzy Search.pdf
+               - Lesson 2 Taking ABAP to SAP HANA (2).pdf
+               - Lesson 2 Taking ABAP to SAP HANA (3).pdf
+               - Lesson 2 Taking ABAP to SAP HANA.pdf
+               - Lesson 3 SAP HANA_Studio or Eclipse (2).pdf
+               - Lesson 3 SAP HANA_Studio or Eclipse (3).pdf
+               - Lesson 3 SAP HANA_Studio or Eclipse.pdf
+               - Lesson 4 Native SQL (2).pdf
+               - Lesson 4 Native SQL (3).pdf
+               - Lesson 4 Native SQL.pdf
+               - Lesson 5 ADBC.pdf
+               - Lesson 5 Calculation View - Scripted.pdf
+               - Lesson 6 ADBC.pdf
+               - Lesson 6 Calculation View - Scripted.pdf
+               - Lesson 7 Core Data Services (2).pdf
+               - Lesson 7 Core Data Services (3).pdf
+               - Lesson 7 Core Data Services.pdf
+               - Lesson 8 ALV with IDA (2).pdf
+               - Lesson 8 ALV with IDA (3).pdf
+               - Lesson 8 ALV with IDA.pdf
+               - Lesson 9 Open SQL-Revisited (2).pdf
+               - Lesson 9 Open SQL-Revisited (3).pdf
+               - Lesson 9 Open SQL-Revisited.pdf
+          - SAP REVISIT 1.docx
+          - SAP REVISIT 1.pdf
+          - SAP REVISIT 2.docx
+          - SAP REVISIT 2.pdf
+     - SAP ARCHITECTURE CONCEPT 2.pptx
+     - SAP ARCHITECTURE CONCEPT 3.pptx
+     - SAP Notes
+          - zadbc_ekko.txt
+          - zamdp_example.txt
+          - ZCS1_MATERIAL_MASTER.txt
+          - zcs_new_syntax.txt
+          - ZCS_NEW_SYNTAX2.txt
+          - ZCS_NEW_SYNTAX3.txt
+          - zcs_new_syntax4.txt
+          - zdemo_cds_with_alv.txt
+          - zdemo_cds_with_select.txt
+          - zdemo_select_options.txt
+     - sap notes TMG AND MAINTENANACE VIEW.docx
+- ABAP Programming
+     - 1.Steps to create First ABAP program.docx
+     - 11.User Defined DataType_Demo1.txt
+     - 12.User Defined DataType_Demo2.txt
+     - 12.User Defined DataType_FieldString_Demo1.txt
+     - 13.User Defined DataType_FieldString_Demo2.txt
+     - 14.User Defined DataType_FieldString_Demo3.txt
+     - 15.System_Fields.txt
+     - 16.Linecount_demo1.docx
+     - 16.Linecount_demo1.txt
+     - 16.NEW PAGE NO TITLE NO HEADING_Demo.docx
+     - 16.NEW PAGE NO TITLE NO HEADING_Demo.txt
+     - 17.Linecount_demo2.docx
+     - 17.Linecount_demo2.txt
+     - 18.linesize_demo1.docx
+     - 18.linesize_demo1.txt
+     - 19.write_demo1.docx
+     - 19.write_demo1.txt
+     - 2 .write chain operator.txt
+     - 20.write_demo2.docx
+     - 20.write_demo2.txt
+     - 21.write_demo3.docx
+     - 21.write_demo3.txt
+     - 22.write_nogapdemo3.docx
+     - 22.write_nogapdemo3.txt
+     - 23.write_editmask_demo4.docx
+     - 23.write_editmask_demo4.txt
+     - 24.write_ nozero_demo5.docx
+     - 24.write_ nozero_demo5.txt
+     - 25.write_ round decimal demo6.docx
+     - 25.write_ round decimal demo6.txt
+     - 26.intesified.docx
+     - 26.intesified.txt
+     - 26.write_ right justified txt.docx
+     - 26.write_ right justified txt.txt
+     - 28.symbols and icons.docx
+     - 28.symbols and icons.txt
+     - 29.checkbox.docx
+     - 29.checkbox.txt
+     - 3 .data types.txt
+     - 30inverse on off.docx
+     - 30inverse on off.txt
+     - 4.constants.txt
+     - 5.right justified text.txt
+     - 6.data types.txt
+     - 8.Move - Char to Num and Num to Char_Demo.txt
+     - 8.move2.txt
+     - 9.clear.txt
+     - for all entries.docx
+     - for all entries.txt
+     - ~$Steps to create First ABAP program.docx
+- Adobe Forms
+     - ADOBE FORM 000.docx
+     - Demo10_TEXTModule.docx
+     - Demo2.2_system variables.docx
+     - Demo2_logo.docx
+     - demo3.5_automatic binding of fields.docx
+     - Demo3_image_fromSE78_edit.docx
+     - demo3_text and binding.docx
+     - Demo4a_tables.docx
+     - Demo4_table.docx
+     - Demo5_javascript.docx
+     - Demo6_footer only on last page.docx
+     - Demo8_INCLUDE Standard TEXT.docx
+     - Demo9_Dynamic TEXT.docx
+     - ZAT_ADOBEFORM_01.txt
+     - ~$mo3.5_automatic binding of fields.docx
+     - ~$mo4_table.docx
+- ALV
+     - ALV
+          - 1.GRID and LIST.docx
+          - 1.GRID and LIST.txt
+          - 2.FIELDCATALOG_MERGE.docx
+          - 2.FIELDCATALOG_MERGE.txt
+          - 3.Manual FieldCatalog.docx
+          - 3.Manual FieldCatalog.txt
+          - 4.Layout.docx
+          - 4.Layout.txt
+          - 5.Sort.docx
+          - 5.Sort.txt
+          - 6.Sort and Total.docx
+          - 6.Sort and Total.txt
+          - 7.Interactive ALV.docx
+          - 7.Interactive ALV.txt
+          - 8.ALV_Header.docx
+          - 8.ALV_Header.txt
+          - 9.Block list EXTRA.docx
+          - 9.Block list EXTRA.txt
+     - BG IMGE ALV.docx
+     - COLOR CHANGE ON CLICK.txt
+     - color example.txt
+     - extras
+          - ZAT_ALV_DEMO01.docx
+          - ZAT_ALV_DEMO01.txt
+          - ZAT_ALV_DEMO02.docx
+          - ZAT_ALV_DEMO02.txt
+          - ZAT_ALV_DEMO03.docx
+          - ZAT_ALV_DEMO03.txt
+          - ZAT_ALV_DEMO04.docx
+          - ZAT_ALV_DEMO04.txt
+          - ZAT_ALV_DEMO05.docx
+          - ZAT_ALV_DEMO05.txt
+          - ZAT_ALV_DEMO06.docx
+          - ZAT_ALV_DEMO06.txt
+          - ZAT_OOALV_DEMO02.docx
+          - ZAT_OOALV_DEMO02.txt
+          - ZAT_OOALV_DEMO04.docx
+          - ZAT_OOALV_DEMO04.txt
+          - ZAT_OOALV_DEMO05.docx
+          - ZAT_OOALV_DEMO05.txt
+          - ZAT_OOALV_DEMO06.docx
+          - ZAT_OOALV_DEMO06.txt
+     - OOALV
+          - 1.OOALV_Basic.txt
+          - 2.OOALV_FieldCatalogMerge.txt
+          - 3.OOALV_Manual Custom FieldCatalog.txt
+          - 4.OOALV_Layout.txt
+          - 5.OOALV_Sort.txt
+          - 6.OOALV_EventHandling.txt
+          - 7.1ooalv.docx
+          - 7.2ooalv_logoand header.docx
+          - OOALV DEMO.docx
+- BADI
+     - BADI.docx
+- BDC
+     - 1.Steps to create a Material using MM01.docx
+     - 2.Steps to create BDC recording for MM01_shdb and sm35.docx
+     - 3. BDC_sessionmethod.docx
+     - 3. BDC_sessionmethod.txt
+     - 4. BDC_call transactionmethod.docx
+     - 4. BDC_call transactionmethod.txt
+     - 5. BDC_call transaction_error.docx
+     - 5. BDC_call transaction_error.txt
+     - 6. BDC_session_excel_upload.docx
+     - 6. BDC_session_excel_upload.txt
+     - BDC 000.docx
+     - BDC 001 INTRENAL STRUCTURE AND FIELD MAPPING.docx
+     - bdc_file02.txt
+     - BDC_notes.docx
+     - How to get the field name for the fields on the screen.docx
+     - materials.xlsx
+- Code remediation
+     - SOH ABAP Code Remediation & Rules to be followed.docx
+- Conditional statements
+     - 1.If Condition_Demo1.docx
+     - 1.If Condition_Demo1.txt
+     - 10.Check_Demo1.docx
+     - 10.Check_Demo1.txt
+     - 11.Check_Demo2.docx
+     - 11.Check_Demo2.txt
+     - 12.Continue_Demo1.docx
+     - 12.Continue_Demo1.txt
+     - 13.Continue_Demo2.docx
+     - 13.Continue_Demo2.txt
+     - 14.Continue_Exit_Demo1.docx
+     - 14.Continue_Exit_Demo1.txt
+     - 15.Case EndCase_Demo1.docx
+     - 15.Case EndCase_Demo1.txt
+     - 16.Case EndCase_Demo2.docx
+     - 16.Case EndCase_Demo2.txt
+     - 2.If Condition_Demo2.docx
+     - 2.If Condition_Demo2.txt
+     - 3.If Condition_Demo3.docx
+     - 3.If Condition_Demo3.txt
+     - 4.If Condition_Demo4.docx
+     - 4.If Condition_Demo4.txt
+     - 5.Exit_Demo1.docx
+     - 5.Exit_Demo1.txt
+     - 6.Do_loop_Demo1.docx
+     - 6.Do_loop_Demo1.txt
+     - 7.Do_loop_Demo2.docx
+     - 7.Do_loop_Demo2.txt
+     - 8.Do_loop_exit_Demo3.docx
+     - 8.Do_loop_exit_Demo3.txt
+- DDIC
+     - Indexes
+          - Creating Secondary Indexes.docx
+          - How to Check if an Index is Used.docx
+          - ~$eating Secondary Indexes.docx
+     - Lock Objects
+          - 14.Lock Objects.docx
+          - lock object example.txt
+          - Lock Objects.txt
+          - ~$.Lock Objects.docx
+     - search help
+          - 7.DDIC Search Help - Elem Search Help1.docx
+          - 8.DDIC Search Help - Collective Search Help Demo1.docx
+          - DDIC Search Help - Elem Search Help Based on Help View.docx
+          - DDIC Search Help - Elem Search Help2.docx
+          - DDIC Search Help Based on SPFLI.docx
+          - Lpos and Spos.txt
+          - search help example.txt
+          - Search helps tables.xlsx
+          - ~$DDIC Search Help - Collective Search Help Demo1.docx
+          - ~$DDIC Search Help - Elem Search Help1.docx
+          - ~$IC Search Help - Elem Search Help2.docx
+          - ~$IC Search Help Based on SPFLI.docx
+     - Structures
+          - 00.Structures theory.docx
+          - 01.DDIC Structure - Flat Structure Demo1.docx
+          - 02.DDIC Structure - Nested Structure Demo1.docx
+          - 9.DDIC Structure - Append Structure.docx
+          - DDIC Structure - Deep Structure n Tabletype.docx
+          - Flat_Nested_Deep_Structure_Diagrams.docx
+          - ~$.DDIC Structure - Flat Structure Demo1.docx
+          - ~$.Structures theory.docx
+     - Tables
+          - 01. DDIC - Create DBTable-Dept Based on Predefined Type.docx
+          - 02.DDIC -  Table Maintainance Generator.docx
+          - 03.FAQ1 - DDIC - Table Maintainance Generator.docx
+          - 04.DDIC  - Create Data Element based on Predefined type.docx
+          - 04A.DDIC  - Create Domain.docx
+          - 04B.top down approach of table creation.docx
+          - 05.DDIC  - DB Utility.docx
+          - 06..Insert Records  in  DBTable-Dept-One Record at a time.txt
+          - 07.foreignkey.docx
+          - 10.DDIC - Pooled and Cluster Tables Demo.docx
+          - 11.DDIC - Pooled and Cluster Tables Demo.docx
+          - 7C.Assignment on Foreign Key.txt
+          - DDIC -  Pooled and Cluster Tables Explanation.docx
+          - SY-SUBRC_Demo.txt
+          - The Different Types of SAP Tables.docx
+          - ~$. DDIC - Create DBTable-Dept Based on Predefined Type.docx
+          - ~$.DDIC  - DB Utility.docx
+          - ~$.DDIC -  Table Maintainance Generator.docx
+          - ~$.DDIC - Pooled and Cluster Tables Demo.docx
+          - ~$.FAQ1 - DDIC - Table Maintainance Generator.docx
+          - ~$e Different Types of SAP Tables.docx
+     - View
+          - 4.DDIC Views - Projection View Demo1.docx
+          - 5.DDIC Views - DataBase View Demo1.docx
+          - 6.DDIC Views - Help View Demo1.docx
+          - 7.DDIC Views - Maintainance View Demo1.docx
+          - Assignment on Views.txt
+          - DDIC Search Help - Elem Search Help Based on Help View.docx
+          - view example.txt
+          - Views_notes.docx
+          - ~$DDIC Views - DataBase View Demo1.docx
+          - ~$DDIC Views - Help View Demo1.docx
+          - ~$ews_notes.docx
+          - ~$IC Search Help - Elem Search Help Based on Help View.docx
+- Demos
+     - Module1
+          - ABAP Debugging
+               - External Debugging Demo.docx
+          - Lesson 10 Reporting Events
+               - At Line Selection Demos
+                    - At Line Selection Demo1 - Hotspot.txt
+                    - At Line Selection Demo1.txt
+                    - At Line Selection Demo2.txt
+                    - At Line Selection Demo3.txt
+                    - At Line Selection_Demo10 - Display Other System fields.txt
+                    - At Line Selection_Demo4_Display secondary list in a window.txt
+                    - At Line Selection_Demo5_SY-LISEL.txt
+                    - At Line Selection_Demo6_SY-LISEL.txt
+                    - At Line Selection_Demo6_SY-LISEL.xlsx
+                    - At Line Selection_Demo7_SY-LISEL.txt
+                    - At Line Selection_Demo7_SY-LISEL.xlsx
+                    - At Line Selection_Demo8_SY-LISEL.txt
+                    - At Line Selection_Demo9_SY-LISEL.txt
+                    - At Line Selection_Demo9_SY-LISEL.xlsx
+               - At PF Status.txt
+               - At PF Status_SY-UCOMM.txt
+               - At Selection Screen Ouput List Box.txt
+               - At Selection Screen Ouput MODIF ID.txt
+               - At Selection Screen Process on value request.txt
+               - At Selection Screen Validation
+                    - At Selection screen_on Block_ Validation_Demo1.txt
+                    - At Selection screen_Validation_Demo1.txt
+                    - At Selection screen_Validation_Demo2.txt
+                    - At Selection screen_Validation_Demo3-Select Options..txt
+               - Events for Classical Reports
+                    - Events_Demo1.txt
+                    - Events_Demo2.txt
+                    - Events_Demo3_TopOfPage_Line Count.txt
+                    - Events_Demo4_TopOfPage_EndofPage_LineCount.txt
+                    - Events_Demo5_TopOfPage_EndofPage_LineCount.txt
+                    - Events_Demo6_Parameters_Initialization.txt
+                    - Events_Demo7_Select Options_Initialization-Example from handout_Lesson 10.txt
+                    - Events_Sequence.txt
+                    - Initilization_SOS_EOS_Demo1.txt
+                    - Initilization_SOS_EOS_Demo2.txt
+                    - Initilization_SOS_EOS_Demo3.txt
+                    - Initilization_SOS_EOS_Demo4.txt
+                    - Initilization_SOS_EOS_Demo5.txt
+               - Events_Sequence.txt
+               - Get Cursor Demos
+                    - At Line Selection_Demo5_HIDE_3_TOP of Page During Line Selection_Get Cursor.txt
+                    - Get Cursor_Demo1.txt
+                    - Get Cursor_Demo2.txt
+                    - Get Cursor_Demo3_At Line Selection_HIDE_1 Secondary List.txt
+                    - Get Cursor_Demo4_At Line Selection_1 Secondary List.txt
+               - Hide Demos
+                    - At Line Selection_Demo1_Write_Hide.txt
+                    - At Line Selection_Demo2_Hide_Write.txt
+                    - At Line Selection_Demo3_HIDE_1 Secondary List.txt
+                    - At Line Selection_Demo4_HIDE_2 Secondary Lists.txt
+                    - At Line Selection_Demo5_HIDE_3_TOP of Page During Line Selection.txt
+                    - HIDE_Demo1.txt
+               - Leaving Event Blocks
+                    - Leaving Event Blocks- Using Check.txt
+                    - Leaving Event Blocks- Using Exit.txt
+                    - Leaving Event Blocks- Using Stop.txt
+               - Load of Prgram Event.txt
+               - Menu Bar, Application Tool Bar
+                    - Status Bar - Demo1.txt
+                    - Status-Bar-Application Tool Bar_Demo2.docx
+                    - Status-Bar-Menu Bar Only_Demo1.docx
+               - Modify Line.txt
+               - ReadLine_Demo1.txt
+               - SY-UCOMM_PICK.txt
+               - ~$teractive_Report_Events_01.docx
+          - Lesson 11 and 12_Modularization Techniques
+               - Function Group
+                    - 87D851F4.tmp
+                    - Assignment on Function Module.txt
+                    - Demo1_MsgClass.docx
+                    - Demos in Sequence
+                         - 1.Function Group.docx
+                         - 2.Function Module.docx
+                         - 3.Calling Simple Function Module from Report.docx
+                         - 4.Calling parameterized FM from Report.docx
+                         - 5.Calling Standard SAP FM from Report.docx
+                         - 6.Raising Exceptions in FM.docx
+                         - 7.Raising Exceptions in FM_demo2.docx
+                         - 8.Function Module Demo2_Changing Parameter.docx
+                         - Passing table in FM via changing tab.docx
+                         - Passing table in FM via tables tab.docx
+                    - Function Group - Steps.docx
+                    - Function Module Demo1.docx
+                    - Function Module Demo2_Add_Two_Numbers.docx
+                    - Function Module Demo3_Changing Parameter.docx
+                    - Function Module Demo4_Global_Variable.docx
+                    - Function Module Demo5_DB Table operations.docx
+                    - Function Module Demo6_Internal Tables.docx
+                    - Function Module Demo6_Internal Tables.txt
+                    - Function Module Demo7_Subroutine in FG.docx
+                    - Function Module Demo8_Exception.docx
+                    - How to See Function Groups_Modules.docx
+                    - Sample Include.docx
+                    - ~$nction Module Demo3_Internal Tables.docx
+                    - ~$nction Module Demo5_DB Table operations.docx
+                    - ~$nction Module Demo5_Exception.docx
+               - Subroutines
+                    - Assignment on subroutine.txt
+                    - Subroutines - Additional Reading.pdf
+                    - Subroutines_Demos
+                         - Additional Demos
+                              - Passing Internal tables as parameters.xlsx
+                              - Subroutines_Demo_LOCAL.txt
+                              - Subroutines_Local Variable_Static Variable_Demo1.txt
+                              - Subroutines_Local Variable_Static Variable_Demo2.txt
+                              - Subroutines_Local Variable_Static Variable_Demo3.txt
+                         - Exceptions
+                              - Exception_Demo1.txt
+                              - Exception_Demo2.txt
+                         - External Subroutines
+                              - Subroutines_External Subroutine_Demo1.txt
+                              - Subroutines_External Subroutine_Demo2.txt
+                              - Subroutines_External Subroutine_Demo3.txt
+                              - Subroutines_External Subroutine_Demo4.txt
+                         - Leaving Subroutine using Check, Exit, Stop
+                              - Subroutines_Demo_Leaving Subrouting using Check.txt
+                              - Subroutines_Demo_Leaving Subrouting using Exit.txt
+                              - Subroutines_Demo_Leaving Subrouting using Stop.txt
+                         - Pass By Reference
+                              - Subroutines_Pass By Reference_Demo1.txt
+                              - Subroutines_Pass By Reference_Demo2.txt
+                              - Subroutines_Pass By Reference_Demo3.txt
+                              - Subroutines_Pass By Reference_Demo4.txt
+                              - Subroutines_Pass By Reference_Internal Tables_Demo1.txt
+                              - Subroutines_Pass By Reference_Internal Tables_Demo2.txt
+                              - Subroutines_Pass By Reference_Internal Tables_Demo3.txt
+                              - Subroutines_Pass By Reference_Internal Tables_Demo4.txt
+                              - Subroutines_Pass By Reference_Internal Tables_Demo5.txt
+                              - Subroutines_Pass By Reference_Internal Tables_Demo6.txt
+                              - Subroutines_Pass By Reference_Internal Tables_Demo7.txt
+                              - Subroutines_Pass By Reference_Internal Tables_Demo8.txt
+                         - Pass By Value
+                              - Subroutines_Pass By Value_Demo1.txt
+                              - Subroutines_Pass By Value_Demo2.txt
+                              - Subroutines_Pass By Value_Internal Tables_Demo1.txt
+                              - Subroutines_Pass By Value_Internal Tables_Demo2.txt
+                              - Subroutines_Pass By Value_Internal Tables_Demo3.txt
+                              - Subroutines_Pass By Value_Internal Tables_Demo4.txt
+                         - Pass by Value and Result
+                              - Subroutines_Demo_Pass by Value and Result.txt
+                              - Subroutines_Pass By Value_Internal Tables_Demo6.txt
+                              - Subroutines_Pass By Value_Internal Tables_Demo7.txt
+                         - Subroutines_Demo1_Create Simple Subroutine.txt
+                         - Subroutines_Demo2_Global Variable.txt
+                         - Subroutines_Demo3_Local Variable.txt
+                         - Subroutines_Demo4_Statics Variable.txt
+                         - Subroutines_Demo_Tables.txt
+                         - Subroutines_Demo_Typed_Parameter.txt
+          - Lesson 2 ABAP Programming
+               - ABAP_System_Fields_SYST_Structure.docx
+               - Add 2 Numbers Demos
+                    - Changing Parameter Labels.docx
+                    - Demo1_Add 2 Numbers.txt
+                    - Demo2_Add 2 Numbers_With Chain Statement in write.txt
+                    - Demo3_Add 2 Numbers_Parameters.txt
+               - At Line Selection Demos
+                    - At Line Selection Demo1.txt
+                    - At Line Selection Demo2.txt
+                    - At Line Selection Demo3.txt
+               - Built in Data Types Demos
+                    - Demo1_Built In Data Types.txt
+                    - Demo2_Built In Data Types.txt
+                    - Demo3_Built In Data Types_With Chain Statement.txt
+               - CheckBox_Demo.txt
+               - Clear_Demo.txt
+               - Complete and Incomplete Data Types Demos
+                    - Complete_OR_FixedLength_DataTypes_Demo1.txt
+                    - Fixed length Data Types.docx
+                    - Incomplete_DataTypes Demo2.txt
+               - Constants_Demo.txt
+               - Conversion Rules for Elementary Data Types.docx
+               - Conversion Rules for Elementary Data Types_26 Aug 2020.docx
+               - Date and Time Demo.txt
+               - Demo10_Clear_Demo.txt
+               - Demo11_System_Fields_Demo.txt
+               - Demo1_Built In Data Types.txt
+               - Demo2_Built In Data Types.txt
+               - Demo3_Built In Data Types_With Chain Statement.txt
+               - Demo4_Add 2 Numbers.txt
+               - Demo5_Add 2 Numbers_With Chain Statement in write.txt
+               - Demo6_Type N_Numeric Text.txt
+               - Demo7_String Data Type Demo.txt
+               - Demo8_Date and Time Demo.txt
+               - Demo9_Constants_Demo.txt
+               - DemoX_Example of Like.txt
+               - Demo_Date_Pgm.txt
+               - Demo_For All Entries.txt
+               - Demo_Type N_Numeric Text.txt
+               - Example of Like.txt
+               - Field String Demos
+                    - Field String.docx
+                    - Field String.mp4
+                    - FieldString_Demo1.txt
+                    - FieldString_Demo2.txt
+                    - FieldString_Demo3.txt
+                    - FieldString_Demo4.txt
+                    - FieldString_Demo5.txt
+                    - FieldString_Demo6.txt
+                    - FieldString_Demo7.txt
+                    - FieldString_Demo8.txt
+               - FieldString_Demo1.txt
+               - FieldString_Demo2.txt
+               - FieldString_Demo3.txt
+               - FieldString_Demo4.txt
+               - Formatting Demos
+                    - FORMAT COLOR  INTENSIFIED ONOFF INVERSE ONOFF.txt
+                    - FORMAT Hotspot on off.txt
+                    - FORMAT Input on off.txt
+                    - Hotspot_Demo1.txt
+               - Include Pgm_Demo1_3 Includes.txt
+               - InitialValue_Demo.txt
+               - Joins Demo
+                    - Joins Inner Join Demo1_SCARR SPFLI_Using Work Area.docx
+                    - Joins Inner Join Demo1_SCARR SPFLI_Using Work Area.txt
+                    - Joins Left Outer Join Demo2_SCARR SPFLI_Using Work Area.docx
+                    - Joins Left Outer Join Demo2_SCARR SPFLI_Using Work Area.txt
+                    - Joins Left Outer Join Demo3_SCARR SPFLI_Using Work Area.txt
+                    - ~$ins Inner Join Demo1_SCARR SPFLI_Using Work Area.docx
+               - Line Count Demo
+                    - Linecount_demo1.txt
+                    - Linecount_demo2.txt
+                    - Linecount_demo3.txt
+                    - Linecount_demo4.txt
+               - Linesize_demo1.txt
+               - Move and Move Corresponding Demos
+                    - Move Corresponding Demos
+                         - Move Corresponding_Demo_1.txt
+                         - Move Corresponding_Demo_2.txt
+                    - Move Demos
+                         - Move Character to Integer and Decimal.txt
+                         - Move Integer and Decimal to character.txt
+                         - Move Integer to Packed Decimal.txt
+                         - Move_Demo1.txt
+                         - Move_Demo2.txt
+                         - Move_Demo3.txt
+                         - Move_Demo4_Char to Num and Num to Char_Demo.txt
+                         - Move_Demo5.txt
+                         - Move_Demo_Subfields.txt
+               - Move Corresponding Demos
+                    - Move Corresponding_Demo_1.txt
+                    - Move Corresponding_Demo_2.txt
+               - Move Demos
+                    - Move C to I and P.txt
+                    - Move I and D to C.txt
+                    - Move I to P.txt
+                    - Move_Demo1_C_to_C.txt
+                    - Move_Demo2_I_to_I.txt
+                    - Move_Demo3_I to P and F .txt
+                    - Move_Demo4_C to I and I to C_Demo.txt
+                    - Move_Demo5_C to D.txt
+                    - Move_Demo_Subfields.txt
+               - New Page Demo1.txt
+               - New Page Demo2.txt
+               - NEW PAGE NO TITLE NO HEADING_Demo.txt
+               - Select EndSelect Statement Demos
+                    - Select_Demo1.txt
+                    - Select_Demo2 - Parameters.txt
+                    - Select_Demo3.txt
+                    - Select_Demo4.txt
+                    - Select_Demo5.txt
+                    - Select_Demo6.txt
+                    - Select_Demo7.txt
+                    - Select_Demo8.txt
+                    - Select_EndSelect_Part1.mp4
+                    - Select_EndSelect_Part2.mp4
+               - Sequence of Events.txt
+               - Standard_Page_Heading.docx
+               - Steps to create an Include Program and use it.docx
+               - Steps to create First ABAP program.docx
+               - Steps to give column_headings.docx
+               - Steps to view an existing Table and Its contents in DDIC.docx
+               - String Data Type Demo.txt
+               - Subroutine_Demo.txt
+               - SY-INDEX_Demo1.txt
+               - SY-SUBRC_Demo.txt
+               - Symbols_And_Icons_Demo.txt
+               - System_Fields_Demo.txt
+               - Text Symbols Demo
+                    - Text Symbols Demo.docx
+               - Type and Like Demo.txt
+               - User Defined Data Types Demos
+                    - Like_Demo.txt
+                    - Structured_Type_Demo3.txt
+                    - User Defined DataType_Demo1.txt
+                    - User Defined DataType_Demo2.txt
+                    - User Defined DataType_Demo3_Structured Type.txt
+                    - User Defined DataType_FieldString_Demo1.txt
+                    - User Defined DataType_FieldString_Demo4.txt
+               - Write Statement Demos
+                    - Write_Demo1_Position_Length.txt
+                    - Write_Demo2_Under.txt
+                    - Write_Demo3_Subfield.txt
+                    - Write_Demo3_Under.txt
+                    - Write_Demo4 Edit Mask.txt
+                    - Write_Demo4_Subfield.txt
+                    - Write_Demo5_NO-GAPS.txt
+                    - Write_Demo5_NO-ZERO.txt
+                    - Write_Demo6 Edit Mask.txt
+                    - Write_Demo6_Decimals.txt
+                    - Write_Demo7_LEFT-JUSTIFIED CENTERED RIGHT-JUSTIFIED .txt
+                    - Write_Demo7_NO-ZERO.txt
+                    - Write_Demo8_Decimals.txt
+                    - Write_Demo9_LEFT-JUSTIFIED CENTERED RIGHT-JUSTIFIED .txt
+               - ~$anging Parameter Labels.docx
+          - Lesson 3 and 7 DDIC
+               - Data Element - View in DDIC.docx
+               - Data Element based on Predefined type_Demo2.docx
+               - DDIC  - DB Utility.docx
+               - DDIC - TMG Events Demo.docx
+               - Delete Records from DB Table.txt
+               - Domain Data Element Example from Handout.xlsx
+               - Generic Buffering.docx
+               - Index Example.xlsx
+               - Insert Record in DBTable
+                    - Insert Records in DBTable Dept From Another DB Table.txt
+                    - Insert Records in DBTable Dept From Internal Table.txt
+                    - Insert Records in DBTable Dept One Record at a time.txt
+                    - Insert Records in DBTable Emp From Internal Table.txt
+                    - Insert Records in DBTable Emp One Record at a time.txt
+               - Joins
+                    - Joins Inner Join Demo1_SCARR SPFLI_Using Work Area.docx
+                    - Joins Inner Join Demo1_SCARR SPFLI_Using Work Area.txt
+                    - Joins Inner Join Demo2_SCARR SPFLI_Using Internal Table.txt
+                    - Joins Left Outer Join Demo3_Using Internal Table.docx
+                    - Joins Left Outer Join Demo3_Using Internal Table.txt
+                    - Joins Left Outer Join Demo4_Using Internal Table.docx
+                    - Joins Left Outer Join Demo4_Using Internal Table.txt
+               - Lock Objects.docx
+               - Lock Objects.txt
+               - Modify Standard tables - Append Structure, Include Stucture
+                    - Append Structure.docx
+                    - Include Structure.docx
+               - Native SQL Demo.txt
+               - Pooled and Cluster Tables
+                    - 10.DDIC - Pooled and Cluster Tables Demo.docx
+                    - Pooled and Cluster Tables Demo.docx
+                    - Pooled and Cluster Tables Explanation.docx
+               - Records for Emp Dept and Salgrade.txt
+               - Search Help
+                    - Collective Search Help Demo1.docx
+                    - Elem Search Help1.docx
+                    - Elem Search Help2.docx
+                    - Elementary Search Help Based on Help View.docx
+                    - Lpos and Spos.txt
+                    - Read Me for  Search Help Demos.docx
+                    - Search Help Based on SPFLI.docx
+                    - ~$llective Search Help Demo1.docx
+               - Select Single.txt
+               - Structures_Nested, Flat, Deep
+                    - Deep Structure Demo3.docx
+                    - Flat Structure Demo1.docx
+                    - Flat_Nested_Deep_Structure_Diagrams.docx
+                    - Nested Structure Demo2.docx
+                    - ~$at Structure Demo1.docx
+               - Table Creation
+                    - Demo1_Dept Table Structure Based on Built-In Type.docx
+                    - Demo2_Dept Table Structure Based on Data Element.docx
+                    - Demo3_Dept Table Structure Based on Data Element and Domain.docx
+                    - Domain for Sal Field of Emp Table- Value Range.docx
+                    - Emp Table Structure Based on Built-In Type.docx
+                    - Emp Table Structure Based on Data Element.docx
+                    - ~$mo1_Dept Table Structure Based on Built-In Type.docx
+               - Table Maintenance Generator - TMG
+                    - DDIC  -  SE16.docx
+                    - DDIC  -  SE16n.docx
+                    - FAQ - DDIC - Table Maintainance Generator.docx
+                    - Function Group - Steps.docx
+                    - Function Module Demo1.docx
+                    - Table Maintainance Generator_Demo1_One_Step.docx
+                    - Table Maintainance Generator_Demo2_Two Step.docx
+                    - Table Maintainance Generator_Demo3_Restricting Entries in some columns.docx
+                    - ~$IC  -  SE16.docx
+                    - ~$Q1 - DDIC - Table Maintainance Generator.docx
+               - Table Relationship - Foreign Keys
+                    - Assignment on Foreign Key.txt
+                    - Domain Data Element Example_Emp Dept table Foreign Key Relationship.docx
+                    - Domain Data Element Example_Emp Dept table Foreign Key Relationship.xlsx
+                    - Flight Bookings RelationShip.txt
+               - Table Type
+                    - Table Type_Demo1.docx
+                    - Table Type_Demo2.docx
+               - The Different Types of SAP Tables.docx
+               - To Do By Participants.txt
+               - TypePool_Demo1.txt
+               - Value Table
+                    - Value Table Demo.docx
+                    - Value Table Example- Scenario.xlsx
+               - Views
+                    - Assignment on Views.txt
+                    - Database View
+                         - DataBase View _Single Table Display Records_Using Internal table.txt
+                         - DataBase View _Single Table Insert Record.txt
+                         - DataBase View_Based on 1 table_Add Records in View.docx
+                         - DataBase View_Based on 1 table_Display Records from View.docx
+                         - DataBase View_Based on 2 tables - Display using SE38 - Internal Tables.txt
+                         - DataBase View_Based on 2 tables- Insert Records Demo1.txt
+                         - DataBase View_Based on 2 tables.docx
+                    - Help View
+                         - Help View Demo1.docx
+                    - Maintenance View
+                         - Assignment on Views_Maintainance View.txt
+                         - Maintainance View_Based on 2 tables Display Records.txt
+                         - Maintainance View_Based on 2 tables Insert Record.txt
+                         - Maintainance View_Based on 2 tables.docx
+                         - Maintainance View_Single Table Display Records.txt
+                         - Maintainance View_Single Table Insert Record.txt
+                    - Projection View
+                         - Projection View Add Records_Using_Internal Table.txt
+                         - Projection View Demo1.docx
+                         - Projection View Display Records_Using_Internal Tables.txt
+               - ~$ble Type_Demo2.docx
+               - ~$ck Objects.docx
+               - ~$IC -  Table Maintainance Generator.docx
+               - ~$IC Search Help - Collective Search Help Demo1.docx
+               - ~$IC Search Help - Elem Search Help Demo1.docx
+               - ~$IC Structure - Deep Structure Demo2.docx
+               - ~$IC Structure - Table Type Structure Demo1.docx
+               - ~$oled and Cluster Tables Explanation.docx
+               - ~$pt Table Structure Based on Data Element.docx
+          - Lesson 4_Selection Screen and Parameters
+               - At Line Selection Demos
+                    - At Line Selection Demo1.txt
+                    - At Line Selection Demo2.txt
+                    - At Line Selection Demo3.txt
+               - At Selection screen on value request.txt
+               - At Selection Screen Output
+                    - At Selection screen output-Screen Active_Demo2.txt
+                    - At Selection screen output-Screen Input_Demo3.txt
+                    - At Selection screen output-Screen Invisible_Demo4.txt
+                    - At Selection screen output_Demo1.txt
+                    - Modif ID
+                         - At Selection screen output-Screen Active-MODIF ID_Demo7.txt
+                         - At Selection screen output-Screen Required-MODIF ID_Demo5.txt
+                         - At Selection screen output-Screen Required-MODIF ID_Demo6.txt
+                    - Screen-Active.docx
+                    - Screen-Input.docx
+                    - Screen-Invisible.docx
+                    - Screen-Structure in SE11.docx
+                    - ~$reen-Active.docx
+                    - ~$reen-Invisible.docx
+               - At Selection Screen Validation
+                    - At Selection screen - Validation Demo1.txt
+                    - At Selection screen - Validation Demo2.txt
+                    - At Selection screen - Validation Demo3.txt
+                    - At Selection screen On Block Validation Demo4.txt
+                    - At Selection screen On Block Validation Demo5.txt
+                    - At Selection screen On Field Validation Demo6.txt
+                    - At Selection screen On Field Validation Demo7.txt
+               - Calling User-Defined Selection Screens.txt
+               - Events cannot be coded in subroutines.txt
+               - Events for Classical Reports
+                    - Events_Demo1.txt
+                    - Events_Demo2.txt
+                    - Events_Demo3_TopOfPage_Line Count.txt
+                    - Events_Demo4_TopOfPage_EndofPage_LineCount.txt
+                    - Events_Demo5_TopOfPage_EndofPage_LineCount.txt
+                    - Events_Demo6_Parameters_Initialization.txt
+                    - Events_Demo7_Select Options_Initialization-Example from handout_Lesson 10.txt
+               - Events_Sequence.txt
+               - MODIF ID - Explanation.txt
+               - Parameters Demo
+                    - Parameters - Changing Parameter Labels.docx
+                    - Parameters_Demo1.txt
+                    - Parameters_Demo2.txt
+                    - Parameters_Demo3_Checkbox_Radiobutton.txt
+                    - Parameters_Demo4_Obligatory.txt
+                    - Parameters_Demo5_Lowercase.txt
+                    - ~$rameters - Changing Parameter Labels.docx
+               - Select Options Demo
+                    - Select Options Demo1.docx
+                    - Select Options Demo1.txt
+                    - Select Options Demo2.txt
+                    - Select Options Demo3.txt
+                    - Select Options Demo4.txt
+               - Selection screen begin of block - Example from Handout.txt
+               - Selection Screen Demo - Block - Select Options.txt
+               - Selection_Screen_Begin of Line End of Line Demos
+                    - Selection_Screen_Begin of Line End of Line Demo1.txt
+                    - Selection_Screen_Begin of Line End of Line Demo2.txt
+                    - Selection_Screen_Begin of Line End of Line Demo3.txt
+                    - Selection_Screen_Begin of Line End of Line Demo4.txt
+                    - Selection_Screen_Begin of Line End of Line Demo5.txt
+                    - Several Elements in a Single Line- Demo1.txt
+                    - Several Elements in a Single Line- Demo2.txt
+                    - Several Elements in a Single Line- Demo3.txt
+                    - Several Elements in a Single Line- Demo4.txt
+               - Selection_Screen_Comment  - Example from handout.txt
+               - Selection_Screen_Demo1.txt
+               - Selection_Screen_Demo2.txt
+          - Lesson 5 Control Statements
+               - Case EndCase_Demo1.txt
+               - Case EndCase_Demo2.txt
+               - Check_Demo1.txt
+               - Check_Demo2.txt
+               - Continue_Demo1.txt
+               - Continue_Demo2.txt
+               - Continue_Exit_Demo1.txt
+               - Do_loop_Demo1.txt
+               - Do_loop_Demo2.txt
+               - Do_loop_Demo3.txt
+               - Do_loop_exit_Demo3.txt
+               - Exit_Demo1.txt
+               - If Condition_Demo1.txt
+               - If Condition_Demo2.txt
+               - If Condition_Demo3.txt
+               - If Condition_Demo4.txt
+               - If Condition_Demo5.txt
+          - Lesson 5_Control Statements
+               - Case EndCase_Demo1.txt
+               - Case EndCase_Demo2.txt
+               - Check_Demo1.txt
+               - Check_Demo2.txt
+               - Continue_Demo1.txt
+               - Continue_Demo2.txt
+               - Continue_Exit_Demo1.txt
+               - Do_loop_Demo1.txt
+               - Do_loop_Demo2.txt
+               - Do_loop_exit_Demo3.txt
+               - Exit_Demo1.txt
+               - If Condition_Demo1.txt
+               - If Condition_Demo2.txt
+               - If Condition_Demo3.txt
+               - If Condition_Demo4.txt
+          - Lesson 6  and Lesson 8 Internal Tables
+               - Internal Tables I - Lesson 6
+                    - Sorted Internal Table
+                         - Read Records from Sorted Table
+                              - Read_Demo1_Loop At.txt
+                              - Read_Demo1_Read With Index.txt
+                              - Read_Demo1_Read With Key.txt
+                         - Sorted_Table_Demo1_Non-Unique Key.txt
+                         - Sorted_Table_Demo2_Unique Key.txt
+                         - Sorted_Table_Demo3_Unique Key_Append_Duplicate Key.txt
+                         - Sorted_Table_Demo4_Append_Keys Out of Sequence.txt
+                    - Standard Internal Table
+                         - Initial Demos
+                              - Demo1_Without a Header Line.txt
+                              - Demo3_With a Header Line.txt
+                              - Demo4_With a Header Line Begin of with Occurs Clause.txt
+                              - Demo5_With a Header Line Begin of with Occurs Clause.txt
+                              - Demo6_Internal Table without header line based on Structured Type.txt
+                              - Demo7_Internal Table without header line based on Structured Type.txt
+                              - Demo8_Internal Table with header line based on Structured Type.txt
+                              - Header Line and Work Area - Notes.txt
+                              - Occurs Clause Meaning.txt
+                         - Read Records
+                              - Read_Demo1_Loop At.txt
+                              - Read_Demo1_Read With Index.txt
+                              - Read_Demo1_Read With Key_Transporting All fields.txt
+                              - Read_Demo1_Read With Key_Transporting Few fields.txt
+                              - Read_Demo1_Read With Key_Transporting NO fields.txt
+                              - Read_Demo2_Read With Key - Sort and Binary Search.txt
+                              - Read_Demo3_Read with Key.txt
+                              - Read_Demo4_Table Key.txt
+                              - Read_Demo5_Table Key.txt
+                              - Read_Demo6_Table Key.txt
+                         - Sort Standard Internal Table
+                              - Sort_Standard_Internal_Table_Sort by Carrid_Demo1.txt
+                              - Sort_Standard_Internal_Table_Sort by Connid_Demo2.txt
+                              - Sort_Std_IT_Sort by Carrid Connid_Demo3.txt
+               - Internal Tables II - Lesson 8
+                    - ABAP Part I- Internal Tables II.xlsx
+                    - Append Sorted By - Demos and Explanation
+                         - Append Sorted By Explanation.docx
+                         - Append Sorted By_Demo1.txt
+                         - Append Sorted By_Demo2.txt
+                         - Append Sorted By_Demo3.txt
+                    - Collect Demos
+                         - Collect_Demo1.txt
+                         - Collect_Demo2.txt
+                         - Collect_Demo3.txt
+                         - Collect_Demo4.txt
+                    - Control Break Demos
+                         - At First At Last
+                              - Control Break At First At Last_Demo1.txt
+                         - At New
+                              - Control Break_Hardcoded Values At New Carrid_Connid Demo5.txt
+                              - Control Break_Hardcoded Values At New Carrid_Demo1.txt
+                              - Control Break_Hardcoded Values At New Carrid_Demo2.txt
+                              - Control Break_Hardcoded Values At New Connid_Demo3.txt
+                              - Control Break_Hardcoded Values At New Connid_Demo4.txt
+                         - On Change of
+                              - Control Break_Hardcoded Values On Change of Carrid_Demo1.txt
+                              - Control Break_Hardcoded Values On Change of Carrid_Demo2.txt
+                         - Sum
+                              - Control Break At New Sum_Demo1.txt
+                              - Control Break At New Sum_Demo2.txt
+                    - Describe_Demo1.txt
+                    - Describe_Demo2.txt
+                    - Describe_Demo3.txt
+                    - Group by in Oracle.txt
+                    - Internal table -  Sum.mp4
+                    - Internal table - Append Sorted By - Demo.mp4
+                    - Internal table - Append Sorted By - Explanation.mp4
+                    - Internal table - At First At Last.mp4
+                    - Internal table - At New.mp4
+                    - Internal table - Collect.mp4
+                    - Internal table - On Change of.mp4
+          - Lesson 6 and 8 Internal Tables
+               - DB Operations using Internal Table
+                    - DB_Delete Using Internal Table.txt
+                    - DB_Insert Using Internal Table.txt
+                    - DB_Modify Using Internal table.txt
+                    - DB_Update Using Internal Table.txt
+               - For All Entries.txt
+               - Internal Table Based on Field String-Example from Handout.txt
+               - Internal Table with header Line_Debugging.docx
+               - Internal Table without header Line_Debugging.docx
+               - Internal Tables I
+                    - Append Lines and Insert Lines
+                         - Append Initial Line_Demo1.txt
+                         - Append Lines Of _Demo2.txt
+                         - Insert Initial Line_Demo1.txt
+                         - Insert Lines Of_Demo2_Dept_Table.txt
+                         - Insert Lines Of_Demo2_SCARR_TABLE.txt
+                    - Clear_Free_Refresh
+                         - CLEAR vs. REFRESH vs. FREE.docx
+                         - Free Clear Refresh Demo.txt
+                         - Free Clear Refresh Explanation.txt
+                    - Delete and Modify Records from Internal Table
+                         - Delete Record(s) from Standard Internal table.txt
+                         - Modify Record in Standard Internal table.txt
+                    - Hashed Internal Table
+                         - Hashed Table_Demo_Read with Index.txt
+                         - Hashed Table_Demo_Read with Key.txt
+                    - Initial Demos - Standard Internal Table
+                         - Demo10_Internal Table Without Header Line- Select Few Fields.txt
+                         - Demo11_Sort_Standard_Internal_Table.txt
+                         - Demo1_Without a Header Line.txt
+                         - Demo2_Without a Header Line_Inserting Records using Insert Keyword.txt
+                         - Demo3_With a Header Line.txt
+                         - Demo4_Begin of with Occurs Clause.txt
+                         - Demo5_Internal Table without header line based on Structured Type.txt
+                         - Demo6_Internal Table with header line based on Structured Type.txt
+                         - Demo7_Internal Table without header Line - Select All Fields.txt
+                         - Demo8_Internal Table Based on Type_Without Header Line - Select Few Fields.txt
+                         - Demo9_Internal Table Without Header Line - Select All Fields.txt
+                         - Header Line and Work Area - Notes.txt
+                         - Internal Table - Work Area and Header Line.xlsx
+                         - Occurs Clause Meaning.txt
+                    - Read records from a  Standard Internal Table
+                         - Internal table - Loop At.mp4
+                         - Internal table - Read with Index.mp4
+                         - Internal table - Read with Key.mp4
+                         - Read_Demo10_Table Key.txt
+                         - Read_Demo11_Table Key.txt
+                         - Read_Demo1_Loop At.txt
+                         - Read_Demo1_Read With Index.txt
+                         - Read_Demo1_Read With Key.txt
+                         - Read_Demo2_Read With Key - Sort and Binary Search.txt
+                         - Read_Demo3_Read With Key_Transporting No Fields.txt
+                         - Read_Demo4_Read With Key_Transporting Few Fields.txt
+                         - Read_Demo6_ReadComparing.txt
+                         - Read_Demo7_Key.txt
+                         - Read_Demo8_Table Key.txt
+                         - Read_Demo9_Table Key.txt
+                    - Sorted Internal Table
+                         - Read Records from Sorted Table
+                              - Read_Demo1_Loop At.txt
+                              - Read_Demo1_Read With Index.txt
+                              - Read_Demo1_Read With Key.txt
+                         - Sorted_Table_Demo1_Non-Unique Key.txt
+                         - Sorted_Table_Demo2_Unique Key.txt
+                         - Sorted_Table_Demo3_Unique Key_Insert_Append_Duplicate Key.txt
+                         - Sorted_Table_Demo4_Insert_Append_Keys Out of Sequence.txt
+                         - Sorted_Table_Demo5_Select Values from DB Table_SCARR.txt
+                         - Sorted_Table_Demo6_Select Values from DB Table_SFLIGHT.txt
+                    - Table Type
+                         - Table Type_Demo1.docx
+                         - Table Type_Demo2.docx
+               - Internal Tables II
+                    - Append Sorted By - Demos and Explanation
+                         - Append Sorted By Explanation.docx
+                         - Append Sorted By_Demo1.txt
+                         - Append Sorted By_Demo2.txt
+                         - Append Sorted By_Demo3.txt
+                    - Collect Demos
+                         - Collect_Demo1.txt
+                         - Collect_Demo2.txt
+                         - Collect_Demo3.txt
+                         - Collect_Demo4.txt
+                    - Control Break Demos
+                         - At First At Last
+                              - Control Break At First At Last_Demo1.txt
+                              - Control Break At First At Last_Demo2.txt
+                         - At New
+                              - Control Break_Hardcoded Values At New Carrid_Connid Demo5.txt
+                              - Control Break_Hardcoded Values At New Carrid_Demo1.txt
+                              - Control Break_Hardcoded Values At New Carrid_Demo2.txt
+                              - Control Break_Hardcoded Values At New Connid_Demo3.txt
+                              - Control Break_Hardcoded Values At New Connid_Demo4.txt
+                              - Control Break_Select from DB At New Carrid_Connid_Demo3.txt
+                              - Control Break_Select from DB At New Carrid_Demo1.txt
+                              - Control Break_Select from DB At New Carrid_Demo2.txt
+                         - On Change of
+                              - Control Break_Hardcoded Values On Change of Carrid_Demo1.txt
+                              - Control Break_Hardcoded Values On Change of Carrid_Demo2.txt
+                              - Control Break_Select from DB_On Change of Carrid_Demo1.txt
+                              - Control Break_Select from DB_On Change of Carrid_Demo2.txt
+                         - Sum
+                              - Control Break At New Sum_Demo1.txt
+                              - Control Break At New Sum_Demo2.txt
+                    - Describe_Demo1.txt
+                    - Describe_Demo2.txt
+                    - Describe_Demo3.txt
+                    - Group by in Oracle.txt
+               - Records for Emp Dept and Salgrade.txt
+               - ~$pend Sorted By Explanation.docx
+          - Lesson 9 String Operations
+               - CN_Demo1.txt
+               - CO CA Explanation.docx
+               - CO_CN_CA_NA_Demo1.txt
+               - CO_Demo1.txt
+               - CP_Demo1.txt
+               - String Handling Concatenate  Demo_2.txt
+               - String Handling Concatenate Demo_1.txt
+               - String Handling Condense Demo_1.txt
+               - String Handling Condense Demo_2.txt
+               - String Handling Find Demo.txt
+               - String Handling Len Demo1.txt
+               - String Handling Shift Demo1.txt
+               - String Handling Shift Demo1A.txt
+               - String Handling Shift Demo2.txt
+               - String Handling Shift Demo3.txt
+               - String Handling Split Demo.txt
+               - String Handling Translate Demo.txt
+               - SubFields_Demo1.txt
+               - ~$ CA Explanation.docx
+          - SAP Memory and ABAP Memory
+               - Demo1 Calling pgm using submit via selection screen and return.txt
+               - Demo2 Calling pgm using submit via selection screen and return.txt
+               - Demo3 Calling pgm using Export Import.txt
+               - ZTR_ABAP_MEMORY1.txt
+               - ZTR_ABAP_MEMORY2.txt
+               - ZTR_SAP_MEMORY2.txt
+     - Module2
+          - ALV and OOALV
+               - ALV
+                    - Demo10_ALV REUSE_ALV_COMMENTARY_WRITE.txt
+                    - Demo11_Interactive ALV.txt
+                    - Demo12_Interactive ALV.txt
+                    - Demo1_ALV Report with Structure_Grid Display.txt
+                    - Demo2_ALV Report with Structure_List Display.txt
+                    - Demo3_ALV Report with Field Catalog Merge.txt
+                    - Demo4_ALV Report with Field Catalog Manual.txt
+                    - Demo5_ALV Report with Layout.txt
+                    - Demo6_ALV Report- Sort.txt
+                    - Demo7_ALV with Totals and Sub Totals.txt
+                    - Demo8_ALV Blocked List Display.txt
+                    - Demo9_ALV Hierarchy Display.txt
+                    - ZNYN_AVL_DEMO_1.docx
+                    - ZNYN_AVL_DEMO_10.docx
+                    - ZNYN_AVL_DEMO_11.docx
+                    - ZNYN_AVL_DEMO_12.docx
+                    - ZNYN_AVL_DEMO_13.docx
+                    - ZNYN_AVL_DEMO_14.docx
+                    - ZNYN_AVL_DEMO_15.docx
+                    - ZNYN_AVL_DEMO_16.docx
+                    - ZNYN_AVL_DEMO_17.docx
+                    - ZNYN_AVL_DEMO_2.docx
+                    - ZNYN_AVL_DEMO_3.docx
+                    - ZNYN_AVL_DEMO_4.docx
+                    - ZNYN_AVL_DEMO_5.docx
+                    - ZNYN_AVL_DEMO_6.docx
+                    - ZNYN_AVL_DEMO_7.docx
+                    - ZNYN_AVL_DEMO_8.docx
+                    - ZNYN_AVL_DEMO_9.docx
+               - ALV more demos
+                    - 36.ALV_LIST_DISPLAYoutput.docx
+                    - 37.ALV_GRID_DISPLAY output.docx
+                    - 38.ALV_POPUP output.docx
+                    - 39.ALV_GRID_CATALOGMERGE output.docx
+                    - 40.ALV_LIST_BLOCK_DISPLAY output.docx
+                    - 41.ALV_GRID_LOGO output.docx
+                    - 42.ALV_GRID_Interactive 1(user double clicks) output.docx
+                    - 43.ALV_GRID_interactive2(pf_status)_output.docx
+                    - 44.ALV_GRID_MACROS_output.docx
+                    - 45.ALV_hierachical_output.docx
+                    - 46.ooabap_alv_1(all fields)_output.docx
+                    - 47.ooabap_alv_1(few fields_field catalogue)_output.docx
+                    - 48.ooabap_alv_1(splitter)_output_EDIT.docx
+                    - 49.a ooalv.docx
+                    - 49.ooabap_alv_graphics_output_EDIT.docx
+                    - 50. ALV_OOABAP_doubleclick(event handler)_output.docx
+                    - 51. ALV_OOABAP_usercommand(event handler)_output_EDIT.docx
+                    - ~$.ooabap_alv_1(all fields)_output.docx
+               - OOALV
+                    - Demo_Display_Data from Internal Table to ALV Grid.txt
+                    - OOALV_Demo1_ALV Report with Structure.TXT
+                    - OOALV_Demo2_ALV Report with Field Catalog Merge.TXT
+                    - OOALV_Demo3_ALV Report with Manual_Field Catalog and Layout.TXT
+                    - OOALV_Demo4_ALV Report with Manual_Field Catalog and Sort.txt
+                    - OOALV_Demo5_ALV Report with Manual_Field Catalog_Sort & Filter.txt
+                    - OOALV_Demo6_Interactive ALV.txt
+          - FileHandling
+               - Delete Dataset.txt
+               - Execute_ZTR_FILEHANDLING_DOWNLOAD.TXT
+               - Execute_ZTR_FILEHANDLING_UPLOAD1.docx
+               - MATMAST.TXT
+               - RLGRAP Structure.docx
+               - ZTR_FILEHANDLING_DOWNLOAD FROM APPLICATION SERVER.txt
+               - ZTR_FILEHANDLING_DOWNLOAD1 FROM INTERNAL TABLE.txt
+               - ZTR_FILEHANDLING_UPLOAD no parameter input.txt
+               - ZTR_FILEHANDLING_UPLOAD1 with parameter input.txt
+               - ZTR_FILEHANDLING_UPLOAD2 FROM SPFLI table.txt
+               - ~$ecute_ZTR_FILEHANDLING_UPLOAD.docx
+          - ModulePool
+               - 00_Module_Pool_Demo0.docx
+               - 01_Module_Pool_Demo1.docx
+               - 02_Module_Pool_Demo1_Single_Screen_DictFields.docx
+               - 04.1 Upload image through se78.docx
+               - 04.2_Demo Display images on the screen.docx
+               - 05_Demo List Box.docx
+               - 06_Demo Subscreen.docx
+               - 07b_Demo Tab Strip Addition.docx
+               - 07_Demo Tab Strip Wihout Wizard Dept Emp.docx
+               - 08_Demo Table Control Without Wizard _Only Display.docx
+               - 09_Demo Table Control Without Wizard Insert Modify Delete.docx
+               - 10_Demo Input Validation_Field.docx
+               - 11_Demo Input Validation_Chain.docx
+               - 12_Demo Process on DML statements and SCREENACTIVE.docx
+               - 13a_Demo Process on Help Request.docx
+               - 13b_Demo Process on Help Request.docx
+               - 14_Demo Process on Value Request.docx
+               - 15_Table_Control .docx
+               - 16_Tabstrip+ Table Control .docx
+               - 3.Table Control _Code.docx
+               - At Exit command.txt
+               - Leave to screen_set screen_Call Screen.txt
+               - ZTRCAP_MPOOL2.docx
+               - ~$.1 Upload image through se78.docx
+               - ~$.2_Demo Display images on the screen.docx
+               - ~$b_Demo Tab Strip Addition.docx
+               - ~$mo Input Validation_Chain.docx
+               - ~$mo Tab Strip Wihout Wizard Dept Emp.docx
+               - ~$_Demo Input Validation_Chain.docx
+               - ~$_Demo List Box.docx
+               - ~$_Demo Process on DML statements and SCREENACTIVE.docx
+               - ~$_Demo Process on Value Request.docx
+               - ~$_Demo Subscreen.docx
+               - ~$_Demo Tab Strip Wihout Wizard Dept Emp.docx
+               - ~$_Demo Table Control Without Wizard _Only Display.docx
+               - ~$_Module_Pool_Demo1.docx
+          - OOABAP
+               - ADD OBJECTS TO INTERNAL TABLE
+                    - Add Objects to Internal Table Demo1_Airlines.txt
+                    - Add Objects to Internal Table Demo2_Airlines.txt
+                    - Add Objects to Internal Table.txt
+                    - ZNYN_OOP_DEMO_44.docx
+                    - ZNYN_OOP_DEMO_45.docx
+                    - ZNYN_OOP_DEMO_46.docx
+               - Additional Demos
+                    - Event Handling.docx
+                    - OOABAP Additional Demo1.txt
+                    - OOABAP Additional Demo2.txt
+                    - OOABAP Additional Demo3 Friends.txt
+                    - OOABAP Additional Demo3.txt
+                    - OOABAP Additional Demo4 Inheritance.txt
+                    - OOABAP Additional Demo5 Interfaces.txt
+                    - OOABAP Events_All Pgms.txt
+                    - OOABAP Events_Pgm3.txt
+                    - OOABAP Events_Pgm4.txt
+                    - OOABAP Events_Pgm5.txt
+                    - ZTRCAP_GLBCLS.docx
+                    - ZTRCAP_GLB_CLASS_METH1.docx
+                    - ~$ent Handling.docx
+                    - ~$RCAP_GLB_CLASS_METH1.docx
+               - Class Builder.docx
+               - Demo1.txt
+               - Demo10_Class_Constructor or Static Constructor.txt
+               - Demo2_Passing Parameters to SetEmp.txt
+               - Demo3_Passing Parameters to SetEmp_Overloading_Not_Possible.txt
+               - Demo4_Public and Private attributes.txt
+               - Demo5_ME.txt
+               - Demo6_Constructor.txt
+               - Demo7_Constructor_ME.txt
+               - Demo8_Static Attribute.txt
+               - Demo9_Static Attribute and Static Method.txt
+               - Events demo
+                    - Events_Demo1_No Events.txt
+                    - Events_Demo2.txt
+                    - Events_Demo2A.txt
+                    - Events_Demo3.txt
+                    - Events_Demo4.txt
+                    - Events_Demo5_Activation.txt
+                    - ZNYN_OOP_DEMO_17.docx
+                    - ZNYN_OOP_DEMO_18.docx
+                    - ZNYN_OOP_DEMO_19.docx
+                    - ZNYN_OOP_DEMO_20.docx
+                    - ZNYN_OOP_DEMO_21.docx
+                    - ZNYN_OOP_DEMO_22.docx
+               - Examples on Internal Tables
+                    - Demo1_Select from DB into workarea_only Importing Parameter.txt
+                    - Demo2.txt
+                    - ZNYN_OO_DEMO_1.docx
+                    - ZNYN_OO_DEMO_2.docx
+               - EXCEPTION DEMO
+                    - Exception_Demo1.txt
+                    - Exception_Demo2.txt
+                    - Exception_Demo3.txt
+                    - ZNYN_OOP_DEMO_23.docx
+                    - ZNYN_OOP_DEMO_24.docx
+                    - ZNYN_OOP_DEMO_25.docx
+                    - ZNYN_OOP_DEMO_26.docx
+               - Functional Method Demo1.txt
+               - INHERITANCE DEMO
+                    - Inheritance Demo1A.txt
+                    - Inheritance Demo1B.txt
+                    - Inheritance Demo1C.txt
+                    - Inheritance Demo1D.txt
+                    - Inheritance Demo2.txt
+                    - Inheritance Demo3_Constructor.txt
+                    - Inheritance Demo4_Constructor.txt
+                    - Inheritance Demo5.txt
+                    - Inheritance Demo6.txt
+                    - ZNYN_OOP_DEMO_28.docx
+                    - ZNYN_OOP_DEMO_30.docx
+                    - ZNYN_OOP_DEMO_31.docx
+                    - ZNYN_OOP_DEMO_32.docx
+                    - ZNYN_OOP_DEMO_33.docx
+                    - ZNYN_OOP_DEMO_34.docx
+                    - ZNYN_OOP_DEMO_35.docx
+                    - ZNYN_OOP_DEMO_36.docx
+               - Instance Method and Static Method - Invoke.txt
+               - INTERFACE DEMO
+                    - Interface Demo1.txt
+                    - Interface Demo2.txt
+                    - Interface Demo3.txt
+                    - Interface Demo4.txt
+                    - Interface Demo5.txt
+                    - Interface Demo6_2 Interfaces.txt
+                    - ZNYN_OOP_DEMO_10.docx
+                    - ZNYN_OOP_DEMO_11.docx
+                    - ZNYN_OOP_DEMO_12.docx
+                    - ZNYN_OOP_DEMO_13.docx
+                    - ZNYN_OOP_DEMO_14.docx
+                    - ZNYN_OOP_DEMO_15.docx
+               - OOABAP Attributes Methods Demo1_Airlines.txt
+               - OOABAP Attributes Methods Demo2_Employee.txt
+               - OOABAP Public Attribute Static Method_Airlines.txt
+               - OOABAP Static Constructor Demo.txt
+               - Static Attribute and Method_Demo2.txt
+               - Static Attribute_Demo1.txt
+               - ZNYN_OOP_DEMO_1.docx
+               - ZNYN_OOP_DEMO_16.docx
+               - ZNYN_OOP_DEMO_2.docx
+               - ZNYN_OOP_DEMO_27.docx
+               - ZNYN_OOP_DEMO_3.docx
+               - ZNYN_OOP_DEMO_37.docx
+               - ZNYN_OOP_DEMO_38.docx
+               - ZNYN_OOP_DEMO_39.docx
+               - ZNYN_OOP_DEMO_4.docx
+               - ZNYN_OOP_DEMO_41.docx
+               - ZNYN_OOP_DEMO_42.docx
+               - ZNYN_OOP_DEMO_43.docx
+               - ZNYN_OOP_DEMO_5.docx
+               - ZNYN_OOP_DEMO_6.docx
+               - ZNYN_OOP_DEMO_7.docx
+               - ZNYN_OOP_DEMO_8.docx
+               - ZNYN_OOP_DEMO_9.docx
+     - Module3
+          - AdobeForms
+               - Adobe Sequence
+                    - 54.Adobe form driver program.txt
+                    - Demo10_TEXTModule.docx
+                    - Demo2.2_system variables.docx
+                    - Demo2_logo.docx
+                    - demo3.5_automatic binding of fields.docx
+                    - Demo3_image_fromSE78_edit.docx
+                    - demo3_text and binding.docx
+                    - Demo4_table.docx
+                    - Demo5_javascript.docx
+                    - Demo6_footer only on last page.docx
+                    - Demo8_INCLUDE Standard TEXT.docx
+                    - Demo9_Dynamic TEXT.docx
+                    - pdf format convert fm.xls
+               - AdobeForms_Demo2.docx
+               - AdobeForms_Demo5.docx
+               - AdobeForms_Demo_Document_01.docx
+               - AdobeForms_Demo_Document_02.docx
+               - AdobeForms_Demo_Document_03.docx
+               - AdobeForms_Demo_Document_04.docx
+               - AdobeForms_Demo_Document_04_Output.pdf
+               - AdobeForms_Demo_Document_05.docx
+               - Adobe_Form_SubForm_Demo.docx
+               - Driver Program for  Demo3.txt
+          - BDC
+               - 1.Steps to create a Material using MM01.docx
+               - 2.Steps to create BDC recording for MM01_shdb and sm35.docx
+               - 3. BDC_sessionmethod.txt
+               - 4. BDC_call transactionmethod.txt
+               - 5. BDC_call transaction_error.txt
+               - 6. BDC_session_excel_upload.txt
+               - 7.load data from desktop to application server.txt
+               - 8.load data  from  application server to desktop.txt
+               - Demo1_XD01STEPS.docx
+               - Demo2_Steps to create BDC recording for XD01.docx
+               - Demo3_Session method_customerupload.txt
+               - Demo4_steps to load  file into Application server.docx
+               - Demo5_steps to download file from  Application server.docx
+               - difference between session and  cal transaction.tsv
+               - LSMW_BAPI_Steps.docx
+               - Materials.txt
+               - materials.xlsx
+               - MATMAST.TXT
+               - MK01STEPS.docx
+               - New Text Document.txt
+               - Steps to create a Material using MM01.docx
+               - Steps to create BDC recording for BP.docx
+               - Steps to create BDC recording for MM01.docx
+               - XD01STEPS.docx
+               - ZTRCAP_BDC_CALLTRANS_METH.txt
+               - ZTRCAP_BDC_PROG1.txt
+               - ZTRCAP_BDC_PROG1_TOP.txt
+               - ZTRCAP_BDC_PROG1_TOP1.txt
+               - ZTRCAP_BDC_PROG2.txt
+               - ZTRCAP_BDC_REC_MAT.txt
+               - ZTRCAP_BDC_SESSION_METH.txt
+               - ZTRCAP_FILEHANDLING.txt
+               - ZTRCAP_FILEHANDLING_DOWN.txt
+               - ZTR_BDC_CALLTRANS_PRG.txt
+               - ZTR_BDC_CALLTRANS_PRG_MSGCL.txt
+               - ZTR_BDC_FILE_TO_ITAB.txt
+               - ZTR_BDC_SESSION_METH1.txt
+               - ZTR_BDC_SESSION_METH1_FILES.txt
+               - ZTR_BDC_TABLE_CONTROLS.txt
+               - ZTR_BDC_TABLE_CONTROLS_INCL.txt
+               - ZTR_BDC_TABLE_CONTROLS_INCL1.txt
+               - ZVKBDC_DEFAULT_RECORDING.txt
+               - ~$mo2_Steps to create BDC recording for XD01.docx
+               - ~$mo4_steps to load  file into Application server.docx
+               - ~$mo5_steps to download file from  Application server.docx
+          - Enhancement and Modification
+               - BAdI
+                    - BAdI Implementation for MM01.docx
+                    - Call  Enhancement Spot in SE38.docx
+                    - Create Classic BAdI.docx
+                    - Create Classic BAdI.txt
+                    - Create Enhancement Spot.docx
+                    - Create Enhancement Spot.txt
+                    - Find Standard BAdI using CL_EXITHANDLER_GET_INSTANCE.docx
+                    - Find Standard BAdI using SE24.docx
+                    - ~$eate Classic BAdI.docx
+               - Exits
+                    - Creating customer documentation_Demo1.docx
+                    - FunctionExit_Demo1.docx
+                    - Locating Exits_Demo1.docx
+                    - MenuExit_Demo1.docx
+                    - Overwriting SAP Field Labels_Demo1.docx
+                    - ScreenExit_Demo1.docx
+                    - Transaction Variant_Demo1.docx
+                    - ~$ansaction Variant_Demo1.docx
+          - Enhancements
+               - BADI
+                    - Demo1_classic BADI.docx
+                    - Demo2_classic BADI_Implementation_Se19.docx
+                    - Demo3_Vendor XK02_BADI_Implementation.docx
+                    - Demo4_FILTER in classic BADI.docx
+                    - Demo5_mutiple implementation BADI_EDIT.docx
+                    - Demo6_mutiple implementation and filter.docx
+                    - ~$mo2_classic BADI_Implementation.docx
+                    - ~$mo2_classic BADI_Implementation_Se19.docx
+                    - ~$mo4_FILTER in classic BADI.docx
+                    - ~$mo6_mutiple implementation and filter.docx
+               - dem1_classic badi_EDIT.docx
+               - demo1_append.docx
+               - demo2_CI_include.docx
+               - demo3_Overwriting SAP Field Labels.docx
+               - demo4_Data element documentation change.docx
+               - demo5_extended_secondary index.docx
+               - demo6_Transaction Variant.docx
+               - demo8_Menu exit.docx
+               - demo9_screenexit.docx
+               - idoc.docx
+          - SmartForms
+               - ABAP.bmp
+               - Capture.PNG
+               - Demo10_styles.docx
+               - Demo11_Textmodules.docx
+               - Demo12_Alternative.docx
+               - Demo2_logo.docx
+               - Demo3_Address with text.docx
+               - Demo4.1_code.docx
+               - Demo4_Footer.docx
+               - Demo5_LOOPand code.docx
+               - Demo6_table.docx
+               - Demo7_template.docx
+               - Demo8_address Window.docx
+               - Demo9_address Window_wth logic.docx
+               - Demo_Form_01
+                    - Smartforms_Demo_Document_01.docx
+                    - Smartform_Driver_Program_01.docx
+                    - ZCAP_SMARTFORMS_PROG1.pdf
+                    - ZCAP_SMARTFORMS_PROG1_TOP.pdf
+               - Demo_Form_02
+                    - Smartforms_Demo_Document_02.docx
+                    - Smartform_Driver_Program_02.docx
+                    - ZCAP_SMARTFORMS_PROG2.pdf
+                    - ZCAP_SMARTFORMS_PROG2_TOP.pdf
+               - driver program_smartforms.txt
+               - error.PNG
+               - form.PNG
+               - SmartForm Demo_01_Add Two Numbers.docx
+               - SmartForm Demo_02_First_Example.doc
+               - SmartForm Demo_Add Two Numbers.docx
+               - SmartForm Demo_Arithmetic_Numbers.docx
+               - SmartForm Demo_First_Example.doc
+               - SmartForm Demo_Numbers.docx
+               - SmartformsDemo2
+                    - Capture.PNG
+                    - Demo10_styles.docx
+                    - Demo11_Textmodules.docx
+                    - Demo12_Alternative.docx
+                    - Demo2_logo.docx
+                    - Demo3_Address with text.docx
+                    - Demo4.1_code.docx
+                    - Demo4_Footer.docx
+                    - Demo5_LOOPand code.docx
+                    - Demo6_table.docx
+                    - Demo7_template.docx
+                    - Demo8_address Window.docx
+                    - Demo9_address Window_wth logic.docx
+                    - driver program_smartforms.txt
+                    - form.PNG
+               - Smartforms_Demo1 MARA.docx
+               - Smartforms_Demo1.docx
+               - Smartforms_Demo2_Table.docx
+               - Smartforms_Demo2_Template.docx
+               - Smartforms_Demo3_SmartStyle.docx
+               - Smartforms_Demo4_TextModule.docx
+               - Smartforms_Demo5_Address.docx
+               - Smartform_Driver_Program_03.docx
+               - Upload Graphics through SE78.docx
+               - ZYNY_SMART_MARA_TABLE.docx
+               - ZYNY_SMART_MARA_TABLE_LOOP.docx
+               - ~$artforms_Demo2_Table.docx
+     - Module4
+          - ALE- IDOC
+               - ALE IDOC_Demo1 - For Participants.docx
+               - ALE IDOC_Demo1.docx
+               - ALE Monitoring using BD87.docx
+               - Change Pointers.docx
+               - Control Record - EDIDC.docx
+               - Create Custom IDOC.docx
+               - Data Record EDIDD and EDID4.docx
+               - IDOC steps.xlsx
+               - Monitoring Tool WE02.docx
+               - Monitoring Tool WE19.docx
+               - Process Code.docx
+               - Status Record EDIDS.docx
+               - WE09 - IDoc Monitoring.docx
+               - ~$E IDOC_Demo1 - For Participants.docx
+               - ~ew Microsoft Excel Worksheet.tmp
+          - BAPI_Demos
+               - BAPI_Customized_steps_for_Customer Master_01
+                    - BAPI_Customized_steps_for_Cust Mast.docx
+                    - ZCAP_BAPI_CUSTOMER_PROGRAM.docx
+                    - ZCAP_BAPI_CUSTOMER_PROGRAM.pdf
+                    - ~$AP_BAPI_CUSTOMER_PROGRAM.docx
+                    - ~$PI_Customized_steps_for_Customer Master.docx
+               - BAPI_Material_Master_Dataupload_02
+                    - BAPI_Material_Master_Dataupload_Document.docx
+                    - BAPI_MAT_Flat_File.txt
+                    - ZCAP_BAPI_MATERIAL_UPLOAD.docx
+                    - ZCAP_BAPI_MATERIAL_UPLOAD.pdf
+                    - ZCAP_BAPI_MATERIAL_UPLOAD_INCL.docx
+                    - ZCAP_BAPI_MATERIAL_UPLOAD_INCL.pdf
+               - BAPI_PO_Get_Details_03
+                    - BAPI_PO_Getdetails.docx
+                    - ZCAP_BAPI_PO_GETDETAILS.pdf
+               - BAPI_Sales_Order Status_04
+                    - ZCAP_BAPI_SALESORDER_GETSTATUS.docx
+                    - ZCAP_BAPI_SALESORDER_GETSTATUS.pdf
+          - LSMW
+               - lsmw fields.xlsx
+               - LSMW Steps - Direct Input Method.docx
+               - LSMW Steps.docx
+               - LSMW_steps.txt
+          - RFC
+               - Function Module_Demo1.docx
+               - Steps to create RFC.docx
+               - Steps to Invoke Function Module thru RFC.docx
+     - SAP HANA
+          - ADBC
+               - ADBC connectivity Demo1_Dept.txt
+               - ADBC connectivity Demo1_EMP.txt
+               - ADBC connectivity Demo2_Dept.txt
+               - ADBC connectivity Join_Case_Demo4_Emp Dept.txt
+               - ADBC connectivity Join_Demo2_Emp Dept.txt
+               - ADBC connectivity UNION_Demo3_ROLE1 ROLE2.txt
+          - ADBC example.txt
+          - AMDP
+               - 34.AMDP classes1 - EMP.txt
+               - 34.AMDP classes2 - EMP - Case Sal.txt
+               - 34.AMDP classes2 - EMP Date.txt
+               - 34.AMDP classes3 - EMP Date.txt
+               - AMDP_Import_Export_Demo1.txt
+               - AMDP_Import_Export_Demo2.txt
+               - AMDP_Import_Export_Demo3.txt
+               - Steps to create an AMDP Class.docx
+          - AMDP example.txt
+          - Calculation View By Script and consume via ADBC
+               - 01 Calculation view by Script.docx
+               - 02 External view for Calculation View.docx
+               - 03 Consume Calculation View By Via ADBC.docx
+               - 03 Consume Calculation View By Via ADBC.txt
+               - 04 SQL for creating Scripted Calculation View.docx
+               - 04 SQL for creating Scripted Calculation View.txt
+          - CDS ALV
+               - CDS with ALV Add Button Demo6.txt
+               - CDS with ALV More Display Options Demo5.txt
+               - CDS with ALV_and Catalog_SET_FIELD_HEADER_TEXTS _Demo3.txt
+               - CDS with ALV_Demo2.txt
+               - CDS with ALV_Lesser_FieldsDemo4.txt
+               - CDS with ALV_With Title and  Disable Aggregation And Sort.txt
+               - Demo with Select options.txt
+               - Demo with Select options_cds_view.txt
+               - Demo1_Handout.txt
+               - zyny_cds_alv_01.docx
+          - CDS Views
+               - CDS View_Demo1.txt
+               - CDS View_Demo10_Currency_Convert_Parameters.txt
+               - CDS View_Demo11_Join_Case_Currency_Convert.txt
+               - CDS View_Demo1_SE38.txt
+               - CDS View_Demo2_Join_SCARR_SPFLI.txt
+               - CDS View_Demo3_Join_With_Case -EMP DEPT.txt
+               - CDS View_Demo4_Union - Role1 Role2.txt
+               - CDS View_Demo5_Parameters.txt
+               - CDS View_Demo6_Parameters - EMP.txt
+               - CDS View_Demo7_Enhancement - EMP.txt
+               - CDS View_Demo8_View on View.txt
+               - CDS View_Demo9_Association - EMP DEPT.txt
+               - Currency Conversion.docx
+               - More Demos on CDS Views.docx
+               - New Open SQL.txt
+          - CDS View_Demo10_Currency_Convert_Parameters.txt
+          - CDS View_Demo5_Parameters.txt
+          - CDS View_Demo7_Extension View.txt
+          - CDS View_Demo9_Association.txt
+          - CDS with ALV_Demo.txt
+          - Currency Conversion.docx
+          - Fuzzy Search.txt
+          - HANA Live and Virtual Data Model.docx
+          - Introduction to ADBC - 1.docx
+          - Introduction to ADBC - 2.docx
+          - More Demos on New ABAP.docx
+          - Native SQL
+               - Data
+                    - deptmaster data.txt
+                    - desigmaster data.txt
+                    - E1_queries.txt
+                    - MT_KNA1.xls
+                    - MT_KNA1_DATA.XLSX
+                    - staffmaster data.txt
+               - E2.import table into eclipse.docx
+               - Pgm to Insert Records.txt
+               - SQL Queries.txt
+               - Tables Created for Demo.docx
+               - ZYNY_NATIVE_SQL_0.docx
+               - zyny_native_sql_demo1.docx
+          - New ABAP
+               - Conversion_Exit - Explanation.txt
+               - Conversion_Exit_Alpha_Input_Classic_Method.txt
+               - Conversion_Exit_Alpha_Input_New_Method.txt
+               - Conversion_Exit_Alpha_Output_Classic_Method.txt
+               - Deep Structure.txt
+               - Explicit_Type Declaration_Demo1.txt
+               - Filter For Internal Tables_Demo1_No_Filter.txt
+               - Filter For Internal Tables_Demo2_Filter With Single Values.txt
+               - Filter For Internal Tables_Demo3_Filter With Single Values.txt
+               - Filter For Internal Tables_Demo4_Filter With Filter Table.txt
+               - Group By For Internal Tables_Demo From Handout.txt
+               - Group By For Internal Tables_Demo1.txt
+               - Group By For Internal Tables_Demo2.txt
+               - Inline Declaration_Demo1.txt
+               - Inner_Join_Improvement_Demo1.txt
+               - Internal Tables
+                    - Reading from Internal Table Using Index.txt
+                    - Reading from Internal Table Using Key.txt
+                    - Sorted Internal table declaration_Demo1.txt
+                    - Sorted Internal table declaration_Demo2.txt
+                    - Sorted Internal table declaration_Demo3.txt
+                    - Standard internal table declaration_Demo1.txt
+                    - Standard internal table declaration_Demo2.txt
+                    - Standard internal table declaration_Demo3.txt
+               - more demos
+                    - New ABAP
+                         - Select Demo1.txt
+                         - Select Demo10_Left Outer Join.txt
+                         - Select Demo11_Left Outer Join.txt
+                         - Select Demo12.txt
+                         - Select Demo13_SubQuery.txt
+                         - Select Demo2.txt
+                         - Select Demo3.txt
+                         - Select Demo4.txt
+                         - Select Demo5.txt
+                         - Select Demo6.txt
+                         - Select Demo7.txt
+                         - Select Demo8.txt
+                         - Select Demo9.txt
+                         - Select _Demo14  For All entries.txt
+               - More Demos on New ABAP.docx
+               - Move Corresponding - Keeping target Lines.txt
+               - New_Case_Via_Switch.txt
+               - Old and New ABAP.xlsx
+               - OOABAP_Constructor_Classic Method.txt
+               - OOABAP_Constructor_New Method.txt
+               - OOABAP_Declaration of actual parameters while importing_Demo1.txt
+          - old Syllabus
+               - Create Procedures and consume via ADBC
+                    - Code for all procedures.txt
+                    - Procedures.docx
+               - HANA Modeler
+                    - Calculation  View Demo1.docx
+                    - Calculation View by Script Demo - EMP.docx
+                    - Consume Calculation View through ADBC - EMP.txt
+                    - Create Decision Table_EMP.docx
+                    - Create procedures - Few Fields_Demo3 - Emp.docx
+                    - Create procedures_Demo1 - EMP.docx
+                    - Create procedures_Demo2 - EMP - IN parameter.docx
+                    - Done
+                         - Analytical View Demo1.docx
+                         - Attribute View Demo1.docx
+                         - Attribute View Demo2.docx
+                         - HANA Modeler - Create Table for Analytical View.txt
+                         - HANA Modeler - Create Table for Attribute View.txt
+                         - HANA Modeler - Create Table for Calculation View.txt
+                    - External view - Created from the above Calculation View_Demo -EMP.docx
+          - Open SQL New Features_Select Statement
+               - Select Demo1.docx
+               - Select Demo1_Comma Separated_Escape Character For Host Variables.txt
+               - Select Demo2.docx
+               - Select Demo2_01.docx
+               - Select Demo2_Comma Separated_Escape Character For Host Variables_Where Condition.txt
+               - Select Demo3_Arithmetic Expressions.txt
+               - Select Demo4.docx
+               - Select Demo4_Case_Expression.txt
+               - Select Demo5.docx
+               - Select Demo5_Case_Expression.txt
+               - Select Demo6.docx
+               - Select Demo6_GroupBy_Having.txt
+               - Select Demo7.docx
+               - Select Demo7_SubQuery.txt
+          - SAP - HANA LabBook.doc
+          - Select options with CDS or TABLE using ALV IDA.txt
+          - Steps for HANA installation for ITICS  team.txt
+          - Steps to connect to Modeler perspective.docx
+          - ZDEMO_CDS_PURCHASE_ASSOC.txt
+          - ZDEMO_CDS_PURCHASE_DATA.txt
+          - ZDEMO_CDS_PURCHASE_EX_V1.txt
+          - ZDEMO_CDS_PURCHASE_HEADER.txt
+          - ZDEMO_CDS_PURCHASE_ITEM.txt
+          - ~$eps to connect to Modeler perspective.docx
+- Enhancement and Modification N BADI
+     - Enhancement and Modification_AT
+          - BAdI
+               - 1_Find Standard BAdI using CL_EXITHANDLER_GET_INSTANCE.docx
+               - 2_Find Standard BAdI using SE24.docx
+               - 3_Using SE84 to find BADI.docx
+               - 4-2_Create Classic BAdI.txt
+               - 4_Create Classic BAdI.docx
+               - 5_Vendor XK02_BADI_Implementation.docx
+               - 6_BAdI Implementation for MM01.docx
+               - 7_FILTER in classic BADI.docx
+               - BADI_notes.docx
+               - Part 1 Create Enhancement Spot.docx
+               - Part 2 Call  Enhancement Spot in SE38.docx
+               - Part 3 Create Enhancement Spot.txt
+               - ~$DI_notes.docx
+               - ~$eate Classic BAdI.docx
+               - ~$FILTER in classic BADI.docx
+               - ~$Using SE84 to find BADI.docx
+               - ~$Vendor XK02_BADI_Implementation.docx
+               - ~WRL3634.tmp
+          - Exits
+               - 01_Transaction Variant_Demo.docx
+               - 02_extended_secondary index.docx
+               - 2_Overwriting SAP Field Labels_Demo.docx
+               - 3_Creating customer documentation_Demo.docx
+               - 4_Locating Exits_Demo.docx
+               - 5_ScreenExit_Demo.docx
+               - 6_FunctionExit_Demo.docx
+               - 7_MenuExit_Demo.docx
+               - ~$ansaction Variant_Demo1.docx
+               - ~$Creating customer documentation_Demo.docx
+               - ~$_extended_secondary index.docx
+               - ~$_Transaction Variant_Demo.docx
+     - Enhancement demo.docx
+     - Enhancement_notes.docx
+- File Handling
+     - 1.GUI_Upload.docx
+     - 1.GUI_Upload.txt
+     - 2.GUI_UploadCommaFile.docx
+     - 2.GUI_UploadCommaFile.txt
+     - 3.GUI_Download.docx
+     - 3.GUI_Download.txt
+     - 4.ToApplication server.docx
+     - 4.ToApplication server.txt
+     - 5.Fromapplication server.docx
+     - 5.Fromapplication server.txt
+     - 6.GUI_Upload_excel.docx
+     - 6.GUI_Upload_excel.txt
+     - customercomma.txt
+     - demo 1 and 2.docx
+     - materials.txt
+     - materials.xlsx
+     - MATMAST.TXT
+     - MATMAST1.TXT
+     - ZAT_FILE4.txt
+     - ZAT_FILE5.txt
+     - ZAT_FILE_APPSERVER01.txt
+- Function modules
+     - 1.Function Group.docx
+     - 2.Function Module.docx
+     - 3.Calling Simple Function Module from Report.docx
+     - 4.Calling parameterized FM from Report.docx
+     - 5.Calling Standard SAP FM from Report.docx
+     - 6.Raising Exceptions in FM.docx
+     - 7.Raising Exceptions in FM_demo2.docx
+     - 8.Function Module Demo2_Changing Parameter.docx
+     - Passing table in FM via changing tab.docx
+     - Passing table in FM via tables tab.docx
+     - ~$Calling parameterized FM from Report.docx
+     - ~$Calling Simple Function Module from Report.docx
+     - ~$Calling Standard SAP FM from Report.docx
+     - ~$Function Group.docx
+     - ~$Function Module.docx
+     - ~$Raising Exceptions in FM.docx
+     - ~$ssing table in FM via changing tab.docx
+     - ~$ssing table in FM via tables tab.docx
+- hana
+     - 0.5 demo tables for HANA.docx
+     - Calculation view in HANA_Ch 6.docx
+     - cds questions.xlsx
+     - E10.1Calculation view by Script.docx
+     - E10.2.Consume View through ADBC.txt
+     - E10.3.Dictionary View onExternal view.docx
+     - E16.optimised abap inline declaration, loop at @.txt
+     - E18.optimised abap sap documentation.txt
+     - E19.optimised abap case, switch.txt
+     - E19.optimised abap conversion.txt
+     - E19.optimised abap filter.txt
+     - E19.optimised abap group by in loop.txt
+     - E19.optimised abap move corresponding keeping target lines.txt
+     - E19.optimised abap new keyword.txt
+     - E19.optimised abap optimised insert.txt
+     - E19.optimised abap read IT using index and keys.txt
+     - E19.optimised abap ref deref table pointers, value .txt
+     - E19.optimised abap union.txt
+     - E19.optimised abap write ref table.txt
+     - E1_queries.txt
+     - E2.import table into eclipse.docx
+     - E24.1CDS views.txt
+     - E24.2 CDS views_SE38 program.txt
+     - E24.Create CDS view.docx
+     - E25.1CDS views join.txt
+     - E25.2 CDS views join_SE38 program.txt
+     - E26.1CDS views join with case.txt
+     - E26.2CDS views join with case_SE38.txt
+     - E26.union cds view .txt
+     - E27CDS_View on View.txt
+     - E28 CDS_extend.txt
+     - E28.1. Extend CDS view.docx
+     - E29 CDS_oneparemeters.txt
+     - E29 CDS_paremeters.txt
+     - E29 CDS_paremeters_simple.txt
+     - E30.CDS curency convert.txt
+     - E31.CDS join parameterscase.txt
+     - E32.CDS association.txt
+     - E33.AMDP classes.txt
+     - E34.AMDP classes1.txt
+     - E34.AMDP classes2.txt
+     - E34.AMDP classes3.txt
+     - E35.CDS with ALV.txt
+     - E36.CDS with ALV and catalogue.txt
+     - E37.CDS with ALV lesser fields.txt
+     - E38.CDS with  title and ascending descendingorder disable.txt
+     - E39.CDS toolbar remove print button.txt
+     - E3_Create table in Eclipse directly.docx
+     - E4. demo tables for HANA.docx
+     - E40.CDS ALV toolbar add one  button.txt
+     - E5.Native SQL queries for ADBC.txt
+     - E6.ADBC connectivity SELECT.txt
+     - E7.ADBC connectivity UNION.txt
+     - E8.ADBC connectivity JOIN.txt
+     - E9.ADBC connectivity INNER JOIN ,CASE and WHERE.txt
+     - HANA_Intro_notes.docx
+     - HANA_notes_Ch 4.docx
+     - old syllabus
+          - 41.fuzzy search.txt
+          - E11.Create procedures.docx
+          - E12.Procedures with few fields.txt
+          - Fuzzy Search.docx
+          - hana modelling diagram_Product.docx
+     - ~$. demo tables for HANA.docx
+     - ~$4.Create CDS view.docx
+- IDOCs
+     - ale idoc.docx
+     - IDOC 1 - Introduction.docx
+     - IDOC 2.docx
+     - IDOC 3 - Flow between source and target system.docx
+     - IDOC 4 - Custom IDOC design with existing IDOC Config..docx
+- Internal Tables
+     - 10.desrcibe.docx
+     - 10.desrcibe.txt
+     - 10.Internal Table_Demo Append Initial Line  Insert Initial Line Standard Table.docx
+     - 10.Internal Table_Demo Append Initial Line  Insert Initial Line Standard Table.txt
+     - 11.itab operations.txt
+     - 11b.Read_Demo1_All Options.docx
+     - 11b.Read_Demo1_All Options.txt
+     - 12.a.Internal Table_Demo Collect_1.docx
+     - 12.a.Internal Table_Demo Collect_1.txt
+     - 12.bInternal Table_Demo Collect_2.docx
+     - 12.bInternal Table_Demo Collect_2.txt
+     - 12.collect in itab_.docx
+     - 12.collect in itab_.txt
+     - 12.fetch from view.docx
+     - 12.fetch from view.txt
+     - 13.controlblock statements.docx
+     - 13.controlblock statements.txt
+     - 13.Insert Records from Internal Table in  DBTable-Dept.docx
+     - 13.Insert Records from Internal Table in  DBTable-Dept.txt
+     - 14.Insert Records from Internal Table in  DBTable-Dept.docx
+     - 14.Insert Records from Internal Table in  DBTable-Dept.txt
+     - 15.Update Delete and Modify  from DBusing internal table.docx
+     - 15.Update Delete and Modify  from DBusing internal table.txt
+     - 16.Insert into DB Table using internal table.docx
+     - 16.Insert into DB Table using internal table.txt
+     - 1and 2.internal table.docx
+     - 1and 2.internal table.txt
+     - 2.1.Internal Table_Demo1.docx
+     - 2.1.Internal Table_Demo1.txt
+     - 2.2Internal Table_Demo2.docx
+     - 2.2Internal Table_Demo2.txt
+     - 3.5.with headerline.txt
+     - 3.bInternal Table_Demo4.docx
+     - 3.bInternal Table_Demo4.txt
+     - 3.select.docx
+     - 3.select.txt
+     - 4.1Free Clear Refresh Demo.docx
+     - 4.Free Clear Refresh Demo.docx
+     - 4.Free Clear Refresh Demo.txt
+     - 4.occurs.docx
+     - 4.occurs.txt
+     - 5.Free Clear Refresh Explanation.txt
+     - 5.types.docx
+     - 5.types.txt
+     - 6.free refresh.docx
+     - 6.free refresh.txt
+     - 6.Internal Table_Demo1_Sorted Table.docx
+     - 6.Internal Table_Demo1_Sorted Table.txt
+     - 6A.Internal Tables - Append Sorted By Explanation.docx
+     - 7.sorted table.docx
+     - 7.sorted table.txt
+     - 8.hashed table.docx
+     - 8.hashed table.txt
+     - 9.Internal Table_Demo_Append Sorted By.docx
+     - 9.Internal Table_Demo_Append Sorted By.txt
+     - 9.standard table.docx
+     - 9.standard table.txt
+     - Internal Table - Table Type.docx
+     - Internal Table - Table Type1.docx
+     - Internal Tables theory.docx
+     - ~$ternal Table - Table Type.docx
+     - ~$ternal Table - Table Type1.docx
+     - ~$ternal Tables theory.docx
+- Modularisation
+     - Function modules
+          - 1.Function Group.docx
+          - 2.Function Module.docx
+          - 3.Calling Simple Function Module from Report.docx
+          - 4.Calling parameterized FM from Report.docx
+          - 5.Calling Standard SAP FM from Report.docx
+          - 6.Raising Exceptions in FM.docx
+          - 7.Raising Exceptions in FM_demo2.docx
+          - 8.Function Module Demo2_Changing Parameter.docx
+          - Passing table in FM via changing tab.docx
+          - Passing table in FM via tables tab.docx
+          - ~$Calling parameterized FM from Report.docx
+          - ~$Calling Simple Function Module from Report.docx
+          - ~$Calling Standard SAP FM from Report.docx
+          - ~$Function Group.docx
+          - ~$Function Module.docx
+          - ~$Raising Exceptions in FM.docx
+          - ~$ssing table in FM via changing tab.docx
+          - ~$ssing table in FM via tables tab.docx
+     - subroutines
+          - 1.subroutines.txt
+          - 2.subroutines _static.txt
+          - 3.subroutines local.txt
+          - 4.subroutinesEXIT.txt
+          - 5.subroutinesByreference.txt
+          - 6.Subroutines ByValue.txt
+          - subroutine theory.docx
+          - SubRoutines.docx
+     - ~$bRoutines.docx
+- module pool
+     - 1.simple mpool eg.docx
+     - DEMO 20 MODULE POOL.docx
+     - DML with button grouping.docx
+     - list of mpool_rose.xlsx
+     - MODULE POOL DEMO 18 JULY.docx
+     - table control eg.docx
+     - table strip eg.docx
+     - tablestrip and table control combined eg.docx
+     - ~$list of mpool_rose.xlsx
+- OOABP
+     - 0.Instance Static Variable.txt
+     - 1.Instance Static Methods.txt
+     - 10.Global class and methods.txt
+     - 11.Global class methods and attibutes .txt
+     - 12. Global class methods and attibutes.txt
+     - 13. Global class methods and attibutes.txt
+     - 14.Interface.docx
+     - 14.Interface.txt
+     - 2.Method implementation.txt
+     - 3.1 Method with attributes.txt
+     - 3.2 Static method .txt
+     - 3.3 Append to table.txt
+     - 4.Inheritance_Protected.docx
+     - 4.Inheritance_Protected.txt
+     - 5.Constructor.docx
+     - 5.Constructor.txt
+     - 6.Constructor.docx
+     - 6.Constructor.txt
+     - 7.Static Constructor.docx
+     - 7.Static Constructor.txt
+     - 8.Events.docx
+     - 8.Events.txt
+     - 9.Global class. and attributes.txt
+     - Extras
+          - ZAT_OOAP_DEMO07A.txt
+          - ZAT_OOAP_DEMO07B.txt
+          - ZAT_OOAP_DEMO08A.txt
+          - ZAT_OOAP_DEMO08B.txt
+          - ZAT_OOAP_DEMOEX01.txt
+          - ZAT_OOAP_DEMOEX02.txt
+     - Global class
+          - Demo1_create class in se24.docx
+          - Demo2_create class  having methods.docx
+          - Demo3_pass table in class.docx
+          - Demo4_methods with import export parameters.docx
+          - events.docx
+          - ~$events.docx
+          - ~$mo3_pass table in class.docx
+     - INHERITANCE PRIVATE CLASS TO PRIVATE CLASS.docx
+     - INHERITANCE PRIVATE CLASS TO PROTECTED CLASS.docx
+     - INHERITANCE PRIVATE CLASS TO PUBLIC CLASS.docx
+     - INHERITANCE PROTECTED CLASS TO PRIVATE CLASS.docx
+     - INHERITANCE PROTECTED CLASS TO PROTECTED CLASS.docx
+     - INHERITANCE PROTECTED CLASS TO PUBLIC CLASS.docx
+     - INHERITANCE PUBLIC CLASS TO PRIVATE CLASS.docx
+     - INHERITANCE PUBLIC CLASS TO PROTECTED CLASS.docx
+     - INHERITANCE PUBLIC CLASS TO PUBLIC CLASS.docx
+     - Interface Demo1.txt
+     - Interface Demo2.docx
+     - Interface Demo2.txt
+     - Interface Demo3.txt
+     - Interface Demo4.docx
+     - Interface Demo4.txt
+     - Interfaces theory.docx
+     - OOABAP ACCESS.docx
+     - Steps for ZCL_AT_OOA_DEMO10.docx
+     - ZAT_OOAP_EV01.txt
+     - ZAT_OOAP_EV02.docx
+     - ZAT_OOAP_EV02.txt
+     - ZAT_OOAP_EV03.docx
+     - ZAT_OOAP_EV03.txt
+     - ZAT_OOAP_EV04.docx
+     - ZAT_OOAP_EV04.txt
+     - ZAT_OOAP_IH01.docx
+     - ZAT_OOAP_IH01.txt
+     - ZAT_OOAP_IH02.docx
+     - ZAT_OOAP_IH02.txt
+     - ZAT_OOAP_IH03.docx
+     - ZAT_OOAP_IH03.txt
+     - ZAT_OOAP_IH04.docx
+     - ZAT_OOAP_IH04.txt
+     - ZAT_OOAP_IH05.txt
+     - Z_CL_CLASS_02_DEMOPRG.txt
+     - ~$terfaces theory.docx
+- Performance Tuning
+     - Performance Tuning_notes.docx
+     - Tools of Performance Tuning.txt
+     - Tools of Performance Tuning.xlsx
+- Report
+     - ZSCK_000.docx
+     - ZSCK_001 WHILE, EXIT, CONTINUE, CHCEK.docx
+     - ZSCK_002 SUB ROUTINE, PERFORM, STATICS, GLOBAL.docx
+     - ZSCK_003 SELECTION SCREEN, WINDOW.docx
+     - ZSCK_004 SEARCH HELP.docx
+     - ZSCK_005 INTERNAL TABLE WITH HEADER, WITHOUT HEADER and many more.docx
+     - ZSCK_006 EVENTS, PARAMETERS, SELECT-OPTIONS, INITIALIZATION, AT SELECTION-SCREEN, ON HELP-REQUEST, ON VALUE-REQUEST,.docx
+     - ZSCK_007 USER COMMAND.docx
+- Reporting events
+     - Classical
+          - 1.SOS .txt
+          - 2.Initilization_SOS_EOS_Demo2.txt
+          - 3.1At Selection Screen Ouput SCREEN .txt
+          - 3.2 At Selection Screen Ouput List Box.docx
+          - 3.2 At Selection Screen Ouput List Box.txt
+          - 3.At Selection Screen Ouput MODIF ID.docx
+          - 3.At Selection Screen Ouput MODIF ID.txt
+          - 4.At Selection screen ON.docx
+          - 4.At Selection screen ON.txt
+          - 5.At Selection screen ON.txt
+          - 6.At selection screen On help  and ON VALUE .docx
+          - 6.At selection screen On help  and ON VALUE .txt
+          - 7.TOP and END of PAGE.txt
+          - 9.all events.txt
+     - Events_Sequence.txt
+     - Interactive
+          - 0.At Line Selection_Demo1.txt
+          - 1..Interactive report events (atlineselection).txt
+          - 10.All events.txt
+          - 11. Menu Bar Only_Demo1.docx
+          - 12.Status-Bar-Application Tool Bar_Demo2.docx
+          - 2.At Line Selection_Demo3B_Hide_Write.txt
+          - 3.At PF Status.docx
+          - 3.At PF Status.txt
+          - 6.Atlineselection GET CUROR.txt
+          - 7.Atlineselection GET CUROR n HIDE.txt
+          - 8.At Line Selection_TOP of Page During Line Selection_Get_Cursor.txt
+          - 9.MPTAll events.txt
+     - more demos
+          - At Line Selection_Demo1A.txt
+          - At Line Selection_Demo2.docx
+          - At Line Selection_Demo2.txt
+          - At Line Selection_Demo3.docx
+          - At Line Selection_Demo3.txt
+          - At Line Selection_Demo4_SY-LISEL.txt
+          - At Line Selection_Demo5_HIDE.txt
+          - At Line Selection_Demo6_HIDE.txt
+          - At Line Selection_Demo7_HIDE_TOP of Page During Line Selection.txt
+          - At Line Selection_Demo8_HIDE_TOP of Page During Line Selection_Get_Cursor.txt
+          - At Selection Screen Ouput List Box.txt
+          - At Selection Screen Ouput MODIF ID.txt
+          - At Selection Screen Process on value request.txt
+          - At Selection screen_on Block_ Validation_Demo1.txt
+          - At Selection screen_Validation_Demo1.txt
+          - At Selection screen_Validation_Demo2.txt
+          - At Selection screen_Validation_Demo3-Select Options..txt
+          - At User Command-Status Bar.txt
+          - Get Cursor_Demo1.txt
+          - HIDE_Demo1.txt
+          - Initilization-Example from handout.txt
+          - Initilization_SOS_EOS_Demo1.txt
+          - Initilization_SOS_EOS_Demo2.txt
+          - Initilization_SOS_EOS_Demo3.txt
+          - Initilization_SOS_EOS_Demo4.txt
+          - Initilization_SOS_EOS_Demo5.txt
+          - Interactive Lists- Simple Eg 1.txt
+          - Interactive_Report_Events_01.docx
+          - Interactive_Report_Events_02.docx
+          - Modify Line.txt
+          - Read Me for Demos.docx
+          - ReadLine_Demo1.txt
+          - Screen-Active.docx
+          - Screen-Input.docx
+          - Screen-Invisible.docx
+          - Sequence of Events.txt
+          - Status-Bar-Application Tool Bar.docx
+          - Status-Bar-Menu Bar Only.docx
+          - SY-UCOMM_PICK.txt
+          - ZTRCAP_INTERACTIVE_REPORT.txt
+     - ~$teractive_Report_Events_01.docx
+     - ~$teractive_Report_Events_02.docx
+- sap hana
+     - INLINE DECLARATION.docx
+     - SAP HANA SQL QUERIES.docx
+     - SPRINT CODE
+          - ADBC CHECKPOINT.txt
+          - ALV IDA CHAECKPOINT.txt
+          - AMDP CHECKPOINT.txt
+          - CHECKPOINT.txt
+          - CHECKPOINT2.txt
+          - CHECKPOINT3.txt
+          - CHECKPOINT4.txt
+     - TABLE EXPRESSION.docx
+     - What is SAP hana
+          - 01 Introduction and Positioning
+               - 003 What is SAP HANA.docx
+               - 004 Main Features of SAP HANA.docx
+          - 02 SAP HANA Scenarios
+               - 001 SAP HANA Agile Data Mart.docx
+               - 002 SAP HANA Operational Data Mart.docx
+               - 003 SAP HANA Accelerators.docx
+- Selection screen
+     - 1.Parameters_Demo1.txt
+     - 10.At Selection screen - Validation Demo1.docx
+     - 10.At Selection screen - Validation Demo1.txt
+     - 11.At Selection screen - Validation Demo2 - Block Level.docx
+     - 11.At Selection screen - Validation Demo2 - Block Level.txt
+     - 2.Parameters_Demo2.docx
+     - 2.Parameters_Demo2.txt
+     - 3.select options.docx
+     - 3.select options.txt
+     - 4.Selecttion_Screen_Uline Comment Underline_Demo1.docx
+     - 4.Selecttion_Screen_Uline Comment Underline_Demo1.txt
+     - 5.Selecttion_Screen_Demo1.docx
+     - 5.Selecttion_Screen_Demo1.txt
+     - 6.Selection Screen Demo -Block.docx
+     - 6.Selection Screen Demo -Block.txt
+     - 7.Selection Screen demo-Block2_select options.docx
+     - 7.Selection Screen demo-Block2_select options.txt
+     - 8.Selecttion_Screen_Begin of Line End of Line Demo2.docx
+     - 8.Selecttion_Screen_Begin of Line End of Line Demo2.txt
+     - 9.At Selection screen output.docx
+     - 9.At Selection screen output.txt
+     - selection screen my notes.txt
+- sequence of teaching.xlsx
+- Smartforms
+     - Demo01.docx
+     - Demo10_styles.docx
+     - Demo11_Textmodules.docx
+     - Demo12_Alternative.docx
+     - Demo2_add nos.docx
+     - Demo2_logo.docx
+     - Demo3_Address with text.docx
+     - Demo4.1_code.docx
+     - Demo4_Footer.docx
+     - Demo5_LOOPand code.docx
+     - Demo6_table.docx
+     - Demo7_template.docx
+     - Demo8_address Window.docx
+     - Demo9_address Window_wth logic.docx
+     - driver program_smartforms.txt
+     - form.PNG
+     - How to get the function module name of a previously executed smartform.docx
+     - Smart forms notes.docx
+     - SMARTFORMS 000.docx
+     - SMARTFORMS 001 UPLOAD AND PRINT LOGO.docx
+     - SMARTFORMS 002 USING TEXT ELEMENT.docx
+     - SMARTFORMS 003 FORM INTERFACE AND GLOBAL DEFINITIONS.docx
+     - SMARTFORMS 004 FLOW LOGIC.docx
+     - SMARTFORMS 005 ADDRESS COMPONENT.docx
+     - SMARTFORMS 006 TEMPLATES.docx
+     - SMARTFORMS 007 TABLES IN SMARFORMS.docx
+     - SMARTFORMS 008 DIFFERENT TYPES OF WINDOWS.docx
+     - Thumbs.db
+- String Operations
+     - 1.String Handling Concatenate  Demo_1.txt
+     - 2.String Handling Concatenate  Demo_2.txt
+     - 3.String Handling Len Demo1.txt
+     - 4.String Handling Condense Demo_1.txt
+     - 5.String Handling Condense Demo_2.txt
+     - 6.String Handling Translate Demo.txt
+     - 7.String Handling Shift Demo1.txt
+     - 8.SubFields_Demo1.txt
+     - CO CA Explanation.docx
+     - CO_CN_CA_NA_Demo1.txt
+     - String Handling Find Demo.docx
+     - String Handling Find Demo.txt
+     - String Handling Shift Demo1A.docx
+     - String Handling Shift Demo1A.txt
+     - String Handling Shift Demo2.docx
+     - String Handling Shift Demo2.txt
+     - String Handling Shift Demo3.docx
+     - String Handling Shift Demo3.txt
+     - String Handling Split Demo.docx
+     - String Handling Split Demo.txt
+     - subfields_demo2.txt
+- SubRoutines.docx
+- SYSTEM VARIABLES.docx
