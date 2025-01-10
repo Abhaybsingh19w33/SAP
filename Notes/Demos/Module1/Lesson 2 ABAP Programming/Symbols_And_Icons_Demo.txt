@@ -1,8 +1,0 @@
-REPORT z.
-INCLUDE <symbol>.
-INCLUDE <icon>.
-WRITE: / 'Phone Symbol:', SYM_PHONE AS SYMBOL.
-SKIP.
-ULINE.
-WRITE AT 10 SY-VLINE.
-WRITE: / 'Alarm Icon: ', ICON_ALARM AS ICON.
