@@ -1,3 +1,0 @@
-do 5 times.
-	write:/ 'The loop iteration is', sy-index. 
-enddo.
