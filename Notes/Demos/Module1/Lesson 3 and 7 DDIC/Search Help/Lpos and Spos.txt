@@ -1,6 +1,8 @@
-LPOS -> Position of field in search help results report/table. From here you select the value
+LPOS -> Position of field in search help results report/table. 
+From here you select the value
 
-SPOS->  Position of the search help parameter in the dialog box for limiting the hit list.
+SPOS->  Position of the search help parameter in the dialog box 
+for limiting the hit list.
 
 Here is the example to make more clear.
 

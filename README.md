@@ -58,6 +58,8 @@ SAP learnings and projects
 - VS Code Extensions
     - [Blog](https://community.sap.com/t5/application-development-blog-posts/abap-development-in-vs-code/ba-p/13433976)
     - We can log in using VS Code
+- BDC
+    - [Structure of BDCMSGCOLL](https://answers.sap.com/questions/1479822/structure-of-bdcmsgcoll.html)
 
 ## New Syntax learnings
 - [ZCS_NEW_SYNTAX3](NewSyntax/ZCS_NEW_SYNTAX3.abap)
