@@ -1,5 +1,0 @@
-1	PL
-2	PM
-3	PL
-4	PL
-5	PM

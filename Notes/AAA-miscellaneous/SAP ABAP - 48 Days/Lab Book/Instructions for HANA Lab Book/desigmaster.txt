@@ -1,6 +1,0 @@
-101	HOD
-102	Professor
-103	Reader
-104	SrLecturer
-105	Lecturer
-106	Director

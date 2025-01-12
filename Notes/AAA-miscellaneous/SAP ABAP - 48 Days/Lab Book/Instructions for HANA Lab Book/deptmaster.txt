@@ -1,4 +1,0 @@
-10	Computer Science 
-30	Electronics 
-40	Mechanics 
-50	Robotics 
