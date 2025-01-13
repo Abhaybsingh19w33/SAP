@@ -1,0 +1,62 @@
+- ZCS_NEW_SYNTAX
+    - Inline Declaration
+    - Value Operator
+    - New Concat operator
+    - ALPHA conv IN OUT
+    - COND operator
+
+- ZSC_NEW_SYNTAX2
+    - Inline Declaration
+    - Value Operator
+    - line_index function
+    - new syntax for reading internal table 
+
+- ZSC_NEW_SYNTAX3
+    - Inline Declaration
+    - CASE Statements In OPEN SQL
+    - Performing Calculations within SQL Statements
+    - NEW Constructor Operator
+    - Value Constructor Operator
+    - FOR Iteration Expression
+    - Chaining Operator
+    - String Templates
+    - Method Chaining
+    - Avoiding TYPE MISMATCH Errors in ABAP
+    - Filter Operator |WITOUT EXCEPT| WITH EXCEPT|
+    - MAPPING |EXCEPT|
+    - Table Comprehension
+    - Table Comprehension : MULTIPLE FOR
+    - Table Comprehension : Local Auxiliary Fields
+    - Table Comprehension : Join
+    - Table Comprehension : Multiple Rows
+    - MESHES
+    - IS INSTANCE OF
+    - CASE TYPE OF
+    - GROUP BY for Internal Tables
+    - REDUCE
+    - REDUCE |UNTIL|
+    - FOR ... WHILE
+    - FOR ... UNTIL
+    - Predicative Method Calls
+    - New Boolean Function
+    - COND
+    - SWITCH
+
+- ZSC_NEW_SYNTAX4
+    - reading internal table using index
+    - reading internal table using key
+    - sorted table examples
+    - Deep Structure
+    - Dereferencing
+
+- [4: Constructor Operators](./ZYNY_4_CONSTRUCTOR_OPERATORS.abap)
+    - NEW
+    - VALUE
+    - CORRESPONDING
+    - FILTER
+    - COND
+    - SWITCH
+    - CONV
+    - REF
+    - REDUCE
+    - EXACT

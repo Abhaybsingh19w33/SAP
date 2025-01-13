@@ -1,4 +1,0 @@
-REPORT Z.
-PARAMETERS: p1(3) TYPE c,
-            p2(5) TYPE c,
-            p3(1) TYPE c.
