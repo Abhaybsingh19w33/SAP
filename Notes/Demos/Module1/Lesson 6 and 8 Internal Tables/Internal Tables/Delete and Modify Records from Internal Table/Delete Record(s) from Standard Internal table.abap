@@ -1,0 +1,58 @@
+* Any one delete statement may be executed at a time
+* Participants must comment remaining lines and uncomment one delete line
+
+REPORT Z104329PGM1 NO STANDARD PAGE HEADING.
+TYPES: BEGIN OF TY_SCARR,
+         CARRID   TYPE SCARR-CARRID,
+         CARRNAME TYPE SCARR-CARRNAME,
+         CURRCODE TYPE SCARR-CURRCODE,
+       END OF TY_SCARR.
+
+DATA ITSCARR TYPE TABLE OF TY_SCARR.
+DATA WA TYPE TY_SCARR.
+
+PERFORM SELECTFROMDB.
+IF SY-SUBRC = 0.
+  PERFORM DISP.
+ELSE.
+  WRITE 'Select not successful'.
+ENDIF.
+SKIP 3.
+
+PERFORM DELROW.
+
+FORM SELECTFROMDB.
+  SELECT CARRID
+         CARRNAME
+         CURRCODE
+         UP TO 10 ROWS
+         FROM SCARR
+         INTO TABLE ITSCARR.
+ENDFORM.
+
+FORM  DELROW.
+  DELETE ITSCARR FROM 2.  "ALL RECORDS from 2nd Record WILL BE DELETED FROM Internal table ITSCARR
+* DELETE ITSCARR TO 3. "from 1 to 3
+* DELETE ITSCARR FROM 2  TO 4.
+* DELETE ITSCARR INDEX 6.
+* DELETE ITSCARR WHERE CARRID = 'AA'.
+* DELETE ITSCARR WHERE CURRCODE = 'USD'.
+*  DELETE ITSCARR WHERE CARRID = 'AA' OR CURRCODE = 'EUR'.
+  WRITE: 'In Delrow SY-SUBRC IS :' , SY-SUBRC.
+  WRITE: 'In Delrow SY-DBCNT IS :' , SY-DBCNT.
+
+  IF SY-SUBRC = 0.
+    PERFORM DISP.
+  ELSE.
+    WRITE: 'Record(s) not deleted :' .
+  ENDIF.
+ENDFORM.
+
+
+FORM DISP.
+  LOOP AT ITSCARR INTO WA.
+    WRITE: /'Carrid is' , WA-CARRID,
+            'Carrname is',WA-CARRNAME,
+            'Currcode is',WA-CURRCODE.
+  ENDLOOP.
+ENDFORM.

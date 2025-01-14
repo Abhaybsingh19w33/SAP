@@ -1,0 +1,27 @@
+*Pass Internal table as parameters
+*Pass by value
+REPORT Z NO STANDARD PAGE HEADING.
+DATA ITAB TYPE TABLE OF I.
+DATA WA TYPE I. "Global variable for work area used in both the subroutines
+
+WA = 10. APPEND WA TO ITAB.
+WA = 20. APPEND WA TO ITAB.
+WA = 30. APPEND WA TO ITAB.
+WA = 40. APPEND WA TO ITAB.
+
+WRITE: / 'Before invoking S1:'.
+LOOP AT ITAB INTO WA.
+  WRITE WA.
+ENDLOOP.
+
+PERFORM S1 USING ITAB.
+
+WRITE: / 'After  invoking S1:'.
+LOOP AT ITAB INTO WA.
+  WRITE WA.
+ENDLOOP.
+
+FORM S1 USING VALUE(FITAB) LIKE ITAB.
+  WA = 99.
+  MODIFY FITAB FROM WA INDEX 3.
+ENDFORM.

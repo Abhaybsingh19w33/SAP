@@ -1,0 +1,13 @@
+REPORT Z.
+DATA WA TYPE I.
+
+START-OF-SELECTION.
+  DO 10 TIMES.
+    WA = SY-INDEX.
+    HIDE WA.
+    WRITE :/ WA.
+  ENDDO.
+
+AT LINE-SELECTION.
+  WRITE /:'This is secondary list:', SY-LSIND.
+  WRITE /: 'WA IS :', WA.

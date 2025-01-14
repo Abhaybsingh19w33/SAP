@@ -1,0 +1,15 @@
+REPORT Z.
+
+*Events cannnot be coded in subroutines.
+PERFORM SUB1.
+PERFORM SUB2.
+
+FORM SUB1.
+    START-OF-SELECTION.
+        WRITE NUM1.
+ENDFORM.
+
+FORM SUB2.
+    INITIALIZATION.
+        DATA NUM1 TYPE I VALUE 10.
+ENDFORM.

@@ -1,0 +1,37 @@
+REPORT Z104329PGM3 NO STANDARD PAGE HEADING.
+TYPES : BEGIN OF TY_SCARR,
+          CARRID   TYPE SCARR-CARRID,
+          CARRNAME TYPE SCARR-CARRNAME,
+          CURRCODE TYPE SCARR-CURRCODE,
+        END OF TY_SCARR.
+
+DATA ITSCARR TYPE TABLE OF TY_SCARR.
+DATA WA TYPE TY_SCARR.
+
+PERFORM SELECTFROMDB.
+IF SY-SUBRC = 0.
+  PERFORM READWITHKEY.
+ELSE.
+  WRITE 'Select not successful'.
+ENDIF.
+
+FORM SELECTFROMDB.
+  SELECT CARRID
+         CARRNAME
+         CURRCODE
+         UP TO 10 ROWS
+         FROM SCARR
+         INTO TABLE ITSCARR.
+ENDFORM.
+
+FORM READWITHKEY.
+*Transporting All fields is the default
+*If we just need  to check if record is present, 
+*there is no need to transfer contents to work area
+*Hence, transporting no fields can be used
+
+  READ TABLE ITSCARR TRANSPORTING NO FIELDS
+  INTO WA WITH
+  KEY CARRID = 'AA'.
+  WRITE: 'SY-SUBRC IS :' , SY-SUBRC.
+ENDFORM.

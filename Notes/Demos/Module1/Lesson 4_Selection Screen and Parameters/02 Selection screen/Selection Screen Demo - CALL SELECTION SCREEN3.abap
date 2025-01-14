@@ -1,0 +1,17 @@
+REPORT z.
+TABLES SPFLI.
+SELECTION-SCREEN BEGIN OF SCREEN 500 AS WINDOW.
+    PARAMETERS: airpfrom TYPE spfli-airpfrom,
+                airpto TYPE spfli-airpto.
+SELECTION-SCREEN END OF SCREEN 500.
+
+CALL SELECTION-SCREEN 500 STARTING AT 10 1.
+
+INITIALIZATION.
+    airpfrom = 'AA'.
+    airpto = 'AA'.
+
+START-OF-SELECTION.
+    WRITE 'HI'.
+    WRITE airpfrom.
+    WRITE airpto.

@@ -1,0 +1,16 @@
+REPORT Z.
+INITIALIZATION.
+PARAMETERS:EMPNO(4)  TYPE N,
+           ENAME(10) TYPE C.
+
+AT SELECTION-SCREEN OUTPUT.
+  LOOP AT SCREEN.
+    IF SCREEN-NAME = 'ENAME'.
+       SCREEN-INVISIBLE = 1. "See * in parameters if screen invisible is 1
+      MODIFY SCREEN.
+    ENDIF.
+  ENDLOOP.
+
+START-OF-SELECTION.
+  WRITE :/ 'Ename is :', ENAME.
+  WRITE :/ 'Empno is :', EMPNO.
