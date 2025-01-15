@@ -1,0 +1,39 @@
+REPORT Z.
+TYPES t_itab TYPE SORTED TABLE OF i WITH UNIQUE KEY table_line.
+DATA(dref) = VALUE t_itab( ( 100 ) ( 200 ) ( 3000 ) ).
+"DATA(dref) = VALUE t_itab( ( 100 ) ( ) ( 3000 ) ).
+LOOP AT dref INTO DATA(WA).
+  WRITE WA.
+ENDLOOP.
+
+
+" NEW SYNTAX
+TYPES : BEGIN OF TY_ITAB,
+          NUM1 TYPE I,
+        END   OF TY_ITAB.
+
+TYPES t_itab TYPE SORTED TABLE OF TY_ITAB WITH UNIQUE KEY NUM1.
+DATA(itab_o) = VALUE t_itab( ( NUM1 = 10 ) ( NUM1 = 20 ) ( NUM1 = 30 ) ).
+
+LOOP AT itab_o INTO DATA(WA).
+  WRITE WA-NUM1.
+ENDLOOP.
+
+
+"NEW METHOD
+REPORT Z.
+TYPES: BEGIN OF MYSCARR,
+        CARRID TYPE S_CARR_ID,
+        CARRNAME TYPE S_CARRNAME,
+        END OF MYSCARR.
+
+TYPES ITAB TYPE SORTED TABLE OF MYSCARR WITH UNIQUE KEY CARRID.
+DATA(LV) = VALUE ITAB( 
+                      ( CARRID = 'AA' CARRNAME = 'American Airlines' )
+                      ( CARRID = 'AB' CARRNAME = 'Air Berlin' )
+                      ).
+
+LOOP AT LV INTO DATA(WA).
+   WRITE WA-CARRID.
+   WRITE WA-CARRNAME.
+ENDLOOP.

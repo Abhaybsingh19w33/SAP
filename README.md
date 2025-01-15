@@ -209,6 +209,9 @@ SAP learnings and projects
 
 ## [Just2Share](https://www.youtube.com/@just2shareji/playlists)
 
+- BADI
+    - [BADI](./Notes/Demos/Module3/Enhancement%20and%20Modification%20N%20BADI/Just2Share/BADI/BADI.docx)
+
 - [ABAP CDS Views Playlist](https://www.youtube.com/watch?v=_846kzfcANc&list=PLmajIBPiks13oUjO95ojKJSjoqZUeRIdd) [File](/CDS/_index.md)
     - Video:1 ABAP CDS Views Introduction
     - Video 2 HANA Studio Intro, Simple CDS Views, Access in SE38 & SE11

@@ -1,0 +1,79 @@
+REPORT Z.
+
+" OLD SYNTAX
+TYPES t_itab TYPE STANDARD TABLE OF i WITH DEFAULT KEY.
+DATA itab_o TYPE t_itab.
+DATA WA TYPE I.
+
+APPEND: 10 TO itab_o,
+        20 TO itab_o,
+        30 TO itab_o.
+
+LOOP AT itab_o INTO WA.
+  WRITE WA.
+ENDLOOP.  
+  
+"NEW SYNTAX
+TYPES t_itab TYPE STANDARD TABLE OF i WITH DEFAULT KEY.
+DATA(itab_o) = VALUE t_itab( ( 10 ) ( 20 ) ( 30 ) ).
+
+LOOP AT itab_o INTO DATA(WA).
+  WRITE WA.
+ENDLOOP.
+
+TYPES itab TYPE STANDARD TABLE OF i WITH DEFAULT KEY.
+DATA(dref) = value itab( ( 100 ) ( ) ( 3000 ) ).
+
+LOOP AT dref INTO DATA(WA).
+  WRITE WA.
+ENDLOOP.
+
+REPORT Z.
+"OLD METHOD
+TYPES: BEGIN OF MYSCARR,
+    CARRID TYPE S_CARR_ID,
+    CARRNAME TYPE S_CARRNAME,
+    END OF MYSCARR.
+
+DATA ITAB TYPE STANDARD TABLE OF MYSCARR WITH HEADER LINE.
+ITAB-CARRID = 'AA'.
+ITAB-CARRNAME = 'American Airlines'.
+APPEND ITAB.
+
+LOOP AT ITAB.
+   WRITE ITAB-CARRID.
+   WRITE ITAB-CARRNAME.
+ENDLOOP.
+
+" ____________________________________________________
+"NEW METHOD
+REPORT Z.
+TYPES: BEGIN OF MYSCARR,
+    CARRID TYPE S_CARR_ID,
+    CARRNAME TYPE S_CARRNAME,
+    END OF MYSCARR.
+
+TYPES ITAB TYPE STANDARD TABLE OF MYSCARR WITH DEFAULT KEY.
+DATA(LV) = VALUE ITAB( ( CARRID = 'AA' CARRNAME = 'American Airlines' )
+                      ( CARRID = 'AB' CARRNAME = 'Air Berlin' )
+                      ).
+
+LOOP AT LV INTO DATA(WA).
+   WRITE WA-CARRID.
+   WRITE WA-CARRNAME.
+ENDLOOP.
+
+" ________________________________________________________
+REPORT Z.
+"NEW METHOD
+TYPES: BEGIN OF MYSCARR,
+    CARRID TYPE S_CARR_ID,
+    CARRNAME TYPE S_CARRNAME,
+    END OF MYSCARR.
+
+TYPES ITAB TYPE STANDARD TABLE OF MYSCARR WITH DEFAULT KEY.
+DATA(LV) = NEW ITAB( ( CARRID = 'AA' CARRNAME = 'American Airlines' )
+                      ( CARRID = 'AB' CARRNAME = 'Air Berlin' )
+                      ).
+
+BREAK-POINT.

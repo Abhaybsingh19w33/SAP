@@ -1,7 +1,0 @@
-REPORT Z.
-TYPES itab TYPE STANDARD TABLE OF i WITH DEFAULT KEY.
-DATA(dref) = value itab( ( 100 ) ( ) ( 3000 ) ).
-
-LOOP AT dref INTO DATA(WA).
-  WRITE WA.
-ENDLOOP.
