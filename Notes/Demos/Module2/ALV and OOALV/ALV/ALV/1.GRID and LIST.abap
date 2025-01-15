@@ -8,19 +8,19 @@ START-OF-SELECTION.
   SELECT * FROM spfli INTO TABLE it_spfli
   WHERE carrid IN s_carrid .
 
-*  CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
-*   EXPORTING
-*    I_STRUCTURE_NAME                  =  'SPFLI'
-*     I_GRID_TITLE                      = ' GRid display'
-*    TABLES
-*      T_OUTTAB                          = it_spfli
-*   EXCEPTIONS
-*     PROGRAM_ERROR                     = 1
-*     OTHERS                            = 2
-*            .
-*  IF SY-SUBRC <> 0.
-* Implement suitable error handling here
-*  ENDIF.
+  CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+   EXPORTING
+    I_STRUCTURE_NAME                  =  'SPFLI'
+     I_GRID_TITLE                      = ' GRid display'
+    TABLES
+      T_OUTTAB                          = it_spfli
+   EXCEPTIONS
+     PROGRAM_ERROR                     = 1
+     OTHERS                            = 2
+            .
+  IF SY-SUBRC <> 0.
+ Implement suitable error handling here
+  ENDIF.
 
 *---------------------------------------
   CALL FUNCTION 'REUSE_ALV_LIST_DISPLAY'

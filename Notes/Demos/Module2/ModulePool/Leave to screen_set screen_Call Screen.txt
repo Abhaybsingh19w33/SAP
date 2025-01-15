@@ -26,5 +26,3 @@ scr1
 scr2
 
 scr3
-
-

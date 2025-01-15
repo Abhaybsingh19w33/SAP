@@ -32,10 +32,8 @@ FORM get_data .
       INTO TABLE it_sflight WHERE carrid IN s_carrid
   .
 ENDFORM.                    " GET_DATA
+
 FORM disp_alv .
-
-
-
   CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
     EXPORTING
       it_fieldcat        = it_fcat
@@ -46,11 +44,8 @@ FORM disp_alv .
 * MESSAGE ID SY-MSGID TYPE SY-MSGTY NUMBER SY-MSGNO
 *         WITH SY-MSGV1 SY-MSGV2 SY-MSGV3 SY-MSGV4.
   ENDIF.
-
-
-
-
 ENDFORM.                    " DISP_ALV
+
 FORM create_fcat .
   wa_fcat-col_pos = '1' .
   wa_fcat-fieldname = 'CARRID' .
@@ -89,5 +84,4 @@ FORM sort .
   wa_sort-fieldname = 'CONNID'.
   wa_sort-up = 'X'.
   APPEND wa_sort TO it_sort .
-
 ENDFORM.

@@ -6,9 +6,9 @@ CLASS lcl_airplane DEFINITION.
     DATA: pub_attr  TYPE i.
 
     METHODS: set_attributes IMPORTING
-                   im_name      TYPE string
-                   im_planetype TYPE saplane-planetype,
-             display_attributes.
+                              im_name      TYPE string
+                              im_planetype TYPE saplane-planetype,
+      display_attributes.
 
     CLASS-METHODS: display_no_of_airplanes.
 
@@ -24,11 +24,11 @@ ENDCLASS.                    "lcl_airplane DEFINITION
 *------------------------------------------------------------------*
 CLASS lcl_airplane IMPLEMENTATION.
 
-METHOD set_attributes.
+  METHOD set_attributes.
     name          = im_name.
     planetype     = im_planetype.
     no_of_airplanes = no_of_airplanes + 1.
-ENDMETHOD.                    "set_attributes
+  ENDMETHOD.                    "set_attributes
 
   METHOD display_attributes.
     WRITE:

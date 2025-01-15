@@ -11,7 +11,6 @@ CLASS emp DEFINITION.
           ename(10) TYPE c.
 ENDCLASS.
 
-
 CLASS emp IMPLEMENTATION.
   METHOD setemp.
     empno = im_empno.
@@ -27,6 +26,7 @@ START-OF-SELECTION.
   DATA emp1 TYPE REF TO emp.
   DATA emp2 TYPE REF TO emp.
   DATA emp_det TYPE TABLE OF REF TO emp.
+
   CREATE OBJECT emp1.
   emp1->setemp( im_empno = 99 im_ename = 'Ram' ).
   APPEND emp1 TO emp_det.

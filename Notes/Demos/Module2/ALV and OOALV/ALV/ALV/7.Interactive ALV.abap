@@ -65,7 +65,6 @@ FORM create_fcat_spfli .
   CLEAR wa_fcat_spfli .
 ENDFORM.                    " CREATE_FCAT
 
-
 FORM disp_alv_spfli .
   CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
     EXPORTING

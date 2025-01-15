@@ -111,7 +111,6 @@ CLASS lcl_truck IMPLEMENTATION.
 
 ENDCLASS.                    "lcl_truck DEFINITION
 
-
 DATA: r_vehicle TYPE REF TO lcl_vehicle,
       r_truck TYPE REF TO lcl_truck,
       itab TYPE TABLE OF REF TO lcl_vehicle.

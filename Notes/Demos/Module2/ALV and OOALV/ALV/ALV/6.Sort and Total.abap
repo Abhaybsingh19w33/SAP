@@ -72,7 +72,6 @@ FORM create_fcat .
   wa_fcat-do_sum = 'X' .
   APPEND wa_fcat TO it_fcat .
   CLEAR wa_fcat .
-
 ENDFORM.                    " CREATE_FCAT
 
 FORM sort_and_subtot .
