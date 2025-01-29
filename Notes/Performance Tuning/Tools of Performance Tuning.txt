@@ -1,20 +1,14 @@
-SCI	Code inspector	
+Static Analysis
+	SCI	Code inspector	
 		Static analysis of the quality of the code. 
 		Errors/Warnings/Informations.			
 		
-		Static Analysis
-
-EPC	Extended Program check	
+	EPC	Extended Program check	
 		The extended program check is also only a static check.	
 
-		Static Analysis
-
-st05	performance trace	
-		Trace allows you to record database access, locking activities etc	
+run time analysis
+	st05	performance trace	
+			Trace allows you to record database access, locking activities etc	
 		
-		run time analysis
-
-se30	runtime analyssis	
-		Provides an overview of the duration and performance of your source code at DB and ABAP level	
-	
-		RUN time Analysis
+	se30	runtime analyssis	
+			Provides an overview of the duration and performance of your source code at DB and ABAP level	
