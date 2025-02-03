@@ -48,5 +48,4 @@ FORM dispinttab2.
   LOOP AT itab2 INTO wa.
     WRITE : / sy-tabix, wa.
   ENDLOOP.
-
 ENDFORM.

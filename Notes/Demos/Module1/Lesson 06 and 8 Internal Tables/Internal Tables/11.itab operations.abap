@@ -21,7 +21,6 @@ PERFORM DISP.
 perform APPEND.
 PERFORM DISP.
 
-
 form selecttab.
 select * from z104329dept into table itdept1.
 ENDFORM.
@@ -56,7 +55,6 @@ perform addtoitdept2.
 insert lines of itdept2 from 2 to 4
 into itdept1 index 2.
 *66, 77 and 88 are inserted from index 2
-
 ENDFORM.
 
 form append.
@@ -66,7 +64,6 @@ form append.
 perform addtoitdept2.
 APPEND LINES OF itdept2 from 2 to 4 to itdept1.
 *66, 77 and 88 are APPENDED AT LAST
-
 ENDFORM.
 
 FORM DISP.

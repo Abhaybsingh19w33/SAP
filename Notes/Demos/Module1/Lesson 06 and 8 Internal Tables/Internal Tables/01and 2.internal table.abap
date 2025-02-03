@@ -16,14 +16,8 @@ LOOP AT it_kna1 INTO wa_kna1.
            wa_kna1-ort01.
 ENDLOOP.
 
-
-
-============================================================================
-with types 
-
-
-
-
+" ============================================================================
+" with types 
 
 *&---------------------------------------------------------------------*
 *& Report ZRTC_GEN_DATA
@@ -39,10 +33,8 @@ TYPES :
     ort01 TYPE ort01,
   END OF ty_kna1.
 
-
 DATA: it_kna1 TYPE TABLE OF ty_kna1,
       wa_kna1 TYPE ty_kna1.
-
 
 SELECT kunnr land1 name1 ort01
   INTO TABLE it_kna1

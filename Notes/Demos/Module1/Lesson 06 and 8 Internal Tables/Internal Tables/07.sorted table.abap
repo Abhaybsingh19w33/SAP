@@ -5,7 +5,6 @@
 *&---------------------------------------------------------------------*
 REPORT ZRT_IT_DEMO5.
 
-
 types : begin of ty_stud,
         rollno type i,
         name(10) type c,
@@ -21,21 +20,20 @@ PERFORM dispstud1.
 
 
 FORM addstud1.
-wa1-rollno = 10. wa1-name = 'AAa'.
-append wa1 to stud1.
-wa1-rollno = 20. wa1-name = 'BBB'.
-append wa1 to stud1.
-wa1-rollno = 30. wa1-name = 'CCC'.
-append wa1 to stud1.
+   wa1-rollno = 10. wa1-name = 'AAa'.
+   append wa1 to stud1.
+   wa1-rollno = 20. wa1-name = 'BBB'.
+   append wa1 to stud1.
+   wa1-rollno = 30. wa1-name = 'CCC'.
+   append wa1 to stud1.
 
-wa1-rollno = 25. wa1-name = 'ABC'.
-*append wa1 to stud1.
-insert  wa1 into stud1 index 2.
+   wa1-rollno = 25. wa1-name = 'ABC'.
+   *append wa1 to stud1.
+   insert  wa1 into stud1 index 2.
 endform.
 
 form dispstud1.
-LOOP AT STUD1 into wa1.
-   WRITE : / sy-tabix , wa1-ROLLNO , wa1-NAME.
-ENDLOOP.
-
+   LOOP AT STUD1 into wa1.
+      WRITE : / sy-tabix , wa1-ROLLNO , wa1-NAME.
+   ENDLOOP.
 ENDFORM.

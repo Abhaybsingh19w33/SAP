@@ -7,27 +7,43 @@
                - External Debugging Demo.docx
           - Lesson 02 ABAP Programming
                - ABAP Programming
-                    - 1.Steps to create First ABAP program.docx
+                    - 01.Steps to create First ABAP program.docx
+                    - 02. write chain operator.abap
+                    - 03. data types.abap
+                    - 04.constants.abap
+                    - 05.left, right, centered justified text.abap
+                    - 06.data types.txt
+                    - 08.Move - Char to Num and Num to Char_Demo.abap
+                    - 08.move2.abap
+                         - slicing and offset and substring
+                    - 09.clear.abap
                     - 11.User Defined DataType_Demo1.abap
+                         - Cannot use "like" for abap predefined data type
                     - 12.User Defined DataType_Demo2.abap
+                         - creating structure/WA
+                         - using char and string
                     - 12.User Defined DataType_FieldString_Demo1.abap
+                        - decimal
                     - 13.User Defined DataType_FieldString_Demo2.abap
+                         - Nested structure
                     - 14.User Defined DataType_FieldString_Demo3.abap
                     - 15.System_Fields.abap
                     - 16.Linecount_demo1.abap
+                         - LINE-COUNT We can put the line count limit to page 
                     - 16.Linecount_demo1.docx
                     - 16.NEW PAGE NO TITLE NO HEADING_Demo.abap
                     - 16.NEW PAGE NO TITLE NO HEADING_Demo.docx
                     - 17.Linecount_demo2.abap
                     - 17.Linecount_demo2.docx
                     - 18.linesize_demo1.abap
+                         - LINE-SIZE
                     - 19.write_demo1.abap
                     - 19.write_demo1.docx
-                    - 2. write chain operator.abap
                     - 20.write_demo2.abap
                     - 20.write_demo2.docx
                     - 21.write_demo3.abap
                     - 21.write_demo3.docx
+                        - OFFSET, LENGTH
                     - 22.write_nogapdemo3.abap
                     - 22.write_nogapdemo3.docx
                     - 23.write_editmask_demo4.abap
@@ -44,18 +60,12 @@
                     - 28.symbols and icons.docx
                     - 29.checkbox.abap
                     - 29.checkbox.docx
-                    - 3. data types.abap
                     - 30inverse on off.abap
                     - 30inverse on off.docx
-                    - 4.constants.abap
-                    - 5.left, right, centered justified text.abap
-                    - 6.data types.txt
-                    - 8.Move - Char to Num and Num to Char_Demo.abap
-                    - 8.move2.abap
-                    - 9.clear.abap
+                    - Date and Time Demo.abap
                     - for all entries.abap
                     - for all entries.docx
-                    - _index.md
+                    - InitialValue_Demo.abap
                - ABAP_System_Fields_SYST_Structure.docx
                - Add 2 Numbers Demos
                     - Changing Parameter Labels.docx
@@ -68,17 +78,15 @@
                     - Demo3_Built In Data Types_With Chain Statement.abap
                - Complete and Incomplete Data Types Demos
                     - Complete_OR_FixedLength_DataTypes_Demo1.abap
+                    - Demo7_String Data Type Demo.abap
+                    - Demo8_Date and Time Demo.abap
+                    - Demo_Type N_Numeric Text.abap
                     - Fixed length Data Types.docx
                     - Incomplete_DataTypes Demo2.abap
-               - Conversion Rules for Elementary Data Objects.pdf
-               - Conversion Rules for Elementary Data Types.docx
-               - Conversion Rules for Elementary Data Types_26 Aug 2020.docx
-               - Date and Time Demo.abap
-               - Demo7_String Data Type Demo.abap
-               - Demo8_Date and Time Demo.abap
-               - Demo_Date_Pgm.abap
-               - Demo_Type N_Numeric Text.abap
-               - Example of Like.abap
+               - Conversion Rules
+                    - Conversion Rules for Elementary Data Objects.pdf
+                    - Conversion Rules for Elementary Data Types.docx
+                    - Conversion Rules for Elementary Data Types_26 Aug 2020.docx
                - Field String Demos
                     - Field String.docx
                     - Field String.mp4
@@ -95,14 +103,18 @@
                     - FORMAT Hotspot on off.abap
                     - FORMAT Input on off.abap
                     - Hotspot_Demo1.abap
-               - Include Pgm_Demo1_3 Includes.abap
-               - InitialValue_Demo.abap
+               - Include Demo
+                    - Include Pgm_Demo1_3 Includes.abap
+                    - Steps to create an Include Program and use it.docx
                - Joins Demo
                     - Joins Inner Join Demo1_SCARR SPFLI_Using Work Area.abap
                     - Joins Inner Join Demo1_SCARR SPFLI_Using Work Area.docx
                     - Joins Left Outer Join Demo2_SCARR SPFLI_Using Work Area.abap
                     - Joins Left Outer Join Demo2_SCARR SPFLI_Using Work Area.docx
                     - Joins Left Outer Join Demo3_SCARR SPFLI_Using Work Area.abap
+               - LIKE Demo
+                    - Example of Like.abap
+                    - Type and Like Demo.abap
                - Line Count Demo
                     - Linecount_demo1.abap
                     - Linecount_demo2.abap
@@ -123,9 +135,9 @@
                          - Move_Demo4_Char to Num and Num to Char_Demo.abap
                          - Move_Demo5_C to D.abap
                          - Move_Demo_Subfields.abap
-               - New Page Demo1.abap
-               - New Page Demo2.abap
-               - NEW PAGE NO TITLE NO HEADING_Demo.abap
+               - NEW PAGE Demo
+                    - New Page Demo1.abap
+                    - New Page Demo2.abap
                - Select EndSelect Statement Demos
                     - Select_Demo1.abap
                     - Select_Demo2 - Parameters.abap
@@ -137,12 +149,10 @@
                     - Select_EndSelect_Part1.mp4
                     - Select_EndSelect_Part2.mp4
                - Standard_Page_Heading.docx
-               - Steps to create an Include Program and use it.docx
                - Steps to create First ABAP program.docx
                - Steps to give column_headings.docx
                - Text Symbols Demo
                     - Text Symbols Demo.docx
-               - Type and Like Demo.abap
                - User Defined Data Types Demos
                     - Like_Demo.abap
                     - Structured_Type_Demo3.abap
@@ -246,7 +256,6 @@
                     - 7C.Assignment on Foreign Key.txt
                     - Generic Buffering.docx
                     - The Different Types of SAP Tables.docx
-               - To Do By Participants.txt
                - TypePool_Demo1.abap
                - Value Table
                     - Value Table Demo.docx
@@ -343,7 +352,20 @@
                     - 04 Select Options DEFAULT, OBLIGATORY, NO EXTENSION, NO INTERVALS.docx
                     - 04 Select Options SELECT INTO TABLE.abap
           - Lesson 05 Control Statements
-               - 1.If Condition_Demo1.abap
+               - 01.If Condition_Demo1.abap
+               - 02.If Condition_Demo2.abap
+               - 03.If Condition_Demo3.abap
+               - 03.If Condition_Demo3.docx
+               - 04.If Condition_Demo4.abap
+               - 04.If Condition_Demo4.docx
+               - 05.Exit_Demo1.abap
+               - 05.Exit_Demo1.docx
+               - 06.Do_loop_Demo1.abap
+               - 06.Do_loop_Demo1.docx
+               - 07.Do_loop_Demo2.abap
+               - 07.Do_loop_Demo2.docx
+               - 08.Do_loop_exit_Demo3.abap
+               - 08.Do_loop_exit_Demo3.docx
                - 10.Check_Demo1.abap
                - 10.Check_Demo1.docx
                - 11.Check_Demo2.abap
@@ -358,19 +380,6 @@
                - 15.Case EndCase_Demo1.docx
                - 16.Case EndCase_Demo2.abap
                - 16.Case EndCase_Demo2.docx
-               - 2.If Condition_Demo2.abap
-               - 3.If Condition_Demo3.abap
-               - 3.If Condition_Demo3.docx
-               - 4.If Condition_Demo4.abap
-               - 4.If Condition_Demo4.docx
-               - 5.Exit_Demo1.abap
-               - 5.Exit_Demo1.docx
-               - 6.Do_loop_Demo1.abap
-               - 6.Do_loop_Demo1.docx
-               - 7.Do_loop_Demo2.abap
-               - 7.Do_loop_Demo2.docx
-               - 8.Do_loop_exit_Demo3.abap
-               - 8.Do_loop_exit_Demo3.docx
           - Lesson 06 and 8 Internal Tables
                - DB Operations using Internal Table
                     - DB_Delete Using Internal Table.abap
@@ -381,60 +390,56 @@
                - Internal Table with header Line_Debugging.docx
                - Internal Table without header Line_Debugging.docx
                - Internal Tables
+                    - 01and 2.internal table.abap
+                    - 01and 2.internal table.docx
+                    - 02.1.Internal Table_Demo1.abap
+                    - 02.1.Internal Table_Demo1.docx
+                    - 02.2Internal Table_Demo2.abap
+                    - 02.2Internal Table_Demo2.docx
+                    - 03.5.with headerline.abap
+                    - 03.bInternal Table_Demo4.abap
+                    - 03.bInternal Table_Demo4.docx
+                    - 03.select.abap
+                    - 03.select.docx
+                    - 04.1Free Clear Refresh Demo.docx
+                    - 04.Free Clear Refresh Demo.docx
+                    - 04.occurs.abap
+                    - 04.occurs.docx
+                    - 05.types.docx
+                    - 05.types.txt
+                    - 06.free refresh.docx
+                    - 06.free refresh.txt
+                    - 06.Internal Table_Demo1_Sorted Table.docx
+                    - 06.Internal Table_Demo1_Sorted Table.txt
+                    - 06A.Internal Tables - Append Sorted By Explanation.docx
+                    - 07.sorted table.abap
+                    - 07.sorted table.docx
+                    - 08.hashed table.abap
+                    - 08.hashed table.docx
+                    - 09.Internal Table_Demo_Append Sorted By.abap
+                    - 09.Internal Table_Demo_Append Sorted By.docx
+                    - 10.desrcibe.abap
                     - 10.desrcibe.docx
-                    - 10.desrcibe.txt
+                    - 10.Internal Table_Demo Append Initial Line  Insert Initial Line Standard Table.abap
                     - 10.Internal Table_Demo Append Initial Line  Insert Initial Line Standard Table.docx
-                    - 10.Internal Table_Demo Append Initial Line  Insert Initial Line Standard Table.txt
-                    - 11.itab operations.txt
+                    - 11.itab operations.abap
+                    - 11b.Read_Demo1_All Options.abap
                     - 11b.Read_Demo1_All Options.docx
-                    - 11b.Read_Demo1_All Options.txt
+                    - 12.a.Internal Table_Demo Collect_1.abap
                     - 12.a.Internal Table_Demo Collect_1.docx
-                    - 12.a.Internal Table_Demo Collect_1.txt
+                    - 12.bInternal Table_Demo Collect_2.abap
                     - 12.bInternal Table_Demo Collect_2.docx
-                    - 12.bInternal Table_Demo Collect_2.txt
+                    - 12.collect in itab_.abap
                     - 12.collect in itab_.docx
-                    - 12.collect in itab_.txt
+                    - 12.fetch from view.abap
                     - 12.fetch from view.docx
-                    - 12.fetch from view.txt
+                    - 13.controlblock statements.abap
                     - 13.controlblock statements.docx
-                    - 13.controlblock statements.txt
                     - 13.Insert Records from Internal Table in  DBTable-Dept.abap
                     - 13.Insert Records from Internal Table in  DBTable-Dept.docx
                     - 15.Update Delete and Modify  from DBusing internal table.abap
                     - 15.Update Delete and Modify  from DBusing internal table.docx
                     - 16.Insert into DB Table using internal table.abap
-                    - 16.Insert into DB Table using internal table.docx
-                    - 1and 2.internal table.docx
-                    - 1and 2.internal table.txt
-                    - 2.1.Internal Table_Demo1.docx
-                    - 2.1.Internal Table_Demo1.txt
-                    - 2.2Internal Table_Demo2.docx
-                    - 2.2Internal Table_Demo2.txt
-                    - 3.5.with headerline.txt
-                    - 3.bInternal Table_Demo4.docx
-                    - 3.bInternal Table_Demo4.txt
-                    - 3.select.docx
-                    - 3.select.txt
-                    - 4.1Free Clear Refresh Demo.docx
-                    - 4.Free Clear Refresh Demo.docx
-                    - 4.occurs.docx
-                    - 4.occurs.txt
-                    - 5.types.docx
-                    - 5.types.txt
-                    - 6.free refresh.docx
-                    - 6.free refresh.txt
-                    - 6.Internal Table_Demo1_Sorted Table.docx
-                    - 6.Internal Table_Demo1_Sorted Table.txt
-                    - 6A.Internal Tables - Append Sorted By Explanation.docx
-                    - 7.sorted table.docx
-                    - 7.sorted table.txt
-                    - 8.hashed table.docx
-                    - 8.hashed table.txt
-                    - 9.Internal Table_Demo_Append Sorted By.docx
-                    - 9.Internal Table_Demo_Append Sorted By.txt
-                    - 9.standard table.docx
-                    - 9.standard table.txt
-                    - ABAP Part I- Internal Tables II.xlsx
                     - Append Lines and Insert Lines
                          - Append Initial Line_Demo1.abap
                          - Append Lines Of _Demo2.abap
@@ -639,7 +644,6 @@
                               - SY-LISEL of list1 is available to list2 but not to list3 and subsequent lists
                               - List2 has its own individual memory area
                               - Each list has its own individual memory area
-               - At PF Status_SY-UCOMM.txt
                - Events for Classical Reports
                     - Events_Demo1.abap
                          - END-OF-SELECTION

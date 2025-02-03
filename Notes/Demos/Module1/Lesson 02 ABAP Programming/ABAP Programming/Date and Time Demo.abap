@@ -17,3 +17,13 @@ DOJ = SY-DATUM.
 EXITTIME = SY-UZEIT.
 WRITE: 'The Date is ', DOJ. "DDMMYYYYY
 WRITE:/'The Time is ', EXITTIME. "HHMMSS
+
+data todaydate(10) TYPE c.
+"yyyymmdd
+CONCATENATE  sy-datum+6(2) "date
+               sy-datum+4(2) "month
+               sy-datum(4) "year
+               into todaydate
+               SEPARATED BY '/'.
+
+WRITE todaydate.

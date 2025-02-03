@@ -1,8 +1,8 @@
 report z.
 Types: begin of it1_ty ,
-  f1,
-  f2(2),
-  end of it1_ty.
+        f1,
+        f2(2),
+       end of it1_ty.
 
 DATA: it TYPE STANDARD TABLE OF it1_ty  INITIAL SIZE 0,
       wa TYPE It1_ty.                  "work area

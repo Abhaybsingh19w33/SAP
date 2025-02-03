@@ -12,7 +12,7 @@ write  /7 'Z'.   "1Z234
 
 "========================
 
-*write /1 'X'.    "X
-*write 'YZ'.   "X YZ
-*write  'MN'.   "X YZ MN
-*write  2 'PQR'.   "XPQR MN
+write /1 'X'.    "X
+write 'YZ'.   "X YZ
+write  'MN'.   "X YZ MN
+write  2 'PQR'.   "XPQR MN

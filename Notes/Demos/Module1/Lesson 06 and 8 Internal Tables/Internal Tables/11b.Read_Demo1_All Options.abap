@@ -16,11 +16,8 @@ PERFORM selectdbtab1.
 *PERFORM readwithkey2. "transportingfewfields.
 *PERFORM readcomparing.
 *PERFORM sorttab.
-
 * PERFORM modrow.
 PERFORM delrow.
-
-
 
 FORM selectdbtab1.
   SELECT *  UP TO 10 ROWS
@@ -118,7 +115,6 @@ FORM  modrow.
   ENDIF.
 ENDFORM.
 
-
 FORM delrow.
 *DELETE itemp1 from 2.
 * DELETE itemp1 to 3. "from 1 to 3
@@ -142,7 +138,6 @@ FORM sorttab.
   IF sy-subrc = 0.
     PERFORM dispall.
   ENDIF.
-
 ENDFORM.
 
 FORM readcomparing.
@@ -152,11 +147,10 @@ FORM readcomparing.
 *wa1-ename = 'JACK'.
 *read table itemp1 into wa1 comparing empno ename. "NOT ALLOWED
 "read table itemp1 into wa1 index 1 COMPARING ALL FIELDS. "all fields is default
-READ TABLE itemp1 INTO wa1 INDEX 1 COMPARING empno ename.
+  READ TABLE itemp1 INTO wa1 INDEX 1 COMPARING empno ename.
 " READ TABLE itemp1 INTO wa1 with KEY job = 'CLERK' COMPARING empno ename. 
   WRITE: 'SY-SUBRC IS :' , sy-subrc.
   IF sy-subrc = 0.
     PERFORM disp.
   ENDIF.
-
 ENDFORM.

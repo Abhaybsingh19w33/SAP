@@ -1,11 +1,13 @@
 REPORT  z_test002.
 types: begin of ittype ,
-  sales type p decimals 2,
-  name(10) TYPE c,
-  date type d,
-  end of ittype.
+        sales type p decimals 2,
+        name(10) TYPE c,
+        date type d,
+       end of ittype.
+
 data : it type standard table of ittype initial size 3 ,
        wa type ittype .
+
 wa-date = '19980101'. wa-sales = 100. wa-name	=  'jack'.
 collect wa into it.
 wa-date = '19980101'. wa-sales = 400. wa-name	=  'jack'.

@@ -468,6 +468,44 @@ Reusability	-> Limited to specific tables/structures. -> Append structures are u
 70. The primary index contains the key fields of the table and a pointer to the non-key fields of the table. The system creates the primary index automatically when the table is created in the database.
 71. A secondary index is a data structure that contains a subset of attributes from a table, along with an alternate key to support Query operations.
 
+72. DIFFERENCE BETWEEN SELECT SINGLE AND SELECT UPTO 1 ROW
+    - SELECT SINGLE
+        
+            SELECT SINGLE * FROM table WHERE field = 'value'.
+
+        -   Purpose: Retrieves exactly one record that matches the given WHERE condition.
+        -   Behavior: It uses the primary key or an indexed field efficiently.
+        -   Performance: Faster when fetching data using indexed fields.
+        -   Database Buffer: Uses SAP table buffering (if enabled), making it more efficient when dealing with frequently accessed data.
+        -   Sorting: Does not consider sorting; it picks any matching row.
+
+    - SELECT ... UP TO 1 ROWS
+
+            SELECT * FROM table WHERE field = 'value' UP TO 1 ROWS.
+
+        -   Purpose: Retrieves at most one record but behaves like a normal SELECT statement.
+        -   Behavior: It fetches data from the database and applies sorting (if an ORDER BY is specified).
+        -   Performance: Slightly slower than SELECT SINGLE, as it doesn't directly use table buffering.
+        -   Database Buffer: Does not use SAP table buffering.
+        -   Sorting: If ORDER BY is used, it will fetch the first row based on the specified order.
+    
+    - Key Differences:
+        -   Feature	- SELECT SINGLE	
+        -   Database - Buffering	Uses buffering (if enabled)	
+        -   Index Usage	- Prefers primary key or index	
+        -   Sorting	- Not considered
+        -   Performance	- Generally faster	
+        -   Use Case - Fetching a specific record based on a key field
+
+        -   Feature	- SELECT ... UP TO 1 ROWS
+        -   Database - Bypasses buffering
+        -   Index Usage	- Works like normal SELECT
+        -   Sorting	- Can use ORDER BY
+        -   Performance - Slightly slower
+        -   Use Case - Fetching any record that meets the condition, optionally with sorting
+
+73. What is the meaning of Buffering allowed but switched off.
+
 ## Internal Table
 
 1. What are the types of Internal tables?
