@@ -300,6 +300,31 @@ Confirm installation with command :- fiori --help
 Install VSCode
 ```
 
+### SAP Full Stack Development
+
+- [SAP ABAP Training - in Plain English](https://www.udemy.com/course/sap-abap-training/learn/lecture/7842162#overview)
+- SAP ABAP Programming Reports, Adobe Forms, CDS, AMDP & more
+- Learn SAP ABAP Objects - Online Training Course
+- SAP OOPS ABAP ( With complete Material/Documentation )
+- SAP ABAP Netweaver 7.50 certification preparation test
+- SAP ABAP on HANA Training for Beginners
+- SAP OData Services | UI5 | FIORI ( Using Eclipse & WEB IDE )
+- SAPUI5/Fiori FullStack on BTP | RAP/ABAP Cloud& SAP BTP CAPM
+- SAP - Learn SAPUI5 Professional Development
+- ChatGPT for SAP ABAP Development
+- SAP ABAP: Mastering the New Syntax
+- SAP ABAP: Mastering the New Syntax
+- SAP BTP Training - From Basics to Advanced [Hands-on]
+- SAP for Beginner: Learn SAP S/4HANA Overview
+
+### Siva Prasad
+- [SAP SD Training - in Plain English](https://capgemini.udemy.com/course/sap-sd-training/learn/lecture/432232#overview)
+- [SAP S/4HANA Training - in Plain English](https://capgemini.udemy.com/course/sap-s4hana-training/learn/lecture/10374244#overview)
+- [SAP MM Training - in Plain English](https://capgemini.udemy.com/course/sap-mm-training/learn/lecture/6056362#overview)
+- [SAP Debugging for Functional Consultants](https://capgemini.udemy.com/course/sap-abap-debugging-for-functional-consultants/learn/lecture/450018#overview)
+- [SAP ABAP Training - in Plain English](https://capgemini.udemy.com/course/sap-abap-training/learn/lecture/7769248#overview)
+
+## FreeCodeCamp
 - [SAP UI5 / Fiori - Full Course - FreeCodeCamp](https://www.youtube.com/watch?v=C9cK2Z2JDLg&ab_channel=freeCodeCamp.org)
     - [Github](https://github.com/brandoncaulfield/sap-ui5-walkthrough/commits/main/)
     - [SAP official web site](https://sapui5.hana.ondemand.com/1.120.20/#/topic/2680aa9b16c14a00b01261d04babbb39)
