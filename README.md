@@ -303,19 +303,18 @@ Install VSCode
 ### SAP Full Stack Development
 
 - [SAP ABAP Training - in Plain English](https://www.udemy.com/course/sap-abap-training/learn/lecture/7842162#overview)
-- SAP ABAP Programming Reports, Adobe Forms, CDS, AMDP & more
-- Learn SAP ABAP Objects - Online Training Course
-- SAP OOPS ABAP ( With complete Material/Documentation )
-- SAP ABAP Netweaver 7.50 certification preparation test
-- SAP ABAP on HANA Training for Beginners
-- SAP OData Services | UI5 | FIORI ( Using Eclipse & WEB IDE )
-- SAPUI5/Fiori FullStack on BTP | RAP/ABAP Cloud& SAP BTP CAPM
-- SAP - Learn SAPUI5 Professional Development
-- ChatGPT for SAP ABAP Development
-- SAP ABAP: Mastering the New Syntax
-- SAP ABAP: Mastering the New Syntax
-- SAP BTP Training - From Basics to Advanced [Hands-on]
-- SAP for Beginner: Learn SAP S/4HANA Overview
+- [SAP ABAP Programming Reports, Adobe Forms, CDS, AMDP & more](https://capgemini.udemy.com/course/sap-abap-basics/learn/lecture/21510436?learning_path_id=4307496#overview)
+- [Learn SAP ABAP Objects - Online Training Course](https://capgemini.udemy.com/course/abap-objects/learn/lecture/481998?learning_path_id=4307496#overview)
+- [SAP OOPS ABAP ( With complete Material/Documentation )](https://capgemini.udemy.com/course/sapoopsabap/learn/lecture/36489748?learning_path_id=4307496#overview)
+- [SAP ABAP Netweaver 7.50 certification preparation test](https://capgemini.udemy.com/course/sap-abap-netweaver-750-certification-preparation-test/learn/quiz/4435306?learning_path_id=4307496#overview)
+- [SAP ABAP on HANA Training for Beginners](https://capgemini.udemy.com/course/abap-for-hana/learn/lecture/14924154?learning_path_id=4307496#overview)
+- [SAP OData Services | UI5 | FIORI ( Using Eclipse & WEB IDE )](https://capgemini.udemy.com/course/sap-odata-abap-services/learn/lecture/21804148?learning_path_id=4307496#overview)
+- [SAPUI5/Fiori FullStack on BTP | RAP/ABAP Cloud& SAP BTP CAPM](https://capgemini.udemy.com/course/professional-sapui5-web-application-development-part-1/learn/lecture/45581041?learning_path_id=4307496#overview)
+- [SAP - Learn SAPUI5 Professional Development](https://capgemini.udemy.com/course/learn-sapui5/learn/lecture/4996270?learning_path_id=4307496#overview)
+- [ChatGPT for SAP ABAP Development](https://capgemini.udemy.com/course/chatgpt-for-sap-abap/learn/lecture/41967194?learning_path_id=4307496#overview)
+- [SAP ABAP: Mastering the New Syntax](https://capgemini.udemy.com/course/sap-abap-new-syntax/learn/lecture/38897662?learning_path_id=4307496#overview)
+- [SAP BTP Training - From Basics to Advanced [Hands-on]](https://capgemini.udemy.com/course/sap-btp-training-from-basics-to-advanced/learn/lecture/39512234?learning_path_id=4307496#overview)
+- [SAP for Beginner: Learn SAP S/4HANA Overview](https://capgemini.udemy.com/course/sap-s4-hana-for-beginners-learn-sap-step-by-step/learn/lecture/27862792?learning_path_id=4307496#overview)
 
 ### Siva Prasad
 - [SAP SD Training - in Plain English](https://capgemini.udemy.com/course/sap-sd-training/learn/lecture/432232#overview)
